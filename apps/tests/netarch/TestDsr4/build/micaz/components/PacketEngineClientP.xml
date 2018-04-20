@@ -1,0 +1,47 @@
+<?xml version="1.0" ?><component abstract="" loc="40:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketEngineClientP.nc" nicename="PacketEngineClientP" qname="PacketEngineClientP">
+      <documentation loc="40:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketEngineClientP.nc">
+        <short>
+
+ Stores the upper AM type and default lower AM type for a packet
+
+ engine client. </short>
+        <long>
+
+ Stores the upper AM type and default lower AM type for a packet
+
+ engine client.  These values are stored statically so that no
+
+ RAM is used up to hold them.
+
+
+
+ @author Ryan Stinnett
+
+</long>
+      </documentation>
+      <parameters>
+        <constant loc="40:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketEngineClientP.nc" name="upper" ref="0x7d91d030">
+          <component-ref nicename="PacketEngineClientP" qname="PacketEngineClientP"/>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="am_id_t" ref="0x7e881588"/></typename>
+          </type-int>
+        </constant>
+        <constant loc="40:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketEngineClientP.nc" name="defLower" ref="0x7d91d1c0">
+          <component-ref nicename="PacketEngineClientP" qname="PacketEngineClientP"/>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="am_id_t" ref="0x7e881588"/></typename>
+          </type-int>
+        </constant>
+      </parameters>
+      <module/>
+    <specification><interface loc="41:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketEngineClientP.nc" name="PacketEngineClient" provided="1" ref="0x7d91d410">
+      <component-ref nicename="PacketEngineClientP" qname="PacketEngineClientP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="PacketEngineClient" ref="0x7d91d410" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="PacketEngineClient" qname="PacketEngineClient"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="upperType" ref="0x7d91d5e8" scoped=""/>
+        <function-ref name="defaultLowerType" ref="0x7d91d6c8" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

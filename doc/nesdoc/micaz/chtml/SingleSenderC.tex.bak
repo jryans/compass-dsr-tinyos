@@ -1,0 +1,47 @@
+\documentclass{article}
+\usepackage[x11names, rgb]{xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\usetikzlibrary{snakes,arrows,shapes}
+\usepackage{amsmath}
+%
+%
+%
+%
+
+\begin{document}
+\pagestyle{empty}
+%
+%
+%
+
+\enlargethispage{100cm}
+% Start of code
+\begin{tikzpicture}[>=latex',join=bevel,]
+%
+\node (n0x7dec0930) at (46bp,218bp) [fill,draw,ellipse] {SinglePacket};
+  \node (SinglePacketC) at (154bp,126bp) [draw,rectangle] {SinglePacketC};
+  \node (n0x7ded0bf0) at (154bp,218bp) [fill,draw,ellipse] {Packet};
+  \node (n0x7ded23e8) at (232bp,218bp) [fill,draw,ellipse] {Send};
+  \node (n0x7ded0010) at (322bp,218bp) [fill,draw,ellipse] {AMPacket};
+  \node (ActiveMessageC) at (322bp,126bp) [draw,rectangle] {ActiveMessageC};
+  \node (SingleSenderC.PacketSenderC) at (154bp,30bp) [draw,rectangle,dashed] {PacketSenderC};
+  \draw [->] (n0x7dec0930) ..controls (60bp,189bp) and (68bp,175bp)  .. (78bp,166bp) .. controls (83bp,161bp) and (88bp,157bp)  .. (SinglePacketC);
+  \draw (114bp,174bp) node {SinglePacket};
+  \draw [->] (n0x7ded0bf0) ..controls (154bp,188bp) and (154bp,172bp)  .. (SinglePacketC);
+  \draw (175bp,174bp) node {Packet};
+  \draw [->] (n0x7ded23e8) ..controls (217bp,190bp) and (209bp,176bp)  .. (200bp,166bp) .. controls (197bp,162bp) and (193bp,158bp)  .. (SinglePacketC);
+  \draw (238bp,174bp) node {AMSend};
+  \draw [->] (n0x7ded0010) ..controls (322bp,188bp) and (322bp,172bp)  .. (ActiveMessageC);
+  \draw (354bp,174bp) node {AMPacket};
+  \draw [->,very thick] (SinglePacketC) ..controls (154bp,91bp) and (154bp,75bp)  .. (SingleSenderC.PacketSenderC);
+  \draw (230bp,78bp) node {AMSend[packet\_client\_id\_t]};
+%
+\end{tikzpicture}
+% End of code
+
+%
+\end{document}
+%
+
+

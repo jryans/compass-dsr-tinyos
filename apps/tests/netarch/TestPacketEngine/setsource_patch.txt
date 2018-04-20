@@ -1,0 +1,174 @@
+Index: tos/lib/tossim/sim_packet.h
+===================================================================
+RCS file: /cvsroot/tinyos/tinyos-2.x/tos/lib/tossim/sim_packet.h,v
+retrieving revision 1.4
+diff -u -r1.4 sim_packet.h
+--- tos/lib/tossim/sim_packet.h	12 Dec 2006 18:23:35 -0000	1.4
++++ tos/lib/tossim/sim_packet.h	25 Jun 2007 10:26:38 -0000
+@@ -50,6 +50,9 @@
+    */
+   typedef struct sim_packet {} sim_packet_t;
+   
++  void sim_packet_set_source(sim_packet_t* msg, uint16_t src);
++  uint16_t sim_packet_source(sim_packet_t* msg);
++  
+   void sim_packet_set_destination(sim_packet_t* msg, uint16_t dest);
+   uint16_t sim_packet_destination(sim_packet_t* msg);
+   
+Index: tos/lib/tossim/tossim_wrap.cxx
+===================================================================
+RCS file: /cvsroot/tinyos/tinyos-2.x/tos/lib/tossim/tossim_wrap.cxx,v
+retrieving revision 1.4
+diff -u -r1.4 tossim_wrap.cxx
+--- tos/lib/tossim/tossim_wrap.cxx	1 Apr 2007 00:29:34 -0000	1.4
++++ tos/lib/tossim/tossim_wrap.cxx	25 Jun 2007 10:26:40 -0000
+@@ -1504,6 +1504,40 @@
+ }
+ 
+ 
++static PyObject *_wrap_Packet_setSource(PyObject *self, PyObject *args) {
++    PyObject *resultobj;
++    Packet *arg1 = (Packet *) 0 ;
++    int arg2 ;
++    PyObject * obj0 = 0 ;
++    
++    if(!PyArg_ParseTuple(args,(char *)"Oi:Packet_setSource",&obj0,&arg2)) goto fail;
++    if ((SWIG_ConvertPtr(obj0,(void **) &arg1, SWIGTYPE_p_Packet,SWIG_POINTER_EXCEPTION | 0 )) == -1) SWIG_fail;
++    (arg1)->setSource(arg2);
++    
++    Py_INCREF(Py_None); resultobj = Py_None;
++    return resultobj;
++    fail:
++    return NULL;
++}
++
++
++static PyObject *_wrap_Packet_source(PyObject *self, PyObject *args) {
++    PyObject *resultobj;
++    Packet *arg1 = (Packet *) 0 ;
++    int result;
++    PyObject * obj0 = 0 ;
++    
++    if(!PyArg_ParseTuple(args,(char *)"O:Packet_source",&obj0)) goto fail;
++    if ((SWIG_ConvertPtr(obj0,(void **) &arg1, SWIGTYPE_p_Packet,SWIG_POINTER_EXCEPTION | 0 )) == -1) SWIG_fail;
++    result = (int)(arg1)->source();
++    
++    resultobj = PyInt_FromLong((long)result);
++    return resultobj;
++    fail:
++    return NULL;
++}
++
++
+ static PyObject *_wrap_Packet_setDestination(PyObject *self, PyObject *args) {
+     PyObject *resultobj;
+     Packet *arg1 = (Packet *) 0 ;
+@@ -3322,6 +3356,8 @@
+ 	 { (char *)"Radio_swigregister", Radio_swigregister, METH_VARARGS },
+ 	 { (char *)"new_Packet", _wrap_new_Packet, METH_VARARGS },
+ 	 { (char *)"delete_Packet", _wrap_delete_Packet, METH_VARARGS },
++	 { (char *)"Packet_setSource", _wrap_Packet_setSource, METH_VARARGS },
++	 { (char *)"Packet_source", _wrap_Packet_source, METH_VARARGS },
+ 	 { (char *)"Packet_setDestination", _wrap_Packet_setDestination, METH_VARARGS },
+ 	 { (char *)"Packet_destination", _wrap_Packet_destination, METH_VARARGS },
+ 	 { (char *)"Packet_setLength", _wrap_Packet_setLength, METH_VARARGS },
+Index: tos/lib/tossim/packet.c
+===================================================================
+RCS file: /cvsroot/tinyos/tinyos-2.x/tos/lib/tossim/packet.c,v
+retrieving revision 1.2
+diff -u -r1.2 packet.c
+--- tos/lib/tossim/packet.c	12 Jul 2006 17:02:35 -0000	1.2
++++ tos/lib/tossim/packet.c	25 Jun 2007 10:26:38 -0000
+@@ -54,6 +54,13 @@
+   }
+ }
+ 
++void Packet::setSource(int src) {
++  sim_packet_set_source(msgPtr, (uint16_t)src);
++}
++int Packet::source() {
++  return sim_packet_source(msgPtr);
++}
++
+ void Packet::setDestination(int dest) {
+   sim_packet_set_destination(msgPtr, (uint16_t)dest);
+ }
+Index: tos/lib/tossim/packet.i
+===================================================================
+RCS file: /cvsroot/tinyos/tinyos-2.x/tos/lib/tossim/packet.i,v
+retrieving revision 1.2
+diff -u -r1.2 packet.i
+--- tos/lib/tossim/packet.i	12 Jul 2006 17:02:35 -0000	1.2
++++ tos/lib/tossim/packet.i	25 Jun 2007 10:26:38 -0000
+@@ -45,6 +45,9 @@
+   public:
+     Packet();
+     ~Packet();
++    
++    void setSource(int src);
++    int source();
+ 
+     void setDestination(int dest);
+     int destination();
+Index: tos/lib/tossim/TOSSIM.py
+===================================================================
+RCS file: /cvsroot/tinyos/tinyos-2.x/tos/lib/tossim/TOSSIM.py,v
+retrieving revision 1.4
+diff -u -r1.4 TOSSIM.py
+--- tos/lib/tossim/TOSSIM.py	1 Apr 2007 00:29:34 -0000	1.4
++++ tos/lib/tossim/TOSSIM.py	25 Jun 2007 10:26:38 -0000
+@@ -113,6 +113,8 @@
+         try:
+             if self.thisown: destroy(self)
+         except: pass
++    def setSource(*args): return apply(_TOSSIM.Packet_setSource,args)
++    def source(*args): return apply(_TOSSIM.Packet_source,args)
+     def setDestination(*args): return apply(_TOSSIM.Packet_setDestination,args)
+     def destination(*args): return apply(_TOSSIM.Packet_destination,args)
+     def setLength(*args): return apply(_TOSSIM.Packet_setLength,args)
+Index: tos/lib/tossim/sim_packet.c
+===================================================================
+RCS file: /cvsroot/tinyos/tinyos-2.x/tos/lib/tossim/sim_packet.c,v
+retrieving revision 1.4
+diff -u -r1.4 sim_packet.c
+--- tos/lib/tossim/sim_packet.c	12 Dec 2006 18:23:35 -0000	1.4
++++ tos/lib/tossim/sim_packet.c	25 Jun 2007 10:26:38 -0000
+@@ -43,10 +43,20 @@
+   return (tossim_header_t*)(msg->data - sizeof(tossim_header_t));
+ }
+ 
++void sim_packet_set_source(sim_packet_t* msg, uint16_t src)__attribute__ ((C, spontaneous)) {
++  tossim_header_t* hdr = getHeader((message_t*)msg);
++  hdr->src = src;
++}
++
++uint16_t sim_packet_source(sim_packet_t* msg)__attribute__ ((C, spontaneous)) {
++  tossim_header_t* hdr = getHeader((message_t*)msg);
++  return hdr->src;
++}
++
+ void sim_packet_set_destination(sim_packet_t* msg, uint16_t dest)__attribute__ ((C, spontaneous)) {
+   tossim_header_t* hdr = getHeader((message_t*)msg);
+   hdr->dest = dest;
+-}__attribute__ ((C, spontaneous))
++}
+ 
+ uint16_t sim_packet_destination(sim_packet_t* msg)__attribute__ ((C, spontaneous)) {
+   tossim_header_t* hdr = getHeader((message_t*)msg);
+Index: tos/lib/tossim/packet.h
+===================================================================
+RCS file: /cvsroot/tinyos/tinyos-2.x/tos/lib/tossim/packet.h,v
+retrieving revision 1.2
+diff -u -r1.2 packet.h
+--- tos/lib/tossim/packet.h	12 Jul 2006 17:02:35 -0000	1.2
++++ tos/lib/tossim/packet.h	25 Jun 2007 10:26:38 -0000
+@@ -40,6 +40,9 @@
+     Packet(sim_packet_t* msg);
+     ~Packet();
+ 
++    void setSource(int src);
++    int source();
++
+     void setDestination(int dest);
+     int destination();
+ 

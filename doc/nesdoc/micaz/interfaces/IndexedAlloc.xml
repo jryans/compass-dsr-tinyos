@@ -1,0 +1,244 @@
+<?xml version="1.0" ?><interfacedef loc="42:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/alloc/IndexedAlloc.nc" nicename="IndexedAlloc" qname="IndexedAlloc">
+      <documentation loc="42:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/alloc/IndexedAlloc.nc">
+        <short>
+
+ Interface to a component that implements a run-time allocation policy on top
+
+ of a static size array via indices. </short>
+        <long>
+
+ Interface to a component that implements a run-time allocation policy on top
+
+ of a static size array via indices.  This simplifies component design by
+
+ moving the policy out of each component, leading to cleaner code.
+
+
+
+ @author Ryan Stinnett
+
+</long>
+      </documentation>
+      <function command="" loc="64:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/alloc/IndexedAlloc.nc" name="size" provided="0" ref="0x7db82010">
+        <documentation loc="58:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/alloc/IndexedAlloc.nc">
+          <short>
+
+ The number of elements currently allocated.
+
+</short>
+          <long>
+
+ The number of elements currently allocated.
+
+ Always less than or equal to maxSize().
+
+
+
+ @return The number of elements currently allocated.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="IndexedAlloc" qname="IndexedAlloc"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="indexed_alloc_id_t" ref="0x7db88178"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+      </function>
+      <function command="" loc="95:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/alloc/IndexedAlloc.nc" name="allocated" provided="0" ref="0x7db81b08">
+        <documentation loc="90:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/alloc/IndexedAlloc.nc">
+          <short>
+
+ Checks if an index is currently allocated.
+
+
+
+</short>
+          <long>
+
+ Checks if an index is currently allocated.
+
+
+
+ @return TRUE if the index is allocated, FALSE if it is not.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="IndexedAlloc" qname="IndexedAlloc"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="bool" ref="0x7ec91520"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="indexed_alloc_id_t" ref="0x7db88178"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="95:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/alloc/IndexedAlloc.nc" name="m" ref="0x7db818f8">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="indexed_alloc_id_t" ref="0x7db88178"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="71:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/alloc/IndexedAlloc.nc" name="maxSize" provided="0" ref="0x7db825d8">
+        <documentation loc="66:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/alloc/IndexedAlloc.nc">
+          <short>
+
+ The maximum number of elements that can be allocated.
+
+
+
+</short>
+          <long>
+
+ The maximum number of elements that can be allocated.
+
+
+
+ @return The maximum size that can be allocated.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="IndexedAlloc" qname="IndexedAlloc"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="indexed_alloc_id_t" ref="0x7db88178"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+      </function>
+      <function command="" loc="79:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/alloc/IndexedAlloc.nc" name="alloc" provided="0" ref="0x7db82bd8">
+        <documentation loc="73:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/alloc/IndexedAlloc.nc">
+          <short>
+
+ Allocate an index in the set.
+
+
+
+</short>
+          <long>
+
+ Allocate an index in the set.
+
+
+
+ @return If an index is free, it will be allocated and returned.  Otherwise,
+
+         maxSize() is returned to indicate that all elements are allocated.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="IndexedAlloc" qname="IndexedAlloc"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="indexed_alloc_id_t" ref="0x7db88178"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+      </function>
+      <function command="" loc="49:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/alloc/IndexedAlloc.nc" name="none" provided="0" ref="0x7db833f0">
+        <documentation loc="44:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/alloc/IndexedAlloc.nc">
+          <short>
+
+ Checks if none of the elements are allocated.
+
+
+
+</short>
+          <long>
+
+ Checks if none of the elements are allocated.
+
+
+
+ @return TRUE if none of the elements are allocated, FALSE otherwise.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="IndexedAlloc" qname="IndexedAlloc"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="bool" ref="0x7ec91520"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+      </function>
+      <function command="" loc="88:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/alloc/IndexedAlloc.nc" name="free" provided="0" ref="0x7db813b0">
+        <documentation loc="81:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/alloc/IndexedAlloc.nc">
+          <short>
+
+ Frees an index in the set.
+
+
+
+</short>
+          <long>
+
+ Frees an index in the set.
+
+
+
+ @return If an index is allocated, it will be freed and SUCCESS is returned.
+
+         If it was already free, no change is made and EALREADY is returned.
+
+         If the index is too large, ESIZE is returned.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="IndexedAlloc" qname="IndexedAlloc"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="error_t" ref="0x7e8372e8"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="indexed_alloc_id_t" ref="0x7db88178"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="88:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/alloc/IndexedAlloc.nc" name="m" ref="0x7db81128">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="indexed_alloc_id_t" ref="0x7db88178"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="56:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/alloc/IndexedAlloc.nc" name="all" provided="0" ref="0x7db839b0">
+        <documentation loc="51:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/alloc/IndexedAlloc.nc">
+          <short>
+
+ Checks if all of the elements are allocated.
+
+
+
+</short>
+          <long>
+
+ Checks if all of the elements are allocated.
+
+
+
+ @return TRUE if all of the elements are allocated, FALSE otherwise.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="IndexedAlloc" qname="IndexedAlloc"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="bool" ref="0x7ec91520"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+      </function>
+    </interfacedef>

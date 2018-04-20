@@ -1,0 +1,191 @@
+<html>
+  <head>
+    <LINK rel="stylesheet" href="nesdoc.css" type="text/css" media="screen"><title>Interface: DataCache</title>
+  </head>
+  <body>
+    <h2>Interface: DataCache</h2>
+    <b>interface DataCache&lt;typedef item_t&gt;</b><p>
+ A data cache.  While this is quite similar to the Cache interface, here a
+ pointer to the element in the cache matching the given input item is
+ returned.  Additional features, such as remove and eviction, are also
+ available.
+
+ 
+    <p>
+    <dl>
+      <dt><b>Author:</b>
+      <dd>
+        Ryan Stinnett
+
+      </dd>
+    </dl>
+    <p><p><div id=heading>Commands</div><div id=funcsig><span id=funcnameshort>command void <a href="#flush">flush</a>()
+      </span><menu>
+ Flush the cache of all entries.
+
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command item_t *<a href="#insert">insert</a>(item_t *item)
+      </span><menu>
+ Inserts an item in the cache, evicting if necessary. 
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command item_t *<a href="#lookup">lookup</a>(item_t *item)
+      </span><menu>
+ Returns a pointer to the item in the cache by matching various keys or
+ NULL if it was not found.
+
+
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command error_t <a href="#remove">remove</a>(item_t *item)
+      </span><menu>
+ Removes an item from the cache.
+
+
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command uint8_t <a href="#size">size</a>()
+      </span><menu>
+ Returns the number of items currently stored in the cache.
+
+      </menu>
+    </div><p><div id=heading>Events</div><div id=funcsig><span id=funcnameshort>event void <a href="#evicted">evicted</a>(item_t *item)
+      </span><menu>
+ Notification that the given item is about to be evicted due to an insert
+ which was requested when the cache was already full. 
+      </menu>
+    </div><p><div id=heading>Commands - Details</div>
+    <a name="flush"></a>
+    <h4>flush
+    </h4>
+    <span id=funcnameshort>command void <b>flush</b>()
+    </span>
+    <p>
+    <menu>
+      
+ Flush the cache of all entries.
+
+    </menu>
+    <hr>
+    <a name="insert"></a>
+    <h4>insert
+    </h4>
+    <span id=funcnameshort>command item_t *<b>insert</b>(item_t *item)
+    </span>
+    <p>
+    <menu>
+      
+ Inserts an item in the cache, evicting if necessary.  An atomic lookup
+ after insert should return true.
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>item</code> -  Pointer to the data item to insert into the cache.
+ 
+        </dd>
+        <dt><b>Returns:</b>
+        <dd>
+          A pointer to the item in the cache.
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="lookup"></a>
+    <h4>lookup
+    </h4>
+    <span id=funcnameshort>command item_t *<b>lookup</b>(item_t *item)
+    </span>
+    <p>
+    <menu>
+      
+ Returns a pointer to the item in the cache by matching various keys or
+ NULL if it was not found.
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>item</code> -  Pointer to the data item to find in the cache.
+ 
+        </dd>
+        <dt><b>Returns:</b>
+        <dd>
+          A pointer to the item in the cache, or NULL if not found.
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="remove"></a>
+    <h4>remove
+    </h4>
+    <span id=funcnameshort>command error_t <b>remove</b>(item_t *item)
+    </span>
+    <p>
+    <menu>
+      
+ Removes an item from the cache.
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>item</code> -  Pointer to the data item to remove from the cache.
+ 
+        </dd>
+        <dt><b>Returns:</b>
+        <dd>
+          SUCCESS if found and removed, EINVAL if not found.
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="size"></a>
+    <h4>size
+    </h4>
+    <span id=funcnameshort>command uint8_t <b>size</b>()
+    </span>
+    <p>
+    <menu>
+      
+ Returns the number of items currently stored in the cache.
+ 
+      <p>
+      <dl>
+        <dt><b>Returns:</b>
+        <dd>
+          The number of items.
+
+        </dd>
+      </dl>
+    </menu>
+    <p><div id=heading>Events - Details</div>
+    <a name="evicted"></a>
+    <h4>evicted
+    </h4>
+    <span id=funcnameshort>event void <b>evicted</b>(item_t *item)
+    </span>
+    <p>
+    <menu>
+      
+ Notification that the given item is about to be evicted due to an insert
+ which was requested when the cache was already full.  Note that this is
+ <b>not</b> signaled on calls of remove.  The pointer passed here should
+ not saved, as it will not longer be vaild once this event returns.
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>item</code> -  Pointer to the data item being evicted.
+
+        </dd>
+      </dl>
+    </menu>
+  </body>
+</html>

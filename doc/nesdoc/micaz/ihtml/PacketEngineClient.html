@@ -1,0 +1,94 @@
+<html>
+  <head>
+    <LINK rel="stylesheet" href="nesdoc.css" type="text/css" media="screen"><title>Interface: PacketEngineClient</title>
+  </head>
+  <body>
+    <h2>Interface: PacketEngineClient</h2>
+    <b>interface PacketEngineClient</b><p>
+
+ Stores the upper AM type and default lower AM type for a packet
+
+ engine client.
+
+
+
+ 
+    <p>
+    <dl>
+      <dt><b>Author:</b>
+      <dd>
+        Ryan Stinnett
+
+
+      </dd>
+    </dl>
+    <p><p><div id=heading>Commands</div><div id=funcsig><span id=funcnameshort>command am_id_t <a href="#defaultLowerType">defaultLowerType</a>()
+      </span><menu>
+
+ Returns the default lower AM type packets sent by this client should
+
+ initially be set to.
+
+
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command am_id_t <a href="#upperType">upperType</a>()
+      </span><menu>
+
+ Returns the upper AM type used by this client above the the packet
+
+ engine layer.
+
+
+      </menu>
+    </div><p><div id=heading>Commands - Details</div>
+    <a name="defaultLowerType"></a>
+    <h4>defaultLowerType
+    </h4>
+    <span id=funcnameshort>command am_id_t <b>defaultLowerType</b>()
+    </span>
+    <p>
+    <menu>
+      
+
+ Returns the default lower AM type packets sent by this client should
+
+ initially be set to.
+
+ 
+      <p>
+      <dl>
+        <dt><b>Returns:</b>
+        <dd>
+          The default lower AM type.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="upperType"></a>
+    <h4>upperType
+    </h4>
+    <span id=funcnameshort>command am_id_t <b>upperType</b>()
+    </span>
+    <p>
+    <menu>
+      
+
+ Returns the upper AM type used by this client above the the packet
+
+ engine layer.
+
+ 
+      <p>
+      <dl>
+        <dt><b>Returns:</b>
+        <dd>
+          The upper AM type.
+
+
+        </dd>
+      </dl>
+    </menu>
+  </body>
+</html>

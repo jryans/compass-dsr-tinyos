@@ -1,0 +1,22 @@
+<area shape="rect" href="tos.lib.timer.VirtualizeTimerC.html" title="VirtualizeTimerC" alt="VirtualizeTimerC" coords="7,133,121,181">
+<area shape="rect" href="../ihtml/tos.lib.timer.Timer.html" title="Timer&lt;TMilli&gt;[uint8_t]" alt="Timer&lt;TMilli&gt;[uint8_t]" coords="71,89,190,108">
+<area shape="rect" href="../ihtml/tos.lib.timer.Timer.html" title="Timer&lt;TMilli&gt;[uint8_t]" alt="Timer&lt;TMilli&gt;[uint8_t]" coords="60,60,68,68">
+<area shape="rect" href="../ihtml/tos.lib.timer.Timer.html" title="Timer&lt;TMilli&gt;[uint8_t]" alt="Timer&lt;TMilli&gt;[uint8_t]" coords="60,129,68,137">
+<area shape="rect" href="tos.lib.timer.AlarmToTimerC.html" title="AlarmToTimerC" alt="AlarmToTimerC" coords="8,251,120,299">
+<area shape="rect" href="../ihtml/tos.lib.timer.Timer.html" title="Timer&lt;TMilli&gt;" alt="Timer&lt;TMilli&gt;" coords="69,207,147,225">
+<area shape="rect" href="../ihtml/tos.lib.timer.Timer.html" title="Timer&lt;TMilli&gt;" alt="Timer&lt;TMilli&gt;" coords="60,177,68,185">
+<area shape="rect" href="../ihtml/tos.lib.timer.Timer.html" title="Timer&lt;TMilli&gt;" alt="Timer&lt;TMilli&gt;" coords="60,247,68,255">
+<area shape="rect" href="tos.lib.timer.CounterToLocalTimeC.html" title="CounterToLocalTimeC" alt="CounterToLocalTimeC" coords="177,251,329,299">
+<area shape="rect" href="../ihtml/tos.lib.timer.LocalTime.html" title="LocalTime&lt;TMilli&gt;" alt="LocalTime&lt;TMilli&gt;" coords="260,207,361,225">
+<area shape="rect" href="../ihtml/tos.lib.timer.LocalTime.html" title="LocalTime&lt;TMilli&gt;" alt="LocalTime&lt;TMilli&gt;" coords="249,177,257,185">
+<area shape="rect" href="../ihtml/tos.lib.timer.LocalTime.html" title="LocalTime&lt;TMilli&gt;" alt="LocalTime&lt;TMilli&gt;" coords="249,247,257,255">
+<area shape="rect" href="tos.platforms.mica.AlarmCounterMilliP.html" title="AlarmCounterMilliP" alt="AlarmCounterMilliP" coords="180,368,327,427">
+<area shape="rect" href="../ihtml/tos.lib.timer.Counter.html" title="Counter&lt;TMilli, uint32_t&gt;" alt="Counter&lt;TMilli, uint32_t&gt;" coords="262,324,396,343">
+<area shape="rect" href="../ihtml/tos.lib.timer.Counter.html" title="Counter&lt;TMilli, uint32_t&gt;" alt="Counter&lt;TMilli, uint32_t&gt;" coords="249,295,257,303">
+<area shape="rect" href="../ihtml/tos.lib.timer.Counter.html" title="Counter&lt;TMilli, uint32_t&gt;" alt="Counter&lt;TMilli, uint32_t&gt;" coords="249,364,257,372">
+<area shape="rect" href="../ihtml/tos.interfaces.Init.html" title="Init" alt="Init" coords="432,324,459,343">
+<area shape="rect" href="../ihtml/tos.interfaces.Init.html" title="Init" alt="Init" coords="439,293,447,301">
+<area shape="rect" href="../ihtml/tos.interfaces.Init.html" title="Init" alt="Init" coords="323,380,331,388">
+<area shape="rect" href="../ihtml/tos.lib.timer.Alarm.html" title="Alarm&lt;TMilli, uint32_t&gt;" alt="Alarm&lt;TMilli, uint32_t&gt;" coords="115,324,240,343">
+<area shape="rect" href="../ihtml/tos.lib.timer.Alarm.html" title="Alarm&lt;TMilli, uint32_t&gt;" alt="Alarm&lt;TMilli, uint32_t&gt;" coords="69,295,77,303">
+<area shape="rect" href="../ihtml/tos.lib.timer.Alarm.html" title="Alarm&lt;TMilli, uint32_t&gt;" alt="Alarm&lt;TMilli, uint32_t&gt;" coords="176,377,184,385">

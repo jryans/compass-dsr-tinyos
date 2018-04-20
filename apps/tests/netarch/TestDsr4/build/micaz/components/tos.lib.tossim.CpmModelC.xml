@@ -1,0 +1,31 @@
+<?xml version="1.0" ?><component loc="45:/opt/tinyos-2.x/tos/lib/tossim/CpmModelC.nc" nicename="tos.lib.tossim.CpmModelC" qname="CpmModelC">
+      <documentation loc="45:/opt/tinyos-2.x/tos/lib/tossim/CpmModelC.nc">
+        <short>
+ Implementation of all of the SNIST primitives and utility
+ functions.
+
+</short>
+        <long>
+ Implementation of all of the SNIST primitives and utility
+ functions.
+
+ @author Hyungjune Lee
+ @date   Oct 13 2006
+</long>
+      </documentation>
+      <module/>
+    <specification><interface loc="46:/opt/tinyos-2.x/tos/lib/tossim/CpmModelC.nc" name="Model" provided="1" ref="0x7df7d170">
+      <component-ref nicename="tos.lib.tossim.CpmModelC" qname="CpmModelC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Model" ref="0x7df7d170" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.tossim.GainRadioModel" qname="GainRadioModel"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="putOnAirTo" ref="0x7df7d348" scoped=""/>
+        <function-ref name="receive" ref="0x7df7d428" scoped=""/>
+        <function-ref name="clearChannel" ref="0x7df7d508" scoped=""/>
+        <function-ref name="setClearValue" ref="0x7df7d5e8" scoped=""/>
+        <function-ref name="acked" ref="0x7df7d6c8" scoped=""/>
+        <function-ref name="shouldAck" ref="0x7df7d7a8" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

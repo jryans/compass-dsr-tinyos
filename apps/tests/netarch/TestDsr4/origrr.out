@@ -1,0 +1,2970 @@
+DEBUG (6): PE: Adding receive/snoop packet at index 0
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 0
+DEBUG (6): PE: Free: 0, Added: 0, Wait: 20, Action: 20
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 1, Added: 0, Wait: 20, Action: 20
+DEBUG (6): PEBS: Send Buffer: 0 of 10
+DEBUG (6): PEBS: Receive Buffer: 1 of 10
+DEBUG (6): PE: Processing added pkt 0
+DEBUG (6): PE: Moved nextWaitPkt from 20 to 0
+DEBUG (6): PE: Free: 1, Added: 0, Wait: 0, Action: 20
+DEBUG (6): PE: Notify about receive added at index 0
+DEBUG (6): DSR: Pkt 0: DSR receive/snoop packet added!
+DEBUG (6): TLV: Type 1 found at byte 0
+DEBUG (6): TLV: Type 1 found at byte 0
+DEBUG (6): DSR: Pkt 0: Found route request option from 0 to 4
+DEBUG (6): DSR: Adding path with 2 links
+DEBUG (6): GS: Inserting edge 0 -> 10
+DEBUG (6): GS: Current Graph:
+DEBUG (6): GS: Inserting edge 6 -> 10
+DEBUG (6): GS: Current Graph:
+DEBUG (6): GS: Inserting edge 10 -> 6
+DEBUG (6): GS: Current Graph:
+DEBUG (6): GS: Inserting edge 10 -> 0
+DEBUG (6): GS: Current Graph:
+DEBUG (6): SSP: Building SPT for 6
+DEBUG (6): DSR: Pkt 0: Route request to 4 (ID 167) is new
+DEBUG (6): TLV: Type 1 found at byte 0
+DEBUG (6): TLV: Type 1 found at byte 0
+DEBUG (6): TLV: Setting length of type 1 to 5
+DEBUG (6): DSR: Pkt 0: Sending route request to 4 further
+DEBUG (6): PE: Marking pkt 0 to be sent
+DEBUG (6): PE: Moved nextActionPkt from 20 to 0
+DEBUG (6): PE: Free: 1, Added: 0, Wait: 0, Action: 0
+DEBUG (6): PE: No packets with state 4 found
+DEBUG (6): PE: Free: 1, Added: 0, Wait: 20, Action: 0
+DEBUG (6): TLV: Type 3 not found
+DEBUG (6): TLV: Type 96 not found
+DEBUG (6): DSR: Pkt 0: Passing to upper layer if not already sent
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 1, Added: 20, Wait: 20, Action: 0
+DEBUG (6): PE: No more added packets
+DEBUG (6): SSP: Added edge 6 -> 6 to SPT
+DEBUG (6): SSP: Adding edge 6 -> 10 (1) to PQ
+DEBUG (6): PE: Processing action pkt 0
+DEBUG (6): PE: SubSend successful, waiting for result
+DEBUG (6): SSP: Added edge 6 -> 10 to SPT
+DEBUG (6): SSP: Adding edge 10 -> 0 (2) to PQ
+DEBUG (6): SSP: Added edge 10 -> 0 to SPT
+DEBUG (6): SSP: Current SPT:
+DEBUG (6): PE: Adding receive/snoop packet at index 1
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 1
+DEBUG (6): PE: Free: 1, Added: 1, Wait: 20, Action: 0
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 2, Added: 1, Wait: 20, Action: 0
+DEBUG (6): PEBS: Send Buffer: 0 of 10
+DEBUG (6): PEBS: Receive Buffer: 2 of 10
+DEBUG (6): PE: Processing added pkt 1
+DEBUG (6): PE: Moved nextWaitPkt from 20 to 1
+DEBUG (6): PE: Free: 2, Added: 1, Wait: 1, Action: 0
+DEBUG (6): PE: Notify about receive added at index 1
+DEBUG (6): DSR: Pkt 1: DSR receive/snoop packet added!
+DEBUG (6): TLV: Type 1 found at byte 0
+DEBUG (6): TLV: Type 1 found at byte 0
+DEBUG (6): DSR: Pkt 1: Found route request option from 0 to 4
+DEBUG (6): DSR: Adding path with 2 links
+DEBUG (6): GS: Inserting edge 0 -> 9
+DEBUG (6): GS: Current Graph:
+DEBUG (6): GS: Inserting edge 6 -> 9
+DEBUG (6): GS: Current Graph:
+DEBUG (6): GS: Inserting edge 9 -> 6
+DEBUG (6): GS: Current Graph:
+DEBUG (6): GS: Inserting edge 9 -> 0
+DEBUG (6): GS: Current Graph:
+DEBUG (6): SSP: Building SPT for 6
+DEBUG (6): DSR: Pkt 1: Route request to 4 (ID 167) found in cache, dropping!
+DEBUG (6): PE: Dropping pkt 1 from the buffer
+DEBUG (6): PE: Removing pkt 1 from the buffer
+DEBUG (6): PE: No packets with state 4 found
+DEBUG (6): PE: Free: 2, Added: 1, Wait: 20, Action: 0
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 2, Added: 20, Wait: 20, Action: 0
+DEBUG (6): PE: No more added packets
+DEBUG (6): SSP: Added edge 6 -> 6 to SPT
+DEBUG (6): SSP: Adding edge 6 -> 9 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 10 (1) to PQ
+DEBUG (6): SSP: Added edge 6 -> 9 to SPT
+DEBUG (6): SSP: Adding edge 9 -> 0 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 10 to SPT
+DEBUG (6): SSP: Added edge 9 -> 0 to SPT
+DEBUG (6): SSP: Current SPT:
+DEBUG (6): PE: Adding receive/snoop packet at index 2
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 2
+DEBUG (6): PE: Free: 2, Added: 2, Wait: 20, Action: 0
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 3, Added: 2, Wait: 20, Action: 0
+DEBUG (6): PEBS: Send Buffer: 0 of 10
+DEBUG (6): PEBS: Receive Buffer: 2 of 10
+DEBUG (6): PE: Processing added pkt 2
+DEBUG (6): PE: Moved nextWaitPkt from 20 to 2
+DEBUG (6): PE: Free: 3, Added: 2, Wait: 2, Action: 0
+DEBUG (6): PE: Notify about receive added at index 2
+DEBUG (6): DSR: Pkt 2: DSR receive/snoop packet added!
+DEBUG (6): TLV: Type 1 found at byte 0
+DEBUG (6): TLV: Type 1 found at byte 0
+DEBUG (6): DSR: Pkt 2: Found route request option from 0 to 4
+DEBUG (6): DSR: Adding path with 3 links
+DEBUG (6): GS: Inserting edge 6 -> 5
+DEBUG (6): GS: Current Graph:
+DEBUG (6): GS: Inserting edge 9 -> 5
+DEBUG (6): GS: Current Graph:
+DEBUG (6): GS: Inserting edge 5 -> 9
+DEBUG (6): GS: Current Graph:
+DEBUG (6): GS: Inserting edge 5 -> 6
+DEBUG (6): GS: Current Graph:
+DEBUG (6): SSP: Building SPT for 6
+DEBUG (6): DSR: Pkt 2: Route request to 4 (ID 167) found in cache, dropping!
+DEBUG (6): PE: Dropping pkt 2 from the buffer
+DEBUG (6): PE: Removing pkt 2 from the buffer
+DEBUG (6): PE: No packets with state 4 found
+DEBUG (6): PE: Free: 3, Added: 2, Wait: 20, Action: 0
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 3, Added: 20, Wait: 20, Action: 0
+DEBUG (6): PE: No more added packets
+DEBUG (6): SSP: Added edge 6 -> 6 to SPT
+DEBUG (6): SSP: Adding edge 6 -> 5 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 9 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 10 (1) to PQ
+DEBUG (6): SSP: Added edge 6 -> 5 to SPT
+DEBUG (6): SSP: Added edge 6 -> 9 to SPT
+DEBUG (6): SSP: Adding edge 9 -> 0 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 10 to SPT
+DEBUG (6): SSP: Added edge 9 -> 0 to SPT
+DEBUG (6): SSP: Current SPT:
+DEBUG (6): PE: Send done for pkt 0
+DEBUG (6): PE: Removing pkt 0 from the buffer
+DEBUG (6): PE: Send backoff for 20 ms
+DEBUG (6): PE: No packets with state 24 found
+DEBUG (6): PE: Free: 3, Added: 20, Wait: 20, Action: 20
+DEBUG (6): PE: No more action packets
+DEBUG (6): PE: Adding receive/snoop packet at index 3
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 3
+DEBUG (6): PE: Free: 3, Added: 3, Wait: 20, Action: 20
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 4, Added: 3, Wait: 20, Action: 20
+DEBUG (6): PEBS: Send Buffer: 0 of 10
+DEBUG (6): PEBS: Receive Buffer: 1 of 10
+DEBUG (6): PE: Processing added pkt 3
+DEBUG (6): PE: Moved nextWaitPkt from 20 to 3
+DEBUG (6): PE: Free: 4, Added: 3, Wait: 3, Action: 20
+DEBUG (6): PE: Notify about receive added at index 3
+DEBUG (6): DSR: Pkt 3: DSR receive/snoop packet added!
+DEBUG (6): TLV: Type 1 found at byte 0
+DEBUG (6): TLV: Type 1 found at byte 0
+DEBUG (6): DSR: Pkt 3: Found route request option from 0 to 4
+DEBUG (6): DSR: Pkt 3: Address already in route request to 4, dropping!
+DEBUG (6): PE: Dropping pkt 3 from the buffer
+DEBUG (6): PE: Removing pkt 3 from the buffer
+DEBUG (6): PE: No packets with state 4 found
+DEBUG (6): PE: Free: 4, Added: 3, Wait: 20, Action: 20
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 4, Added: 20, Wait: 20, Action: 20
+DEBUG (6): PE: No more added packets
+DEBUG (6): PE: Adding receive/snoop packet at index 4
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 4
+DEBUG (6): PE: Free: 4, Added: 4, Wait: 20, Action: 20
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 5, Added: 4, Wait: 20, Action: 20
+DEBUG (6): PEBS: Send Buffer: 0 of 10
+DEBUG (6): PEBS: Receive Buffer: 1 of 10
+DEBUG (6): PE: Processing added pkt 4
+DEBUG (6): PE: Moved nextWaitPkt from 20 to 4
+DEBUG (6): PE: Free: 5, Added: 4, Wait: 4, Action: 20
+DEBUG (6): PE: Notify about receive added at index 4
+DEBUG (6): DSR: Pkt 4: DSR receive/snoop packet added!
+DEBUG (6): TLV: Type 1 found at byte 0
+DEBUG (6): TLV: Type 1 found at byte 0
+DEBUG (6): DSR: Pkt 4: Found route request option from 0 to 4
+DEBUG (6): DSR: Pkt 4: Address already in route request to 4, dropping!
+DEBUG (6): PE: Dropping pkt 4 from the buffer
+DEBUG (6): PE: Removing pkt 4 from the buffer
+DEBUG (6): PE: No packets with state 4 found
+DEBUG (6): PE: Free: 5, Added: 4, Wait: 20, Action: 20
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 5, Added: 20, Wait: 20, Action: 20
+DEBUG (6): PE: No more added packets
+DEBUG (6): PE: Adding receive/snoop packet at index 5
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 5
+DEBUG (6): PE: Free: 5, Added: 5, Wait: 20, Action: 20
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 6, Added: 5, Wait: 20, Action: 20
+DEBUG (6): PEBS: Send Buffer: 0 of 10
+DEBUG (6): PEBS: Receive Buffer: 1 of 10
+DEBUG (6): PE: Processing added pkt 5
+DEBUG (6): PE: Moved nextWaitPkt from 20 to 5
+DEBUG (6): PE: Free: 6, Added: 5, Wait: 5, Action: 20
+DEBUG (6): PE: Notify about receive added at index 5
+DEBUG (6): DSR: Pkt 5: DSR receive/snoop packet added!
+DEBUG (6): TLV: Type 1 not found
+DEBUG (6): TLV: Type 3 not found
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): DSR: Pkt 5: Found route reply option from 4 to 0
+DEBUG (6): DSR: Adding path with 2 links
+DEBUG (6): GS: Inserting edge 4 -> 8
+DEBUG (6): GS: Current Graph:
+DEBUG (6): GS: Inserting edge 6 -> 8
+DEBUG (6): GS: Current Graph:
+DEBUG (6): GS: Inserting edge 8 -> 6
+DEBUG (6): GS: Current Graph:
+DEBUG (6): GS: Inserting edge 8 -> 4
+DEBUG (6): GS: Current Graph:
+DEBUG (6): SSP: Building SPT for 6
+DEBUG (6): DSR: Pkt 5: Sending to 10 along the way to 0
+DEBUG (6): PE: Marking pkt 5 to be sent
+DEBUG (6): PE: Moved nextActionPkt from 20 to 5
+DEBUG (6): PE: Free: 6, Added: 5, Wait: 5, Action: 5
+DEBUG (6): PE: No packets with state 4 found
+DEBUG (6): PE: Free: 6, Added: 5, Wait: 20, Action: 5
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 6, Added: 20, Wait: 20, Action: 5
+DEBUG (6): PE: No more added packets
+DEBUG (6): SSP: Added edge 6 -> 6 to SPT
+DEBUG (6): SSP: Adding edge 6 -> 8 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 5 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 9 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 10 (1) to PQ
+DEBUG (6): PE: Processing action pkt 5
+DEBUG (6): PE: SubSend successful, waiting for result
+DEBUG (6): SSP: Added edge 6 -> 8 to SPT
+DEBUG (6): SSP: Adding edge 8 -> 4 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 5 to SPT
+DEBUG (6): SSP: Added edge 6 -> 10 to SPT
+DEBUG (6): SSP: Adding edge 10 -> 0 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 9 to SPT
+DEBUG (6): SSP: Added edge 8 -> 4 to SPT
+DEBUG (6): SSP: Added edge 10 -> 0 to SPT
+DEBUG (6): SSP: Current SPT:
+DEBUG (6): DSR: Pkt 5: Unicast send wasn't acked, retrying!
+DEBUG (6): PE: Retrying send for pkt 5
+DEBUG (6): PE: Send backoff for 9 ms
+DEBUG (6): PE: Processing action pkt 5
+DEBUG (6): PE: SubSend successful, waiting for result
+DEBUG (6): DSR: Pkt 5: Unicast send wasn't acked, retrying!
+DEBUG (6): PE: Retrying send for pkt 5
+DEBUG (6): PE: Send backoff for 9 ms
+DEBUG (6): PE: Processing action pkt 5
+DEBUG (6): PE: SubSend successful, waiting for result
+DEBUG (6): DSR: Pkt 5: Unicast send wasn't acked, route error!
+DEBUG (6): DSR: Pkt 5: Removing broken link 6 -> 10
+DEBUG (6): GS: Removing edge 6 -> 10
+DEBUG (6): GS: Current Graph:
+DEBUG (6): GS: Removing edge 10 -> 6
+DEBUG (6): GS: Current Graph:
+DEBUG (6): SSP: Building SPT for 6
+DEBUG (6): PE: Send moving to wait for pkt 5
+DEBUG (6): PE: Moved nextWaitPkt from 20 to 5
+DEBUG (6): PE: Free: 6, Added: 20, Wait: 5, Action: 5
+DEBUG (6): PE: Send backoff for 25 ms
+DEBUG (6): PE: No packets with state 24 found
+DEBUG (6): PE: Free: 6, Added: 20, Wait: 5, Action: 20
+DEBUG (6): PE: No more action packets
+DEBUG (6): SSP: Added edge 6 -> 6 to SPT
+DEBUG (6): SSP: Adding edge 6 -> 8 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 5 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 9 (1) to PQ
+DEBUG (6): TLV: Type 1 not found
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): DSR: Pkt 5: Composing route error to 4
+DEBUG (6): TLV: Type 3 not found
+DEBUG (6): TLV: Adding type 3 with length 7
+DEBUG (6): DSR: Pkt 5: Finding route for route error to 4
+DEBUG (6): PE: Dropping pkt 5 from the buffer
+DEBUG (6): PE: Removing pkt 5 from the buffer
+DEBUG (6): PE: No packets with state 4 found
+DEBUG (6): PE: Free: 6, Added: 20, Wait: 20, Action: 20
+DEBUG (6): SP: Sending pkt from 6 to 4
+DEBUG (6): PE: Adding send packet at index 6
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 6
+DEBUG (6): PE: Free: 6, Added: 6, Wait: 20, Action: 20
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 7, Added: 6, Wait: 20, Action: 20
+DEBUG (6): DSR: Pkt 5: Outgoing send successful, waiting for result
+DEBUG (6): TLV: Type 1 not found
+DEBUG (6): SSP: Added edge 6 -> 8 to SPT
+DEBUG (6): SSP: Adding edge 8 -> 4 (2) to PQ
+DEBUG (6): PEBS: Send Buffer: 1 of 10
+DEBUG (6): PEBS: Receive Buffer: 0 of 10
+DEBUG (6): PE: Processing added pkt 6
+DEBUG (6): PE: Moved nextWaitPkt from 20 to 6
+DEBUG (6): PE: Free: 7, Added: 6, Wait: 6, Action: 20
+DEBUG (6): PE: Notify about send added at index 6
+DEBUG (6): TLV: Type 1 not found
+DEBUG (6): TLV: Type 96 not found
+DEBUG (6): DSR: Pkt 6: DSR send packet added, waiting for route
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 7, Added: 20, Wait: 6, Action: 20
+DEBUG (6): PE: No more added packets
+DEBUG (6): SSP: Added edge 6 -> 5 to SPT
+DEBUG (6): SSP: Added edge 6 -> 9 to SPT
+DEBUG (6): SSP: Adding edge 9 -> 0 (2) to PQ
+DEBUG (6): SSP: Added edge 8 -> 4 to SPT
+DEBUG (6): SSP: Added edge 9 -> 0 to SPT
+DEBUG (6): SSP: Adding edge 0 -> 10 (3) to PQ
+DEBUG (6): SSP: Added edge 0 -> 10 to SPT
+DEBUG (6): SSP: Current SPT:
+DEBUG (6): DSR: Pkt 6: Adding source route to 4
+DEBUG (6): TLV: Type 96 not found
+DEBUG (6): TLV: Adding type 96 with length 3
+DEBUG (6): TLV: Type 96 found at byte 9
+DEBUG (6): DSR: Pkt 6: Sending to 8 along the way to 4
+DEBUG (6): PE: Marking pkt 6 to be sent
+DEBUG (6): PE: Moved nextActionPkt from 20 to 6
+DEBUG (6): PE: Free: 7, Added: 20, Wait: 6, Action: 6
+DEBUG (6): PE: No packets with state 4 found
+DEBUG (6): PE: Free: 7, Added: 20, Wait: 20, Action: 6
+DEBUG (6): PE: Processing action pkt 6
+DEBUG (6): PE: Already sending or during backoff, waiting
+DEBUG (6): PE: Processing action pkt 6
+DEBUG (6): PE: SubSend successful, waiting for result
+DEBUG (6): DSR: Checking for another response to send
+DEBUG (6): PE: Send done for pkt 6
+DEBUG (6): PE: Removing pkt 6 from the buffer
+DEBUG (6): PE: Send backoff for 24 ms
+DEBUG (6): PE: No packets with state 24 found
+DEBUG (6): PE: Free: 7, Added: 20, Wait: 20, Action: 20
+DEBUG (6): PE: No more action packets
+DEBUG (6): PE: Adding receive/snoop packet at index 7
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 7
+DEBUG (6): PE: Free: 7, Added: 7, Wait: 20, Action: 20
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 8, Added: 7, Wait: 20, Action: 20
+DEBUG (6): PEBS: Send Buffer: 0 of 10
+DEBUG (6): PEBS: Receive Buffer: 1 of 10
+DEBUG (6): PE: Processing added pkt 7
+DEBUG (6): PE: Moved nextWaitPkt from 20 to 7
+DEBUG (6): PE: Free: 8, Added: 7, Wait: 7, Action: 20
+DEBUG (6): PE: Notify about receive added at index 7
+DEBUG (6): DSR: Pkt 7: DSR receive/snoop packet added!
+DEBUG (6): TLV: Type 1 not found
+DEBUG (6): TLV: Type 3 not found
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): DSR: Pkt 7: Found route reply option from 4 to 0
+DEBUG (6): DSR: Adding path with 2 links
+DEBUG (6): SSP: SPT for 6 already built!
+DEBUG (6): DSR: Pkt 7: Sending to 10 along the way to 0
+DEBUG (6): PE: Marking pkt 7 to be sent
+DEBUG (6): PE: Moved nextActionPkt from 20 to 7
+DEBUG (6): PE: Free: 8, Added: 7, Wait: 7, Action: 7
+DEBUG (6): PE: No packets with state 4 found
+DEBUG (6): PE: Free: 8, Added: 7, Wait: 20, Action: 7
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 8, Added: 20, Wait: 20, Action: 7
+DEBUG (6): PE: No more added packets
+DEBUG (6): SSP: Current SPT:
+DEBUG (6): PE: Processing action pkt 7
+DEBUG (6): PE: SubSend successful, waiting for result
+DEBUG (6): DSR: Pkt 7: Unicast send wasn't acked, retrying!
+DEBUG (6): PE: Retrying send for pkt 7
+DEBUG (6): PE: Send backoff for 14 ms
+DEBUG (6): PE: Adding receive/snoop packet at index 8
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 8
+DEBUG (6): PE: Free: 8, Added: 8, Wait: 20, Action: 7
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 9, Added: 8, Wait: 20, Action: 7
+DEBUG (6): PEBS: Send Buffer: 0 of 10
+DEBUG (6): PEBS: Receive Buffer: 2 of 10
+DEBUG (6): PE: Processing added pkt 8
+DEBUG (6): PE: Moved nextWaitPkt from 20 to 8
+DEBUG (6): PE: Free: 9, Added: 8, Wait: 8, Action: 7
+DEBUG (6): PE: Notify about snoop added at index 8
+DEBUG (6): DSR: Pkt 8: DSR snooped!
+DEBUG (6): DSR: Pkt 8: DSR receive/snoop packet added!
+DEBUG (6): TLV: Type 1 not found
+DEBUG (6): TLV: Type 3 found at byte 0
+DEBUG (6): DSR: Pkt 8: Found route error option at 0 from 8 to 4
+DEBUG (6): DSR: Pkt 8: Removing broken link 8 -> 6
+DEBUG (6): GS: Removing edge 8 -> 6
+DEBUG (6): GS: Current Graph:
+DEBUG (6): GS: Removing edge 6 -> 8
+DEBUG (6): GS: Current Graph:
+DEBUG (6): SSP: Building SPT for 6
+DEBUG (6): TLV: Type 3 not found
+DEBUG (6): TLV: Type 96 found at byte 9
+DEBUG (6): TLV: Type 96 found at byte 9
+DEBUG (6): DSR: Pkt 8: Found source route option from 8 to 4
+DEBUG (6): DSR: Adding path with 1 links
+DEBUG (6): DSR: Pkt 8: Passing to upper layer if not already sent
+DEBUG (6): PE: Removing pkt 8 from the buffer
+DEBUG (6): PE: No packets with state 4 found
+DEBUG (6): PE: Free: 9, Added: 8, Wait: 20, Action: 7
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 9, Added: 20, Wait: 20, Action: 7
+DEBUG (6): PE: No more added packets
+DEBUG (6): SSP: Added edge 6 -> 6 to SPT
+DEBUG (6): SSP: Adding edge 6 -> 5 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 9 (1) to PQ
+DEBUG (6): SSP: Added edge 6 -> 5 to SPT
+DEBUG (6): SSP: Added edge 6 -> 9 to SPT
+DEBUG (6): SSP: Adding edge 9 -> 0 (2) to PQ
+DEBUG (6): SSP: Added edge 9 -> 0 to SPT
+DEBUG (6): SSP: Adding edge 0 -> 10 (3) to PQ
+DEBUG (6): SSP: Added edge 0 -> 10 to SPT
+DEBUG (6): SSP: Current SPT:
+DEBUG (6): PE: Processing action pkt 7
+DEBUG (6): PE: SubSend successful, waiting for result
+DEBUG (6): DSR: Pkt 7: Unicast send wasn't acked, retrying!
+DEBUG (6): PE: Retrying send for pkt 7
+DEBUG (6): PE: Send backoff for 9 ms
+DEBUG (6): PE: Processing action pkt 7
+DEBUG (6): PE: SubSend successful, waiting for result
+DEBUG (6): DSR: Pkt 7: Unicast send wasn't acked, route error!
+DEBUG (6): DSR: Pkt 7: Removing broken link 6 -> 10
+DEBUG (6): GS: Removing edge 6 -> 10
+DEBUG (6): GS: Edge not found!
+DEBUG (6): GS: Removing edge 10 -> 6
+DEBUG (6): GS: Edge not found!
+DEBUG (6): SSP: SPT for 6 already built!
+DEBUG (6): PE: Send moving to wait for pkt 7
+DEBUG (6): PE: Moved nextWaitPkt from 20 to 7
+DEBUG (6): PE: Free: 9, Added: 20, Wait: 7, Action: 7
+DEBUG (6): PE: Send backoff for 17 ms
+DEBUG (6): PE: No packets with state 24 found
+DEBUG (6): PE: Free: 9, Added: 20, Wait: 7, Action: 20
+DEBUG (6): PE: No more action packets
+DEBUG (6): SSP: Current SPT:
+DEBUG (6): TLV: Type 1 not found
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): DSR: Pkt 7: Composing route error to 4
+DEBUG (6): TLV: Type 3 not found
+DEBUG (6): TLV: Adding type 3 with length 7
+DEBUG (6): DSR: Pkt 7: Finding route for route error to 4
+DEBUG (6): PE: Dropping pkt 7 from the buffer
+DEBUG (6): PE: Removing pkt 7 from the buffer
+DEBUG (6): PE: No packets with state 4 found
+DEBUG (6): PE: Free: 9, Added: 20, Wait: 20, Action: 20
+DEBUG (6): SP: Sending pkt from 6 to 4
+DEBUG (6): PE: Adding send packet at index 9
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 9
+DEBUG (6): PE: Free: 9, Added: 9, Wait: 20, Action: 20
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 10, Added: 9, Wait: 20, Action: 20
+DEBUG (6): DSR: Pkt 7: Outgoing send successful, waiting for result
+DEBUG (6): TLV: Type 1 not found
+DEBUG (6): PEBS: Send Buffer: 1 of 10
+DEBUG (6): PEBS: Receive Buffer: 0 of 10
+DEBUG (6): PE: Processing added pkt 9
+DEBUG (6): PE: Moved nextWaitPkt from 20 to 9
+DEBUG (6): PE: Free: 10, Added: 9, Wait: 9, Action: 20
+DEBUG (6): PE: Notify about send added at index 9
+DEBUG (6): TLV: Type 1 not found
+DEBUG (6): TLV: Type 96 not found
+DEBUG (6): DSR: Pkt 9: DSR send packet added, waiting for route
+DEBUG (6): DSR: Route request out timer for 4 set to 512 ms
+DEBUG (6): DSR: Pkt 9: Sending route request #1 to 4
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 10, Added: 20, Wait: 9, Action: 20
+DEBUG (6): PE: No more added packets
+DEBUG (6): TLV: Type 1 not found
+DEBUG (6): TLV: Type 96 not found
+DEBUG (6): DSR: Pkt 9: Composing route request to 4 for DSR
+DEBUG (6): TLV: Type 1 not found
+DEBUG (6): TLV: Adding type 1 with length 1
+DEBUG (6): TLV: Type 1 found at byte 9
+DEBUG (6): DSR: Pkt 9: Sending route request to 4
+DEBUG (6): SP: Sending pkt from 6 to 4
+DEBUG (6): PE: Adding send packet at index 10
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 10
+DEBUG (6): PE: Free: 10, Added: 10, Wait: 9, Action: 20
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 11, Added: 10, Wait: 9, Action: 20
+DEBUG (6): DSR: Pkt 9: Outgoing send successful, waiting for result
+DEBUG (6): TLV: Type 1 not found
+DEBUG (6): PEBS: Send Buffer: 2 of 10
+DEBUG (6): PEBS: Receive Buffer: 0 of 10
+DEBUG (6): PE: Processing added pkt 10
+DEBUG (6): PE: Notify about send added at index 10
+DEBUG (6): TLV: Type 1 found at byte 9
+ERROR (6): DSR: Pkt 10: Looking for pkt that originated route request to 4, but no packets are waiting!
+DEBUG (6): DSR: Pkt 10: DSR send packet added, sending!
+DEBUG (6): PE: Marking pkt 10 to be sent
+DEBUG (6): PE: Moved nextActionPkt from 20 to 10
+DEBUG (6): PE: Free: 11, Added: 10, Wait: 9, Action: 10
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 11, Added: 20, Wait: 9, Action: 10
+DEBUG (6): PE: No more added packets
+DEBUG (6): PE: Processing action pkt 10
+DEBUG (6): PE: Already sending or during backoff, waiting
+DEBUG (6): PE: Processing action pkt 10
+DEBUG (6): PE: SubSend successful, waiting for result
+DEBUG (6): DSR: Checking for another response to send
+DEBUG (6): PE: Send done for pkt 10
+DEBUG (6): PE: Removing pkt 10 from the buffer
+DEBUG (6): PE: Send backoff for 26 ms
+DEBUG (6): PE: No packets with state 24 found
+DEBUG (6): PE: Free: 11, Added: 20, Wait: 9, Action: 20
+DEBUG (6): PE: No more action packets
+DEBUG (6): PE: Adding receive/snoop packet at index 11
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 11
+DEBUG (6): PE: Free: 11, Added: 11, Wait: 9, Action: 20
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 12, Added: 11, Wait: 9, Action: 20
+DEBUG (6): PEBS: Send Buffer: 1 of 10
+DEBUG (6): PEBS: Receive Buffer: 1 of 10
+DEBUG (6): PE: Processing added pkt 11
+DEBUG (6): PE: Notify about receive added at index 11
+DEBUG (6): DSR: Pkt 11: DSR receive/snoop packet added!
+DEBUG (6): TLV: Type 1 found at byte 0
+DEBUG (6): TLV: Type 1 found at byte 0
+DEBUG (6): DSR: Pkt 11: Found route request option from 3 to 13
+DEBUG (6): DSR: Adding path with 2 links
+DEBUG (6): GS: Inserting edge 3 -> 5
+DEBUG (6): GS: Current Graph:
+DEBUG (6): GS: Inserting edge 5 -> 3
+DEBUG (6): GS: Current Graph:
+DEBUG (6): SSP: Building SPT for 6
+DEBUG (6): DSR: Pkt 11: Route request to 13 (ID 156) is new
+DEBUG (6): TLV: Type 1 found at byte 0
+DEBUG (6): TLV: Type 1 found at byte 0
+DEBUG (6): TLV: Setting length of type 1 to 5
+DEBUG (6): DSR: Pkt 11: Sending route request to 13 further
+DEBUG (6): PE: Marking pkt 11 to be sent
+DEBUG (6): PE: Moved nextActionPkt from 20 to 11
+DEBUG (6): PE: Free: 12, Added: 11, Wait: 9, Action: 11
+DEBUG (6): TLV: Type 3 not found
+DEBUG (6): TLV: Type 96 not found
+DEBUG (6): DSR: Pkt 11: Passing to upper layer if not already sent
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 12, Added: 20, Wait: 9, Action: 11
+DEBUG (6): PE: No more added packets
+DEBUG (6): SSP: Added edge 6 -> 6 to SPT
+DEBUG (6): SSP: Adding edge 6 -> 5 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 9 (1) to PQ
+DEBUG (6): PE: Processing action pkt 11
+DEBUG (6): PE: SubSend successful, waiting for result
+DEBUG (6): SSP: Added edge 6 -> 5 to SPT
+DEBUG (6): SSP: Adding edge 5 -> 3 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 9 to SPT
+DEBUG (6): SSP: Adding edge 9 -> 0 (2) to PQ
+DEBUG (6): SSP: Added edge 5 -> 3 to SPT
+DEBUG (6): SSP: Added edge 9 -> 0 to SPT
+DEBUG (6): SSP: Adding edge 0 -> 10 (3) to PQ
+DEBUG (6): SSP: Added edge 0 -> 10 to SPT
+DEBUG (6): SSP: Current SPT:
+DEBUG (6): PE: Send done for pkt 11
+DEBUG (6): PE: Removing pkt 11 from the buffer
+DEBUG (6): PE: Send backoff for 22 ms
+DEBUG (6): PE: No packets with state 24 found
+DEBUG (6): PE: Free: 12, Added: 20, Wait: 9, Action: 20
+DEBUG (6): PE: No more action packets
+DEBUG (6): PE: Adding receive/snoop packet at index 12
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 12
+DEBUG (6): PE: Free: 12, Added: 12, Wait: 9, Action: 20
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 13, Added: 12, Wait: 9, Action: 20
+DEBUG (6): PEBS: Send Buffer: 1 of 10
+DEBUG (6): PEBS: Receive Buffer: 1 of 10
+DEBUG (6): PE: Processing added pkt 12
+DEBUG (6): PE: Notify about receive added at index 12
+DEBUG (6): DSR: Pkt 12: DSR receive/snoop packet added!
+DEBUG (6): TLV: Type 1 found at byte 0
+DEBUG (6): TLV: Type 1 found at byte 0
+DEBUG (6): DSR: Pkt 12: Found route request option from 3 to 13
+DEBUG (6): DSR: Pkt 12: Address already in route request to 13, dropping!
+DEBUG (6): PE: Dropping pkt 12 from the buffer
+DEBUG (6): PE: Removing pkt 12 from the buffer
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 13, Added: 20, Wait: 9, Action: 20
+DEBUG (6): PE: No more added packets
+DEBUG (6): PE: Adding receive/snoop packet at index 13
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 13
+DEBUG (6): PE: Free: 13, Added: 13, Wait: 9, Action: 20
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 14, Added: 13, Wait: 9, Action: 20
+DEBUG (6): PEBS: Send Buffer: 1 of 10
+DEBUG (6): PEBS: Receive Buffer: 1 of 10
+DEBUG (6): PE: Processing added pkt 13
+DEBUG (6): PE: Notify about receive added at index 13
+DEBUG (6): DSR: Pkt 13: DSR receive/snoop packet added!
+DEBUG (6): TLV: Type 1 found at byte 0
+DEBUG (6): TLV: Type 1 found at byte 0
+DEBUG (6): DSR: Pkt 13: Found route request option from 3 to 13
+DEBUG (6): DSR: Adding path with 4 links
+DEBUG (6): GS: Inserting edge 3 -> 2
+DEBUG (6): GS: Current Graph:
+DEBUG (6): GS: Inserting edge 6 -> 8
+DEBUG (6): GS: Current Graph:
+DEBUG (6): GS: Inserting edge 2 -> 4
+DEBUG (6): GS: Current Graph:
+DEBUG (6): GS: Inserting edge 4 -> 2
+DEBUG (6): GS: Current Graph:
+DEBUG (6): GS: Inserting edge 8 -> 6
+DEBUG (6): GS: Current Graph:
+DEBUG (6): GS: Inserting edge 2 -> 3
+DEBUG (6): GS: Current Graph:
+DEBUG (6): SSP: Building SPT for 6
+DEBUG (6): DSR: Pkt 13: Route request to 13 (ID 156) found in cache, dropping!
+DEBUG (6): PE: Dropping pkt 13 from the buffer
+DEBUG (6): PE: Removing pkt 13 from the buffer
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 14, Added: 20, Wait: 9, Action: 20
+DEBUG (6): PE: No more added packets
+DEBUG (6): SSP: Added edge 6 -> 6 to SPT
+DEBUG (6): SSP: Adding edge 6 -> 8 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 5 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 9 (1) to PQ
+DEBUG (6): SSP: Added edge 6 -> 8 to SPT
+DEBUG (6): SSP: Adding edge 8 -> 4 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 5 to SPT
+DEBUG (6): SSP: Adding edge 5 -> 3 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 9 to SPT
+DEBUG (6): SSP: Adding edge 9 -> 0 (2) to PQ
+DEBUG (6): SSP: Added edge 8 -> 4 to SPT
+DEBUG (6): SSP: Adding edge 4 -> 2 (3) to PQ
+DEBUG (6): SSP: Added edge 5 -> 3 to SPT
+DEBUG (6): SSP: Added edge 9 -> 0 to SPT
+DEBUG (6): SSP: Adding edge 0 -> 10 (3) to PQ
+DEBUG (6): SSP: Added edge 4 -> 2 to SPT
+DEBUG (6): SSP: Added edge 0 -> 10 to SPT
+DEBUG (6): SSP: Current SPT:
+DEBUG (6): DSR: Route request out timer for 4 reset
+DEBUG (6): DSR: Pkt 9: Adding source route to 4
+DEBUG (6): TLV: Type 96 not found
+DEBUG (6): TLV: Adding type 96 with length 3
+DEBUG (6): TLV: Type 96 found at byte 9
+DEBUG (6): DSR: Pkt 9: Sending to 8 along the way to 4
+DEBUG (6): PE: Marking pkt 9 to be sent
+DEBUG (6): PE: Moved nextActionPkt from 20 to 9
+DEBUG (6): PE: Free: 14, Added: 20, Wait: 9, Action: 9
+DEBUG (6): PE: No packets with state 4 found
+DEBUG (6): PE: Free: 14, Added: 20, Wait: 20, Action: 9
+DEBUG (6): PE: Processing action pkt 9
+DEBUG (6): PE: SubSend successful, waiting for result
+DEBUG (6): DSR: Checking for another response to send
+DEBUG (6): PE: Send done for pkt 9
+DEBUG (6): PE: Removing pkt 9 from the buffer
+DEBUG (6): PE: Send backoff for 25 ms
+DEBUG (6): PE: No packets with state 24 found
+DEBUG (6): PE: Free: 14, Added: 20, Wait: 20, Action: 20
+DEBUG (6): PE: No more action packets
+DEBUG (6): PE: Adding receive/snoop packet at index 14
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 14
+DEBUG (6): PE: Free: 14, Added: 14, Wait: 20, Action: 20
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 15, Added: 14, Wait: 20, Action: 20
+DEBUG (6): PEBS: Send Buffer: 0 of 10
+DEBUG (6): PEBS: Receive Buffer: 1 of 10
+DEBUG (6): PE: Processing added pkt 14
+DEBUG (6): PE: Moved nextWaitPkt from 20 to 14
+DEBUG (6): PE: Free: 15, Added: 14, Wait: 14, Action: 20
+DEBUG (6): PE: Notify about snoop added at index 14
+DEBUG (6): DSR: Pkt 14: DSR snooped!
+DEBUG (6): DSR: Pkt 14: DSR receive/snoop packet added!
+DEBUG (6): TLV: Type 1 not found
+DEBUG (6): TLV: Type 3 not found
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): DSR: Pkt 14: Found route reply option from 13 to 3
+DEBUG (6): DSR: Adding path with 1 links
+DEBUG (6): GS: Inserting edge 13 -> 4
+DEBUG (6): GS: Current Graph:
+DEBUG (6): GS: Inserting edge 4 -> 13
+DEBUG (6): GS: Current Graph:
+DEBUG (6): SSP: Building SPT for 6
+DEBUG (6): DSR: Pkt 14: Passing to upper layer if not already sent
+DEBUG (6): PE: Removing pkt 14 from the buffer
+DEBUG (6): PE: No packets with state 4 found
+DEBUG (6): PE: Free: 15, Added: 14, Wait: 20, Action: 20
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 15, Added: 20, Wait: 20, Action: 20
+DEBUG (6): PE: No more added packets
+DEBUG (6): SSP: Added edge 6 -> 6 to SPT
+DEBUG (6): SSP: Adding edge 6 -> 8 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 5 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 9 (1) to PQ
+DEBUG (6): SSP: Added edge 6 -> 8 to SPT
+DEBUG (6): SSP: Adding edge 8 -> 4 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 5 to SPT
+DEBUG (6): SSP: Adding edge 5 -> 3 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 9 to SPT
+DEBUG (6): SSP: Adding edge 9 -> 0 (2) to PQ
+DEBUG (6): SSP: Added edge 8 -> 4 to SPT
+DEBUG (6): SSP: Adding edge 4 -> 13 (3) to PQ
+DEBUG (6): SSP: Adding edge 4 -> 2 (3) to PQ
+DEBUG (6): SSP: Added edge 5 -> 3 to SPT
+DEBUG (6): SSP: Added edge 9 -> 0 to SPT
+DEBUG (6): SSP: Adding edge 0 -> 10 (3) to PQ
+DEBUG (6): SSP: Added edge 4 -> 2 to SPT
+DEBUG (6): SSP: Added edge 4 -> 13 to SPT
+DEBUG (6): SSP: Added edge 0 -> 10 to SPT
+DEBUG (6): SSP: Current SPT:
+DEBUG (6): PE: Adding receive/snoop packet at index 15
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 15
+DEBUG (6): PE: Free: 15, Added: 15, Wait: 20, Action: 20
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 16, Added: 15, Wait: 20, Action: 20
+DEBUG (6): PEBS: Send Buffer: 0 of 10
+DEBUG (6): PEBS: Receive Buffer: 1 of 10
+DEBUG (6): PE: Processing added pkt 15
+DEBUG (6): PE: Moved nextWaitPkt from 20 to 15
+DEBUG (6): PE: Free: 16, Added: 15, Wait: 15, Action: 20
+DEBUG (6): PE: Notify about snoop added at index 15
+DEBUG (6): DSR: Pkt 15: DSR snooped!
+DEBUG (6): DSR: Pkt 15: DSR receive/snoop packet added!
+DEBUG (6): TLV: Type 1 not found
+DEBUG (6): TLV: Type 3 found at byte 0
+DEBUG (6): DSR: Pkt 15: Found route error option at 0 from 6 to 4
+DEBUG (6): DSR: Pkt 15: Removing broken link 6 -> 10
+DEBUG (6): GS: Removing edge 6 -> 10
+DEBUG (6): GS: Edge not found!
+DEBUG (6): GS: Removing edge 10 -> 6
+DEBUG (6): GS: Edge not found!
+DEBUG (6): SSP: SPT for 6 already built!
+DEBUG (6): TLV: Type 3 not found
+DEBUG (6): TLV: Type 96 found at byte 9
+DEBUG (6): TLV: Type 96 found at byte 9
+DEBUG (6): DSR: Pkt 15: Found source route option from 6 to 4
+DEBUG (6): DSR: Adding path with 2 links
+DEBUG (6): SSP: SPT for 6 already built!
+DEBUG (6): DSR: Pkt 15: Passing to upper layer if not already sent
+DEBUG (6): PE: Removing pkt 15 from the buffer
+DEBUG (6): PE: No packets with state 4 found
+DEBUG (6): PE: Free: 16, Added: 15, Wait: 20, Action: 20
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 16, Added: 20, Wait: 20, Action: 20
+DEBUG (6): PE: No more added packets
+DEBUG (6): SSP: Current SPT:
+DEBUG (6): PE: Adding receive/snoop packet at index 16
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 16
+DEBUG (6): PE: Free: 16, Added: 16, Wait: 20, Action: 20
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 17, Added: 16, Wait: 20, Action: 20
+DEBUG (6): PEBS: Send Buffer: 0 of 10
+DEBUG (6): PEBS: Receive Buffer: 1 of 10
+DEBUG (6): PE: Processing added pkt 16
+DEBUG (6): PE: Moved nextWaitPkt from 20 to 16
+DEBUG (6): PE: Free: 17, Added: 16, Wait: 16, Action: 20
+DEBUG (6): PE: Notify about snoop added at index 16
+DEBUG (6): DSR: Pkt 16: DSR snooped!
+DEBUG (6): DSR: Pkt 16: DSR receive/snoop packet added!
+DEBUG (6): TLV: Type 1 not found
+DEBUG (6): TLV: Type 3 not found
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): DSR: Pkt 16: Found route reply option from 13 to 3
+DEBUG (6): DSR: Adding path with 1 links
+DEBUG (6): GS: Inserting edge 13 -> 8
+DEBUG (6): GS: Current Graph:
+DEBUG (6): GS: Inserting edge 8 -> 13
+DEBUG (6): GS: Current Graph:
+DEBUG (6): SSP: Building SPT for 6
+DEBUG (6): DSR: Pkt 16: Passing to upper layer if not already sent
+DEBUG (6): PE: Removing pkt 16 from the buffer
+DEBUG (6): PE: No packets with state 4 found
+DEBUG (6): PE: Free: 17, Added: 16, Wait: 20, Action: 20
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 17, Added: 20, Wait: 20, Action: 20
+DEBUG (6): PE: No more added packets
+DEBUG (6): SSP: Added edge 6 -> 6 to SPT
+DEBUG (6): SSP: Adding edge 6 -> 8 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 5 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 9 (1) to PQ
+DEBUG (6): SSP: Added edge 6 -> 8 to SPT
+DEBUG (6): SSP: Adding edge 8 -> 13 (2) to PQ
+DEBUG (6): SSP: Adding edge 8 -> 4 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 5 to SPT
+DEBUG (6): SSP: Adding edge 5 -> 3 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 9 to SPT
+DEBUG (6): SSP: Adding edge 9 -> 0 (2) to PQ
+DEBUG (6): SSP: Added edge 8 -> 4 to SPT
+DEBUG (6): SSP: Adding edge 4 -> 2 (3) to PQ
+DEBUG (6): SSP: Added edge 5 -> 3 to SPT
+DEBUG (6): SSP: Added edge 9 -> 0 to SPT
+DEBUG (6): SSP: Adding edge 0 -> 10 (3) to PQ
+DEBUG (6): SSP: Added edge 8 -> 13 to SPT
+DEBUG (6): SSP: Added edge 4 -> 2 to SPT
+DEBUG (6): SSP: Added edge 0 -> 10 to SPT
+DEBUG (6): SSP: Current SPT:
+DEBUG (6): PE: Adding receive/snoop packet at index 17
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 17
+DEBUG (6): PE: Free: 17, Added: 17, Wait: 20, Action: 20
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 18, Added: 17, Wait: 20, Action: 20
+DEBUG (6): PEBS: Send Buffer: 0 of 10
+DEBUG (6): PEBS: Receive Buffer: 1 of 10
+DEBUG (6): PE: Processing added pkt 17
+DEBUG (6): PE: Moved nextWaitPkt from 20 to 17
+DEBUG (6): PE: Free: 18, Added: 17, Wait: 17, Action: 20
+DEBUG (6): PE: Notify about receive added at index 17
+DEBUG (6): DSR: Pkt 17: DSR receive/snoop packet added!
+DEBUG (6): TLV: Type 1 found at byte 0
+DEBUG (6): TLV: Type 1 found at byte 0
+DEBUG (6): DSR: Pkt 17: Found route request option from 3 to 13
+DEBUG (6): DSR: Adding path with 6 links
+DEBUG (6): GS: Inserting edge 6 -> 14
+DEBUG (6): GS: Current Graph:
+DEBUG (6): GS: Inserting edge 14 -> 12
+DEBUG (6): GS: Current Graph:
+DEBUG (6): GS: Inserting edge 12 -> 8
+DEBUG (6): GS: Current Graph:
+DEBUG (6): GS: Inserting edge 8 -> 12
+DEBUG (6): GS: Current Graph:
+DEBUG (6): GS: Inserting edge 12 -> 14
+DEBUG (6): GS: Current Graph:
+DEBUG (6): GS: Inserting edge 14 -> 6
+DEBUG (6): GS: Current Graph:
+DEBUG (6): SSP: Building SPT for 6
+DEBUG (6): DSR: Pkt 17: Route request to 13 (ID 156) found in cache, dropping!
+DEBUG (6): PE: Dropping pkt 17 from the buffer
+DEBUG (6): PE: Removing pkt 17 from the buffer
+DEBUG (6): PE: No packets with state 4 found
+DEBUG (6): PE: Free: 18, Added: 17, Wait: 20, Action: 20
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 18, Added: 20, Wait: 20, Action: 20
+DEBUG (6): PE: No more added packets
+DEBUG (6): SSP: Added edge 6 -> 6 to SPT
+DEBUG (6): SSP: Adding edge 6 -> 14 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 8 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 5 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 9 (1) to PQ
+DEBUG (6): SSP: Added edge 6 -> 14 to SPT
+DEBUG (6): SSP: Adding edge 14 -> 12 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 8 to SPT
+DEBUG (6): SSP: Adding edge 8 -> 13 (2) to PQ
+DEBUG (6): SSP: Adding edge 8 -> 4 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 9 to SPT
+DEBUG (6): SSP: Adding edge 9 -> 0 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 5 to SPT
+DEBUG (6): SSP: Adding edge 5 -> 3 (2) to PQ
+DEBUG (6): SSP: Added edge 14 -> 12 to SPT
+DEBUG (6): SSP: Added edge 8 -> 13 to SPT
+DEBUG (6): SSP: Added edge 9 -> 0 to SPT
+DEBUG (6): SSP: Adding edge 0 -> 10 (3) to PQ
+DEBUG (6): SSP: Added edge 5 -> 3 to SPT
+DEBUG (6): SSP: Adding edge 3 -> 2 (3) to PQ
+DEBUG (6): SSP: Added edge 8 -> 4 to SPT
+DEBUG (6): SSP: Added edge 0 -> 10 to SPT
+DEBUG (6): SSP: Added edge 3 -> 2 to SPT
+DEBUG (6): SSP: Current SPT:
+DEBUG (6): PE: Adding receive/snoop packet at index 18
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 18
+DEBUG (6): PE: Free: 18, Added: 18, Wait: 20, Action: 20
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 19, Added: 18, Wait: 20, Action: 20
+DEBUG (6): PEBS: Send Buffer: 0 of 10
+DEBUG (6): PEBS: Receive Buffer: 1 of 10
+DEBUG (6): PE: Processing added pkt 18
+DEBUG (6): PE: Moved nextWaitPkt from 20 to 18
+DEBUG (6): PE: Free: 19, Added: 18, Wait: 18, Action: 20
+DEBUG (6): PE: Notify about snoop added at index 18
+DEBUG (6): DSR: Pkt 18: DSR snooped!
+DEBUG (6): DSR: Pkt 18: DSR receive/snoop packet added!
+DEBUG (6): TLV: Type 1 not found
+DEBUG (6): TLV: Type 3 found at byte 0
+DEBUG (6): DSR: Pkt 18: Found route error option at 0 from 12 to 4
+DEBUG (6): DSR: Pkt 18: Removing broken link 12 -> 6
+DEBUG (6): GS: Removing edge 12 -> 6
+DEBUG (6): GS: Edge not found!
+DEBUG (6): GS: Removing edge 6 -> 12
+DEBUG (6): GS: Edge not found!
+DEBUG (6): SSP: SPT for 6 already built!
+DEBUG (6): TLV: Type 3 not found
+DEBUG (6): TLV: Type 96 found at byte 9
+DEBUG (6): TLV: Type 96 found at byte 9
+DEBUG (6): DSR: Pkt 18: Found source route option from 12 to 4
+DEBUG (6): DSR: Adding path with 2 links
+DEBUG (6): SSP: SPT for 6 already built!
+DEBUG (6): DSR: Pkt 18: Passing to upper layer if not already sent
+DEBUG (6): PE: Removing pkt 18 from the buffer
+DEBUG (6): PE: No packets with state 4 found
+DEBUG (6): PE: Free: 19, Added: 18, Wait: 20, Action: 20
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 19, Added: 20, Wait: 20, Action: 20
+DEBUG (6): PE: No more added packets
+DEBUG (6): SSP: Current SPT:
+DEBUG (6): PE: Adding receive/snoop packet at index 19
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 19
+DEBUG (6): PE: Free: 19, Added: 19, Wait: 20, Action: 20
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 0, Added: 19, Wait: 20, Action: 20
+DEBUG (6): PEBS: Send Buffer: 0 of 10
+DEBUG (6): PEBS: Receive Buffer: 1 of 10
+DEBUG (6): PE: Processing added pkt 19
+DEBUG (6): PE: Moved nextWaitPkt from 20 to 19
+DEBUG (6): PE: Free: 0, Added: 19, Wait: 19, Action: 20
+DEBUG (6): PE: Notify about receive added at index 19
+DEBUG (6): DSR: Pkt 19: DSR receive/snoop packet added!
+DEBUG (6): TLV: Type 1 found at byte 0
+DEBUG (6): TLV: Type 1 found at byte 0
+DEBUG (6): DSR: Pkt 19: Found route request option from 5 to 14
+DEBUG (6): DSR: Adding path with 1 links
+DEBUG (6): SSP: SPT for 6 already built!
+DEBUG (6): DSR: Pkt 19: Route request to 14 (ID 234) is new
+DEBUG (6): TLV: Type 1 found at byte 0
+DEBUG (6): TLV: Type 1 found at byte 0
+DEBUG (6): TLV: Setting length of type 1 to 3
+DEBUG (6): DSR: Pkt 19: Sending route request to 14 further
+DEBUG (6): PE: Marking pkt 19 to be sent
+DEBUG (6): PE: Moved nextActionPkt from 20 to 19
+DEBUG (6): PE: Free: 0, Added: 19, Wait: 19, Action: 19
+DEBUG (6): PE: No packets with state 4 found
+DEBUG (6): PE: Free: 0, Added: 19, Wait: 20, Action: 19
+DEBUG (6): TLV: Type 3 not found
+DEBUG (6): TLV: Type 96 not found
+DEBUG (6): DSR: Pkt 19: Passing to upper layer if not already sent
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 0, Added: 20, Wait: 20, Action: 19
+DEBUG (6): PE: No more added packets
+DEBUG (6): SSP: Current SPT:
+DEBUG (6): PE: Processing action pkt 19
+DEBUG (6): PE: SubSend successful, waiting for result
+DEBUG (6): PE: Adding receive/snoop packet at index 0
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 0
+DEBUG (6): PE: Free: 0, Added: 0, Wait: 20, Action: 19
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 1, Added: 0, Wait: 20, Action: 19
+DEBUG (6): PEBS: Send Buffer: 0 of 10
+DEBUG (6): PEBS: Receive Buffer: 2 of 10
+DEBUG (6): PE: Processing added pkt 0
+DEBUG (6): PE: Moved nextWaitPkt from 20 to 0
+DEBUG (6): PE: Free: 1, Added: 0, Wait: 0, Action: 19
+DEBUG (6): PE: Notify about receive added at index 0
+DEBUG (6): DSR: Pkt 0: DSR receive/snoop packet added!
+DEBUG (6): TLV: Type 1 found at byte 0
+DEBUG (6): TLV: Type 1 found at byte 0
+DEBUG (6): DSR: Pkt 0: Found route request option from 5 to 14
+DEBUG (6): DSR: Adding path with 2 links
+DEBUG (6): GS: Inserting edge 5 -> 13
+DEBUG (6): GS: Current Graph:
+DEBUG (6): GS: Inserting edge 6 -> 13
+DEBUG (6): GS: Current Graph:
+DEBUG (6): GS: Inserting edge 13 -> 6
+DEBUG (6): GS: Current Graph:
+DEBUG (6): GS: Inserting edge 13 -> 5
+DEBUG (6): GS: Current Graph:
+DEBUG (6): SSP: Building SPT for 6
+DEBUG (6): DSR: Pkt 0: Route request to 14 (ID 234) found in cache, dropping!
+DEBUG (6): PE: Dropping pkt 0 from the buffer
+DEBUG (6): PE: Removing pkt 0 from the buffer
+DEBUG (6): PE: No packets with state 4 found
+DEBUG (6): PE: Free: 1, Added: 0, Wait: 20, Action: 19
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 1, Added: 20, Wait: 20, Action: 19
+DEBUG (6): PE: No more added packets
+DEBUG (6): SSP: Added edge 6 -> 6 to SPT
+DEBUG (6): SSP: Adding edge 6 -> 13 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 14 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 8 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 5 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 9 (1) to PQ
+DEBUG (6): SSP: Added edge 6 -> 13 to SPT
+DEBUG (6): SSP: Adding edge 13 -> 4 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 14 to SPT
+DEBUG (6): SSP: Adding edge 14 -> 12 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 5 to SPT
+DEBUG (6): SSP: Adding edge 5 -> 3 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 9 to SPT
+DEBUG (6): SSP: Adding edge 9 -> 0 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 8 to SPT
+DEBUG (6): SSP: Added edge 13 -> 4 to SPT
+DEBUG (6): SSP: Adding edge 4 -> 2 (3) to PQ
+DEBUG (6): SSP: Added edge 14 -> 12 to SPT
+DEBUG (6): SSP: Added edge 9 -> 0 to SPT
+DEBUG (6): SSP: Adding edge 0 -> 10 (3) to PQ
+DEBUG (6): SSP: Added edge 5 -> 3 to SPT
+DEBUG (6): SSP: Added edge 4 -> 2 to SPT
+DEBUG (6): SSP: Added edge 0 -> 10 to SPT
+DEBUG (6): SSP: Current SPT:
+DEBUG (6): PE: Send done for pkt 19
+DEBUG (6): PE: Removing pkt 19 from the buffer
+DEBUG (6): PE: Send backoff for 30 ms
+DEBUG (6): PE: No packets with state 24 found
+DEBUG (6): PE: Free: 1, Added: 20, Wait: 20, Action: 20
+DEBUG (6): PE: No more action packets
+DEBUG (6): PE: Adding receive/snoop packet at index 1
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 1
+DEBUG (6): PE: Free: 1, Added: 1, Wait: 20, Action: 20
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 2, Added: 1, Wait: 20, Action: 20
+DEBUG (6): PEBS: Send Buffer: 0 of 10
+DEBUG (6): PEBS: Receive Buffer: 1 of 10
+DEBUG (6): PE: Processing added pkt 1
+DEBUG (6): PE: Moved nextWaitPkt from 20 to 1
+DEBUG (6): PE: Free: 2, Added: 1, Wait: 1, Action: 20
+DEBUG (6): PE: Notify about snoop added at index 1
+DEBUG (6): DSR: Pkt 1: DSR snooped!
+DEBUG (6): DSR: Pkt 1: DSR receive/snoop packet added!
+DEBUG (6): TLV: Type 1 not found
+DEBUG (6): TLV: Type 3 not found
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): DSR: Pkt 1: Found route reply option from 14 to 5
+DEBUG (6): DSR: Adding path with 1 links
+DEBUG (6): GS: Inserting edge 14 -> 13
+DEBUG (6): GS: Current Graph:
+DEBUG (6): GS: Inserting edge 13 -> 14
+DEBUG (6): GS: Current Graph:
+DEBUG (6): SSP: Building SPT for 6
+DEBUG (6): DSR: Pkt 1: Passing to upper layer if not already sent
+DEBUG (6): PE: Removing pkt 1 from the buffer
+DEBUG (6): PE: No packets with state 4 found
+DEBUG (6): PE: Free: 2, Added: 1, Wait: 20, Action: 20
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 2, Added: 20, Wait: 20, Action: 20
+DEBUG (6): PE: No more added packets
+DEBUG (6): SSP: Added edge 6 -> 6 to SPT
+DEBUG (6): SSP: Adding edge 6 -> 13 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 14 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 8 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 5 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 9 (1) to PQ
+DEBUG (6): SSP: Added edge 6 -> 13 to SPT
+DEBUG (6): SSP: Adding edge 13 -> 4 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 14 to SPT
+DEBUG (6): SSP: Adding edge 14 -> 12 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 5 to SPT
+DEBUG (6): SSP: Adding edge 5 -> 3 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 9 to SPT
+DEBUG (6): SSP: Adding edge 9 -> 0 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 8 to SPT
+DEBUG (6): SSP: Added edge 13 -> 4 to SPT
+DEBUG (6): SSP: Adding edge 4 -> 2 (3) to PQ
+DEBUG (6): SSP: Added edge 14 -> 12 to SPT
+DEBUG (6): SSP: Added edge 9 -> 0 to SPT
+DEBUG (6): SSP: Adding edge 0 -> 10 (3) to PQ
+DEBUG (6): SSP: Added edge 5 -> 3 to SPT
+DEBUG (6): SSP: Added edge 4 -> 2 to SPT
+DEBUG (6): SSP: Added edge 0 -> 10 to SPT
+DEBUG (6): SSP: Current SPT:
+DEBUG (6): PE: Adding receive/snoop packet at index 2
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 2
+DEBUG (6): PE: Free: 2, Added: 2, Wait: 20, Action: 20
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 3, Added: 2, Wait: 20, Action: 20
+DEBUG (6): PEBS: Send Buffer: 0 of 10
+DEBUG (6): PEBS: Receive Buffer: 1 of 10
+DEBUG (6): PE: Processing added pkt 2
+DEBUG (6): PE: Moved nextWaitPkt from 20 to 2
+DEBUG (6): PE: Free: 3, Added: 2, Wait: 2, Action: 20
+DEBUG (6): PE: Notify about receive added at index 2
+DEBUG (6): DSR: Pkt 2: DSR receive/snoop packet added!
+DEBUG (6): TLV: Type 1 found at byte 0
+DEBUG (6): TLV: Type 1 found at byte 0
+DEBUG (6): DSR: Pkt 2: Found route request option from 5 to 14
+DEBUG (6): DSR: Pkt 2: Address already in route request to 14, dropping!
+DEBUG (6): PE: Dropping pkt 2 from the buffer
+DEBUG (6): PE: Removing pkt 2 from the buffer
+DEBUG (6): PE: No packets with state 4 found
+DEBUG (6): PE: Free: 3, Added: 2, Wait: 20, Action: 20
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 3, Added: 20, Wait: 20, Action: 20
+DEBUG (6): PE: No more added packets
+DEBUG (6): PE: Adding receive/snoop packet at index 3
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 3
+DEBUG (6): PE: Free: 3, Added: 3, Wait: 20, Action: 20
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 4, Added: 3, Wait: 20, Action: 20
+DEBUG (6): PEBS: Send Buffer: 0 of 10
+DEBUG (6): PEBS: Receive Buffer: 1 of 10
+DEBUG (6): PE: Processing added pkt 3
+DEBUG (6): PE: Moved nextWaitPkt from 20 to 3
+DEBUG (6): PE: Free: 4, Added: 3, Wait: 3, Action: 20
+DEBUG (6): PE: Notify about snoop added at index 3
+DEBUG (6): DSR: Pkt 3: DSR snooped!
+DEBUG (6): DSR: Pkt 3: DSR receive/snoop packet added!
+DEBUG (6): TLV: Type 1 not found
+DEBUG (6): TLV: Type 3 found at byte 0
+DEBUG (6): DSR: Pkt 3: Found route error option at 0 from 8 to 12
+DEBUG (6): DSR: Pkt 3: Removing broken link 8 -> 4
+DEBUG (6): GS: Removing edge 8 -> 4
+DEBUG (6): GS: Current Graph:
+DEBUG (6): GS: Removing edge 4 -> 8
+DEBUG (6): GS: Current Graph:
+DEBUG (6): SSP: Building SPT for 6
+DEBUG (6): TLV: Type 3 not found
+DEBUG (6): TLV: Type 96 found at byte 9
+DEBUG (6): TLV: Type 96 found at byte 9
+DEBUG (6): DSR: Pkt 3: Found source route option from 8 to 12
+DEBUG (6): DSR: Adding path with 1 links
+DEBUG (6): DSR: Pkt 3: Passing to upper layer if not already sent
+DEBUG (6): PE: Removing pkt 3 from the buffer
+DEBUG (6): PE: No packets with state 4 found
+DEBUG (6): PE: Free: 4, Added: 3, Wait: 20, Action: 20
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 4, Added: 20, Wait: 20, Action: 20
+DEBUG (6): PE: No more added packets
+DEBUG (6): SSP: Added edge 6 -> 6 to SPT
+DEBUG (6): SSP: Adding edge 6 -> 13 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 14 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 8 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 5 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 9 (1) to PQ
+DEBUG (6): SSP: Added edge 6 -> 13 to SPT
+DEBUG (6): SSP: Adding edge 13 -> 4 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 14 to SPT
+DEBUG (6): SSP: Adding edge 14 -> 12 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 5 to SPT
+DEBUG (6): SSP: Adding edge 5 -> 3 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 9 to SPT
+DEBUG (6): SSP: Adding edge 9 -> 0 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 8 to SPT
+DEBUG (6): SSP: Added edge 13 -> 4 to SPT
+DEBUG (6): SSP: Adding edge 4 -> 2 (3) to PQ
+DEBUG (6): SSP: Added edge 14 -> 12 to SPT
+DEBUG (6): SSP: Added edge 9 -> 0 to SPT
+DEBUG (6): SSP: Adding edge 0 -> 10 (3) to PQ
+DEBUG (6): SSP: Added edge 5 -> 3 to SPT
+DEBUG (6): SSP: Added edge 4 -> 2 to SPT
+DEBUG (6): SSP: Added edge 0 -> 10 to SPT
+DEBUG (6): SSP: Current SPT:
+DEBUG (6): Sending Data: Pkt 6 Payload Length: 6
+DEBUG (6): SP: Sending pkt from 6 to 17
+DEBUG (6): PE: Adding send packet at index 4
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 4
+DEBUG (6): PE: Free: 4, Added: 4, Wait: 20, Action: 20
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 5, Added: 4, Wait: 20, Action: 20
+DEBUG (6): PEBS: Send Buffer: 1 of 10
+DEBUG (6): PEBS: Receive Buffer: 0 of 10
+DEBUG (6): PE: Processing added pkt 4
+DEBUG (6): PE: Moved nextWaitPkt from 20 to 4
+DEBUG (6): PE: Free: 5, Added: 4, Wait: 4, Action: 20
+DEBUG (6): PE: Notify about send added at index 4
+DEBUG (6): DSR: Pkt 4: Single unicast send packet added!
+DEBUG (6): DSR: Pkt 4: Looking for route to 17
+DEBUG (6): DSR: Route request out timer for 17 set to 512 ms
+DEBUG (6): DSR: Pkt 4: Sending route request #1 to 17
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 5, Added: 20, Wait: 4, Action: 20
+DEBUG (6): PE: No more added packets
+DEBUG (6): DSR: Pkt 4: Composing route request to 17 for Single
+DEBUG (6): TLV: Type 1 not found
+DEBUG (6): TLV: Adding type 1 with length 1
+DEBUG (6): TLV: Type 1 found at byte 0
+DEBUG (6): DSR: Pkt 4: Sending route request to 17
+DEBUG (6): SP: Sending pkt from 6 to 17
+DEBUG (6): PE: Adding send packet at index 5
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 5
+DEBUG (6): PE: Free: 5, Added: 5, Wait: 4, Action: 20
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 6, Added: 5, Wait: 4, Action: 20
+DEBUG (6): DSR: Pkt 4: Outgoing send successful, waiting for result
+DEBUG (6): PEBS: Send Buffer: 2 of 10
+DEBUG (6): PEBS: Receive Buffer: 0 of 10
+DEBUG (6): PE: Processing added pkt 5
+DEBUG (6): PE: Notify about send added at index 5
+DEBUG (6): TLV: Type 1 found at byte 0
+DEBUG (6): DSR: Pkt 5: Recovered upper layer AM type from pkt 4
+DEBUG (6): DSR: Pkt 5: DSR send packet added, sending!
+DEBUG (6): PE: Marking pkt 5 to be sent
+DEBUG (6): PE: Moved nextActionPkt from 20 to 5
+DEBUG (6): PE: Free: 6, Added: 5, Wait: 4, Action: 5
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 6, Added: 20, Wait: 4, Action: 5
+DEBUG (6): PE: No more added packets
+DEBUG (6): PE: Processing action pkt 5
+DEBUG (6): PE: SubSend successful, waiting for result
+DEBUG (6): PE: Adding receive/snoop packet at index 6
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 6
+DEBUG (6): PE: Free: 6, Added: 6, Wait: 4, Action: 5
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 7, Added: 6, Wait: 4, Action: 5
+DEBUG (6): PEBS: Send Buffer: 2 of 10
+DEBUG (6): PEBS: Receive Buffer: 1 of 10
+DEBUG (6): PE: Processing added pkt 6
+DEBUG (6): PE: Notify about receive added at index 6
+DEBUG (6): DSR: Pkt 6: DSR receive/snoop packet added!
+DEBUG (6): TLV: Type 1 found at byte 0
+DEBUG (6): TLV: Type 1 found at byte 0
+DEBUG (6): DSR: Pkt 6: Found route request option from 5 to 14
+DEBUG (6): DSR: Adding path with 3 links
+DEBUG (6): SSP: SPT for 6 already built!
+DEBUG (6): DSR: Pkt 6: Route request to 14 (ID 234) found in cache, dropping!
+DEBUG (6): PE: Dropping pkt 6 from the buffer
+DEBUG (6): PE: Removing pkt 6 from the buffer
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 7, Added: 20, Wait: 4, Action: 5
+DEBUG (6): PE: No more added packets
+DEBUG (6): SSP: Current SPT:
+DEBUG (6): DSR: Checking for another response to send
+DEBUG (6): PE: Send done for pkt 5
+DEBUG (6): PE: Removing pkt 5 from the buffer
+DEBUG (6): PE: Send backoff for 21 ms
+DEBUG (6): PE: No packets with state 24 found
+DEBUG (6): PE: Free: 7, Added: 20, Wait: 4, Action: 20
+DEBUG (6): PE: No more action packets
+DEBUG (6): PE: Adding receive/snoop packet at index 7
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 7
+DEBUG (6): PE: Free: 7, Added: 7, Wait: 4, Action: 20
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 8, Added: 7, Wait: 4, Action: 20
+DEBUG (6): PEBS: Send Buffer: 1 of 10
+DEBUG (6): PEBS: Receive Buffer: 1 of 10
+DEBUG (6): PE: Processing added pkt 7
+DEBUG (6): PE: Notify about snoop added at index 7
+DEBUG (6): DSR: Pkt 7: DSR snooped!
+DEBUG (6): DSR: Pkt 7: DSR receive/snoop packet added!
+DEBUG (6): TLV: Type 1 not found
+DEBUG (6): TLV: Type 3 not found
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): DSR: Pkt 7: Found route reply option from 14 to 5
+DEBUG (6): DSR: Adding path with 2 links
+DEBUG (6): GS: Inserting edge 14 -> 8
+DEBUG (6): GS: Current Graph:
+DEBUG (6): GS: Inserting edge 8 -> 14
+DEBUG (6): GS: Current Graph:
+DEBUG (6): SSP: Building SPT for 6
+DEBUG (6): DSR: Pkt 7: Passing to upper layer if not already sent
+DEBUG (6): PE: Removing pkt 7 from the buffer
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 8, Added: 20, Wait: 4, Action: 20
+DEBUG (6): PE: No more added packets
+DEBUG (6): SSP: Added edge 6 -> 6 to SPT
+DEBUG (6): SSP: Adding edge 6 -> 13 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 14 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 8 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 5 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 9 (1) to PQ
+DEBUG (6): SSP: Added edge 6 -> 13 to SPT
+DEBUG (6): SSP: Adding edge 13 -> 4 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 14 to SPT
+DEBUG (6): SSP: Adding edge 14 -> 12 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 5 to SPT
+DEBUG (6): SSP: Adding edge 5 -> 3 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 9 to SPT
+DEBUG (6): SSP: Adding edge 9 -> 0 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 8 to SPT
+DEBUG (6): SSP: Added edge 13 -> 4 to SPT
+DEBUG (6): SSP: Adding edge 4 -> 2 (3) to PQ
+DEBUG (6): SSP: Added edge 14 -> 12 to SPT
+DEBUG (6): SSP: Added edge 9 -> 0 to SPT
+DEBUG (6): SSP: Adding edge 0 -> 10 (3) to PQ
+DEBUG (6): SSP: Added edge 5 -> 3 to SPT
+DEBUG (6): SSP: Added edge 4 -> 2 to SPT
+DEBUG (6): SSP: Added edge 0 -> 10 to SPT
+DEBUG (6): SSP: Current SPT:
+DEBUG (6): PE: Adding receive/snoop packet at index 8
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 8
+DEBUG (6): PE: Free: 8, Added: 8, Wait: 4, Action: 20
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 9, Added: 8, Wait: 4, Action: 20
+DEBUG (6): PEBS: Send Buffer: 1 of 10
+DEBUG (6): PEBS: Receive Buffer: 1 of 10
+DEBUG (6): PE: Processing added pkt 8
+DEBUG (6): PE: Notify about receive added at index 8
+DEBUG (6): DSR: Pkt 8: DSR receive/snoop packet added!
+DEBUG (6): TLV: Type 1 found at byte 0
+DEBUG (6): TLV: Type 1 found at byte 0
+DEBUG (6): DSR: Pkt 8: Found route request option from 6 to 17
+DEBUG (6): DSR: Pkt 8: Address already in route request to 17, dropping!
+DEBUG (6): PE: Dropping pkt 8 from the buffer
+DEBUG (6): PE: Removing pkt 8 from the buffer
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 9, Added: 20, Wait: 4, Action: 20
+DEBUG (6): PE: No more added packets
+DEBUG (6): PE: Adding receive/snoop packet at index 9
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 9
+DEBUG (6): PE: Free: 9, Added: 9, Wait: 4, Action: 20
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 10, Added: 9, Wait: 4, Action: 20
+DEBUG (6): PEBS: Send Buffer: 1 of 10
+DEBUG (6): PEBS: Receive Buffer: 1 of 10
+DEBUG (6): PE: Processing added pkt 9
+DEBUG (6): PE: Notify about snoop added at index 9
+DEBUG (6): DSR: Pkt 9: DSR snooped!
+DEBUG (6): DSR: Pkt 9: DSR receive/snoop packet added!
+DEBUG (6): TLV: Type 1 not found
+DEBUG (6): TLV: Type 3 not found
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): DSR: Pkt 9: Found route reply option from 14 to 5
+DEBUG (6): DSR: Adding path with 2 links
+DEBUG (6): SSP: SPT for 6 already built!
+DEBUG (6): DSR: Pkt 9: Passing to upper layer if not already sent
+DEBUG (6): PE: Removing pkt 9 from the buffer
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 10, Added: 20, Wait: 4, Action: 20
+DEBUG (6): PE: No more added packets
+DEBUG (6): SSP: Current SPT:
+DEBUG (6): PE: Adding receive/snoop packet at index 10
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 10
+DEBUG (6): PE: Free: 10, Added: 10, Wait: 4, Action: 20
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 11, Added: 10, Wait: 4, Action: 20
+DEBUG (6): PEBS: Send Buffer: 1 of 10
+DEBUG (6): PEBS: Receive Buffer: 1 of 10
+DEBUG (6): PE: Processing added pkt 10
+DEBUG (6): PE: Notify about receive added at index 10
+DEBUG (6): DSR: Pkt 10: DSR receive/snoop packet added!
+DEBUG (6): TLV: Type 1 found at byte 0
+DEBUG (6): TLV: Type 1 found at byte 0
+DEBUG (6): DSR: Pkt 10: Found route request option from 6 to 17
+DEBUG (6): DSR: Pkt 10: Address already in route request to 17, dropping!
+DEBUG (6): PE: Dropping pkt 10 from the buffer
+DEBUG (6): PE: Removing pkt 10 from the buffer
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 11, Added: 20, Wait: 4, Action: 20
+DEBUG (6): PE: No more added packets
+DEBUG (6): PE: Adding receive/snoop packet at index 11
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 11
+DEBUG (6): PE: Free: 11, Added: 11, Wait: 4, Action: 20
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 12, Added: 11, Wait: 4, Action: 20
+DEBUG (6): PEBS: Send Buffer: 1 of 10
+DEBUG (6): PEBS: Receive Buffer: 1 of 10
+DEBUG (6): PE: Processing added pkt 11
+DEBUG (6): PE: Notify about snoop added at index 11
+DEBUG (6): DSR: Pkt 11: DSR snooped!
+DEBUG (6): DSR: Pkt 11: DSR receive/snoop packet added!
+DEBUG (6): TLV: Type 1 not found
+DEBUG (6): TLV: Type 3 not found
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): DSR: Pkt 11: Found route reply option from 14 to 5
+DEBUG (6): DSR: Adding path with 3 links
+DEBUG (6): GS: Inserting edge 14 -> 16
+DEBUG (6): GS: Current Graph:
+DEBUG (6): GS: Inserting edge 16 -> 8
+DEBUG (6): GS: Current Graph:
+DEBUG (6): GS: Inserting edge 8 -> 16
+DEBUG (6): GS: Current Graph:
+DEBUG (6): GS: Inserting edge 16 -> 14
+DEBUG (6): GS: Current Graph:
+DEBUG (6): SSP: Building SPT for 6
+DEBUG (6): DSR: Pkt 11: Passing to upper layer if not already sent
+DEBUG (6): PE: Removing pkt 11 from the buffer
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 12, Added: 20, Wait: 4, Action: 20
+DEBUG (6): PE: No more added packets
+DEBUG (6): SSP: Added edge 6 -> 6 to SPT
+DEBUG (6): SSP: Adding edge 6 -> 13 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 14 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 8 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 5 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 9 (1) to PQ
+DEBUG (6): SSP: Added edge 6 -> 13 to SPT
+DEBUG (6): SSP: Adding edge 13 -> 4 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 14 to SPT
+DEBUG (6): SSP: Adding edge 14 -> 16 (2) to PQ
+DEBUG (6): SSP: Adding edge 14 -> 12 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 5 to SPT
+DEBUG (6): SSP: Adding edge 5 -> 3 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 9 to SPT
+DEBUG (6): SSP: Adding edge 9 -> 0 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 8 to SPT
+DEBUG (6): SSP: Added edge 13 -> 4 to SPT
+DEBUG (6): SSP: Adding edge 4 -> 2 (3) to PQ
+DEBUG (6): SSP: Added edge 14 -> 12 to SPT
+DEBUG (6): SSP: Added edge 9 -> 0 to SPT
+DEBUG (6): SSP: Adding edge 0 -> 10 (3) to PQ
+DEBUG (6): SSP: Added edge 14 -> 16 to SPT
+DEBUG (6): SSP: Added edge 5 -> 3 to SPT
+DEBUG (6): SSP: Added edge 4 -> 2 to SPT
+DEBUG (6): SSP: Added edge 0 -> 10 to SPT
+DEBUG (6): SSP: Current SPT:
+DEBUG (6): PE: Adding receive/snoop packet at index 12
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 12
+DEBUG (6): PE: Free: 12, Added: 12, Wait: 4, Action: 20
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 13, Added: 12, Wait: 4, Action: 20
+DEBUG (6): PEBS: Send Buffer: 1 of 10
+DEBUG (6): PEBS: Receive Buffer: 1 of 10
+DEBUG (6): PE: Processing added pkt 12
+DEBUG (6): PE: Notify about snoop added at index 12
+DEBUG (6): DSR: Pkt 12: DSR snooped!
+DEBUG (6): DSR: Pkt 12: DSR receive/snoop packet added!
+DEBUG (6): TLV: Type 1 not found
+DEBUG (6): TLV: Type 3 found at byte 0
+DEBUG (6): DSR: Pkt 12: Found route error option at 0 from 8 to 14
+DEBUG (6): DSR: Pkt 12: Removing broken link 8 -> 13
+DEBUG (6): GS: Removing edge 8 -> 13
+DEBUG (6): GS: Current Graph:
+DEBUG (6): GS: Removing edge 13 -> 8
+DEBUG (6): GS: Current Graph:
+DEBUG (6): SSP: Building SPT for 6
+DEBUG (6): TLV: Type 3 not found
+DEBUG (6): TLV: Type 96 found at byte 9
+DEBUG (6): TLV: Type 96 found at byte 9
+DEBUG (6): DSR: Pkt 12: Found source route option from 8 to 14
+DEBUG (6): DSR: Adding path with 1 links
+DEBUG (6): DSR: Pkt 12: Passing to upper layer if not already sent
+DEBUG (6): PE: Removing pkt 12 from the buffer
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 13, Added: 20, Wait: 4, Action: 20
+DEBUG (6): PE: No more added packets
+DEBUG (6): SSP: Added edge 6 -> 6 to SPT
+DEBUG (6): SSP: Adding edge 6 -> 13 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 14 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 8 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 5 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 9 (1) to PQ
+DEBUG (6): SSP: Added edge 6 -> 13 to SPT
+DEBUG (6): SSP: Adding edge 13 -> 4 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 14 to SPT
+DEBUG (6): SSP: Adding edge 14 -> 16 (2) to PQ
+DEBUG (6): SSP: Adding edge 14 -> 12 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 5 to SPT
+DEBUG (6): SSP: Adding edge 5 -> 3 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 9 to SPT
+DEBUG (6): SSP: Adding edge 9 -> 0 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 8 to SPT
+DEBUG (6): SSP: Added edge 13 -> 4 to SPT
+DEBUG (6): SSP: Adding edge 4 -> 2 (3) to PQ
+DEBUG (6): SSP: Added edge 14 -> 12 to SPT
+DEBUG (6): SSP: Added edge 9 -> 0 to SPT
+DEBUG (6): SSP: Adding edge 0 -> 10 (3) to PQ
+DEBUG (6): SSP: Added edge 14 -> 16 to SPT
+DEBUG (6): SSP: Added edge 5 -> 3 to SPT
+DEBUG (6): SSP: Added edge 4 -> 2 to SPT
+DEBUG (6): SSP: Added edge 0 -> 10 to SPT
+DEBUG (6): SSP: Current SPT:
+DEBUG (6): PE: Adding receive/snoop packet at index 13
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 13
+DEBUG (6): PE: Free: 13, Added: 13, Wait: 4, Action: 20
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 14, Added: 13, Wait: 4, Action: 20
+DEBUG (6): PEBS: Send Buffer: 1 of 10
+DEBUG (6): PEBS: Receive Buffer: 1 of 10
+DEBUG (6): PE: Processing added pkt 13
+DEBUG (6): PE: Notify about snoop added at index 13
+DEBUG (6): DSR: Pkt 13: DSR snooped!
+DEBUG (6): DSR: Pkt 13: DSR receive/snoop packet added!
+DEBUG (6): TLV: Type 1 not found
+DEBUG (6): TLV: Type 3 not found
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): DSR: Pkt 13: Found route reply option from 14 to 5
+DEBUG (6): DSR: Adding path with 4 links
+DEBUG (6): GS: Inserting edge 13 -> 8
+DEBUG (6): GS: Current Graph:
+DEBUG (6): GS: Inserting edge 8 -> 13
+DEBUG (6): GS: Current Graph:
+DEBUG (6): SSP: Building SPT for 6
+DEBUG (6): DSR: Pkt 13: Passing to upper layer if not already sent
+DEBUG (6): PE: Removing pkt 13 from the buffer
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 14, Added: 20, Wait: 4, Action: 20
+DEBUG (6): PE: No more added packets
+DEBUG (6): SSP: Added edge 6 -> 6 to SPT
+DEBUG (6): SSP: Adding edge 6 -> 13 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 14 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 8 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 5 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 9 (1) to PQ
+DEBUG (6): SSP: Added edge 6 -> 13 to SPT
+DEBUG (6): SSP: Adding edge 13 -> 4 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 14 to SPT
+DEBUG (6): SSP: Adding edge 14 -> 16 (2) to PQ
+DEBUG (6): SSP: Adding edge 14 -> 12 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 5 to SPT
+DEBUG (6): SSP: Adding edge 5 -> 3 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 9 to SPT
+DEBUG (6): SSP: Adding edge 9 -> 0 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 8 to SPT
+DEBUG (6): SSP: Added edge 13 -> 4 to SPT
+DEBUG (6): SSP: Adding edge 4 -> 2 (3) to PQ
+DEBUG (6): SSP: Added edge 14 -> 12 to SPT
+DEBUG (6): SSP: Added edge 9 -> 0 to SPT
+DEBUG (6): SSP: Adding edge 0 -> 10 (3) to PQ
+DEBUG (6): SSP: Added edge 14 -> 16 to SPT
+DEBUG (6): SSP: Added edge 5 -> 3 to SPT
+DEBUG (6): SSP: Added edge 4 -> 2 to SPT
+DEBUG (6): SSP: Added edge 0 -> 10 to SPT
+DEBUG (6): SSP: Current SPT:
+DEBUG (6): PE: Adding receive/snoop packet at index 14
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 14
+DEBUG (6): PE: Free: 14, Added: 14, Wait: 4, Action: 20
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 15, Added: 14, Wait: 4, Action: 20
+DEBUG (6): PEBS: Send Buffer: 1 of 10
+DEBUG (6): PEBS: Receive Buffer: 1 of 10
+DEBUG (6): PE: Processing added pkt 14
+DEBUG (6): PE: Notify about receive added at index 14
+DEBUG (6): DSR: Pkt 14: DSR receive/snoop packet added!
+DEBUG (6): TLV: Type 1 found at byte 0
+DEBUG (6): TLV: Type 1 found at byte 0
+DEBUG (6): DSR: Pkt 14: Found route request option from 8 to 19
+DEBUG (6): DSR: Adding path with 1 links
+DEBUG (6): SSP: SPT for 6 already built!
+DEBUG (6): DSR: Pkt 14: Route request to 19 (ID 223) is new
+DEBUG (6): TLV: Type 1 found at byte 0
+DEBUG (6): TLV: Type 1 found at byte 0
+DEBUG (6): TLV: Setting length of type 1 to 3
+DEBUG (6): DSR: Pkt 14: Sending route request to 19 further
+DEBUG (6): PE: Marking pkt 14 to be sent
+DEBUG (6): PE: Moved nextActionPkt from 20 to 14
+DEBUG (6): PE: Free: 15, Added: 14, Wait: 4, Action: 14
+DEBUG (6): TLV: Type 3 not found
+DEBUG (6): TLV: Type 96 not found
+DEBUG (6): DSR: Pkt 14: Passing to upper layer if not already sent
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 15, Added: 20, Wait: 4, Action: 14
+DEBUG (6): PE: No more added packets
+DEBUG (6): SSP: Current SPT:
+DEBUG (6): PE: Processing action pkt 14
+DEBUG (6): PE: SubSend successful, waiting for result
+DEBUG (6): PE: Send done for pkt 14
+DEBUG (6): PE: Removing pkt 14 from the buffer
+DEBUG (6): PE: Send backoff for 20 ms
+DEBUG (6): PE: No packets with state 24 found
+DEBUG (6): PE: Free: 15, Added: 20, Wait: 4, Action: 20
+DEBUG (6): PE: No more action packets
+DEBUG (6): PE: Adding receive/snoop packet at index 15
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 15
+DEBUG (6): PE: Free: 15, Added: 15, Wait: 4, Action: 20
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 16, Added: 15, Wait: 4, Action: 20
+DEBUG (6): PEBS: Send Buffer: 1 of 10
+DEBUG (6): PEBS: Receive Buffer: 1 of 10
+DEBUG (6): PE: Processing added pkt 15
+DEBUG (6): PE: Notify about receive added at index 15
+DEBUG (6): DSR: Pkt 15: DSR receive/snoop packet added!
+DEBUG (6): TLV: Type 1 found at byte 0
+DEBUG (6): TLV: Type 1 found at byte 0
+DEBUG (6): DSR: Pkt 15: Found route request option from 8 to 19
+DEBUG (6): DSR: Pkt 15: Address already in route request to 19, dropping!
+DEBUG (6): PE: Dropping pkt 15 from the buffer
+DEBUG (6): PE: Removing pkt 15 from the buffer
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 16, Added: 20, Wait: 4, Action: 20
+DEBUG (6): PE: No more added packets
+DEBUG (6): PE: Adding receive/snoop packet at index 16
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 16
+DEBUG (6): PE: Free: 16, Added: 16, Wait: 4, Action: 20
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 17, Added: 16, Wait: 4, Action: 20
+DEBUG (6): PEBS: Send Buffer: 1 of 10
+DEBUG (6): PEBS: Receive Buffer: 1 of 10
+DEBUG (6): PE: Processing added pkt 16
+DEBUG (6): PE: Notify about receive added at index 16
+DEBUG (6): DSR: Pkt 16: DSR receive/snoop packet added!
+DEBUG (6): TLV: Type 1 found at byte 0
+DEBUG (6): TLV: Type 1 found at byte 0
+DEBUG (6): DSR: Pkt 16: Found route request option from 8 to 19
+DEBUG (6): DSR: Pkt 16: Address already in route request to 19, dropping!
+DEBUG (6): PE: Dropping pkt 16 from the buffer
+DEBUG (6): PE: Removing pkt 16 from the buffer
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 17, Added: 20, Wait: 4, Action: 20
+DEBUG (6): PE: No more added packets
+DEBUG (6): PE: Adding receive/snoop packet at index 17
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 17
+DEBUG (6): PE: Free: 17, Added: 17, Wait: 4, Action: 20
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 18, Added: 17, Wait: 4, Action: 20
+DEBUG (6): PEBS: Send Buffer: 1 of 10
+DEBUG (6): PEBS: Receive Buffer: 1 of 10
+DEBUG (6): PE: Processing added pkt 17
+DEBUG (6): PE: Notify about snoop added at index 17
+DEBUG (6): DSR: Pkt 17: DSR snooped!
+DEBUG (6): DSR: Pkt 17: DSR receive/snoop packet added!
+DEBUG (6): TLV: Type 1 not found
+DEBUG (6): TLV: Type 3 not found
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): DSR: Pkt 17: Found source route option from 9 to 2
+DEBUG (6): DSR: Adding path with 3 links
+DEBUG (6): GS: Inserting edge 9 -> 3
+DEBUG (6): GS: Current Graph:
+DEBUG (6): GS: Inserting edge 2 -> 5
+DEBUG (6): GS: Current Graph:
+DEBUG (6): GS: Inserting edge 5 -> 2
+DEBUG (6): GS: Current Graph:
+DEBUG (6): GS: Inserting edge 3 -> 9
+DEBUG (6): GS: Current Graph:
+DEBUG (6): SSP: Building SPT for 6
+DEBUG (6): DSR: Pkt 17: Passing to upper layer if not already sent
+DEBUG (6): PE: Passing pkt 17 to upper layer
+DEBUG (6): SP: Snooped pkt from 9 to 2
+DEBUG (6): SP: No snoop connected for upper id 23!
+DEBUG (6): PE: Removing pkt 17 from the buffer
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 18, Added: 20, Wait: 4, Action: 20
+DEBUG (6): PE: No more added packets
+DEBUG (6): SSP: Added edge 6 -> 6 to SPT
+DEBUG (6): SSP: Adding edge 6 -> 13 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 14 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 8 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 5 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 9 (1) to PQ
+DEBUG (6): SSP: Added edge 6 -> 13 to SPT
+DEBUG (6): SSP: Adding edge 13 -> 4 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 14 to SPT
+DEBUG (6): SSP: Adding edge 14 -> 16 (2) to PQ
+DEBUG (6): SSP: Adding edge 14 -> 12 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 5 to SPT
+DEBUG (6): SSP: Adding edge 5 -> 2 (2) to PQ
+DEBUG (6): SSP: Adding edge 5 -> 3 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 9 to SPT
+DEBUG (6): SSP: Adding edge 9 -> 0 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 8 to SPT
+DEBUG (6): SSP: Added edge 13 -> 4 to SPT
+DEBUG (6): SSP: Added edge 14 -> 12 to SPT
+DEBUG (6): SSP: Added edge 9 -> 0 to SPT
+DEBUG (6): SSP: Adding edge 0 -> 10 (3) to PQ
+DEBUG (6): SSP: Added edge 5 -> 3 to SPT
+DEBUG (6): SSP: Added edge 14 -> 16 to SPT
+DEBUG (6): SSP: Added edge 5 -> 2 to SPT
+DEBUG (6): SSP: Added edge 0 -> 10 to SPT
+DEBUG (6): SSP: Current SPT:
+DEBUG (6): DSR: Route request out timer for 17 set to 1024 ms
+DEBUG (6): DSR: Pkt 4: Sending route request #2 to 17
+DEBUG (6): DSR: Pkt 4: Composing route request to 17 for Single
+DEBUG (6): TLV: Type 1 not found
+DEBUG (6): TLV: Adding type 1 with length 1
+DEBUG (6): TLV: Type 1 found at byte 0
+DEBUG (6): DSR: Pkt 4: Sending route request to 17
+DEBUG (6): SP: Sending pkt from 6 to 17
+DEBUG (6): PE: Adding send packet at index 18
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 18
+DEBUG (6): PE: Free: 18, Added: 18, Wait: 4, Action: 20
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 19, Added: 18, Wait: 4, Action: 20
+DEBUG (6): DSR: Pkt 4: Outgoing send successful, waiting for result
+DEBUG (6): PEBS: Send Buffer: 2 of 10
+DEBUG (6): PEBS: Receive Buffer: 0 of 10
+DEBUG (6): PE: Processing added pkt 18
+DEBUG (6): PE: Notify about send added at index 18
+DEBUG (6): TLV: Type 1 found at byte 0
+DEBUG (6): DSR: Pkt 18: Recovered upper layer AM type from pkt 4
+DEBUG (6): DSR: Pkt 18: DSR send packet added, sending!
+DEBUG (6): PE: Marking pkt 18 to be sent
+DEBUG (6): PE: Moved nextActionPkt from 20 to 18
+DEBUG (6): PE: Free: 19, Added: 18, Wait: 4, Action: 18
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 19, Added: 20, Wait: 4, Action: 18
+DEBUG (6): PE: No more added packets
+DEBUG (6): PE: Processing action pkt 18
+DEBUG (6): PE: SubSend successful, waiting for result
+DEBUG (6): DSR: Checking for another response to send
+DEBUG (6): PE: Send done for pkt 18
+DEBUG (6): PE: Removing pkt 18 from the buffer
+DEBUG (6): PE: Send backoff for 21 ms
+DEBUG (6): PE: No packets with state 24 found
+DEBUG (6): PE: Free: 19, Added: 20, Wait: 4, Action: 20
+DEBUG (6): PE: No more action packets
+DEBUG (6): PE: Adding receive/snoop packet at index 19
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 19
+DEBUG (6): PE: Free: 19, Added: 19, Wait: 4, Action: 20
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 0, Added: 19, Wait: 4, Action: 20
+DEBUG (6): PEBS: Send Buffer: 1 of 10
+DEBUG (6): PEBS: Receive Buffer: 1 of 10
+DEBUG (6): PE: Processing added pkt 19
+DEBUG (6): PE: Notify about snoop added at index 19
+DEBUG (6): DSR: Pkt 19: DSR snooped!
+DEBUG (6): DSR: Pkt 19: DSR receive/snoop packet added!
+DEBUG (6): TLV: Type 1 not found
+DEBUG (6): TLV: Type 3 not found
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): DSR: Pkt 19: Found route reply option from 17 to 6
+DEBUG (6): DSR: Adding path with 1 links
+DEBUG (6): GS: Inserting edge 17 -> 18
+DEBUG (6): GS: Current Graph:
+DEBUG (6): GS: Inserting edge 18 -> 17
+DEBUG (6): GS: Current Graph:
+DEBUG (6): SSP: Building SPT for 6
+DEBUG (6): DSR: Pkt 19: Passing to upper layer if not already sent
+DEBUG (6): PE: Removing pkt 19 from the buffer
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 0, Added: 20, Wait: 4, Action: 20
+DEBUG (6): PE: No more added packets
+DEBUG (6): SSP: Added edge 6 -> 6 to SPT
+DEBUG (6): SSP: Adding edge 6 -> 13 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 14 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 8 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 5 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 9 (1) to PQ
+DEBUG (6): SSP: Added edge 6 -> 13 to SPT
+DEBUG (6): SSP: Adding edge 13 -> 4 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 14 to SPT
+DEBUG (6): SSP: Adding edge 14 -> 16 (2) to PQ
+DEBUG (6): SSP: Adding edge 14 -> 12 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 5 to SPT
+DEBUG (6): SSP: Adding edge 5 -> 2 (2) to PQ
+DEBUG (6): SSP: Adding edge 5 -> 3 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 9 to SPT
+DEBUG (6): SSP: Adding edge 9 -> 0 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 8 to SPT
+DEBUG (6): SSP: Added edge 13 -> 4 to SPT
+DEBUG (6): SSP: Added edge 14 -> 12 to SPT
+DEBUG (6): SSP: Added edge 9 -> 0 to SPT
+DEBUG (6): SSP: Adding edge 0 -> 10 (3) to PQ
+DEBUG (6): SSP: Added edge 5 -> 3 to SPT
+DEBUG (6): SSP: Added edge 14 -> 16 to SPT
+DEBUG (6): SSP: Added edge 5 -> 2 to SPT
+DEBUG (6): SSP: Added edge 0 -> 10 to SPT
+DEBUG (6): SSP: Current SPT:
+DEBUG (6): PE: Adding receive/snoop packet at index 0
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 0
+DEBUG (6): PE: Free: 0, Added: 0, Wait: 4, Action: 20
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 1, Added: 0, Wait: 4, Action: 20
+DEBUG (6): PEBS: Send Buffer: 1 of 10
+DEBUG (6): PEBS: Receive Buffer: 1 of 10
+DEBUG (6): PE: Processing added pkt 0
+DEBUG (6): PE: Notify about receive added at index 0
+DEBUG (6): DSR: Pkt 0: DSR receive/snoop packet added!
+DEBUG (6): TLV: Type 1 found at byte 0
+DEBUG (6): TLV: Type 1 found at byte 0
+DEBUG (6): DSR: Pkt 0: Found route request option from 6 to 17
+DEBUG (6): DSR: Pkt 0: Address already in route request to 17, dropping!
+DEBUG (6): PE: Dropping pkt 0 from the buffer
+DEBUG (6): PE: Removing pkt 0 from the buffer
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 1, Added: 20, Wait: 4, Action: 20
+DEBUG (6): PE: No more added packets
+DEBUG (6): PE: Adding receive/snoop packet at index 1
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 1
+DEBUG (6): PE: Free: 1, Added: 1, Wait: 4, Action: 20
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 2, Added: 1, Wait: 4, Action: 20
+DEBUG (6): PEBS: Send Buffer: 1 of 10
+DEBUG (6): PEBS: Receive Buffer: 1 of 10
+DEBUG (6): PE: Processing added pkt 1
+DEBUG (6): PE: Notify about snoop added at index 1
+DEBUG (6): DSR: Pkt 1: DSR snooped!
+DEBUG (6): DSR: Pkt 1: DSR receive/snoop packet added!
+DEBUG (6): TLV: Type 1 not found
+DEBUG (6): TLV: Type 3 not found
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): DSR: Pkt 1: Found route reply option from 17 to 6
+DEBUG (6): DSR: Adding path with 1 links
+DEBUG (6): SSP: SPT for 6 already built!
+DEBUG (6): DSR: Pkt 1: Passing to upper layer if not already sent
+DEBUG (6): PE: Removing pkt 1 from the buffer
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 2, Added: 20, Wait: 4, Action: 20
+DEBUG (6): PE: No more added packets
+DEBUG (6): SSP: Current SPT:
+DEBUG (6): PE: Adding receive/snoop packet at index 2
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 2
+DEBUG (6): PE: Free: 2, Added: 2, Wait: 4, Action: 20
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 3, Added: 2, Wait: 4, Action: 20
+DEBUG (6): PEBS: Send Buffer: 1 of 10
+DEBUG (6): PEBS: Receive Buffer: 1 of 10
+DEBUG (6): PE: Processing added pkt 2
+DEBUG (6): PE: Notify about receive added at index 2
+DEBUG (6): DSR: Pkt 2: DSR receive/snoop packet added!
+DEBUG (6): TLV: Type 1 not found
+DEBUG (6): TLV: Type 3 not found
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): DSR: Pkt 2: Found route reply option from 17 to 6
+DEBUG (6): DSR: Adding path with 3 links
+DEBUG (6): GS: Inserting edge 18 -> 5
+DEBUG (6): GS: Current Graph:
+DEBUG (6): GS: Inserting edge 5 -> 18
+DEBUG (6): GS: Current Graph:
+DEBUG (6): SSP: Building SPT for 6
+DEBUG (6): DSR: Pkt 2: No segments left, removing source route
+DEBUG (6): DSR: Pkt 2: Pkt 4 received successfully, dropping
+DEBUG (6): Send done with result 0
+DEBUG (6): PE: Dropping pkt 4 from the buffer
+DEBUG (6): PE: Removing pkt 4 from the buffer
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 3, Added: 2, Wait: 2, Action: 20
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): TLV: Setting length of type 96 to 0
+DEBUG (6): DSR: Pkt 2: Passing to upper layer if not already sent
+DEBUG (6): PE: Removing pkt 2 from the buffer
+DEBUG (6): PE: No packets with state 4 found
+DEBUG (6): PE: Free: 3, Added: 2, Wait: 20, Action: 20
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 3, Added: 20, Wait: 20, Action: 20
+DEBUG (6): PE: No more added packets
+DEBUG (6): SSP: Added edge 6 -> 6 to SPT
+DEBUG (6): SSP: Adding edge 6 -> 13 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 14 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 8 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 5 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 9 (1) to PQ
+DEBUG (6): SSP: Added edge 6 -> 13 to SPT
+DEBUG (6): SSP: Adding edge 13 -> 4 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 14 to SPT
+DEBUG (6): SSP: Adding edge 14 -> 16 (2) to PQ
+DEBUG (6): SSP: Adding edge 14 -> 12 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 5 to SPT
+DEBUG (6): SSP: Adding edge 5 -> 18 (2) to PQ
+DEBUG (6): SSP: Adding edge 5 -> 2 (2) to PQ
+DEBUG (6): SSP: Adding edge 5 -> 3 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 9 to SPT
+DEBUG (6): SSP: Adding edge 9 -> 0 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 8 to SPT
+DEBUG (6): SSP: Added edge 13 -> 4 to SPT
+DEBUG (6): SSP: Added edge 14 -> 12 to SPT
+DEBUG (6): SSP: Added edge 9 -> 0 to SPT
+DEBUG (6): SSP: Adding edge 0 -> 10 (3) to PQ
+DEBUG (6): SSP: Added edge 5 -> 2 to SPT
+DEBUG (6): SSP: Added edge 5 -> 3 to SPT
+DEBUG (6): SSP: Added edge 14 -> 16 to SPT
+DEBUG (6): SSP: Added edge 5 -> 18 to SPT
+DEBUG (6): SSP: Adding edge 18 -> 17 (3) to PQ
+DEBUG (6): SSP: Added edge 0 -> 10 to SPT
+DEBUG (6): SSP: Added edge 18 -> 17 to SPT
+DEBUG (6): SSP: Current SPT:
+DEBUG (6): DSR: Route request out timer for 17 reset
+DEBUG (6): PE: Adding receive/snoop packet at index 3
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 3
+DEBUG (6): PE: Free: 3, Added: 3, Wait: 20, Action: 20
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 4, Added: 3, Wait: 20, Action: 20
+DEBUG (6): PEBS: Send Buffer: 0 of 10
+DEBUG (6): PEBS: Receive Buffer: 1 of 10
+DEBUG (6): PE: Processing added pkt 3
+DEBUG (6): PE: Moved nextWaitPkt from 20 to 3
+DEBUG (6): PE: Free: 4, Added: 3, Wait: 3, Action: 20
+DEBUG (6): PE: Notify about receive added at index 3
+DEBUG (6): DSR: Pkt 3: DSR receive/snoop packet added!
+DEBUG (6): TLV: Type 1 not found
+DEBUG (6): TLV: Type 3 not found
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): DSR: Pkt 3: Found route reply option from 17 to 6
+DEBUG (6): DSR: Adding path with 3 links
+DEBUG (6): SSP: SPT for 6 already built!
+DEBUG (6): DSR: Pkt 3: No segments left, removing source route
+DEBUG (6): DSR: Pkt 3: Pkt that originated route request to 17 no longer here
+DEBUG (6): PE: Dropping pkt 3 from the buffer
+DEBUG (6): PE: Removing pkt 3 from the buffer
+DEBUG (6): PE: No packets with state 4 found
+DEBUG (6): PE: Free: 4, Added: 3, Wait: 20, Action: 20
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 4, Added: 20, Wait: 20, Action: 20
+DEBUG (6): PE: No more added packets
+DEBUG (6): SSP: Current SPT:
+DEBUG (6): PE: Adding receive/snoop packet at index 4
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 4
+DEBUG (6): PE: Free: 4, Added: 4, Wait: 20, Action: 20
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 5, Added: 4, Wait: 20, Action: 20
+DEBUG (6): PEBS: Send Buffer: 0 of 10
+DEBUG (6): PEBS: Receive Buffer: 1 of 10
+DEBUG (6): PE: Processing added pkt 4
+DEBUG (6): PE: Moved nextWaitPkt from 20 to 4
+DEBUG (6): PE: Free: 5, Added: 4, Wait: 4, Action: 20
+DEBUG (6): PE: Notify about snoop added at index 4
+DEBUG (6): DSR: Pkt 4: DSR snooped!
+DEBUG (6): DSR: Pkt 4: DSR receive/snoop packet added!
+DEBUG (6): TLV: Type 1 not found
+DEBUG (6): TLV: Type 3 not found
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): DSR: Pkt 4: Found source route option from 8 to 19
+DEBUG (6): DSR: Adding path with 2 links
+DEBUG (6): GS: Inserting edge 19 -> 12
+DEBUG (6): GS: Current Graph:
+DEBUG (6): GS: Inserting edge 12 -> 19
+DEBUG (6): GS: Current Graph:
+DEBUG (6): SSP: Building SPT for 6
+DEBUG (6): DSR: Pkt 4: Passing to upper layer if not already sent
+DEBUG (6): PE: Passing pkt 4 to upper layer
+DEBUG (6): SP: Snooped pkt from 8 to 19
+DEBUG (6): SP: No snoop connected for upper id 23!
+DEBUG (6): PE: Removing pkt 4 from the buffer
+DEBUG (6): PE: No packets with state 4 found
+DEBUG (6): PE: Free: 5, Added: 4, Wait: 20, Action: 20
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 5, Added: 20, Wait: 20, Action: 20
+DEBUG (6): PE: No more added packets
+DEBUG (6): SSP: Added edge 6 -> 6 to SPT
+DEBUG (6): SSP: Adding edge 6 -> 13 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 14 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 8 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 5 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 9 (1) to PQ
+DEBUG (6): SSP: Added edge 6 -> 13 to SPT
+DEBUG (6): SSP: Adding edge 13 -> 4 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 14 to SPT
+DEBUG (6): SSP: Adding edge 14 -> 16 (2) to PQ
+DEBUG (6): SSP: Adding edge 14 -> 12 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 5 to SPT
+DEBUG (6): SSP: Adding edge 5 -> 18 (2) to PQ
+DEBUG (6): SSP: Adding edge 5 -> 2 (2) to PQ
+DEBUG (6): SSP: Adding edge 5 -> 3 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 9 to SPT
+DEBUG (6): SSP: Adding edge 9 -> 0 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 8 to SPT
+DEBUG (6): SSP: Added edge 13 -> 4 to SPT
+DEBUG (6): SSP: Added edge 14 -> 12 to SPT
+DEBUG (6): SSP: Adding edge 12 -> 19 (3) to PQ
+DEBUG (6): SSP: Added edge 9 -> 0 to SPT
+DEBUG (6): SSP: Adding edge 0 -> 10 (3) to PQ
+DEBUG (6): SSP: Added edge 5 -> 2 to SPT
+DEBUG (6): SSP: Added edge 5 -> 3 to SPT
+DEBUG (6): SSP: Added edge 14 -> 16 to SPT
+DEBUG (6): SSP: Added edge 5 -> 18 to SPT
+DEBUG (6): SSP: Adding edge 18 -> 17 (3) to PQ
+DEBUG (6): SSP: Added edge 12 -> 19 to SPT
+DEBUG (6): SSP: Added edge 0 -> 10 to SPT
+DEBUG (6): SSP: Added edge 18 -> 17 to SPT
+DEBUG (6): SSP: Current SPT:
+DEBUG (6): PE: Adding receive/snoop packet at index 5
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 5
+DEBUG (6): PE: Free: 5, Added: 5, Wait: 20, Action: 20
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 6, Added: 5, Wait: 20, Action: 20
+DEBUG (6): PEBS: Send Buffer: 0 of 10
+DEBUG (6): PEBS: Receive Buffer: 1 of 10
+DEBUG (6): PE: Processing added pkt 5
+DEBUG (6): PE: Moved nextWaitPkt from 20 to 5
+DEBUG (6): PE: Free: 6, Added: 5, Wait: 5, Action: 20
+DEBUG (6): PE: Notify about snoop added at index 5
+DEBUG (6): DSR: Pkt 5: DSR snooped!
+DEBUG (6): DSR: Pkt 5: DSR receive/snoop packet added!
+DEBUG (6): TLV: Type 1 not found
+DEBUG (6): TLV: Type 3 not found
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): DSR: Pkt 5: Found route reply option from 17 to 6
+DEBUG (6): DSR: Adding path with 1 links
+DEBUG (6): GS: Inserting edge 17 -> 10
+DEBUG (6): GS: Current Graph:
+DEBUG (6): GS: Inserting edge 10 -> 17
+DEBUG (6): GS: Current Graph:
+DEBUG (6): SSP: Building SPT for 6
+DEBUG (6): DSR: Pkt 5: Passing to upper layer if not already sent
+DEBUG (6): PE: Removing pkt 5 from the buffer
+DEBUG (6): PE: No packets with state 4 found
+DEBUG (6): PE: Free: 6, Added: 5, Wait: 20, Action: 20
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 6, Added: 20, Wait: 20, Action: 20
+DEBUG (6): PE: No more added packets
+DEBUG (6): SSP: Added edge 6 -> 6 to SPT
+DEBUG (6): SSP: Adding edge 6 -> 13 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 14 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 8 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 5 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 9 (1) to PQ
+DEBUG (6): SSP: Added edge 6 -> 13 to SPT
+DEBUG (6): SSP: Adding edge 13 -> 4 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 14 to SPT
+DEBUG (6): SSP: Adding edge 14 -> 16 (2) to PQ
+DEBUG (6): SSP: Adding edge 14 -> 12 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 5 to SPT
+DEBUG (6): SSP: Adding edge 5 -> 18 (2) to PQ
+DEBUG (6): SSP: Adding edge 5 -> 2 (2) to PQ
+DEBUG (6): SSP: Adding edge 5 -> 3 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 9 to SPT
+DEBUG (6): SSP: Adding edge 9 -> 0 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 8 to SPT
+DEBUG (6): SSP: Added edge 13 -> 4 to SPT
+DEBUG (6): SSP: Added edge 14 -> 12 to SPT
+DEBUG (6): SSP: Adding edge 12 -> 19 (3) to PQ
+DEBUG (6): SSP: Added edge 9 -> 0 to SPT
+DEBUG (6): SSP: Adding edge 0 -> 10 (3) to PQ
+DEBUG (6): SSP: Added edge 5 -> 2 to SPT
+DEBUG (6): SSP: Added edge 5 -> 3 to SPT
+DEBUG (6): SSP: Added edge 14 -> 16 to SPT
+DEBUG (6): SSP: Added edge 5 -> 18 to SPT
+DEBUG (6): SSP: Adding edge 18 -> 17 (3) to PQ
+DEBUG (6): SSP: Added edge 12 -> 19 to SPT
+DEBUG (6): SSP: Added edge 0 -> 10 to SPT
+DEBUG (6): SSP: Added edge 18 -> 17 to SPT
+DEBUG (6): SSP: Current SPT:
+DEBUG (6): PE: Adding receive/snoop packet at index 6
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 6
+DEBUG (6): PE: Free: 6, Added: 6, Wait: 20, Action: 20
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 7, Added: 6, Wait: 20, Action: 20
+DEBUG (6): PEBS: Send Buffer: 0 of 10
+DEBUG (6): PEBS: Receive Buffer: 1 of 10
+DEBUG (6): PE: Processing added pkt 6
+DEBUG (6): PE: Moved nextWaitPkt from 20 to 6
+DEBUG (6): PE: Free: 7, Added: 6, Wait: 6, Action: 20
+DEBUG (6): PE: Notify about receive added at index 6
+DEBUG (6): DSR: Pkt 6: DSR receive/snoop packet added!
+DEBUG (6): TLV: Type 1 not found
+DEBUG (6): TLV: Type 3 not found
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): DSR: Pkt 6: Found route reply option from 17 to 6
+DEBUG (6): DSR: Adding path with 3 links
+DEBUG (6): SSP: SPT for 6 already built!
+DEBUG (6): DSR: Pkt 6: No segments left, removing source route
+DEBUG (6): DSR: Pkt 6: Pkt that originated route request to 17 no longer here
+DEBUG (6): PE: Dropping pkt 6 from the buffer
+DEBUG (6): PE: Removing pkt 6 from the buffer
+DEBUG (6): PE: No packets with state 4 found
+DEBUG (6): PE: Free: 7, Added: 6, Wait: 20, Action: 20
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 7, Added: 20, Wait: 20, Action: 20
+DEBUG (6): PE: No more added packets
+DEBUG (6): SSP: Current SPT:
+DEBUG (6): PE: Adding receive/snoop packet at index 7
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 7
+DEBUG (6): PE: Free: 7, Added: 7, Wait: 20, Action: 20
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 8, Added: 7, Wait: 20, Action: 20
+DEBUG (6): PEBS: Send Buffer: 0 of 10
+DEBUG (6): PEBS: Receive Buffer: 1 of 10
+DEBUG (6): PE: Processing added pkt 7
+DEBUG (6): PE: Moved nextWaitPkt from 20 to 7
+DEBUG (6): PE: Free: 8, Added: 7, Wait: 7, Action: 20
+DEBUG (6): PE: Notify about snoop added at index 7
+DEBUG (6): DSR: Pkt 7: DSR snooped!
+DEBUG (6): DSR: Pkt 7: DSR receive/snoop packet added!
+DEBUG (6): TLV: Type 1 not found
+DEBUG (6): TLV: Type 3 not found
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): DSR: Pkt 7: Found route reply option from 17 to 6
+DEBUG (6): DSR: Adding path with 1 links
+DEBUG (6): GS: Inserting edge 17 -> 0
+DEBUG (6): GS: Current Graph:
+DEBUG (6): GS: Inserting edge 0 -> 17
+DEBUG (6): GS: Current Graph:
+DEBUG (6): SSP: Building SPT for 6
+DEBUG (6): DSR: Pkt 7: Passing to upper layer if not already sent
+DEBUG (6): PE: Removing pkt 7 from the buffer
+DEBUG (6): PE: No packets with state 4 found
+DEBUG (6): PE: Free: 8, Added: 7, Wait: 20, Action: 20
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 8, Added: 20, Wait: 20, Action: 20
+DEBUG (6): PE: No more added packets
+DEBUG (6): SSP: Added edge 6 -> 6 to SPT
+DEBUG (6): SSP: Adding edge 6 -> 13 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 14 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 8 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 5 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 9 (1) to PQ
+DEBUG (6): SSP: Added edge 6 -> 13 to SPT
+DEBUG (6): SSP: Adding edge 13 -> 4 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 14 to SPT
+DEBUG (6): SSP: Adding edge 14 -> 16 (2) to PQ
+DEBUG (6): SSP: Adding edge 14 -> 12 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 5 to SPT
+DEBUG (6): SSP: Adding edge 5 -> 18 (2) to PQ
+DEBUG (6): SSP: Adding edge 5 -> 2 (2) to PQ
+DEBUG (6): SSP: Adding edge 5 -> 3 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 9 to SPT
+DEBUG (6): SSP: Adding edge 9 -> 0 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 8 to SPT
+DEBUG (6): SSP: Added edge 13 -> 4 to SPT
+DEBUG (6): SSP: Added edge 14 -> 12 to SPT
+DEBUG (6): SSP: Adding edge 12 -> 19 (3) to PQ
+DEBUG (6): SSP: Added edge 9 -> 0 to SPT
+DEBUG (6): SSP: Adding edge 0 -> 17 (3) to PQ
+DEBUG (6): SSP: Adding edge 0 -> 10 (3) to PQ
+DEBUG (6): SSP: Added edge 5 -> 2 to SPT
+DEBUG (6): SSP: Added edge 5 -> 3 to SPT
+DEBUG (6): SSP: Added edge 14 -> 16 to SPT
+DEBUG (6): SSP: Added edge 5 -> 18 to SPT
+DEBUG (6): SSP: Added edge 12 -> 19 to SPT
+DEBUG (6): SSP: Added edge 0 -> 17 to SPT
+DEBUG (6): SSP: Added edge 0 -> 10 to SPT
+DEBUG (6): SSP: Current SPT:
+DEBUG (6): PE: Adding receive/snoop packet at index 8
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 8
+DEBUG (6): PE: Free: 8, Added: 8, Wait: 20, Action: 20
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 9, Added: 8, Wait: 20, Action: 20
+DEBUG (6): PEBS: Send Buffer: 0 of 10
+DEBUG (6): PEBS: Receive Buffer: 1 of 10
+DEBUG (6): PE: Processing added pkt 8
+DEBUG (6): PE: Moved nextWaitPkt from 20 to 8
+DEBUG (6): PE: Free: 9, Added: 8, Wait: 8, Action: 20
+DEBUG (6): PE: Notify about receive added at index 8
+DEBUG (6): DSR: Pkt 8: DSR receive/snoop packet added!
+DEBUG (6): TLV: Type 1 not found
+DEBUG (6): TLV: Type 3 not found
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): DSR: Pkt 8: Found route reply option from 17 to 6
+DEBUG (6): DSR: Adding path with 3 links
+DEBUG (6): GS: Inserting edge 10 -> 5
+DEBUG (6): GS: Current Graph:
+DEBUG (6): GS: Inserting edge 5 -> 10
+DEBUG (6): GS: Current Graph:
+DEBUG (6): SSP: Building SPT for 6
+DEBUG (6): DSR: Pkt 8: No segments left, removing source route
+DEBUG (6): DSR: Pkt 8: Pkt that originated route request to 17 no longer here
+DEBUG (6): PE: Dropping pkt 8 from the buffer
+DEBUG (6): PE: Removing pkt 8 from the buffer
+DEBUG (6): PE: No packets with state 4 found
+DEBUG (6): PE: Free: 9, Added: 8, Wait: 20, Action: 20
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 9, Added: 20, Wait: 20, Action: 20
+DEBUG (6): PE: No more added packets
+DEBUG (6): SSP: Added edge 6 -> 6 to SPT
+DEBUG (6): SSP: Adding edge 6 -> 13 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 14 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 8 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 5 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 9 (1) to PQ
+DEBUG (6): SSP: Added edge 6 -> 13 to SPT
+DEBUG (6): SSP: Adding edge 13 -> 4 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 14 to SPT
+DEBUG (6): SSP: Adding edge 14 -> 16 (2) to PQ
+DEBUG (6): SSP: Adding edge 14 -> 12 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 5 to SPT
+DEBUG (6): SSP: Adding edge 5 -> 10 (2) to PQ
+DEBUG (6): SSP: Adding edge 5 -> 18 (2) to PQ
+DEBUG (6): SSP: Adding edge 5 -> 2 (2) to PQ
+DEBUG (6): SSP: Adding edge 5 -> 3 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 9 to SPT
+DEBUG (6): SSP: Adding edge 9 -> 0 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 8 to SPT
+DEBUG (6): SSP: Added edge 13 -> 4 to SPT
+DEBUG (6): SSP: Added edge 14 -> 12 to SPT
+DEBUG (6): SSP: Adding edge 12 -> 19 (3) to PQ
+DEBUG (6): SSP: Added edge 5 -> 2 to SPT
+DEBUG (6): SSP: Added edge 9 -> 0 to SPT
+DEBUG (6): SSP: Adding edge 0 -> 17 (3) to PQ
+DEBUG (6): SSP: Added edge 5 -> 18 to SPT
+DEBUG (6): SSP: Added edge 14 -> 16 to SPT
+DEBUG (6): SSP: Added edge 5 -> 3 to SPT
+DEBUG (6): SSP: Added edge 5 -> 10 to SPT
+DEBUG (6): SSP: Added edge 12 -> 19 to SPT
+DEBUG (6): SSP: Added edge 0 -> 17 to SPT
+DEBUG (6): SSP: Current SPT:
+DEBUG (6): PE: Adding receive/snoop packet at index 9
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 9
+DEBUG (6): PE: Free: 9, Added: 9, Wait: 20, Action: 20
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 10, Added: 9, Wait: 20, Action: 20
+DEBUG (6): PEBS: Send Buffer: 0 of 10
+DEBUG (6): PEBS: Receive Buffer: 1 of 10
+DEBUG (6): PE: Processing added pkt 9
+DEBUG (6): PE: Moved nextWaitPkt from 20 to 9
+DEBUG (6): PE: Free: 10, Added: 9, Wait: 9, Action: 20
+DEBUG (6): PE: Notify about snoop added at index 9
+DEBUG (6): DSR: Pkt 9: DSR snooped!
+DEBUG (6): DSR: Pkt 9: DSR receive/snoop packet added!
+DEBUG (6): TLV: Type 1 not found
+DEBUG (6): TLV: Type 3 not found
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): DSR: Pkt 9: Found route reply option from 17 to 6
+DEBUG (6): DSR: Adding path with 1 links
+DEBUG (6): GS: Inserting edge 17 -> 9
+DEBUG (6): GS: Current Graph:
+DEBUG (6): GS: Inserting edge 9 -> 17
+DEBUG (6): GS: Current Graph:
+DEBUG (6): SSP: Building SPT for 6
+DEBUG (6): DSR: Pkt 9: Passing to upper layer if not already sent
+DEBUG (6): PE: Removing pkt 9 from the buffer
+DEBUG (6): PE: No packets with state 4 found
+DEBUG (6): PE: Free: 10, Added: 9, Wait: 20, Action: 20
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 10, Added: 20, Wait: 20, Action: 20
+DEBUG (6): PE: No more added packets
+DEBUG (6): SSP: Added edge 6 -> 6 to SPT
+DEBUG (6): SSP: Adding edge 6 -> 13 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 14 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 8 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 5 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 9 (1) to PQ
+DEBUG (6): SSP: Added edge 6 -> 13 to SPT
+DEBUG (6): SSP: Adding edge 13 -> 4 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 14 to SPT
+DEBUG (6): SSP: Adding edge 14 -> 16 (2) to PQ
+DEBUG (6): SSP: Adding edge 14 -> 12 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 5 to SPT
+DEBUG (6): SSP: Adding edge 5 -> 10 (2) to PQ
+DEBUG (6): SSP: Adding edge 5 -> 18 (2) to PQ
+DEBUG (6): SSP: Adding edge 5 -> 2 (2) to PQ
+DEBUG (6): SSP: Adding edge 5 -> 3 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 9 to SPT
+DEBUG (6): SSP: Adding edge 9 -> 17 (2) to PQ
+DEBUG (6): SSP: Adding edge 9 -> 0 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 8 to SPT
+DEBUG (6): SSP: Added edge 13 -> 4 to SPT
+DEBUG (6): SSP: Added edge 14 -> 12 to SPT
+DEBUG (6): SSP: Adding edge 12 -> 19 (3) to PQ
+DEBUG (6): SSP: Added edge 5 -> 2 to SPT
+DEBUG (6): SSP: Added edge 9 -> 0 to SPT
+DEBUG (6): SSP: Added edge 9 -> 17 to SPT
+DEBUG (6): SSP: Added edge 14 -> 16 to SPT
+DEBUG (6): SSP: Added edge 5 -> 18 to SPT
+DEBUG (6): SSP: Added edge 5 -> 3 to SPT
+DEBUG (6): SSP: Added edge 5 -> 10 to SPT
+DEBUG (6): SSP: Added edge 12 -> 19 to SPT
+DEBUG (6): SSP: Current SPT:
+DEBUG (6): PE: Adding receive/snoop packet at index 10
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 10
+DEBUG (6): PE: Free: 10, Added: 10, Wait: 20, Action: 20
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 11, Added: 10, Wait: 20, Action: 20
+DEBUG (6): PEBS: Send Buffer: 0 of 10
+DEBUG (6): PEBS: Receive Buffer: 1 of 10
+DEBUG (6): PE: Processing added pkt 10
+DEBUG (6): PE: Moved nextWaitPkt from 20 to 10
+DEBUG (6): PE: Free: 11, Added: 10, Wait: 10, Action: 20
+DEBUG (6): PE: Notify about snoop added at index 10
+DEBUG (6): DSR: Pkt 10: DSR snooped!
+DEBUG (6): DSR: Pkt 10: DSR receive/snoop packet added!
+DEBUG (6): TLV: Type 1 not found
+DEBUG (6): TLV: Type 3 not found
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): DSR: Pkt 10: Found route reply option from 17 to 6
+DEBUG (6): DSR: Adding path with 2 links
+DEBUG (6): SSP: SPT for 6 already built!
+DEBUG (6): DSR: Pkt 10: Passing to upper layer if not already sent
+DEBUG (6): PE: Removing pkt 10 from the buffer
+DEBUG (6): PE: No packets with state 4 found
+DEBUG (6): PE: Free: 11, Added: 10, Wait: 20, Action: 20
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 11, Added: 20, Wait: 20, Action: 20
+DEBUG (6): PE: No more added packets
+DEBUG (6): SSP: Current SPT:
+DEBUG (6): PE: Adding receive/snoop packet at index 11
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 11
+DEBUG (6): PE: Free: 11, Added: 11, Wait: 20, Action: 20
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 12, Added: 11, Wait: 20, Action: 20
+DEBUG (6): PEBS: Send Buffer: 0 of 10
+DEBUG (6): PEBS: Receive Buffer: 1 of 10
+DEBUG (6): PE: Processing added pkt 11
+DEBUG (6): PE: Moved nextWaitPkt from 20 to 11
+DEBUG (6): PE: Free: 12, Added: 11, Wait: 11, Action: 20
+DEBUG (6): PE: Notify about snoop added at index 11
+DEBUG (6): DSR: Pkt 11: DSR snooped!
+DEBUG (6): DSR: Pkt 11: DSR receive/snoop packet added!
+DEBUG (6): TLV: Type 1 not found
+DEBUG (6): TLV: Type 3 not found
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): DSR: Pkt 11: Found source route option from 13 to 9
+DEBUG (6): DSR: Adding path with 1 links
+DEBUG (6): GS: Inserting edge 13 -> 9
+DEBUG (6): GS: Current Graph:
+DEBUG (6): GS: Inserting edge 9 -> 13
+DEBUG (6): GS: Current Graph:
+DEBUG (6): SSP: Building SPT for 6
+DEBUG (6): DSR: Pkt 11: Passing to upper layer if not already sent
+DEBUG (6): PE: Passing pkt 11 to upper layer
+DEBUG (6): SP: Snooped pkt from 13 to 9
+DEBUG (6): SP: No snoop connected for upper id 23!
+DEBUG (6): PE: Removing pkt 11 from the buffer
+DEBUG (6): PE: No packets with state 4 found
+DEBUG (6): PE: Free: 12, Added: 11, Wait: 20, Action: 20
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 12, Added: 20, Wait: 20, Action: 20
+DEBUG (6): PE: No more added packets
+DEBUG (6): SSP: Added edge 6 -> 6 to SPT
+DEBUG (6): SSP: Adding edge 6 -> 13 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 14 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 8 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 5 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 9 (1) to PQ
+DEBUG (6): SSP: Added edge 6 -> 13 to SPT
+DEBUG (6): SSP: Adding edge 13 -> 4 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 14 to SPT
+DEBUG (6): SSP: Adding edge 14 -> 16 (2) to PQ
+DEBUG (6): SSP: Adding edge 14 -> 12 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 5 to SPT
+DEBUG (6): SSP: Adding edge 5 -> 10 (2) to PQ
+DEBUG (6): SSP: Adding edge 5 -> 18 (2) to PQ
+DEBUG (6): SSP: Adding edge 5 -> 2 (2) to PQ
+DEBUG (6): SSP: Adding edge 5 -> 3 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 9 to SPT
+DEBUG (6): SSP: Adding edge 9 -> 17 (2) to PQ
+DEBUG (6): SSP: Adding edge 9 -> 0 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 8 to SPT
+DEBUG (6): SSP: Added edge 13 -> 4 to SPT
+DEBUG (6): SSP: Added edge 14 -> 12 to SPT
+DEBUG (6): SSP: Adding edge 12 -> 19 (3) to PQ
+DEBUG (6): SSP: Added edge 5 -> 2 to SPT
+DEBUG (6): SSP: Added edge 9 -> 0 to SPT
+DEBUG (6): SSP: Added edge 9 -> 17 to SPT
+DEBUG (6): SSP: Added edge 14 -> 16 to SPT
+DEBUG (6): SSP: Added edge 5 -> 18 to SPT
+DEBUG (6): SSP: Added edge 5 -> 3 to SPT
+DEBUG (6): SSP: Added edge 5 -> 10 to SPT
+DEBUG (6): SSP: Added edge 12 -> 19 to SPT
+DEBUG (6): SSP: Current SPT:
+DEBUG (6): PE: Adding receive/snoop packet at index 12
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 12
+DEBUG (6): PE: Free: 12, Added: 12, Wait: 20, Action: 20
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 13, Added: 12, Wait: 20, Action: 20
+DEBUG (6): PEBS: Send Buffer: 0 of 10
+DEBUG (6): PEBS: Receive Buffer: 1 of 10
+DEBUG (6): PE: Processing added pkt 12
+DEBUG (6): PE: Moved nextWaitPkt from 20 to 12
+DEBUG (6): PE: Free: 13, Added: 12, Wait: 12, Action: 20
+DEBUG (6): PE: Notify about snoop added at index 12
+DEBUG (6): DSR: Pkt 12: DSR snooped!
+DEBUG (6): DSR: Pkt 12: DSR receive/snoop packet added!
+DEBUG (6): TLV: Type 1 not found
+DEBUG (6): TLV: Type 3 not found
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): DSR: Pkt 12: Found route reply option from 17 to 6
+DEBUG (6): DSR: Adding path with 1 links
+DEBUG (6): GS: Inserting edge 17 -> 15
+DEBUG (6): GS: Current Graph:
+DEBUG (6): GS: Inserting edge 15 -> 17
+DEBUG (6): GS: Current Graph:
+DEBUG (6): SSP: Building SPT for 6
+DEBUG (6): DSR: Pkt 12: Passing to upper layer if not already sent
+DEBUG (6): PE: Removing pkt 12 from the buffer
+DEBUG (6): PE: No packets with state 4 found
+DEBUG (6): PE: Free: 13, Added: 12, Wait: 20, Action: 20
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 13, Added: 20, Wait: 20, Action: 20
+DEBUG (6): PE: No more added packets
+DEBUG (6): SSP: Added edge 6 -> 6 to SPT
+DEBUG (6): SSP: Adding edge 6 -> 13 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 14 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 8 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 5 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 9 (1) to PQ
+DEBUG (6): SSP: Added edge 6 -> 13 to SPT
+DEBUG (6): SSP: Adding edge 13 -> 4 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 14 to SPT
+DEBUG (6): SSP: Adding edge 14 -> 16 (2) to PQ
+DEBUG (6): SSP: Adding edge 14 -> 12 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 5 to SPT
+DEBUG (6): SSP: Adding edge 5 -> 10 (2) to PQ
+DEBUG (6): SSP: Adding edge 5 -> 18 (2) to PQ
+DEBUG (6): SSP: Adding edge 5 -> 2 (2) to PQ
+DEBUG (6): SSP: Adding edge 5 -> 3 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 9 to SPT
+DEBUG (6): SSP: Adding edge 9 -> 17 (2) to PQ
+DEBUG (6): SSP: Adding edge 9 -> 0 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 8 to SPT
+DEBUG (6): SSP: Added edge 13 -> 4 to SPT
+DEBUG (6): SSP: Added edge 14 -> 12 to SPT
+DEBUG (6): SSP: Adding edge 12 -> 19 (3) to PQ
+DEBUG (6): SSP: Added edge 5 -> 2 to SPT
+DEBUG (6): SSP: Added edge 9 -> 0 to SPT
+DEBUG (6): SSP: Added edge 9 -> 17 to SPT
+DEBUG (6): SSP: Adding edge 17 -> 15 (3) to PQ
+DEBUG (6): SSP: Added edge 14 -> 16 to SPT
+DEBUG (6): SSP: Added edge 5 -> 18 to SPT
+DEBUG (6): SSP: Added edge 5 -> 3 to SPT
+DEBUG (6): SSP: Added edge 5 -> 10 to SPT
+DEBUG (6): SSP: Added edge 12 -> 19 to SPT
+DEBUG (6): SSP: Added edge 17 -> 15 to SPT
+DEBUG (6): SSP: Current SPT:
+DEBUG (6): PE: Adding receive/snoop packet at index 13
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 13
+DEBUG (6): PE: Free: 13, Added: 13, Wait: 20, Action: 20
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 14, Added: 13, Wait: 20, Action: 20
+DEBUG (6): PEBS: Send Buffer: 0 of 10
+DEBUG (6): PEBS: Receive Buffer: 1 of 10
+DEBUG (6): PE: Processing added pkt 13
+DEBUG (6): PE: Moved nextWaitPkt from 20 to 13
+DEBUG (6): PE: Free: 14, Added: 13, Wait: 13, Action: 20
+DEBUG (6): PE: Notify about receive added at index 13
+DEBUG (6): DSR: Pkt 13: DSR receive/snoop packet added!
+DEBUG (6): TLV: Type 1 not found
+DEBUG (6): TLV: Type 3 not found
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): DSR: Pkt 13: Found route reply option from 17 to 6
+DEBUG (6): DSR: Adding path with 5 links
+DEBUG (6): GS: Inserting edge 0 -> 3
+DEBUG (6): GS: Current Graph:
+DEBUG (6): GS: Inserting edge 3 -> 18
+DEBUG (6): GS: Current Graph:
+DEBUG (6): GS: Inserting edge 18 -> 3
+DEBUG (6): GS: Current Graph:
+DEBUG (6): GS: Inserting edge 3 -> 0
+DEBUG (6): GS: Current Graph:
+DEBUG (6): SSP: Building SPT for 6
+DEBUG (6): DSR: Pkt 13: No segments left, removing source route
+DEBUG (6): DSR: Pkt 13: Pkt that originated route request to 17 no longer here
+DEBUG (6): PE: Dropping pkt 13 from the buffer
+DEBUG (6): PE: Removing pkt 13 from the buffer
+DEBUG (6): PE: No packets with state 4 found
+DEBUG (6): PE: Free: 14, Added: 13, Wait: 20, Action: 20
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 14, Added: 20, Wait: 20, Action: 20
+DEBUG (6): PE: No more added packets
+DEBUG (6): SSP: Added edge 6 -> 6 to SPT
+DEBUG (6): SSP: Adding edge 6 -> 13 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 14 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 8 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 5 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 9 (1) to PQ
+DEBUG (6): SSP: Added edge 6 -> 13 to SPT
+DEBUG (6): SSP: Adding edge 13 -> 4 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 14 to SPT
+DEBUG (6): SSP: Adding edge 14 -> 16 (2) to PQ
+DEBUG (6): SSP: Adding edge 14 -> 12 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 5 to SPT
+DEBUG (6): SSP: Adding edge 5 -> 10 (2) to PQ
+DEBUG (6): SSP: Adding edge 5 -> 18 (2) to PQ
+DEBUG (6): SSP: Adding edge 5 -> 2 (2) to PQ
+DEBUG (6): SSP: Adding edge 5 -> 3 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 9 to SPT
+DEBUG (6): SSP: Adding edge 9 -> 17 (2) to PQ
+DEBUG (6): SSP: Adding edge 9 -> 0 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 8 to SPT
+DEBUG (6): SSP: Added edge 13 -> 4 to SPT
+DEBUG (6): SSP: Added edge 14 -> 12 to SPT
+DEBUG (6): SSP: Adding edge 12 -> 19 (3) to PQ
+DEBUG (6): SSP: Added edge 5 -> 2 to SPT
+DEBUG (6): SSP: Added edge 9 -> 0 to SPT
+DEBUG (6): SSP: Added edge 9 -> 17 to SPT
+DEBUG (6): SSP: Adding edge 17 -> 15 (3) to PQ
+DEBUG (6): SSP: Added edge 14 -> 16 to SPT
+DEBUG (6): SSP: Added edge 5 -> 18 to SPT
+DEBUG (6): SSP: Added edge 5 -> 3 to SPT
+DEBUG (6): SSP: Added edge 5 -> 10 to SPT
+DEBUG (6): SSP: Added edge 12 -> 19 to SPT
+DEBUG (6): SSP: Added edge 17 -> 15 to SPT
+DEBUG (6): SSP: Current SPT:
+DEBUG (6): PE: Adding receive/snoop packet at index 14
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 14
+DEBUG (6): PE: Free: 14, Added: 14, Wait: 20, Action: 20
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 15, Added: 14, Wait: 20, Action: 20
+DEBUG (6): PEBS: Send Buffer: 0 of 10
+DEBUG (6): PEBS: Receive Buffer: 1 of 10
+DEBUG (6): PE: Processing added pkt 14
+DEBUG (6): PE: Moved nextWaitPkt from 20 to 14
+DEBUG (6): PE: Free: 15, Added: 14, Wait: 14, Action: 20
+DEBUG (6): PE: Notify about snoop added at index 14
+DEBUG (6): DSR: Pkt 14: DSR snooped!
+DEBUG (6): DSR: Pkt 14: DSR receive/snoop packet added!
+DEBUG (6): TLV: Type 1 not found
+DEBUG (6): TLV: Type 3 not found
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): DSR: Pkt 14: Found route reply option from 17 to 6
+DEBUG (6): DSR: Adding path with 2 links
+DEBUG (6): SSP: SPT for 6 already built!
+DEBUG (6): DSR: Pkt 14: Passing to upper layer if not already sent
+DEBUG (6): PE: Removing pkt 14 from the buffer
+DEBUG (6): PE: No packets with state 4 found
+DEBUG (6): PE: Free: 15, Added: 14, Wait: 20, Action: 20
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 15, Added: 20, Wait: 20, Action: 20
+DEBUG (6): PE: No more added packets
+DEBUG (6): SSP: Current SPT:
+DEBUG (6): PE: Adding receive/snoop packet at index 15
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 15
+DEBUG (6): PE: Free: 15, Added: 15, Wait: 20, Action: 20
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 16, Added: 15, Wait: 20, Action: 20
+DEBUG (6): PEBS: Send Buffer: 0 of 10
+DEBUG (6): PEBS: Receive Buffer: 1 of 10
+DEBUG (6): PE: Processing added pkt 15
+DEBUG (6): PE: Moved nextWaitPkt from 20 to 15
+DEBUG (6): PE: Free: 16, Added: 15, Wait: 15, Action: 20
+DEBUG (6): PE: Notify about snoop added at index 15
+DEBUG (6): DSR: Pkt 15: DSR snooped!
+DEBUG (6): DSR: Pkt 15: DSR receive/snoop packet added!
+DEBUG (6): TLV: Type 1 not found
+DEBUG (6): TLV: Type 3 not found
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): DSR: Pkt 15: Found route reply option from 17 to 6
+DEBUG (6): DSR: Adding path with 1 links
+DEBUG (6): SSP: SPT for 6 already built!
+DEBUG (6): DSR: Pkt 15: Passing to upper layer if not already sent
+DEBUG (6): PE: Removing pkt 15 from the buffer
+DEBUG (6): PE: No packets with state 4 found
+DEBUG (6): PE: Free: 16, Added: 15, Wait: 20, Action: 20
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 16, Added: 20, Wait: 20, Action: 20
+DEBUG (6): PE: No more added packets
+DEBUG (6): SSP: Current SPT:
+DEBUG (6): PE: Adding receive/snoop packet at index 16
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 16
+DEBUG (6): PE: Free: 16, Added: 16, Wait: 20, Action: 20
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 17, Added: 16, Wait: 20, Action: 20
+DEBUG (6): PEBS: Send Buffer: 0 of 10
+DEBUG (6): PEBS: Receive Buffer: 1 of 10
+DEBUG (6): PE: Processing added pkt 16
+DEBUG (6): PE: Moved nextWaitPkt from 20 to 16
+DEBUG (6): PE: Free: 17, Added: 16, Wait: 16, Action: 20
+DEBUG (6): PE: Notify about snoop added at index 16
+DEBUG (6): DSR: Pkt 16: DSR snooped!
+DEBUG (6): DSR: Pkt 16: DSR receive/snoop packet added!
+DEBUG (6): TLV: Type 1 not found
+DEBUG (6): TLV: Type 3 not found
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): DSR: Pkt 16: Found route reply option from 17 to 6
+DEBUG (6): DSR: Adding path with 2 links
+DEBUG (6): SSP: SPT for 6 already built!
+DEBUG (6): DSR: Pkt 16: Passing to upper layer if not already sent
+DEBUG (6): PE: Removing pkt 16 from the buffer
+DEBUG (6): PE: No packets with state 4 found
+DEBUG (6): PE: Free: 17, Added: 16, Wait: 20, Action: 20
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 17, Added: 20, Wait: 20, Action: 20
+DEBUG (6): PE: No more added packets
+DEBUG (6): SSP: Current SPT:
+DEBUG (6): PE: Adding receive/snoop packet at index 17
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 17
+DEBUG (6): PE: Free: 17, Added: 17, Wait: 20, Action: 20
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 18, Added: 17, Wait: 20, Action: 20
+DEBUG (6): PEBS: Send Buffer: 0 of 10
+DEBUG (6): PEBS: Receive Buffer: 1 of 10
+DEBUG (6): PE: Processing added pkt 17
+DEBUG (6): PE: Moved nextWaitPkt from 20 to 17
+DEBUG (6): PE: Free: 18, Added: 17, Wait: 17, Action: 20
+DEBUG (6): PE: Notify about snoop added at index 17
+DEBUG (6): DSR: Pkt 17: DSR snooped!
+DEBUG (6): DSR: Pkt 17: DSR receive/snoop packet added!
+DEBUG (6): TLV: Type 1 not found
+DEBUG (6): TLV: Type 3 not found
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): DSR: Pkt 17: Found route reply option from 17 to 6
+DEBUG (6): DSR: Adding path with 2 links
+DEBUG (6): SSP: SPT for 6 already built!
+DEBUG (6): DSR: Pkt 17: Passing to upper layer if not already sent
+DEBUG (6): PE: Removing pkt 17 from the buffer
+DEBUG (6): PE: No packets with state 4 found
+DEBUG (6): PE: Free: 18, Added: 17, Wait: 20, Action: 20
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 18, Added: 20, Wait: 20, Action: 20
+DEBUG (6): PE: No more added packets
+DEBUG (6): SSP: Current SPT:
+DEBUG (6): PE: Adding receive/snoop packet at index 18
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 18
+DEBUG (6): PE: Free: 18, Added: 18, Wait: 20, Action: 20
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 19, Added: 18, Wait: 20, Action: 20
+DEBUG (6): PEBS: Send Buffer: 0 of 10
+DEBUG (6): PEBS: Receive Buffer: 1 of 10
+DEBUG (6): PE: Processing added pkt 18
+DEBUG (6): PE: Moved nextWaitPkt from 20 to 18
+DEBUG (6): PE: Free: 19, Added: 18, Wait: 18, Action: 20
+DEBUG (6): PE: Notify about snoop added at index 18
+DEBUG (6): DSR: Pkt 18: DSR snooped!
+DEBUG (6): DSR: Pkt 18: DSR receive/snoop packet added!
+DEBUG (6): TLV: Type 1 not found
+DEBUG (6): TLV: Type 3 found at byte 0
+DEBUG (6): DSR: Pkt 18: Found route error option at 0 from 9 to 17
+DEBUG (6): DSR: Pkt 18: Removing broken link 9 -> 3
+DEBUG (6): GS: Removing edge 9 -> 3
+DEBUG (6): GS: Current Graph:
+DEBUG (6): GS: Removing edge 3 -> 9
+DEBUG (6): GS: Current Graph:
+DEBUG (6): SSP: Building SPT for 6
+DEBUG (6): TLV: Type 3 not found
+DEBUG (6): TLV: Type 96 found at byte 9
+DEBUG (6): TLV: Type 96 found at byte 9
+DEBUG (6): DSR: Pkt 18: Found source route option from 9 to 17
+DEBUG (6): DSR: Adding path with 1 links
+DEBUG (6): DSR: Pkt 18: Passing to upper layer if not already sent
+DEBUG (6): PE: Removing pkt 18 from the buffer
+DEBUG (6): PE: No packets with state 4 found
+DEBUG (6): PE: Free: 19, Added: 18, Wait: 20, Action: 20
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 19, Added: 20, Wait: 20, Action: 20
+DEBUG (6): PE: No more added packets
+DEBUG (6): SSP: Added edge 6 -> 6 to SPT
+DEBUG (6): SSP: Adding edge 6 -> 13 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 14 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 8 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 5 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 9 (1) to PQ
+DEBUG (6): SSP: Added edge 6 -> 13 to SPT
+DEBUG (6): SSP: Adding edge 13 -> 4 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 14 to SPT
+DEBUG (6): SSP: Adding edge 14 -> 16 (2) to PQ
+DEBUG (6): SSP: Adding edge 14 -> 12 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 5 to SPT
+DEBUG (6): SSP: Adding edge 5 -> 10 (2) to PQ
+DEBUG (6): SSP: Adding edge 5 -> 18 (2) to PQ
+DEBUG (6): SSP: Adding edge 5 -> 2 (2) to PQ
+DEBUG (6): SSP: Adding edge 5 -> 3 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 9 to SPT
+DEBUG (6): SSP: Adding edge 9 -> 17 (2) to PQ
+DEBUG (6): SSP: Adding edge 9 -> 0 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 8 to SPT
+DEBUG (6): SSP: Added edge 13 -> 4 to SPT
+DEBUG (6): SSP: Added edge 14 -> 12 to SPT
+DEBUG (6): SSP: Adding edge 12 -> 19 (3) to PQ
+DEBUG (6): SSP: Added edge 5 -> 2 to SPT
+DEBUG (6): SSP: Added edge 9 -> 0 to SPT
+DEBUG (6): SSP: Added edge 9 -> 17 to SPT
+DEBUG (6): SSP: Adding edge 17 -> 15 (3) to PQ
+DEBUG (6): SSP: Added edge 14 -> 16 to SPT
+DEBUG (6): SSP: Added edge 5 -> 18 to SPT
+DEBUG (6): SSP: Added edge 5 -> 3 to SPT
+DEBUG (6): SSP: Added edge 5 -> 10 to SPT
+DEBUG (6): SSP: Added edge 12 -> 19 to SPT
+DEBUG (6): SSP: Added edge 17 -> 15 to SPT
+DEBUG (6): SSP: Current SPT:
+DEBUG (6): PE: Adding receive/snoop packet at index 19
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 19
+DEBUG (6): PE: Free: 19, Added: 19, Wait: 20, Action: 20
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 0, Added: 19, Wait: 20, Action: 20
+DEBUG (6): PEBS: Send Buffer: 0 of 10
+DEBUG (6): PEBS: Receive Buffer: 1 of 10
+DEBUG (6): PE: Processing added pkt 19
+DEBUG (6): PE: Moved nextWaitPkt from 20 to 19
+DEBUG (6): PE: Free: 0, Added: 19, Wait: 19, Action: 20
+DEBUG (6): PE: Notify about receive added at index 19
+DEBUG (6): DSR: Pkt 19: DSR receive/snoop packet added!
+DEBUG (6): TLV: Type 1 not found
+DEBUG (6): TLV: Type 3 not found
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): DSR: Pkt 19: Found route reply option from 17 to 6
+DEBUG (6): DSR: Adding path with 5 links
+DEBUG (6): GS: Inserting edge 15 -> 3
+DEBUG (6): GS: Current Graph:
+DEBUG (6): GS: Inserting edge 3 -> 15
+DEBUG (6): GS: Current Graph:
+DEBUG (6): SSP: Building SPT for 6
+DEBUG (6): DSR: Pkt 19: No segments left, removing source route
+DEBUG (6): DSR: Pkt 19: Pkt that originated route request to 17 no longer here
+DEBUG (6): PE: Dropping pkt 19 from the buffer
+DEBUG (6): PE: Removing pkt 19 from the buffer
+DEBUG (6): PE: No packets with state 4 found
+DEBUG (6): PE: Free: 0, Added: 19, Wait: 20, Action: 20
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 0, Added: 20, Wait: 20, Action: 20
+DEBUG (6): PE: No more added packets
+DEBUG (6): SSP: Added edge 6 -> 6 to SPT
+DEBUG (6): SSP: Adding edge 6 -> 13 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 14 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 8 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 5 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 9 (1) to PQ
+DEBUG (6): SSP: Added edge 6 -> 13 to SPT
+DEBUG (6): SSP: Adding edge 13 -> 4 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 14 to SPT
+DEBUG (6): SSP: Adding edge 14 -> 16 (2) to PQ
+DEBUG (6): SSP: Adding edge 14 -> 12 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 5 to SPT
+DEBUG (6): SSP: Adding edge 5 -> 10 (2) to PQ
+DEBUG (6): SSP: Adding edge 5 -> 18 (2) to PQ
+DEBUG (6): SSP: Adding edge 5 -> 2 (2) to PQ
+DEBUG (6): SSP: Adding edge 5 -> 3 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 9 to SPT
+DEBUG (6): SSP: Adding edge 9 -> 17 (2) to PQ
+DEBUG (6): SSP: Adding edge 9 -> 0 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 8 to SPT
+DEBUG (6): SSP: Added edge 13 -> 4 to SPT
+DEBUG (6): SSP: Added edge 14 -> 12 to SPT
+DEBUG (6): SSP: Adding edge 12 -> 19 (3) to PQ
+DEBUG (6): SSP: Added edge 5 -> 2 to SPT
+DEBUG (6): SSP: Added edge 9 -> 0 to SPT
+DEBUG (6): SSP: Added edge 9 -> 17 to SPT
+DEBUG (6): SSP: Adding edge 17 -> 15 (3) to PQ
+DEBUG (6): SSP: Added edge 14 -> 16 to SPT
+DEBUG (6): SSP: Added edge 5 -> 18 to SPT
+DEBUG (6): SSP: Added edge 5 -> 3 to SPT
+DEBUG (6): SSP: Added edge 5 -> 10 to SPT
+DEBUG (6): SSP: Added edge 12 -> 19 to SPT
+DEBUG (6): SSP: Added edge 17 -> 15 to SPT
+DEBUG (6): SSP: Current SPT:
+DEBUG (6): PE: Adding receive/snoop packet at index 0
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 0
+DEBUG (6): PE: Free: 0, Added: 0, Wait: 20, Action: 20
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 1, Added: 0, Wait: 20, Action: 20
+DEBUG (6): PEBS: Send Buffer: 0 of 10
+DEBUG (6): PEBS: Receive Buffer: 1 of 10
+DEBUG (6): PE: Processing added pkt 0
+DEBUG (6): PE: Moved nextWaitPkt from 20 to 0
+DEBUG (6): PE: Free: 1, Added: 0, Wait: 0, Action: 20
+DEBUG (6): PE: Notify about snoop added at index 0
+DEBUG (6): DSR: Pkt 0: DSR snooped!
+DEBUG (6): DSR: Pkt 0: DSR receive/snoop packet added!
+DEBUG (6): TLV: Type 1 not found
+DEBUG (6): TLV: Type 3 found at byte 0
+DEBUG (6): DSR: Pkt 0: Found route error option at 0 from 9 to 17
+DEBUG (6): DSR: Pkt 0: Removing broken link 9 -> 3
+DEBUG (6): GS: Removing edge 9 -> 3
+DEBUG (6): GS: Edge not found!
+DEBUG (6): GS: Removing edge 3 -> 9
+DEBUG (6): GS: Edge not found!
+DEBUG (6): SSP: SPT for 6 already built!
+DEBUG (6): TLV: Type 3 not found
+DEBUG (6): TLV: Type 96 found at byte 9
+DEBUG (6): TLV: Type 96 found at byte 9
+DEBUG (6): DSR: Pkt 0: Found source route option from 9 to 17
+DEBUG (6): DSR: Adding path with 1 links
+DEBUG (6): SSP: SPT for 6 already built!
+DEBUG (6): DSR: Pkt 0: Passing to upper layer if not already sent
+DEBUG (6): PE: Removing pkt 0 from the buffer
+DEBUG (6): PE: No packets with state 4 found
+DEBUG (6): PE: Free: 1, Added: 0, Wait: 20, Action: 20
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 1, Added: 20, Wait: 20, Action: 20
+DEBUG (6): PE: No more added packets
+DEBUG (6): SSP: Current SPT:
+DEBUG (6): PE: Adding receive/snoop packet at index 1
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 1
+DEBUG (6): PE: Free: 1, Added: 1, Wait: 20, Action: 20
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 2, Added: 1, Wait: 20, Action: 20
+DEBUG (6): PEBS: Send Buffer: 0 of 10
+DEBUG (6): PEBS: Receive Buffer: 1 of 10
+DEBUG (6): PE: Processing added pkt 1
+DEBUG (6): PE: Moved nextWaitPkt from 20 to 1
+DEBUG (6): PE: Free: 2, Added: 1, Wait: 1, Action: 20
+DEBUG (6): PE: Notify about receive added at index 1
+DEBUG (6): DSR: Pkt 1: DSR receive/snoop packet added!
+DEBUG (6): TLV: Type 1 not found
+DEBUG (6): TLV: Type 3 not found
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): DSR: Pkt 1: Found route reply option from 17 to 6
+DEBUG (6): DSR: Adding path with 5 links
+DEBUG (6): SSP: SPT for 6 already built!
+DEBUG (6): DSR: Pkt 1: No segments left, removing source route
+DEBUG (6): DSR: Pkt 1: Pkt that originated route request to 17 no longer here
+DEBUG (6): PE: Dropping pkt 1 from the buffer
+DEBUG (6): PE: Removing pkt 1 from the buffer
+DEBUG (6): PE: No packets with state 4 found
+DEBUG (6): PE: Free: 2, Added: 1, Wait: 20, Action: 20
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 2, Added: 20, Wait: 20, Action: 20
+DEBUG (6): PE: No more added packets
+DEBUG (6): SSP: Current SPT:
+DEBUG (6): PE: Adding receive/snoop packet at index 2
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 2
+DEBUG (6): PE: Free: 2, Added: 2, Wait: 20, Action: 20
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 3, Added: 2, Wait: 20, Action: 20
+DEBUG (6): PEBS: Send Buffer: 0 of 10
+DEBUG (6): PEBS: Receive Buffer: 1 of 10
+DEBUG (6): PE: Processing added pkt 2
+DEBUG (6): PE: Moved nextWaitPkt from 20 to 2
+DEBUG (6): PE: Free: 3, Added: 2, Wait: 2, Action: 20
+DEBUG (6): PE: Notify about snoop added at index 2
+DEBUG (6): DSR: Pkt 2: DSR snooped!
+DEBUG (6): DSR: Pkt 2: DSR receive/snoop packet added!
+DEBUG (6): TLV: Type 1 not found
+DEBUG (6): TLV: Type 3 not found
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): DSR: Pkt 2: Found source route option from 17 to 18
+DEBUG (6): DSR: Adding path with 1 links
+DEBUG (6): SSP: SPT for 6 already built!
+DEBUG (6): DSR: Pkt 2: Passing to upper layer if not already sent
+DEBUG (6): PE: Passing pkt 2 to upper layer
+DEBUG (6): SP: Snooped pkt from 17 to 18
+DEBUG (6): SP: No snoop connected for upper id 23!
+DEBUG (6): PE: Removing pkt 2 from the buffer
+DEBUG (6): PE: No packets with state 4 found
+DEBUG (6): PE: Free: 3, Added: 2, Wait: 20, Action: 20
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 3, Added: 20, Wait: 20, Action: 20
+DEBUG (6): PE: No more added packets
+DEBUG (6): SSP: Current SPT:
+DEBUG (6): PE: Adding receive/snoop packet at index 3
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 3
+DEBUG (6): PE: Free: 3, Added: 3, Wait: 20, Action: 20
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 4, Added: 3, Wait: 20, Action: 20
+DEBUG (6): PEBS: Send Buffer: 0 of 10
+DEBUG (6): PEBS: Receive Buffer: 1 of 10
+DEBUG (6): PE: Processing added pkt 3
+DEBUG (6): PE: Moved nextWaitPkt from 20 to 3
+DEBUG (6): PE: Free: 4, Added: 3, Wait: 3, Action: 20
+DEBUG (6): PE: Notify about receive added at index 3
+DEBUG (6): DSR: Pkt 3: DSR receive/snoop packet added!
+DEBUG (6): TLV: Type 1 found at byte 0
+DEBUG (6): TLV: Type 1 found at byte 0
+DEBUG (6): DSR: Pkt 3: Found route request option from 18 to 1
+DEBUG (6): DSR: Adding path with 2 links
+DEBUG (6): GS: Inserting edge 18 -> 19
+DEBUG (6): GS: Current Graph:
+DEBUG (6): GS: Inserting edge 6 -> 19
+DEBUG (6): GS: Current Graph:
+DEBUG (6): GS: Inserting edge 19 -> 6
+DEBUG (6): GS: Current Graph:
+DEBUG (6): GS: Inserting edge 19 -> 18
+DEBUG (6): GS: Current Graph:
+DEBUG (6): SSP: Building SPT for 6
+DEBUG (6): DSR: Pkt 3: Route request to 1 (ID 101) is new
+DEBUG (6): TLV: Type 1 found at byte 0
+DEBUG (6): TLV: Type 1 found at byte 0
+DEBUG (6): TLV: Setting length of type 1 to 5
+DEBUG (6): DSR: Pkt 3: Sending route request to 1 further
+DEBUG (6): PE: Marking pkt 3 to be sent
+DEBUG (6): PE: Moved nextActionPkt from 20 to 3
+DEBUG (6): PE: Free: 4, Added: 3, Wait: 3, Action: 3
+DEBUG (6): PE: No packets with state 4 found
+DEBUG (6): PE: Free: 4, Added: 3, Wait: 20, Action: 3
+DEBUG (6): TLV: Type 3 not found
+DEBUG (6): TLV: Type 96 not found
+DEBUG (6): DSR: Pkt 3: Passing to upper layer if not already sent
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 4, Added: 20, Wait: 20, Action: 3
+DEBUG (6): PE: No more added packets
+DEBUG (6): SSP: Added edge 6 -> 6 to SPT
+DEBUG (6): SSP: Adding edge 6 -> 19 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 13 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 14 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 8 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 5 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 9 (1) to PQ
+DEBUG (6): PE: Processing action pkt 3
+DEBUG (6): PE: SubSend successful, waiting for result
+DEBUG (6): SSP: Added edge 6 -> 19 to SPT
+DEBUG (6): SSP: Adding edge 19 -> 18 (2) to PQ
+DEBUG (6): SSP: Adding edge 19 -> 12 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 13 to SPT
+DEBUG (6): SSP: Adding edge 13 -> 4 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 8 to SPT
+DEBUG (6): SSP: Adding edge 8 -> 16 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 9 to SPT
+DEBUG (6): SSP: Adding edge 9 -> 17 (2) to PQ
+DEBUG (6): SSP: Adding edge 9 -> 0 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 5 to SPT
+DEBUG (6): SSP: Adding edge 5 -> 10 (2) to PQ
+DEBUG (6): SSP: Adding edge 5 -> 2 (2) to PQ
+DEBUG (6): SSP: Adding edge 5 -> 3 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 14 to SPT
+DEBUG (6): SSP: Added edge 19 -> 12 to SPT
+DEBUG (6): SSP: Added edge 8 -> 16 to SPT
+DEBUG (6): SSP: Added edge 5 -> 10 to SPT
+DEBUG (6): SSP: Added edge 5 -> 3 to SPT
+DEBUG (6): SSP: Adding edge 3 -> 15 (3) to PQ
+DEBUG (6): SSP: Added edge 5 -> 2 to SPT
+DEBUG (6): SSP: Added edge 9 -> 17 to SPT
+DEBUG (6): SSP: Added edge 9 -> 0 to SPT
+DEBUG (6): SSP: Added edge 13 -> 4 to SPT
+DEBUG (6): SSP: Added edge 19 -> 18 to SPT
+DEBUG (6): SSP: Added edge 3 -> 15 to SPT
+DEBUG (6): SSP: Current SPT:
+DEBUG (6): PE: Send done for pkt 3
+DEBUG (6): PE: Removing pkt 3 from the buffer
+DEBUG (6): PE: Send backoff for 23 ms
+DEBUG (6): PE: No packets with state 24 found
+DEBUG (6): PE: Free: 4, Added: 20, Wait: 20, Action: 20
+DEBUG (6): PE: No more action packets
+DEBUG (6): PE: Adding receive/snoop packet at index 4
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 4
+DEBUG (6): PE: Free: 4, Added: 4, Wait: 20, Action: 20
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 5, Added: 4, Wait: 20, Action: 20
+DEBUG (6): PEBS: Send Buffer: 0 of 10
+DEBUG (6): PEBS: Receive Buffer: 1 of 10
+DEBUG (6): PE: Processing added pkt 4
+DEBUG (6): PE: Moved nextWaitPkt from 20 to 4
+DEBUG (6): PE: Free: 5, Added: 4, Wait: 4, Action: 20
+DEBUG (6): PE: Notify about receive added at index 4
+DEBUG (6): DSR: Pkt 4: DSR receive/snoop packet added!
+DEBUG (6): TLV: Type 1 found at byte 0
+DEBUG (6): TLV: Type 1 found at byte 0
+DEBUG (6): DSR: Pkt 4: Found route request option from 18 to 1
+DEBUG (6): DSR: Adding path with 4 links
+DEBUG (6): GS: Inserting edge 19 -> 4
+DEBUG (6): GS: Current Graph:
+DEBUG (6): GS: Inserting edge 4 -> 19
+DEBUG (6): GS: Current Graph:
+DEBUG (6): SSP: Building SPT for 6
+DEBUG (6): DSR: Pkt 4: Route request to 1 (ID 101) found in cache, dropping!
+DEBUG (6): PE: Dropping pkt 4 from the buffer
+DEBUG (6): PE: Removing pkt 4 from the buffer
+DEBUG (6): PE: No packets with state 4 found
+DEBUG (6): PE: Free: 5, Added: 4, Wait: 20, Action: 20
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 5, Added: 20, Wait: 20, Action: 20
+DEBUG (6): PE: No more added packets
+DEBUG (6): SSP: Added edge 6 -> 6 to SPT
+DEBUG (6): SSP: Adding edge 6 -> 19 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 13 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 14 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 8 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 5 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 9 (1) to PQ
+DEBUG (6): SSP: Added edge 6 -> 19 to SPT
+DEBUG (6): SSP: Adding edge 19 -> 4 (2) to PQ
+DEBUG (6): SSP: Adding edge 19 -> 18 (2) to PQ
+DEBUG (6): SSP: Adding edge 19 -> 12 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 13 to SPT
+DEBUG (6): SSP: Added edge 6 -> 8 to SPT
+DEBUG (6): SSP: Adding edge 8 -> 16 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 9 to SPT
+DEBUG (6): SSP: Adding edge 9 -> 17 (2) to PQ
+DEBUG (6): SSP: Adding edge 9 -> 0 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 5 to SPT
+DEBUG (6): SSP: Adding edge 5 -> 10 (2) to PQ
+DEBUG (6): SSP: Adding edge 5 -> 2 (2) to PQ
+DEBUG (6): SSP: Adding edge 5 -> 3 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 14 to SPT
+DEBUG (6): SSP: Added edge 19 -> 12 to SPT
+DEBUG (6): SSP: Added edge 8 -> 16 to SPT
+DEBUG (6): SSP: Added edge 5 -> 10 to SPT
+DEBUG (6): SSP: Added edge 5 -> 3 to SPT
+DEBUG (6): SSP: Adding edge 3 -> 15 (3) to PQ
+DEBUG (6): SSP: Added edge 5 -> 2 to SPT
+DEBUG (6): SSP: Added edge 9 -> 17 to SPT
+DEBUG (6): SSP: Added edge 9 -> 0 to SPT
+DEBUG (6): SSP: Added edge 19 -> 18 to SPT
+DEBUG (6): SSP: Added edge 19 -> 4 to SPT
+DEBUG (6): SSP: Added edge 3 -> 15 to SPT
+DEBUG (6): SSP: Current SPT:
+DEBUG (6): PE: Adding receive/snoop packet at index 5
+DEBUG (6): PE: Moved nextAddedPkt from 20 to 5
+DEBUG (6): PE: Free: 5, Added: 5, Wait: 20, Action: 20
+DEBUG (6): PE: Index updated
+DEBUG (6): PE: Free: 6, Added: 5, Wait: 20, Action: 20
+DEBUG (6): PEBS: Send Buffer: 0 of 10
+DEBUG (6): PEBS: Receive Buffer: 1 of 10
+DEBUG (6): PE: Processing added pkt 5
+DEBUG (6): PE: Moved nextWaitPkt from 20 to 5
+DEBUG (6): PE: Free: 6, Added: 5, Wait: 5, Action: 20
+DEBUG (6): PE: Notify about snoop added at index 5
+DEBUG (6): DSR: Pkt 5: DSR snooped!
+DEBUG (6): DSR: Pkt 5: DSR receive/snoop packet added!
+DEBUG (6): TLV: Type 1 not found
+DEBUG (6): TLV: Type 3 not found
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): TLV: Type 96 found at byte 0
+DEBUG (6): DSR: Pkt 5: Found route reply option from 1 to 18
+DEBUG (6): DSR: Adding path with 3 links
+DEBUG (6): GS: Inserting edge 1 -> 7
+DEBUG (6): GS: Current Graph:
+DEBUG (6): GS: Inserting edge 7 -> 17
+DEBUG (6): GS: Current Graph:
+DEBUG (6): GS: Inserting edge 17 -> 7
+DEBUG (6): GS: Current Graph:
+DEBUG (6): GS: Inserting edge 7 -> 1
+DEBUG (6): GS: Current Graph:
+DEBUG (6): SSP: Building SPT for 6
+DEBUG (6): DSR: Pkt 5: Passing to upper layer if not already sent
+DEBUG (6): PE: Removing pkt 5 from the buffer
+DEBUG (6): PE: No packets with state 4 found
+DEBUG (6): PE: Free: 6, Added: 5, Wait: 20, Action: 20
+DEBUG (6): PE: No packets with state 2 found
+DEBUG (6): PE: Free: 6, Added: 20, Wait: 20, Action: 20
+DEBUG (6): PE: No more added packets
+DEBUG (6): SSP: Added edge 6 -> 6 to SPT
+DEBUG (6): SSP: Adding edge 6 -> 19 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 13 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 14 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 8 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 5 (1) to PQ
+DEBUG (6): SSP: Adding edge 6 -> 9 (1) to PQ
+DEBUG (6): SSP: Added edge 6 -> 19 to SPT
+DEBUG (6): SSP: Adding edge 19 -> 4 (2) to PQ
+DEBUG (6): SSP: Adding edge 19 -> 18 (2) to PQ
+DEBUG (6): SSP: Adding edge 19 -> 12 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 13 to SPT
+DEBUG (6): SSP: Added edge 6 -> 8 to SPT
+DEBUG (6): SSP: Adding edge 8 -> 16 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 9 to SPT
+DEBUG (6): SSP: Adding edge 9 -> 17 (2) to PQ
+DEBUG (6): SSP: Adding edge 9 -> 0 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 5 to SPT
+DEBUG (6): SSP: Adding edge 5 -> 10 (2) to PQ
+DEBUG (6): SSP: Adding edge 5 -> 2 (2) to PQ
+DEBUG (6): SSP: Adding edge 5 -> 3 (2) to PQ
+DEBUG (6): SSP: Added edge 6 -> 14 to SPT
+DEBUG (6): SSP: Added edge 19 -> 12 to SPT
+DEBUG (6): SSP: Added edge 8 -> 16 to SPT
+DEBUG (6): SSP: Added edge 5 -> 10 to SPT
+DEBUG (6): SSP: Added edge 5 -> 3 to SPT
+DEBUG (6): SSP: Adding edge 3 -> 15 (3) to PQ
+DEBUG (6): SSP: Added edge 5 -> 2 to SPT
+DEBUG (6): SSP: Added edge 9 -> 17 to SPT
+DEBUG (6): SSP: Adding edge 17 -> 7 (3) to PQ
+DEBUG (6): SSP: Added edge 9 -> 0 to SPT
+DEBUG (6): SSP: Added edge 19 -> 18 to SPT
+DEBUG (6): SSP: Added edge 19 -> 4 to SPT
+DEBUG (6): SSP: Added edge 3 -> 15 to SPT
+DEBUG (6): SSP: Added edge 17 -> 7 to SPT
+DEBUG (6): SSP: Adding edge 7 -> 1 (4) to PQ
+DEBUG (6): SSP: Added edge 7 -> 1 to SPT
+DEBUG (6): SSP: Current SPT:

@@ -1,0 +1,156 @@
+<?xml version="1.0" ?><interfacedef loc="39:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvBlockPacket.nc" nicename="TlvBlockPacket" qname="TlvBlockPacket">
+      <documentation loc="39:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvBlockPacket.nc">
+        <short>
+
+ Manipulate a packet with a TLV block independent of the types it
+
+ contains.
+
+
+
+</short>
+        <long>
+
+ Manipulate a packet with a TLV block independent of the types it
+
+ contains.
+
+
+
+ @author Ryan Stinnett
+
+</long>
+      </documentation>
+      <function command="" loc="58:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvBlockPacket.nc" name="remove" provided="0" ref="0x7de825c8">
+        <documentation loc="52:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvBlockPacket.nc">
+          <short>
+
+ Removes a TLV block from the beginning of a given packet.</short>
+          <long>
+
+ Removes a TLV block from the beginning of a given packet. Other
+
+ data is moved to fill the gap.
+
+
+
+ @param pkt Pointer to the packet.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="TlvBlockPacket" qname="TlvBlockPacket"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-pointer alignment="I:4" size="I:4">
+              <type-tag alignment="I:1" size="I:50"><nx_struct-ref name="message_t" ref="0x7e872dd8"/>
+                <typename><typedef-ref name="message_t" ref="0x7e8707a8"/></typename>
+              </type-tag>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="58:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvBlockPacket.nc" name="pkt" ref="0x7de82390">
+            <type-pointer alignment="I:4" size="I:4">
+              <type-tag alignment="I:1" size="I:50"><nx_struct-ref name="message_t" ref="0x7e872dd8"/>
+                <typename><typedef-ref name="message_t" ref="0x7e8707a8"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="67:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvBlockPacket.nc" name="length" provided="0" ref="0x7de82da0">
+        <documentation loc="60:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvBlockPacket.nc">
+          <short>
+
+ Returns the length of the entire TLV block, including the block
+
+ length value itself.
+
+
+
+</short>
+          <long>
+
+ Returns the length of the entire TLV block, including the block
+
+ length value itself.
+
+
+
+ @param pkt Pointer to the packet.
+
+ @return Length of the TLV block.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="TlvBlockPacket" qname="TlvBlockPacket"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x7fea0110"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-pointer alignment="I:4" size="I:4">
+              <type-tag alignment="I:1" size="I:50"><nx_struct-ref name="message_t" ref="0x7e872dd8"/>
+                <typename><typedef-ref name="message_t" ref="0x7e8707a8"/></typename>
+              </type-tag>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="67:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvBlockPacket.nc" name="pkt" ref="0x7de82b30">
+            <type-pointer alignment="I:4" size="I:4">
+              <type-tag alignment="I:1" size="I:50"><nx_struct-ref name="message_t" ref="0x7e872dd8"/>
+                <typename><typedef-ref name="message_t" ref="0x7e8707a8"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="50:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvBlockPacket.nc" name="add" provided="0" ref="0x7de83dd8">
+        <documentation loc="41:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvBlockPacket.nc">
+          <short>
+
+ Adds a TLV block at the beginning of a given packet. </short>
+          <long>
+
+ Adds a TLV block at the beginning of a given packet.  Other
+
+ data is moved to accomidate it.  This must be called on any new TLV
+
+ block before using any other TLV commands.
+
+
+
+ @param pkt Pointer to the packet.
+
+ @return SUCCESS if the add completed, ESIZE if there wasn't enough
+
+         space.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="TlvBlockPacket" qname="TlvBlockPacket"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="error_t" ref="0x7e8372e8"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-pointer alignment="I:4" size="I:4">
+              <type-tag alignment="I:1" size="I:50"><nx_struct-ref name="message_t" ref="0x7e872dd8"/>
+                <typename><typedef-ref name="message_t" ref="0x7e8707a8"/></typename>
+              </type-tag>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="50:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvBlockPacket.nc" name="pkt" ref="0x7de83b00">
+            <type-pointer alignment="I:4" size="I:4">
+              <type-tag alignment="I:1" size="I:50"><nx_struct-ref name="message_t" ref="0x7e872dd8"/>
+                <typename><typedef-ref name="message_t" ref="0x7e8707a8"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+    </interfacedef>

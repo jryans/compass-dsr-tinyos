@@ -1,0 +1,90 @@
+<html>
+  <head>
+    <LINK rel="stylesheet" href="nesdoc.css" type="text/css" media="screen"><title>Component: GraphWeightedC</title>
+  </head>
+  <body>
+    <h2>Component: GraphWeightedC
+    </h2>
+    <b>generic configuration GraphWeightedC(graph_vertex_id_t maxVertices, graph_edge_id_t maxEdges, bool parallelEdges, typedef graph_edge_weight_t)</b>
+    <p>
+
+ Builds a weighted graph as edges are added and supports finding the single
+
+ source shortest path.
+
+
+
+ 
+    <p>
+    <dl>
+      <dt><b>Author:</b>
+      <dd>
+        Ryan Stinnett
+
+
+      </dd>
+    </dl>
+    <p><p><div id=heading>Provides</div><div id=funcsig>interface <a href="../ihtml/Graph.html">Graph</a></div><div id=funcsig>interface <a href="../ihtml/GraphEdge.html">GraphEdge</a></div><div id=funcsig>interface <a href="../ihtml/IndexedIterator.html">IndexedIterator</a>&lt;graph_edge_id_t&gt; as <b>GraphEdgeList</b></div><div id=funcsig>interface <a href="../ihtml/IndexedIterator.html">IndexedIterator</a>&lt;graph_vertex_id_t&gt; as <b>PathEdgeList</b></div><div id=funcsig>interface <a href="../ihtml/SourceShortestPath.html">SourceShortestPath</a></div><p><div id=heading>Uses</div><div id=funcsig>interface <a href="../ihtml/GraphEdgeWeight.html">GraphEdgeWeight</a>&lt;graph_edge_weight_t&gt;</div><p><div id=heading>Wiring</div><p>
+    <map name="comp">
+      <area shape="rect" href="GraphSparseC.html" title="GraphSparseC" alt="GraphSparseC" coords="640,261,755,320">
+
+      <area shape="rect" href="../ihtml/Graph.html" title="Graph" alt="Graph" coords="1137,217,1177,236">
+
+      <area shape="rect" href="../ihtml/Graph.html" title="Graph" alt="Graph" coords="1165,180,1173,188">
+
+      <area shape="rect" href="../ihtml/Graph.html" title="Graph" alt="Graph" coords="751,284,759,292">
+
+      <area shape="rect" href="SourceShortestPathC.html" title="SourceShortestPathC" alt="SourceShortestPathC" coords="332,133,487,192">
+
+      <area shape="rect" href="../ihtml/IndexedIterator.html" title="IndexedIterator&lt;graph_vertex_id_t&gt;" alt="IndexedIterator&lt;graph_vertex_id_t&gt;" coords="313,89,495,108">
+
+      <area shape="rect" href="../ihtml/IndexedIterator.html" title="IndexedIterator&lt;graph_vertex_id_t&gt;" alt="IndexedIterator&lt;graph_vertex_id_t&gt;" coords="280,60,288,68">
+
+      <area shape="rect" href="../ihtml/IndexedIterator.html" title="IndexedIterator&lt;graph_vertex_id_t&gt;" alt="IndexedIterator&lt;graph_vertex_id_t&gt;" coords="328,130,336,138">
+
+      <area shape="rect" href="../ihtml/Graph.html" title="Graph" alt="Graph" coords="384,217,424,236">
+
+      <area shape="rect" href="../ihtml/Graph.html" title="Graph" alt="Graph" coords="381,188,389,196">
+
+      <area shape="rect" href="../ihtml/Graph.html" title="Graph" alt="Graph" coords="636,281,644,289">
+
+      <area shape="rect" href="../ihtml/GraphEdge.html" title="GraphEdge" alt="GraphEdge" coords="478,217,541,236">
+
+      <area shape="rect" href="../ihtml/GraphEdge.html" title="GraphEdge" alt="GraphEdge" coords="424,188,432,196">
+
+      <area shape="rect" href="../ihtml/GraphEdge.html" title="GraphEdge" alt="GraphEdge" coords="636,277,644,285">
+
+      <area shape="rect" href="../ihtml/IndexedIterator.html" title="IndexedIterator&lt;graph_edge_id_t&gt;" alt="IndexedIterator&lt;graph_edge_id_t&gt;" coords="585,217,762,236">
+
+      <area shape="rect" href="../ihtml/IndexedIterator.html" title="IndexedIterator&lt;graph_edge_id_t&gt;" alt="IndexedIterator&lt;graph_edge_id_t&gt;" coords="483,178,491,186">
+
+      <area shape="rect" href="../ihtml/IndexedIterator.html" title="IndexedIterator&lt;graph_edge_id_t&gt;" alt="IndexedIterator&lt;graph_edge_id_t&gt;" coords="636,265,644,273">
+
+      <area shape="rect" href="../ihtml/GraphEdgeWeight.html" title="GraphEdgeWeight&lt;graph_edge_weight_t&gt;" alt="GraphEdgeWeight&lt;graph_edge_weight_t&gt;" coords="151,217,366,236">
+
+      <area shape="rect" href="../ihtml/GraphEdgeWeight.html" title="GraphEdgeWeight&lt;graph_edge_weight_t&gt;" alt="GraphEdgeWeight&lt;graph_edge_weight_t&gt;" coords="328,166,336,174">
+
+      <area shape="rect" href="../ihtml/GraphEdgeWeight.html" title="GraphEdgeWeight&lt;graph_edge_weight_t&gt;" alt="GraphEdgeWeight&lt;graph_edge_weight_t&gt;" coords="81,262,89,270">
+
+      <area shape="rect" href="../ihtml/SourceShortestPath.html" title="SourceShortestPath" alt="SourceShortestPath" coords="534,89,639,108">
+
+      <area shape="rect" href="../ihtml/SourceShortestPath.html" title="SourceShortestPath" alt="SourceShortestPath" coords="528,60,536,68">
+
+      <area shape="rect" href="../ihtml/SourceShortestPath.html" title="SourceShortestPath" alt="SourceShortestPath" coords="480,129,488,137">
+
+      <area shape="rect" href="../ihtml/GraphEdge.html" title="GraphEdge" alt="GraphEdge" coords="795,217,858,236">
+
+      <area shape="rect" href="../ihtml/GraphEdge.html" title="GraphEdge" alt="GraphEdge" coords="804,182,812,190">
+
+      <area shape="rect" href="../ihtml/GraphEdge.html" title="GraphEdge" alt="GraphEdge" coords="748,257,756,265">
+
+      <area shape="rect" href="../ihtml/IndexedIterator.html" title="IndexedIterator&lt;graph_edge_id_t&gt;" alt="IndexedIterator&lt;graph_edge_id_t&gt;" coords="904,217,1080,236">
+
+      <area shape="rect" href="../ihtml/IndexedIterator.html" title="IndexedIterator&lt;graph_edge_id_t&gt;" alt="IndexedIterator&lt;graph_edge_id_t&gt;" coords="920,181,928,189">
+
+      <area shape="rect" href="../ihtml/IndexedIterator.html" title="IndexedIterator&lt;graph_edge_id_t&gt;" alt="IndexedIterator&lt;graph_edge_id_t&gt;" coords="751,284,759,292">
+
+    </map>
+    <img src="GraphWeightedC.gif" usemap="#comp" id=imgwiring>
+  </body>
+</html>

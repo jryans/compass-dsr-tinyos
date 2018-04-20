@@ -1,0 +1,245 @@
+<?xml version="1.0" ?><component loc="31:/opt/tinyos-2.x/tos/platforms/mica/sim/PlatformC.nc" nicename="tos.platforms.mica.sim.PlatformC" qname="PlatformC">
+      <documentation loc="31:/opt/tinyos-2.x/tos/platforms/mica/sim/PlatformC.nc">
+        <short>                                                                     tab:4
+  IMPORTANT: READ BEFORE DOWNLOADING, COPYING, INSTALLING OR USING. </short>
+        <long>                                                                     tab:4
+  IMPORTANT: READ BEFORE DOWNLOADING, COPYING, INSTALLING OR USING.  By
+  downloading, copying, installing or using the software you agree to
+  this license.  If you do not agree to this license, do not download,
+  install, copy or use the software.
+
+  Copyright (c) 2004-2005 Crossbow Technology, Inc.
+  Copyright (c) 2002-2003 Intel Corporation.
+  Copyright (c) 2000-2003 The Regents of the University  of California.    
+  All rights reserved.
+
+  Permission to use, copy, modify, and distribute this software and its
+  documentation for any purpose, without fee, and without written
+  agreement is hereby granted, provided that the above copyright
+  notice, the (updated) modification history and the author appear in
+  all copies of this source code.
+
+  Permission is also granted to distribute this software under the
+  standard BSD license as contained in the TinyOS distribution.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+  PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE INTEL OR ITS
+  CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+  EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+  PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+  PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+  LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+  @author Jason Hill, Philip Levis, Nelson Lee, David Gay
+  @author Alan Broad &lt;abroad@xbow.com&gt;
+  @author Matt Miller &lt;mmiller@xbow.com&gt;
+  @author Martin Turon &lt;mturon@xbow.com&gt;
+
+  $Id: platform_hardware.h,v 1.4 2006/12/12 18:23:44 vlahan Exp $
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="42:/opt/tinyos-2.x/tos/platforms/mica/sim/PlatformC.nc">
+          <from><interface-ref name="Init" ref="0x7e7538e0" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x7e7478e0" scoped=""/></to>
+        </wire>
+        <wire loc="43:/opt/tinyos-2.x/tos/platforms/mica/sim/PlatformC.nc">
+          <from><interface-ref name="MoteInit" ref="0x7e747c50" scoped=""/></from>
+          <to><interface-ref name="PlatformInit" ref="0x7e741770" scoped=""/></to>
+        </wire>
+        <wire loc="44:/opt/tinyos-2.x/tos/platforms/mica/sim/PlatformC.nc">
+          <from><interface-ref name="SubInit" ref="0x7e741ad8" scoped=""/></from>
+          <to><interface-ref name="SubInit" ref="0x7e7521d0" scoped=""/></to>
+        </wire>
+        <wire loc="45:/opt/tinyos-2.x/tos/platforms/mica/sim/PlatformC.nc">
+          <from><interface-ref name="MeasureClock" ref="0x7e746010" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x7e613930" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="36:/opt/tinyos-2.x/tos/platforms/mica/sim/PlatformC.nc" name="SubInit" provided="0" ref="0x7e7521d0">
+      <component-ref nicename="tos.platforms.mica.sim.PlatformC" qname="PlatformC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="SubInit" ref="0x7e7521d0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x7e7523a8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="33:/opt/tinyos-2.x/tos/platforms/mica/sim/PlatformC.nc" name="Init" provided="1" ref="0x7e7538e0">
+      <component-ref nicename="tos.platforms.mica.sim.PlatformC" qname="PlatformC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Init" ref="0x7e7538e0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x7e753ab8" scoped=""/>
+      </interface-functions>
+    </interface><function command="" loc="34:/opt/tinyos-2.x/tos/platforms/mica/sim/PlatformC.nc" name="calibrateMicro" provided="1" ref="0x7e752010">
+      <component-ref nicename="tos.platforms.mica.sim.PlatformC" qname="PlatformC"/>
+      <type-function alignment="I:1" size="I:1">
+        <type-int alignment="I:4" cname="unsigned long" size="I:4" unsigned="">
+          <typename><typedef-ref name="uint32_t" ref="0x7fea04e0"/></typename>
+        </type-int>
+        <function-parameters>
+          <type-int alignment="I:4" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="uint32_t" ref="0x7fea04e0"/></typename>
+          </type-int>
+        </function-parameters>
+      </type-function>
+      <parameters>
+        <variable loc="34:/opt/tinyos-2.x/tos/platforms/mica/sim/PlatformC.nc" name="n" ref="0x7e753dd0">
+          <type-int alignment="I:4" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="uint32_t" ref="0x7fea04e0"/></typename>
+          </type-int>
+        </variable>
+      </parameters>
+    </function></specification><referenced><interface loc="18:/opt/tinyos-2.x/tos/platforms/micaz/MotePlatformC.nc" name="SubInit" provided="0" ref="0x7e741ad8">
+      <component-ref nicename="tos.platforms.micaz.MotePlatformC" qname="MotePlatformC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="SubInit" ref="0x7e741ad8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x7e741cb0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="36:/opt/tinyos-2.x/tos/platforms/mica/PlatformP.nc" name="MoteInit" provided="0" ref="0x7e747c50">
+      <component-ref nicename="tos.platforms.mica.PlatformP" qname="PlatformP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="MoteInit" ref="0x7e747c50" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x7e747e28" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="17:/opt/tinyos-2.x/tos/platforms/micaz/MotePlatformC.nc" name="PlatformInit" provided="1" ref="0x7e741770">
+      <component-ref nicename="tos.platforms.micaz.MotePlatformC" qname="MotePlatformC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="PlatformInit" ref="0x7e741770" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x7e741948" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="12:/opt/tinyos-2.x/tos/platforms/mica/sim/MeasureClockC.nc" name="Init" provided="1" ref="0x7e613930">
+      <component-ref nicename="tos.platforms.mica.sim.MeasureClockC" qname="MeasureClockC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Init" ref="0x7e613930" scoped=""/></type-interface>
+      <attribute-value>
+        <attribute-ref name="exactlyonce" ref="0x7ec452a8"/>
+        <value-structured>
+          <type-tag alignment="I:1" size="I:0"><attribute-ref name="exactlyonce" ref="0x7ec452a8"/></type-tag>
+        </value-structured>
+      </attribute-value>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x7e613b08" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="37:/opt/tinyos-2.x/tos/platforms/mica/PlatformP.nc" name="MeasureClock" provided="0" ref="0x7e746010">
+      <component-ref nicename="tos.platforms.mica.PlatformP" qname="PlatformP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="MeasureClock" ref="0x7e746010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x7e7461e8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="35:/opt/tinyos-2.x/tos/platforms/mica/PlatformP.nc" name="Init" provided="1" ref="0x7e7478e0">
+      <component-ref nicename="tos.platforms.mica.PlatformP" qname="PlatformP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Init" ref="0x7e7478e0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x7e747ab8" scoped=""/>
+      </interface-functions>
+    </interface><component loc="10:/opt/tinyos-2.x/tos/platforms/mica/sim/MeasureClockC.nc" nicename="tos.platforms.mica.sim.MeasureClockC" qname="MeasureClockC">
+      <documentation loc="10:/opt/tinyos-2.x/tos/platforms/mica/sim/MeasureClockC.nc">
+        <short>
+ Simulation version of MeasureClockC for the mica platform.</short>
+        <long>
+ Simulation version of MeasureClockC for the mica platform. See 
+ tos/platforms/mica/MeasureClockC.nc for more details.
+
+ @author Phil Levis
+</long>
+      </documentation>
+      <module/>
+    </component><component loc="33:/opt/tinyos-2.x/tos/platforms/mica/PlatformP.nc" nicename="tos.platforms.mica.PlatformP" qname="PlatformP">
+      <documentation loc="33:/opt/tinyos-2.x/tos/platforms/mica/PlatformP.nc">
+        <short>                                                                     tab:4
+  IMPORTANT: READ BEFORE DOWNLOADING, COPYING, INSTALLING OR USING. </short>
+        <long>                                                                     tab:4
+  IMPORTANT: READ BEFORE DOWNLOADING, COPYING, INSTALLING OR USING.  By
+  downloading, copying, installing or using the software you agree to
+  this license.  If you do not agree to this license, do not download,
+  install, copy or use the software.
+
+  Copyright (c) 2004-2005 Crossbow Technology, Inc.
+  Copyright (c) 2002-2003 Intel Corporation.
+  Copyright (c) 2000-2003 The Regents of the University  of California.    
+  All rights reserved.
+
+  Permission to use, copy, modify, and distribute this software and its
+  documentation for any purpose, without fee, and without written
+  agreement is hereby granted, provided that the above copyright
+  notice, the (updated) modification history and the author appear in
+  all copies of this source code.
+
+  Permission is also granted to distribute this software under the
+  standard BSD license as contained in the TinyOS distribution.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+  PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE INTEL OR ITS
+  CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+  EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+  PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+  PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+  LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+  @author Jason Hill, Philip Levis, Nelson Lee, David Gay
+  @author Alan Broad &lt;abroad@xbow.com&gt;
+  @author Matt Miller &lt;mmiller@xbow.com&gt;
+  @author Martin Turon &lt;mturon@xbow.com&gt;
+
+  $Id: platform_hardware.h,v 1.4 2006/12/12 18:23:44 vlahan Exp $
+</long>
+      </documentation>
+      <module/>
+    </component><component loc="15:/opt/tinyos-2.x/tos/platforms/micaz/MotePlatformC.nc" nicename="tos.platforms.micaz.MotePlatformC" qname="MotePlatformC">
+      <documentation loc="15:/opt/tinyos-2.x/tos/platforms/micaz/MotePlatformC.nc">
+        <short>
+ The porttion of a mica-family initialisation that is mote-specific.
+ 
+</short>
+        <long>
+ The porttion of a mica-family initialisation that is mote-specific.
+ 
+ @author David Gay
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="23:/opt/tinyos-2.x/tos/platforms/micaz/MotePlatformC.nc">
+          <from><interface-ref name="PlatformInit" ref="0x7e741770" scoped=""/></from>
+          <to><interface-ref name="PlatformInit" ref="0x7e740c30" scoped=""/></to>
+        </wire>
+        <wire loc="25:/opt/tinyos-2.x/tos/platforms/micaz/MotePlatformC.nc">
+          <from><interface-ref name="SerialIdPin" ref="0x7e7304e8" scoped=""/></from>
+          <to><interface-ref name="PortA4" ref="0x7e723010" scoped=""/></to>
+        </wire>
+        <wire loc="26:/opt/tinyos-2.x/tos/platforms/micaz/MotePlatformC.nc">
+          <from><interface-ref name="SubInit" ref="0x7e730e70" scoped=""/></from>
+          <to><interface-ref name="SubInit" ref="0x7e741ad8" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component></referenced></component>

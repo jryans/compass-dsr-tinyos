@@ -1,0 +1,449 @@
+<?xml version="1.0" ?><component loc="40:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/DsrOptionsC.nc" nicename="DsrOptionsC" qname="DsrOptionsC">
+      <configuration/>
+      <wiring>
+        <wire loc="70:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/DsrOptionsC.nc">
+          <from><interface-ref name="RouteErrorList" ref="0x7de70910" scoped=""/></from>
+          <to><interface-ref name="TlvListPacket" ref="0x7dd72d08" scoped=""/>
+          <arguments>
+            <value cst="I:3">
+              <type-int alignment="I:4" cname="int" size="I:4"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="75:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/DsrOptionsC.nc">
+          <from><interface-ref name="AckList" ref="0x7de61730" scoped=""/></from>
+          <to><interface-ref name="TlvListPacket" ref="0x7dd72d08" scoped=""/>
+          <arguments>
+            <value cst="I:32">
+              <type-int alignment="I:4" cname="int" size="I:4"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="64:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/DsrOptionsC.nc">
+          <from><interface-ref name="RouteRequest" ref="0x7de7bc68" scoped=""/></from>
+          <to><interface-ref name="TlvSinglePacket" ref="0x7dd73bd0" scoped=""/>
+          <arguments>
+            <value cst="I:1">
+              <type-int alignment="I:4" cname="int" size="I:4"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="67:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/DsrOptionsC.nc">
+          <from><interface-ref name="RouteReplyList" ref="0x7de631d0" scoped=""/></from>
+          <to><interface-ref name="TlvListPacket" ref="0x7dd72d08" scoped=""/>
+          <arguments>
+            <value cst="I:2">
+              <type-int alignment="I:4" cname="int" size="I:4"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="79:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/DsrOptionsC.nc">
+          <from><interface-ref name="Packet" ref="0x7de60ba0" scoped=""/></from>
+          <to><interface-ref name="Packet" ref="0x7dd71ab0" scoped=""/></to>
+        </wire>
+        <wire loc="62:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/DsrOptionsC.nc">
+          <from><interface-ref name="DsrHeader" ref="0x7de90010" scoped=""/></from>
+          <to><interface-ref name="TlvBlockPacket" ref="0x7dd73660" scoped=""/></to>
+        </wire>
+        <wire loc="77:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/DsrOptionsC.nc">
+          <from><interface-ref name="SourceRoute" ref="0x7de60500" scoped=""/></from>
+          <to><interface-ref name="TlvSinglePacket" ref="0x7dd73bd0" scoped=""/>
+          <arguments>
+            <value cst="I:96">
+              <type-int alignment="I:4" cname="int" size="I:4"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="69:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/DsrOptionsC.nc">
+          <from><interface-ref name="RouteError" ref="0x7de70010" scoped=""/></from>
+          <to><interface-ref name="TlvMultiplePacket" ref="0x7dd723a8" scoped=""/>
+          <arguments>
+            <value cst="I:3">
+              <type-int alignment="I:4" cname="int" size="I:4"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="72:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/DsrOptionsC.nc">
+          <from><interface-ref name="AckRequest" ref="0x7de626e0" scoped=""/></from>
+          <to><interface-ref name="TlvSinglePacket" ref="0x7dd73bd0" scoped=""/>
+          <arguments>
+            <value cst="I:160">
+              <type-int alignment="I:4" cname="int" size="I:4"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="66:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/DsrOptionsC.nc">
+          <from><interface-ref name="RouteReply" ref="0x7de73b60" scoped=""/></from>
+          <to><interface-ref name="TlvMultiplePacket" ref="0x7dd723a8" scoped=""/>
+          <arguments>
+            <value cst="I:2">
+              <type-int alignment="I:4" cname="int" size="I:4"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="74:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/DsrOptionsC.nc">
+          <from><interface-ref name="Ack" ref="0x7de62db8" scoped=""/></from>
+          <to><interface-ref name="TlvMultiplePacket" ref="0x7dd723a8" scoped=""/>
+          <arguments>
+            <value cst="I:32">
+              <type-int alignment="I:4" cname="int" size="I:4"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="80:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/DsrOptionsC.nc">
+          <from><interface-ref name="SubPacket" ref="0x7dd701a8" scoped=""/></from>
+          <to><interface-ref name="SubPacket" ref="0x7de5e378" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="47:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/DsrOptionsC.nc" name="RouteErrorList" provided="1" ref="0x7de70910">
+      <component-ref nicename="DsrOptionsC" qname="DsrOptionsC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="RouteErrorList" ref="0x7de70910" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="StaticIndexedIterator" qname="StaticIndexedIterator"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:50"><nx_struct-ref name="message_t" ref="0x7e872dd8"/>
+            <typename><typedef-ref name="message_t" ref="0x7e8707a8"/></typename>
+          </type-tag>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="tlv_key_t" ref="0x7de80b38"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="end" ref="0x7de623a8" scoped=""/>
+        <function-ref name="next" ref="0x7de62068" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="50:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/DsrOptionsC.nc" name="AckList" provided="1" ref="0x7de61730">
+      <component-ref nicename="DsrOptionsC" qname="DsrOptionsC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="AckList" ref="0x7de61730" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="StaticIndexedIterator" qname="StaticIndexedIterator"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:50"><nx_struct-ref name="message_t" ref="0x7e872dd8"/>
+            <typename><typedef-ref name="message_t" ref="0x7e8707a8"/></typename>
+          </type-tag>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="tlv_key_t" ref="0x7de80b38"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="end" ref="0x7de601c8" scoped=""/>
+        <function-ref name="next" ref="0x7de61e60" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/DsrOptionsC.nc" name="RouteRequest" provided="1" ref="0x7de7bc68">
+      <component-ref nicename="DsrOptionsC" qname="DsrOptionsC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="RouteRequest" ref="0x7de7bc68" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="TlvSinglePacket" qname="TlvSinglePacket"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="value" ref="0x7de7be40" scoped=""/>
+        <function-ref name="remove" ref="0x7de7bf20" scoped=""/>
+        <function-ref name="length" ref="0x7de82018" scoped=""/>
+        <function-ref name="setLength" ref="0x7de820f8" scoped=""/>
+        <function-ref name="add" ref="0x7de821d8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/DsrOptionsC.nc" name="RouteReplyList" provided="1" ref="0x7de631d0">
+      <component-ref nicename="DsrOptionsC" qname="DsrOptionsC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="RouteReplyList" ref="0x7de631d0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="StaticIndexedIterator" qname="StaticIndexedIterator"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:50"><nx_struct-ref name="message_t" ref="0x7e872dd8"/>
+            <typename><typedef-ref name="message_t" ref="0x7e8707a8"/></typename>
+          </type-tag>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="tlv_key_t" ref="0x7de80b38"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="end" ref="0x7de63c40" scoped=""/>
+        <function-ref name="next" ref="0x7de63900" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="53:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/DsrOptionsC.nc" name="Packet" provided="1" ref="0x7de60ba0">
+      <component-ref nicename="DsrOptionsC" qname="DsrOptionsC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Packet" ref="0x7de60ba0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Packet" qname="Packet"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x7de60d78" scoped=""/>
+        <function-ref name="payloadLength" ref="0x7de60e58" scoped=""/>
+        <function-ref name="getPayload" ref="0x7de5e010" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x7de5e0f0" scoped=""/>
+        <function-ref name="setPayloadLength" ref="0x7de5e1d0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="42:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/DsrOptionsC.nc" name="DsrHeader" provided="1" ref="0x7de90010">
+      <component-ref nicename="DsrOptionsC" qname="DsrOptionsC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="DsrHeader" ref="0x7de90010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="TlvBlockPacket" qname="TlvBlockPacket"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="remove" ref="0x7de901e8" scoped=""/>
+        <function-ref name="length" ref="0x7de902c8" scoped=""/>
+        <function-ref name="add" ref="0x7de903a8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="51:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/DsrOptionsC.nc" name="SourceRoute" provided="1" ref="0x7de60500">
+      <component-ref nicename="DsrOptionsC" qname="DsrOptionsC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="SourceRoute" ref="0x7de60500" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="TlvSinglePacket" qname="TlvSinglePacket"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="value" ref="0x7de606d8" scoped=""/>
+        <function-ref name="remove" ref="0x7de607b8" scoped=""/>
+        <function-ref name="length" ref="0x7de60898" scoped=""/>
+        <function-ref name="setLength" ref="0x7de60978" scoped=""/>
+        <function-ref name="add" ref="0x7de60a58" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/DsrOptionsC.nc" name="RouteError" provided="1" ref="0x7de70010">
+      <component-ref nicename="DsrOptionsC" qname="DsrOptionsC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="RouteError" ref="0x7de70010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="TlvMultiplePacket" qname="TlvMultiplePacket"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="value" ref="0x7de701e8" scoped=""/>
+        <function-ref name="list" ref="0x7de702c8" scoped=""/>
+        <function-ref name="remove" ref="0x7de703a8" scoped=""/>
+        <function-ref name="length" ref="0x7de70488" scoped=""/>
+        <function-ref name="setLength" ref="0x7de70568" scoped=""/>
+        <function-ref name="add" ref="0x7de70648" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="48:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/DsrOptionsC.nc" name="AckRequest" provided="1" ref="0x7de626e0">
+      <component-ref nicename="DsrOptionsC" qname="DsrOptionsC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="AckRequest" ref="0x7de626e0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="TlvSinglePacket" qname="TlvSinglePacket"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="value" ref="0x7de628b8" scoped=""/>
+        <function-ref name="remove" ref="0x7de62998" scoped=""/>
+        <function-ref name="length" ref="0x7de62a78" scoped=""/>
+        <function-ref name="setLength" ref="0x7de62b58" scoped=""/>
+        <function-ref name="add" ref="0x7de62c38" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/DsrOptionsC.nc" name="RouteReply" provided="1" ref="0x7de73b60">
+      <component-ref nicename="DsrOptionsC" qname="DsrOptionsC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="RouteReply" ref="0x7de73b60" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="TlvMultiplePacket" qname="TlvMultiplePacket"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="value" ref="0x7de73d38" scoped=""/>
+        <function-ref name="list" ref="0x7de73e18" scoped=""/>
+        <function-ref name="remove" ref="0x7de73ef8" scoped=""/>
+        <function-ref name="length" ref="0x7de79010" scoped=""/>
+        <function-ref name="setLength" ref="0x7de790f0" scoped=""/>
+        <function-ref name="add" ref="0x7de791d0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="49:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/DsrOptionsC.nc" name="Ack" provided="1" ref="0x7de62db8">
+      <component-ref nicename="DsrOptionsC" qname="DsrOptionsC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Ack" ref="0x7de62db8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="TlvMultiplePacket" qname="TlvMultiplePacket"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="value" ref="0x7de61010" scoped=""/>
+        <function-ref name="list" ref="0x7de610f0" scoped=""/>
+        <function-ref name="remove" ref="0x7de611d0" scoped=""/>
+        <function-ref name="length" ref="0x7de612b0" scoped=""/>
+        <function-ref name="setLength" ref="0x7de61390" scoped=""/>
+        <function-ref name="add" ref="0x7de61470" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="55:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/DsrOptionsC.nc" name="SubPacket" provided="0" ref="0x7de5e378">
+      <component-ref nicename="DsrOptionsC" qname="DsrOptionsC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="SubPacket" ref="0x7de5e378" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Packet" qname="Packet"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x7de5e550" scoped=""/>
+        <function-ref name="payloadLength" ref="0x7de5e630" scoped=""/>
+        <function-ref name="getPayload" ref="0x7de5e710" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x7de5e7f0" scoped=""/>
+        <function-ref name="setPayloadLength" ref="0x7de5e8d0" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="54:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvPacketC.nc" name="SubPacket" provided="0" ref="0x7dd701a8">
+      <component-ref nicename="DsrOptionsC.TlvC" qname="DsrOptionsC.TlvC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="SubPacket" ref="0x7dd701a8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Packet" qname="Packet"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x7dd70380" scoped=""/>
+        <function-ref name="payloadLength" ref="0x7dd70460" scoped=""/>
+        <function-ref name="getPayload" ref="0x7dd70540" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x7dd70620" scoped=""/>
+        <function-ref name="setPayloadLength" ref="0x7dd70700" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="51:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvPacketC.nc" name="Packet" provided="1" ref="0x7dd71ab0">
+      <component-ref nicename="DsrOptionsC.TlvC" qname="DsrOptionsC.TlvC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Packet" ref="0x7dd71ab0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Packet" qname="Packet"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x7dd71c88" scoped=""/>
+        <function-ref name="payloadLength" ref="0x7dd71d68" scoped=""/>
+        <function-ref name="getPayload" ref="0x7dd71e48" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x7dd71f28" scoped=""/>
+        <function-ref name="setPayloadLength" ref="0x7dd70018" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="50:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvPacketC.nc" name="TlvListPacket" provided="1" ref="0x7dd72d08">
+      <component-ref nicename="DsrOptionsC.TlvC" qname="DsrOptionsC.TlvC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="TlvListPacket" ref="0x7dd72d08" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="StaticIndexedIterator" qname="StaticIndexedIterator"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:50"><nx_struct-ref name="message_t" ref="0x7e872dd8"/>
+            <typename><typedef-ref name="message_t" ref="0x7e8707a8"/></typename>
+          </type-tag>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="tlv_key_t" ref="0x7de80b38"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x7fea0110"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="end" ref="0x7dd717a8" scoped=""/>
+        <function-ref name="next" ref="0x7dd71458" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvPacketC.nc" name="TlvBlockPacket" provided="1" ref="0x7dd73660">
+      <component-ref nicename="DsrOptionsC.TlvC" qname="DsrOptionsC.TlvC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="TlvBlockPacket" ref="0x7dd73660" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="TlvBlockPacket" qname="TlvBlockPacket"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="remove" ref="0x7dd73838" scoped=""/>
+        <function-ref name="length" ref="0x7dd73918" scoped=""/>
+        <function-ref name="add" ref="0x7dd739f8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="48:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvPacketC.nc" name="TlvSinglePacket" provided="1" ref="0x7dd73bd0">
+      <component-ref nicename="DsrOptionsC.TlvC" qname="DsrOptionsC.TlvC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="TlvSinglePacket" ref="0x7dd73bd0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="TlvSinglePacket" qname="TlvSinglePacket"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x7fea0110"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="value" ref="0x7dd73db8" scoped=""/>
+        <function-ref name="remove" ref="0x7dd73e98" scoped=""/>
+        <function-ref name="length" ref="0x7dd72010" scoped=""/>
+        <function-ref name="setLength" ref="0x7dd720f0" scoped=""/>
+        <function-ref name="add" ref="0x7dd721d0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="49:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvPacketC.nc" name="TlvMultiplePacket" provided="1" ref="0x7dd723a8">
+      <component-ref nicename="DsrOptionsC.TlvC" qname="DsrOptionsC.TlvC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="TlvMultiplePacket" ref="0x7dd723a8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="TlvMultiplePacket" qname="TlvMultiplePacket"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x7fea0110"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="value" ref="0x7dd72590" scoped=""/>
+        <function-ref name="list" ref="0x7dd72670" scoped=""/>
+        <function-ref name="remove" ref="0x7dd72750" scoped=""/>
+        <function-ref name="length" ref="0x7dd72830" scoped=""/>
+        <function-ref name="setLength" ref="0x7dd72910" scoped=""/>
+        <function-ref name="add" ref="0x7dd729f0" scoped=""/>
+      </interface-functions>
+    </interface><component loc="45(DsrOptionsC.TlvC):/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvPacketC.nc" nicename="DsrOptionsC.TlvC" qname="DsrOptionsC.TlvC">
+      <documentation loc="45(DsrOptionsC.TlvC):/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvPacketC.nc">
+        <short>
+
+ A general Type-Length-Value (TLV) data processor within a packet.
+
+</short>
+        <long>
+
+ A general Type-Length-Value (TLV) data processor within a packet.
+
+ This component does not assume any ordering by type among the TLV
+
+ types in a block of types.  If at most one instance of a type is
+
+ allowed, access the type via the TlvSingle interface.  If any number
+
+ of instances are allowed, access the type via the TlvMultiple and
+
+ TlvList interfaces.
+
+
+
+ @author Ryan Stinnett
+
+</long>
+      </documentation>
+      <instance number="0">
+        <component-ref nicename="TlvPacketC" qname="TlvPacketC"/>
+      </instance>
+      <configuration/>
+      <wiring>
+        <wire>
+          <from><interface-ref name="TlvListPacket" ref="0x7dd72d08" scoped=""/></from>
+          <to><interface-ref name="TlvListPacket" ref="0x7d52fc28" scoped=""/></to>
+        </wire>
+        <wire>
+          <from><interface-ref name="Packet" ref="0x7dd71ab0" scoped=""/></from>
+          <to><interface-ref name="Packet" ref="0x7d52e9d8" scoped=""/></to>
+        </wire>
+        <wire>
+          <from><interface-ref name="TlvMultiplePacket" ref="0x7dd723a8" scoped=""/></from>
+          <to><interface-ref name="TlvMultiplePacket" ref="0x7d52f2c8" scoped=""/></to>
+        </wire>
+        <wire>
+          <from><interface-ref name="TlvBlockPacket" ref="0x7dd73660" scoped=""/></from>
+          <to><interface-ref name="TlvBlockPacket" ref="0x7d5305a0" scoped=""/></to>
+        </wire>
+        <wire>
+          <from><interface-ref name="TlvSinglePacket" ref="0x7dd73bd0" scoped=""/></from>
+          <to><interface-ref name="TlvSinglePacket" ref="0x7d530b10" scoped=""/></to>
+        </wire>
+        <wire>
+          <from><interface-ref name="SubPacket" ref="0x7d52a400" scoped=""/></from>
+          <to><interface-ref name="SubPacket" ref="0x7dd701a8" scoped=""/></to>
+        </wire>
+        <wire>
+          <from><interface-ref name="TlvBlock" ref="0x7d52c180" scoped=""/></from>
+          <to><interface-ref name="TlvBlock" ref="0x7ddc3f08" scoped=""/></to>
+        </wire>
+        <wire>
+          <from><interface-ref name="TlvSingle" ref="0x7d52c6f0" scoped=""/></from>
+          <to><interface-ref name="TlvSingle" ref="0x7ddc2690" scoped=""/></to>
+        </wire>
+        <wire>
+          <from><interface-ref name="TlvMultiple" ref="0x7d52ce30" scoped=""/></from>
+          <to><interface-ref name="TlvMultiple" ref="0x7ddc0010" scoped=""/></to>
+        </wire>
+        <wire>
+          <from><interface-ref name="TlvList" ref="0x7d52b738" scoped=""/></from>
+          <to><interface-ref name="TlvList" ref="0x7ddc0b00" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component></referenced></component>

@@ -1,0 +1,11 @@
+digraph "LruDataCacheC" {
+  n0x7e3258b8 [shape=ellipse, style=filled, label="DataCache", fontsize=12];
+  "LruDataCacheC.CacheP" [fontsize=12, shape=box, style=dashed, label="LruDataCacheP\n(CacheP)", URL="LruDataCacheP.html"];
+  "LruDataCacheC.CacheP" [fontsize=12, shape=box, style=dashed, label="LruDataCacheP\n(CacheP)", URL="LruDataCacheP.html"];
+  n0x7e324e20 [shape=ellipse, style=filled, label="Equal", fontsize=12];
+  "MainC" [fontsize=12, shape=box,peripheries=2, URL="tos.lib.tossim.MainC.html"];
+  "LruDataCacheC.CacheP" [fontsize=12, shape=box, style=dashed, label="LruDataCacheP\n(CacheP)", URL="LruDataCacheP.html"];
+  "n0x7e3258b8" -> "LruDataCacheC.CacheP" [label="DataCache<data_cache_item_t>", URL="../ihtml/DataCache.html", fontsize=10];
+  "LruDataCacheC.CacheP" -> "n0x7e324e20" [label="Equal<data_cache_item_t *>", URL="../ihtml/Equal.html", fontsize=10];
+  "MainC" -> "LruDataCacheC.CacheP" [label="Init", URL="../ihtml/tos.interfaces.Init.html", fontsize=10];
+}

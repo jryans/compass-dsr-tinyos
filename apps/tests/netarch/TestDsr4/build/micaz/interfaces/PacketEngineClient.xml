@@ -1,0 +1,78 @@
+<?xml version="1.0" ?><interfacedef loc="40:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketEngineClient.nc" nicename="PacketEngineClient" qname="PacketEngineClient">
+      <documentation loc="40:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketEngineClient.nc">
+        <short>
+
+ Stores the upper AM type and default lower AM type for a packet
+
+ engine client. </short>
+        <long>
+
+ Stores the upper AM type and default lower AM type for a packet
+
+ engine client.  This information aids in moving between the two kinds
+
+ of AM types.
+
+
+
+ @author Ryan Stinnett
+
+</long>
+      </documentation>
+      <function command="" loc="47:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketEngineClient.nc" name="upperType" provided="0" ref="0x7e4dc968">
+        <documentation loc="42:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketEngineClient.nc">
+          <short>
+
+ Returns the upper AM type used by this client above the the packet
+
+ engine layer.
+
+</short>
+          <long>
+
+ Returns the upper AM type used by this client above the the packet
+
+ engine layer.
+
+ @return The upper AM type.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="PacketEngineClient" qname="PacketEngineClient"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="am_id_t" ref="0x7e881588"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+      </function>
+      <function command="" loc="54:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketEngineClient.nc" name="defaultLowerType" provided="0" ref="0x7e4da010">
+        <documentation loc="49:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketEngineClient.nc">
+          <short>
+
+ Returns the default lower AM type packets sent by this client should
+
+ initially be set to.
+
+</short>
+          <long>
+
+ Returns the default lower AM type packets sent by this client should
+
+ initially be set to.
+
+ @return The default lower AM type.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="PacketEngineClient" qname="PacketEngineClient"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="am_id_t" ref="0x7e881588"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+      </function>
+    </interfacedef>

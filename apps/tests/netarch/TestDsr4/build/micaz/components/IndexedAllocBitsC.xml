@@ -1,0 +1,226 @@
+<?xml version="1.0" ?><component abstract="" loc="39:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/alloc/IndexedAllocBitsC.nc" nicename="IndexedAllocBitsC" qname="IndexedAllocBitsC">
+      <documentation loc="39:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/alloc/IndexedAllocBitsC.nc">
+        <short>
+
+ Packages IndexedAllocBitsP together with its dependencies to create an
+
+ easily usable component.
+
+
+
+</short>
+        <long>
+
+ Packages IndexedAllocBitsP together with its dependencies to create an
+
+ easily usable component.
+
+
+
+ @author Ryan Stinnett
+
+</long>
+      </documentation>
+      <parameters>
+        <constant loc="39:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/alloc/IndexedAllocBitsC.nc" name="maxSize" ref="0x7db7ca58">
+          <component-ref nicename="IndexedAllocBitsC" qname="IndexedAllocBitsC"/>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="indexed_alloc_id_t" ref="0x7db87178"/></typename>
+          </type-int>
+        </constant>
+      </parameters>
+      <configuration/>
+      <wiring>
+        <wire loc="48:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/alloc/IndexedAllocBitsC.nc">
+          <from><interface-ref name="IndexedAlloc" ref="0x7db7cca0" scoped=""/></from>
+          <to><interface-ref name="IndexedAlloc" ref="0x7db61798" scoped=""/></to>
+        </wire>
+        <wire loc="50:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/alloc/IndexedAllocBitsC.nc">
+          <from><interface-ref name="Boot" ref="0x7db60040" scoped=""/></from>
+          <to><interface-ref name="Boot" ref="0x7e759bd8" scoped=""/></to>
+        </wire>
+        <wire loc="52:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/alloc/IndexedAllocBitsC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x7e756348" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x7db63f08" scoped=""/></to>
+        </wire>
+        <wire loc="53:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/alloc/IndexedAllocBitsC.nc">
+          <from><interface-ref name="BitVector" ref="0x7db60358" scoped=""/></from>
+          <to><interface-ref name="BitVector" ref="0x7db79250" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="40:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/alloc/IndexedAllocBitsC.nc" name="IndexedAlloc" provided="1" ref="0x7db7cca0">
+      <component-ref nicename="IndexedAllocBitsC" qname="IndexedAllocBitsC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="IndexedAlloc" ref="0x7db7cca0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="IndexedAlloc" qname="IndexedAlloc"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="all" ref="0x7db7b470" scoped=""/>
+        <function-ref name="allocated" ref="0x7db7b010" scoped=""/>
+        <function-ref name="maxSize" ref="0x7db7b0f0" scoped=""/>
+        <function-ref name="alloc" ref="0x7db7b1d0" scoped=""/>
+        <function-ref name="none" ref="0x7db7b2b0" scoped=""/>
+        <function-ref name="free" ref="0x7db7b390" scoped=""/>
+        <function-ref name="size" ref="0x7db7ce78" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="36:/opt/tinyos-2.x/tos/system/BitVectorC.nc" name="BitVector" provided="1" ref="0x7db79250">
+      <component-ref nicename="tos.system.BitVectorC" qname="IndexedAllocBitsC.Bits"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="BitVector" ref="0x7db79250" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.BitVector" qname="BitVector"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clearAll" ref="0x7db79428" scoped=""/>
+        <function-ref name="clear" ref="0x7db79508" scoped=""/>
+        <function-ref name="toggle" ref="0x7db795e8" scoped=""/>
+        <function-ref name="get" ref="0x7db796c8" scoped=""/>
+        <function-ref name="assign" ref="0x7db797a8" scoped=""/>
+        <function-ref name="setAll" ref="0x7db79888" scoped=""/>
+        <function-ref name="set" ref="0x7db79968" scoped=""/>
+        <function-ref name="size" ref="0x7db79a48" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/alloc/IndexedAllocBitsP.nc" name="BitVector" provided="0" ref="0x7db60358">
+      <component-ref nicename="IndexedAllocBitsC.IndexedBits" qname="IndexedAllocBitsC.IndexedBits"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="BitVector" ref="0x7db60358" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.BitVector" qname="BitVector"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clearAll" ref="0x7db60530" scoped=""/>
+        <function-ref name="clear" ref="0x7db60610" scoped=""/>
+        <function-ref name="toggle" ref="0x7db606f0" scoped=""/>
+        <function-ref name="get" ref="0x7db607d0" scoped=""/>
+        <function-ref name="assign" ref="0x7db608b0" scoped=""/>
+        <function-ref name="setAll" ref="0x7db60990" scoped=""/>
+        <function-ref name="set" ref="0x7db60a70" scoped=""/>
+        <function-ref name="size" ref="0x7db60b50" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/alloc/IndexedAllocBitsP.nc" name="Boot" provided="0" ref="0x7db60040">
+      <component-ref nicename="IndexedAllocBitsC.IndexedBits" qname="IndexedAllocBitsC.IndexedBits"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Boot" ref="0x7db60040" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Boot" qname="Boot"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="booted" ref="0x7db60218" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/alloc/IndexedAllocBitsP.nc" name="IndexedAlloc" provided="1" ref="0x7db61798">
+      <component-ref nicename="IndexedAllocBitsC.IndexedBits" qname="IndexedAllocBitsC.IndexedBits"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="IndexedAlloc" ref="0x7db61798" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="IndexedAlloc" qname="IndexedAlloc"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="size" ref="0x7db61eb0" scoped=""/>
+        <function-ref name="allocated" ref="0x7db61a50" scoped=""/>
+        <function-ref name="maxSize" ref="0x7db61b30" scoped=""/>
+        <function-ref name="alloc" ref="0x7db61c10" scoped=""/>
+        <function-ref name="none" ref="0x7db61cf0" scoped=""/>
+        <function-ref name="free" ref="0x7db61dd0" scoped=""/>
+        <function-ref name="all" ref="0x7db61970" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="40:/opt/tinyos-2.x/tos/lib/tossim/MainC.nc" name="Boot" provided="1" ref="0x7e759bd8">
+      <component-ref nicename="tos.lib.tossim.MainC" qname="MainC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Boot" ref="0x7e759bd8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Boot" qname="Boot"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="booted" ref="0x7e759db0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="35:/opt/tinyos-2.x/tos/system/BitVectorC.nc" name="Init" provided="1" ref="0x7db63f08">
+      <component-ref nicename="tos.system.BitVectorC" qname="IndexedAllocBitsC.Bits"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Init" ref="0x7db63f08" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x7db790f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="41:/opt/tinyos-2.x/tos/lib/tossim/MainC.nc" name="SoftwareInit" provided="0" ref="0x7e756348">
+      <component-ref nicename="tos.lib.tossim.MainC" qname="MainC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="SoftwareInit" ref="0x7e756348" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x7e756520" scoped=""/>
+      </interface-functions>
+    </interface><component abstract="" loc="33(IndexedAllocBitsC.Bits):/opt/tinyos-2.x/tos/system/BitVectorC.nc" nicename="tos.system.BitVectorC" qname="IndexedAllocBitsC.Bits">
+      <documentation loc="33(IndexedAllocBitsC.Bits):/opt/tinyos-2.x/tos/system/BitVectorC.nc">
+        <short>
+ Generic bit vector implementation.</short>
+        <long>
+ Generic bit vector implementation. Note that if you use this bit vector
+ from interrupt code, you must use appropriate &lt;code&gt;atomic&lt;/code&gt;
+ statements to ensure atomicity.
+
+ @param max_bits Bit vector length.
+
+ @author Cory Sharp &lt;cssharp@eecs.berkeley.edu&gt;
+</long>
+      </documentation>
+      <instance>
+        <component-ref nicename="tos.system.BitVectorC" qname="BitVectorC"/>
+        <arguments>
+          <value cst="U:">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="indexed_alloc_id_t" ref="0x7db87178"/></typename>
+            </type-int>
+          </value>
+        </arguments>
+      </instance>
+      <module/>
+    </component><component loc="39:/opt/tinyos-2.x/tos/lib/tossim/MainC.nc" nicename="tos.lib.tossim.MainC" qname="MainC">
+      <configuration/>
+      <wiring>
+        <wire loc="56:/opt/tinyos-2.x/tos/lib/tossim/MainC.nc">
+          <from><interface-ref name="Boot" ref="0x7e759bd8" scoped=""/></from>
+          <to><interface-ref name="Boot" ref="0x7e5f9770" scoped=""/></to>
+        </wire>
+        <wire loc="51:/opt/tinyos-2.x/tos/lib/tossim/MainC.nc">
+          <from><interface-ref name="Scheduler" ref="0x7e5f9ab8" scoped=""/></from>
+          <to><interface-ref name="Scheduler" ref="0x7e8d1c50" scoped=""/></to>
+        </wire>
+        <wire loc="52:/opt/tinyos-2.x/tos/lib/tossim/MainC.nc">
+          <from><interface-ref name="PlatformInit" ref="0x7e5f8010" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x7e7538e0" scoped=""/></to>
+        </wire>
+        <wire loc="55:/opt/tinyos-2.x/tos/lib/tossim/MainC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x7e5f8380" scoped=""/></from>
+          <to><interface-ref name="SoftwareInit" ref="0x7e756348" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component abstract="" loc="42(IndexedAllocBitsC.IndexedBits):/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/alloc/IndexedAllocBitsP.nc" nicename="IndexedAllocBitsC.IndexedBits" qname="IndexedAllocBitsC.IndexedBits">
+      <documentation loc="42(IndexedAllocBitsC.IndexedBits):/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/alloc/IndexedAllocBitsP.nc">
+        <short>
+
+ A compact indexed allocation scheme using only a bit vector to track the
+
+ elements. </short>
+        <long>
+
+ A compact indexed allocation scheme using only a bit vector to track the
+
+ elements.  While this is surely slower than a pointer-based system, it uses
+
+ much less memory.
+
+
+
+ @author Ryan Stinnett
+
+</long>
+      </documentation>
+      <instance>
+        <component-ref nicename="IndexedAllocBitsP" qname="IndexedAllocBitsP"/>
+        <arguments>
+          <value cst="U:">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="indexed_alloc_id_t" ref="0x7db87178"/></typename>
+            </type-int>
+          </value>
+        </arguments>
+      </instance>
+      <module/>
+    </component></referenced></component>

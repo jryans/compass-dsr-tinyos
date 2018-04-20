@@ -1,0 +1,107 @@
+<html>
+  <head>
+    <LINK rel="stylesheet" href="nesdoc.css" type="text/css" media="screen"><title>Component: PacketEngineP</title>
+  </head>
+  <body>
+    <h2>Component: PacketEngineP
+    </h2>
+    <b>module PacketEngineP</b>
+    <p>
+
+ Queues packets sent, received, and overheard for a multihop routing
+
+ protocol.  This "packet engine" is intended to be flexible enough to
+
+ support a wide array of possible protocols.
+
+
+
+ A control component using the PacketEngine interfaces provided here
+
+ is notified of and can control all of the above packets, while not
+
+ having to deal with packet management issues itself.
+
+
+
+ At any time after being notified of a packet's reception, the control
+
+ component can modify the packet (if needed) and then instruct this engine
+
+ to take one of the following actions:
+
+   - Send (pass to lower layer)
+
+   - Send with Intercept (pass to lower layer if upper layer approves)
+
+   - Receive (pass to upper layer)
+
+   - Drop (silently remove)
+
+
+
+ Note that this allows for some unusual actions to take place, such as
+
+ forcing a receive on a packet the upper layer has sent (which also
+
+ means it won't go on the radio anymore).
+
+
+
+ The control component is responsible for ensuring the packet is valid
+
+ if it makes any modifications.  For example, it must update the payload
+
+ length if the size of the payload changes.
+
+
+
+ This component does not request acknowledgements or use any kind of
+
+ automatic retry scheme.  However, the return value of the
+
+ PacketEngine.sendDone event allows the control component to request
+
+ a retry for any packet that failed to send.  The control component or
+
+ the upper layer is certainly free to request acknowledgments on its own.
+
+
+
+ When disabled, no new packets are accepted into the buffer and the
+
+ packets already in the buffer are not processed but do remain in
+
+ the buffer.  Processing resumes when enabled again.
+
+
+
+ The AM type of packets sent from the upper layer is copied into the
+
+ packet payload for storage so that multihop protocols can use AM types
+
+ of their own without collisions.
+
+
+
+ Based on TransceiverM by David Moss, CtpForwardingEngineP by Phil Levis,
+
+ Kyle Jamieson, Omprakash Gnawali, and Rodrigo Fonseca, and
+
+ ForwardingEngineM by Roamin Thouvenin.
+
+
+
+ 
+    <p>
+    <dl>
+      <dt><b>Author:</b>
+      <dd>
+        Ryan Stinnett
+
+
+      </dd>
+    </dl>
+    <p><p><div id=heading>Provides</div><div id=funcsig>interface <a href="../ihtml/tos.interfaces.Init.html">Init</a></div><div id=funcsig>interface <a href="../ihtml/tos.interfaces.Intercept.html">Intercept</a>[am_id_t]</div><div id=funcsig>interface <a href="../ihtml/tos.interfaces.Packet.html">Packet</a></div><div id=funcsig>interface <a href="../ihtml/PacketEngine.html">PacketEngine</a>[am_id_t]</div><div id=funcsig>interface <a href="../ihtml/IndexedIterator.html">IndexedIterator</a>&lt;packet_id_t&gt; as <b>PacketWaitList</b>[am_id_t]</div><div id=funcsig>interface <a href="../ihtml/tos.interfaces.Receive.html">Receive</a>[am_id_t]</div><div id=funcsig>interface <a href="../ihtml/tos.interfaces.AMSend.html">AMSend</a> as <b>Send</b>[packet_client_id_t]</div><div id=funcsig>interface <a href="../ihtml/Equal.html">Equal</a>&lt;packet_send_entry_t *&gt; as <b>SendQueueEqual</b></div><div id=funcsig>interface <a href="../ihtml/tos.interfaces.StdControl.html">StdControl</a></div><p><div id=heading>Uses</div><div id=funcsig>interface <a href="../ihtml/tos.interfaces.AMPacket.html">AMPacket</a></div><div id=funcsig>interface <a href="../ihtml/tos.interfaces.TaskBasic.html">TaskBasic</a> as <b>msgAction</b></div><div id=funcsig>interface <a href="../ihtml/tos.interfaces.TaskBasic.html">TaskBasic</a> as <b>msgAdded</b></div><div id=funcsig>interface <a href="../ihtml/PacketEngineClient.html">PacketEngineClient</a>[packet_client_id_t]</div><div id=funcsig>interface <a href="../ihtml/tos.interfaces.SplitControl.html">SplitControl</a> as <b>RadioControl</b></div><div id=funcsig>interface <a href="../ihtml/tos.interfaces.Random.html">Random</a></div><div id=funcsig>interface <a href="../ihtml/tos.interfaces.Pool.html">Pool</a>&lt;message_t&gt; as <b>ReceivePool</b></div><div id=funcsig>interface <a href="../ihtml/tos.lib.timer.Timer.html">Timer</a>&lt;TMilli&gt; as <b>SendBackoff</b></div><div id=funcsig>interface <a href="../ihtml/tos.interfaces.Pool.html">Pool</a>&lt;message_t&gt; as <b>SendPool</b></div><div id=funcsig>interface <a href="../ihtml/DataCache.html">DataCache</a>&lt;packet_send_entry_t&gt; as <b>SendQueue</b></div><div id=funcsig>interface <a href="../ihtml/tos.interfaces.State.html">State</a> as <b>SendState</b></div><div id=funcsig>interface <a href="../ihtml/tos.interfaces.Packet.html">Packet</a> as <b>SubPacket</b>[am_id_t]</div><div id=funcsig>interface <a href="../ihtml/tos.interfaces.Receive.html">Receive</a> as <b>SubReceive</b>[am_id_t]</div><div id=funcsig>interface <a href="../ihtml/tos.interfaces.AMSend.html">AMSend</a> as <b>SubSend</b>[am_id_t]</div>
+  </body>
+</html>

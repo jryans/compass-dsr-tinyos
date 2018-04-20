@@ -1,0 +1,69 @@
+<html>
+  <head>
+    <LINK rel="stylesheet" href="nesdoc.css" type="text/css" media="screen"><title>Interface: tos.lib.tossim.SimMote</title>
+  </head>
+  <body>
+    <h2>Interface: tos.lib.tossim.SimMote</h2>
+    <b>interface SimMote</b><p>
+ TOSSIM-specific interface to access a mote's state. TinyOS programs
+ should never use this interface.
+
+ 
+    <p>
+    <dl>
+      <dt><b>Author:</b>
+      <dd>
+        Philip Levis
+ 
+      </dd>
+      <dt><b>Date:</b>
+      <dd>
+          Nov 22 2005
+
+      </dd>
+    </dl>
+    <p><p><div id=heading>Commands</div><div id=funcsig><span id=funcnameshort>command long long <a href="#getEuid">getEuid</a>()
+      </span></div><div id=funcsig><span id=funcnameshort>command long long <a href="#getStartTime">getStartTime</a>()
+      </span></div><div id=funcsig><span id=funcnameshort>command int <a href="#getVariableInfo">getVariableInfo</a>(char *name, void **ptr, size_t *len)
+      </span></div><div id=funcsig><span id=funcnameshort>command bool <a href="#isOn">isOn</a>()
+      </span></div><div id=funcsig><span id=funcnameshort>command void <a href="#setEuid">setEuid</a>(long long euid)
+      </span></div><div id=funcsig><span id=funcnameshort>command void <a href="#turnOff">turnOff</a>()
+      </span></div><div id=funcsig><span id=funcnameshort>command void <a href="#turnOn">turnOn</a>()
+      </span></div><p><div id=heading>Commands - Details</div>
+    <a name="getEuid"></a>
+    <h4>getEuid
+    </h4>
+    <span id=funcnameshort>command long long <b>getEuid</b>()
+    </span><hr>
+    <a name="getStartTime"></a>
+    <h4>getStartTime
+    </h4>
+    <span id=funcnameshort>command long long <b>getStartTime</b>()
+    </span><hr>
+    <a name="getVariableInfo"></a>
+    <h4>getVariableInfo
+    </h4>
+    <span id=funcnameshort>command int <b>getVariableInfo</b>(char *name, void **ptr, size_t *len)
+    </span><hr>
+    <a name="isOn"></a>
+    <h4>isOn
+    </h4>
+    <span id=funcnameshort>command bool <b>isOn</b>()
+    </span><hr>
+    <a name="setEuid"></a>
+    <h4>setEuid
+    </h4>
+    <span id=funcnameshort>command void <b>setEuid</b>(long long euid)
+    </span><hr>
+    <a name="turnOff"></a>
+    <h4>turnOff
+    </h4>
+    <span id=funcnameshort>command void <b>turnOff</b>()
+    </span><hr>
+    <a name="turnOn"></a>
+    <h4>turnOn
+    </h4>
+    <span id=funcnameshort>command void <b>turnOn</b>()
+    </span>
+  </body>
+</html>

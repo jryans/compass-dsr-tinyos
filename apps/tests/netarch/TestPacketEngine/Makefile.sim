@@ -1,0 +1,3 @@
+all:
+	g++ -g -c -o sim.o sim.c -I$(TOSDIR)/lib/tossim/
+	g++ -o sim sim.o build/micaz/tossim.o build/micaz/sim.o build/micaz/c-support.o

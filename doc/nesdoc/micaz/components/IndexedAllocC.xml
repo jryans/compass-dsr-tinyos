@@ -1,0 +1,81 @@
+<?xml version="1.0" ?><component abstract="" loc="41:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/alloc/IndexedAllocC.nc" nicename="IndexedAllocC" qname="IndexedAllocC">
+      <parameters>
+        <constant loc="41:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/alloc/IndexedAllocC.nc" name="MAX_SIZE" ref="0x7db88618">
+          <component-ref nicename="IndexedAllocC" qname="IndexedAllocC"/>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="indexed_alloc_id_t" ref="0x7db88178"/></typename>
+          </type-int>
+        </constant>
+      </parameters>
+      <configuration/>
+      <wiring>
+        <wire loc="49:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/alloc/IndexedAllocC.nc">
+          <from><interface-ref name="IndexedAlloc" ref="0x7db81c80" scoped=""/></from>
+          <to><interface-ref name="IndexedAlloc" ref="0x7db7fcc8" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="42:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/alloc/IndexedAllocC.nc" name="IndexedAlloc" provided="1" ref="0x7db81c80">
+      <component-ref nicename="IndexedAllocC" qname="IndexedAllocC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="IndexedAlloc" ref="0x7db81c80" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="IndexedAlloc" qname="IndexedAlloc"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="all" ref="0x7db86470" scoped=""/>
+        <function-ref name="allocated" ref="0x7db86010" scoped=""/>
+        <function-ref name="maxSize" ref="0x7db860f0" scoped=""/>
+        <function-ref name="alloc" ref="0x7db861d0" scoped=""/>
+        <function-ref name="none" ref="0x7db862b0" scoped=""/>
+        <function-ref name="free" ref="0x7db86390" scoped=""/>
+        <function-ref name="size" ref="0x7db81e58" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="40:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/alloc/IndexedAllocBitsC.nc" name="IndexedAlloc" provided="1" ref="0x7db7fcc8">
+      <component-ref nicename="IndexedAllocC.IndexedBits" qname="IndexedAllocC.IndexedBits"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="IndexedAlloc" ref="0x7db7fcc8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="IndexedAlloc" qname="IndexedAlloc"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="size" ref="0x7db7e470" scoped=""/>
+        <function-ref name="allocated" ref="0x7db7e010" scoped=""/>
+        <function-ref name="maxSize" ref="0x7db7e0f0" scoped=""/>
+        <function-ref name="alloc" ref="0x7db7e1d0" scoped=""/>
+        <function-ref name="none" ref="0x7db7e2b0" scoped=""/>
+        <function-ref name="free" ref="0x7db7e390" scoped=""/>
+        <function-ref name="all" ref="0x7db7fea0" scoped=""/>
+      </interface-functions>
+    </interface><component abstract="" loc="39(IndexedAllocC.IndexedBits):/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/alloc/IndexedAllocBitsC.nc" nicename="IndexedAllocC.IndexedBits" qname="IndexedAllocC.IndexedBits">
+      <documentation loc="39(IndexedAllocC.IndexedBits):/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/alloc/IndexedAllocBitsC.nc">
+        <short>
+
+ Packages IndexedAllocBitsP together with its dependencies to create an
+
+ easily usable component.
+
+
+
+</short>
+        <long>
+
+ Packages IndexedAllocBitsP together with its dependencies to create an
+
+ easily usable component.
+
+
+
+ @author Ryan Stinnett
+
+</long>
+      </documentation>
+      <instance>
+        <component-ref nicename="IndexedAllocBitsC" qname="IndexedAllocBitsC"/>
+        <arguments>
+          <value cst="U:">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="indexed_alloc_id_t" ref="0x7db88178"/></typename>
+            </type-int>
+          </value>
+        </arguments>
+      </instance>
+      <configuration/>
+    </component></referenced></component>

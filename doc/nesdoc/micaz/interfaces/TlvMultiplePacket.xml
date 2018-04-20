@@ -1,0 +1,386 @@
+<?xml version="1.0" ?><interfacedef loc="42:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvMultiplePacket.nc" nicename="TlvMultiplePacket" qname="TlvMultiplePacket">
+      <documentation loc="42:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvMultiplePacket.nc">
+        <short>
+
+ Access data stored in a generalized Type-Length-Value (TLV) block
+
+ within a packet. </short>
+        <long>
+
+ Access data stored in a generalized Type-Length-Value (TLV) block
+
+ within a packet.  This interface, when used together with the TlvList
+
+ interface, has no restrictions of the number of instances of a type.
+
+
+
+ @author Ryan Stinnett
+
+</long>
+      </documentation>
+      <function command="" loc="82:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvMultiplePacket.nc" name="value" provided="0" ref="0x7de75a60">
+        <documentation loc="74:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvMultiplePacket.nc">
+          <short>
+
+ Returns the value in this type instance within the TLV block. </short>
+          <long>
+
+ Returns the value in this type instance within the TLV block.  If
+
+ the type instance is not found in the block, then NULL is returned.
+
+
+
+ @param pkt Pointer to the packet.
+
+ @param key Key for the TLV type instance.
+
+ @return Pointer to the value in this TLV type.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="TlvMultiplePacket" qname="TlvMultiplePacket"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-pointer alignment="I:4" size="I:4">
+            <type-void alignment="I:1" size="I:1"/>
+          </type-pointer>
+          <function-parameters>
+            <type-pointer alignment="I:4" size="I:4">
+              <type-tag alignment="I:1" size="I:50"><nx_struct-ref name="message_t" ref="0x7e872dd8"/>
+                <typename><typedef-ref name="message_t" ref="0x7e8707a8"/></typename>
+              </type-tag>
+            </type-pointer>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="tlv_key_t" ref="0x7de80b38"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="82:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvMultiplePacket.nc" name="pkt" ref="0x7de755e8">
+            <type-pointer alignment="I:4" size="I:4">
+              <type-tag alignment="I:1" size="I:50"><nx_struct-ref name="message_t" ref="0x7e872dd8"/>
+                <typename><typedef-ref name="message_t" ref="0x7e8707a8"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+          <variable loc="82:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvMultiplePacket.nc" name="key" ref="0x7de75778">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="tlv_key_t" ref="0x7de80b38"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="120:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvMultiplePacket.nc" name="list" provided="0" ref="0x7de739a8">
+        <documentation loc="111:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvMultiplePacket.nc">
+          <short>
+
+ Access a list of all instances of a type within the TLV block.
+
+</short>
+          <long>
+
+ Access a list of all instances of a type within the TLV block.
+
+ This command gives the key for the first such instance.
+
+ Traverse the rest of the list with the TlvList interface.
+
+
+
+ @param pkt Pointer to the packet.
+
+ @return The key for the first instance of a type in the TLV
+
+         block.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="TlvMultiplePacket" qname="TlvMultiplePacket"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="tlv_key_t" ref="0x7de80b38"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-pointer alignment="I:4" size="I:4">
+              <type-tag alignment="I:1" size="I:50"><nx_struct-ref name="message_t" ref="0x7e872dd8"/>
+                <typename><typedef-ref name="message_t" ref="0x7e8707a8"/></typename>
+              </type-tag>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="120:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvMultiplePacket.nc" name="pkt" ref="0x7de736c8">
+            <type-pointer alignment="I:4" size="I:4">
+              <type-tag alignment="I:1" size="I:50"><nx_struct-ref name="message_t" ref="0x7e872dd8"/>
+                <typename><typedef-ref name="message_t" ref="0x7e8707a8"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="109:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvMultiplePacket.nc" name="remove" provided="0" ref="0x7de73150">
+        <documentation loc="101:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvMultiplePacket.nc">
+          <short>
+
+ Removes this type instance from the TLV block.
+
+
+
+</short>
+          <long>
+
+ Removes this type instance from the TLV block.
+
+
+
+ @param pkt Pointer to the packet.
+
+ @param key Key for the TLV type instance.
+
+ @return SUCCESS if the type instance was found and removed, EINVAL
+
+         otherwise.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="TlvMultiplePacket" qname="TlvMultiplePacket"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="error_t" ref="0x7e8372e8"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-pointer alignment="I:4" size="I:4">
+              <type-tag alignment="I:1" size="I:50"><nx_struct-ref name="message_t" ref="0x7e872dd8"/>
+                <typename><typedef-ref name="message_t" ref="0x7e8707a8"/></typename>
+              </type-tag>
+            </type-pointer>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="tlv_key_t" ref="0x7de80b38"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="109:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvMultiplePacket.nc" name="pkt" ref="0x7de74d08">
+            <type-pointer alignment="I:4" size="I:4">
+              <type-tag alignment="I:1" size="I:50"><nx_struct-ref name="message_t" ref="0x7e872dd8"/>
+                <typename><typedef-ref name="message_t" ref="0x7e8707a8"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+          <variable loc="109:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvMultiplePacket.nc" name="key" ref="0x7de74e98">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="tlv_key_t" ref="0x7de80b38"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="52:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvMultiplePacket.nc" name="length" provided="0" ref="0x7de76320">
+        <documentation loc="44:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvMultiplePacket.nc">
+          <short>
+
+ Returns the length of this type instance within the TLV block. </short>
+          <long>
+
+ Returns the length of this type instance within the TLV block.  If
+
+ the type instance is not found in the block, then 0 is returned.
+
+
+
+ @param pkt Pointer to the packet.
+
+ @param key Key for the TLV type instance.
+
+ @return Length of this TLV type.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="TlvMultiplePacket" qname="TlvMultiplePacket"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x7fea0110"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-pointer alignment="I:4" size="I:4">
+              <type-tag alignment="I:1" size="I:50"><nx_struct-ref name="message_t" ref="0x7e872dd8"/>
+                <typename><typedef-ref name="message_t" ref="0x7e8707a8"/></typename>
+              </type-tag>
+            </type-pointer>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="tlv_key_t" ref="0x7de80b38"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="52:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvMultiplePacket.nc" name="pkt" ref="0x7de77ea0">
+            <type-pointer alignment="I:4" size="I:4">
+              <type-tag alignment="I:1" size="I:50"><nx_struct-ref name="message_t" ref="0x7e872dd8"/>
+                <typename><typedef-ref name="message_t" ref="0x7e8707a8"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+          <variable loc="52:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvMultiplePacket.nc" name="key" ref="0x7de76068">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="tlv_key_t" ref="0x7de80b38"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="71:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvMultiplePacket.nc" name="setLength" provided="0" ref="0x7de75080">
+        <documentation loc="54:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvMultiplePacket.nc">
+          <short>
+
+ Sets the length of a type instance within the TLV block. </short>
+          <long>
+
+ Sets the length of a type instance within the TLV block.  This
+
+ operation moves data around and should always be performed before
+
+ storing a value with a different length than the one currently
+
+ stored.  If the type instance is not found in the block or there
+
+ is not enough room for the new length, returns ESIZE.
+
+
+
+ Setting the length of a type instance typically invalidates any
+
+ keys received prior to the change.
+
+
+
+ @param pkt Pointer to the packet.
+
+ @param key Key for the TLV type instance.
+
+ @param len Length to set for this TLV type.
+
+ @return SUCCESS if the type instance was found, enough space was
+
+         available, and the length was set, ESIZE if wasn't enough
+
+         space, EINVAL if the instance wasn't found.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="TlvMultiplePacket" qname="TlvMultiplePacket"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="error_t" ref="0x7e8372e8"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-pointer alignment="I:4" size="I:4">
+              <type-tag alignment="I:1" size="I:50"><nx_struct-ref name="message_t" ref="0x7e872dd8"/>
+                <typename><typedef-ref name="message_t" ref="0x7e8707a8"/></typename>
+              </type-tag>
+            </type-pointer>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="tlv_key_t" ref="0x7de80b38"/></typename>
+            </type-int>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x7fea0110"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="71:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvMultiplePacket.nc" name="pkt" ref="0x7de76898">
+            <type-pointer alignment="I:4" size="I:4">
+              <type-tag alignment="I:1" size="I:50"><nx_struct-ref name="message_t" ref="0x7e872dd8"/>
+                <typename><typedef-ref name="message_t" ref="0x7e8707a8"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+          <variable loc="71:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvMultiplePacket.nc" name="key" ref="0x7de76a28">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="tlv_key_t" ref="0x7de80b38"/></typename>
+            </type-int>
+          </variable>
+          <variable loc="72:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvMultiplePacket.nc" name="len" ref="0x7de76bc0">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x7fea0110"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="98:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvMultiplePacket.nc" name="add" provided="0" ref="0x7de74798">
+        <documentation loc="84:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvMultiplePacket.nc">
+          <short>
+
+ Adds an instance of a type to the TLV block and sets the initial
+
+ length of the instance. </short>
+          <long>
+
+ Adds an instance of a type to the TLV block and sets the initial
+
+ length of the instance.  This operation moves data around and
+
+ should always be performed before storing a value of the given
+
+ type.  The type instance will be added to the block as long as
+
+ there are at least len + 2 bytes available in the buffer holding
+
+ the TLV block.
+
+
+
+ @param pkt Pointer to the packet.
+
+ @param key Pointer to store the key for the TLV type instance.
+
+ @param len Length to set for this TLV type.
+
+ @return SUCCESS if enough space was available and the length was
+
+         set, ESIZE if there wasn't enough space.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="TlvMultiplePacket" qname="TlvMultiplePacket"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="error_t" ref="0x7e8372e8"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-pointer alignment="I:4" size="I:4">
+              <type-tag alignment="I:1" size="I:50"><nx_struct-ref name="message_t" ref="0x7e872dd8"/>
+                <typename><typedef-ref name="message_t" ref="0x7e8707a8"/></typename>
+              </type-tag>
+            </type-pointer>
+            <type-pointer alignment="I:4" size="I:4">
+              <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+                <typename><typedef-ref name="tlv_key_t" ref="0x7de80b38"/></typename>
+              </type-int>
+            </type-pointer>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x7fea0110"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="98:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvMultiplePacket.nc" name="pkt" ref="0x7de74010">
+            <type-pointer alignment="I:4" size="I:4">
+              <type-tag alignment="I:1" size="I:50"><nx_struct-ref name="message_t" ref="0x7e872dd8"/>
+                <typename><typedef-ref name="message_t" ref="0x7e8707a8"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+          <variable loc="98:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvMultiplePacket.nc" name="key" ref="0x7de741c0">
+            <type-pointer alignment="I:4" size="I:4">
+              <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+                <typename><typedef-ref name="tlv_key_t" ref="0x7de80b38"/></typename>
+              </type-int>
+            </type-pointer>
+          </variable>
+          <variable loc="99:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvMultiplePacket.nc" name="len" ref="0x7de74358">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x7fea0110"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+    </interfacedef>

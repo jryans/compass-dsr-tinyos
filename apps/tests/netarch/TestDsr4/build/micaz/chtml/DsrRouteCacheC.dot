@@ -1,0 +1,8 @@
+digraph "DsrRouteCacheC" {
+  n0x7dbf1d38 [shape=ellipse, style=filled, label="RouteCache", fontsize=12];
+  "DsrRouteCacheC.SimpleLinkCacheC" [fontsize=12, shape=box,peripheries=2, style=dashed, label="SimpleLinkCacheC", URL="SimpleLinkCacheC.html"];
+  n0x7dbf04d8 [shape=ellipse, style=filled, label="RouteNodeList", fontsize=12];
+  "DsrRouteCacheC.SimpleLinkCacheC" [fontsize=12, shape=box,peripheries=2, style=dashed, label="SimpleLinkCacheC", URL="SimpleLinkCacheC.html"];
+  "n0x7dbf1d38" -> "DsrRouteCacheC.SimpleLinkCacheC" [label="RouteCache", URL="../ihtml/RouteCache.html", fontsize=10];
+  "n0x7dbf04d8" -> "DsrRouteCacheC.SimpleLinkCacheC" [label="IndexedIterator<route_cache_node_id_t>", URL="../ihtml/IndexedIterator.html", fontsize=10];
+}

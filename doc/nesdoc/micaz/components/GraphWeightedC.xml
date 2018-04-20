@@ -1,0 +1,381 @@
+<?xml version="1.0" ?><component abstract="" loc="41:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphWeightedC.nc" nicename="GraphWeightedC" qname="GraphWeightedC">
+      <documentation loc="41:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphWeightedC.nc">
+        <short>
+
+ Builds a weighted graph as edges are added and supports finding the single
+
+ source shortest path.
+
+
+
+</short>
+        <long>
+
+ Builds a weighted graph as edges are added and supports finding the single
+
+ source shortest path.
+
+
+
+ @author Ryan Stinnett
+
+</long>
+      </documentation>
+      <parameters>
+        <constant loc="41:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphWeightedC.nc" name="maxVertices" ref="0x7dba8da0">
+          <component-ref nicename="GraphWeightedC" qname="GraphWeightedC"/>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="graph_vertex_id_t" ref="0x7dbe5e40"/></typename>
+          </type-int>
+        </constant>
+        <constant loc="42:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphWeightedC.nc" name="maxEdges" ref="0x7dba7010">
+          <component-ref nicename="GraphWeightedC" qname="GraphWeightedC"/>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="graph_edge_id_t" ref="0x7dbe4020"/></typename>
+          </type-int>
+        </constant>
+        <constant loc="43:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphWeightedC.nc" name="parallelEdges" ref="0x7dba71b0">
+          <component-ref nicename="GraphWeightedC" qname="GraphWeightedC"/>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="bool" ref="0x7ec91520"/></typename>
+          </type-int>
+        </constant>
+        <typedef loc="44:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphWeightedC.nc" name="graph_edge_weight_t" ref="0x7dba7478">
+          <component-ref nicename="GraphWeightedC" qname="GraphWeightedC"/>
+          <type-var alignment="U:" size="U:"><typedef-ref name="graph_edge_weight_t" ref="0x7dba7478" scoped=""/></type-var>
+        </typedef>
+      </parameters>
+      <configuration/>
+      <wiring>
+        <wire loc="60:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphWeightedC.nc">
+          <from><interface-ref name="Graph" ref="0x7dba76c8" scoped=""/></from>
+          <to><interface-ref name="Graph" ref="0x7db97010" scoped=""/></to>
+        </wire>
+        <wire loc="70:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphWeightedC.nc">
+          <from><interface-ref name="PathEdgeList" ref="0x7dba4ce0" scoped=""/></from>
+          <to><interface-ref name="PathEdgeList" ref="0x7da5d588" scoped=""/></to>
+        </wire>
+        <wire loc="69:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphWeightedC.nc">
+          <from><interface-ref name="SourceShortestPath" ref="0x7dba43a0" scoped=""/></from>
+          <to><interface-ref name="SourceShortestPath" ref="0x7db11c68" scoped=""/></to>
+        </wire>
+        <wire loc="61:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphWeightedC.nc">
+          <from><interface-ref name="GraphEdge" ref="0x7dba13b8" scoped=""/></from>
+          <to><interface-ref name="GraphEdge" ref="0x7db97cc8" scoped=""/></to>
+        </wire>
+        <wire loc="62:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphWeightedC.nc">
+          <from><interface-ref name="GraphEdgeList" ref="0x7dba1890" scoped=""/></from>
+          <to><interface-ref name="GraphEdgeList" ref="0x7db15200" scoped=""/></to>
+        </wire>
+        <wire loc="63:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphWeightedC.nc">
+          <from><interface-ref name="Graph" ref="0x7da5c0c0" scoped=""/></from>
+          <to><interface-ref name="Graph" ref="0x7db97010" scoped=""/></to>
+        </wire>
+        <wire loc="64:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphWeightedC.nc">
+          <from><interface-ref name="GraphEdge" ref="0x7da5cd78" scoped=""/></from>
+          <to><interface-ref name="GraphEdge" ref="0x7db97cc8" scoped=""/></to>
+        </wire>
+        <wire loc="65:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphWeightedC.nc">
+          <from><interface-ref name="GraphEdgeList" ref="0x7da59370" scoped=""/></from>
+          <to><interface-ref name="GraphEdgeList" ref="0x7db15200" scoped=""/></to>
+        </wire>
+        <wire loc="67:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphWeightedC.nc">
+          <from><interface-ref name="GraphEdgeWeight" ref="0x7da5b2c0" scoped=""/></from>
+          <to><interface-ref name="GraphEdgeWeight" ref="0x7db9aac0" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="46:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphWeightedC.nc" name="Graph" provided="1" ref="0x7dba76c8">
+      <component-ref nicename="GraphWeightedC" qname="GraphWeightedC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Graph" ref="0x7dba76c8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="Graph" qname="Graph"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="maxEdges" ref="0x7dba78a0" scoped=""/>
+        <function-ref name="removed" ref="0x7dba7980" scoped=""/>
+        <function-ref name="remove" ref="0x7dba7a60" scoped=""/>
+        <function-ref name="edge" ref="0x7dba7b40" scoped=""/>
+        <function-ref name="directed" ref="0x7dba7c20" scoped=""/>
+        <function-ref name="vertices" ref="0x7dba7d00" scoped=""/>
+        <function-ref name="parallelEdges" ref="0x7dba7de0" scoped=""/>
+        <function-ref name="maxVertices" ref="0x7dba7ec0" scoped=""/>
+        <function-ref name="insert" ref="0x7dba6010" scoped=""/>
+        <function-ref name="inserted" ref="0x7dba60f0" scoped=""/>
+        <function-ref name="edgeList" ref="0x7dba61d0" scoped=""/>
+        <function-ref name="edges" ref="0x7dba62b0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="50:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphWeightedC.nc" name="PathEdgeList" provided="1" ref="0x7dba4ce0">
+      <component-ref nicename="GraphWeightedC" qname="GraphWeightedC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="PathEdgeList" ref="0x7dba4ce0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="IndexedIterator" qname="IndexedIterator"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="graph_vertex_id_t" ref="0x7dbe5e40"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="end" ref="0x7dba35d0" scoped=""/>
+        <function-ref name="next" ref="0x7dba3350" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="49:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphWeightedC.nc" name="SourceShortestPath" provided="1" ref="0x7dba43a0">
+      <component-ref nicename="GraphWeightedC" qname="GraphWeightedC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="SourceShortestPath" ref="0x7dba43a0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="SourceShortestPath" qname="SourceShortestPath"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="rebuildNeeded" ref="0x7dba4578" scoped=""/>
+        <function-ref name="buildTree" ref="0x7dba4658" scoped=""/>
+        <function-ref name="builtTree" ref="0x7dba4738" scoped=""/>
+        <function-ref name="buildingTree" ref="0x7dba4818" scoped=""/>
+        <function-ref name="edgeCount" ref="0x7dba48f8" scoped=""/>
+        <function-ref name="buildTreeTo" ref="0x7dba49d8" scoped=""/>
+        <function-ref name="builtTreeTo" ref="0x7dba4ab8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphWeightedC.nc" name="GraphEdge" provided="1" ref="0x7dba13b8">
+      <component-ref nicename="GraphWeightedC" qname="GraphWeightedC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="GraphEdge" ref="0x7dba13b8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="GraphEdge" qname="GraphEdge"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="src" ref="0x7dba1590" scoped=""/>
+        <function-ref name="dest" ref="0x7dba1670" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="48:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphWeightedC.nc" name="GraphEdgeList" provided="1" ref="0x7dba1890">
+      <component-ref nicename="GraphWeightedC" qname="GraphWeightedC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="GraphEdgeList" ref="0x7dba1890" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="IndexedIterator" qname="IndexedIterator"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="graph_edge_id_t" ref="0x7dbe4020"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="end" ref="0x7dba4150" scoped=""/>
+        <function-ref name="next" ref="0x7dba1eb8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="52:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphWeightedC.nc" name="GraphEdgeWeight" provided="0" ref="0x7db9aac0">
+      <component-ref nicename="GraphWeightedC" qname="GraphWeightedC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="GraphEdgeWeight" ref="0x7db9aac0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="GraphEdgeWeight" qname="GraphEdgeWeight"/>
+        <arguments>
+          <type-var alignment="U:" size="U:"><typedef-ref name="graph_edge_weight_t" ref="0x7dba7478" scoped=""/></type-var>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="canChangeWeights" ref="0x7db9e100" scoped=""/>
+        <function-ref name="weightChanged" ref="0x7db9e880" scoped=""/>
+        <function-ref name="setWeight" ref="0x7db9e560" scoped=""/>
+        <function-ref name="weight" ref="0x7db9e2e0" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="42:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/SourceShortestPathC.nc" name="PathEdgeList" provided="1" ref="0x7da5d588">
+      <component-ref nicename="GraphWeightedC.SourceShortestPathC" qname="GraphWeightedC.SourceShortestPathC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="PathEdgeList" ref="0x7da5d588" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="IndexedIterator" qname="IndexedIterator"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="graph_vertex_id_t" ref="0x7dbe5e40"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="end" ref="0x7da5de30" scoped=""/>
+        <function-ref name="next" ref="0x7da5dbb0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphSparseC.nc" name="Graph" provided="1" ref="0x7db97010">
+      <component-ref nicename="GraphWeightedC.GraphSparseC" qname="GraphWeightedC.GraphSparseC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Graph" ref="0x7db97010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="Graph" qname="Graph"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="maxEdges" ref="0x7db971e8" scoped=""/>
+        <function-ref name="removed" ref="0x7db972c8" scoped=""/>
+        <function-ref name="remove" ref="0x7db973a8" scoped=""/>
+        <function-ref name="edge" ref="0x7db97488" scoped=""/>
+        <function-ref name="directed" ref="0x7db97568" scoped=""/>
+        <function-ref name="vertices" ref="0x7db97648" scoped=""/>
+        <function-ref name="parallelEdges" ref="0x7db97728" scoped=""/>
+        <function-ref name="maxVertices" ref="0x7db97808" scoped=""/>
+        <function-ref name="insert" ref="0x7db978e8" scoped=""/>
+        <function-ref name="inserted" ref="0x7db979c8" scoped=""/>
+        <function-ref name="edgeList" ref="0x7db97aa8" scoped=""/>
+        <function-ref name="edges" ref="0x7db97b88" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphSparseC.nc" name="GraphEdgeList" provided="1" ref="0x7db15200">
+      <component-ref nicename="GraphWeightedC.GraphSparseC" qname="GraphWeightedC.GraphSparseC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="GraphEdgeList" ref="0x7db15200" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="IndexedIterator" qname="IndexedIterator"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="graph_edge_id_t" ref="0x7dbe4020"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="end" ref="0x7db15aa8" scoped=""/>
+        <function-ref name="next" ref="0x7db15828" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/SourceShortestPathC.nc" name="Graph" provided="0" ref="0x7da5c0c0">
+      <component-ref nicename="GraphWeightedC.SourceShortestPathC" qname="GraphWeightedC.SourceShortestPathC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Graph" ref="0x7da5c0c0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="Graph" qname="Graph"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="maxEdges" ref="0x7da5c298" scoped=""/>
+        <function-ref name="removed" ref="0x7da5c378" scoped=""/>
+        <function-ref name="remove" ref="0x7da5c458" scoped=""/>
+        <function-ref name="edge" ref="0x7da5c538" scoped=""/>
+        <function-ref name="directed" ref="0x7da5c618" scoped=""/>
+        <function-ref name="vertices" ref="0x7da5c6f8" scoped=""/>
+        <function-ref name="parallelEdges" ref="0x7da5c7d8" scoped=""/>
+        <function-ref name="maxVertices" ref="0x7da5c8b8" scoped=""/>
+        <function-ref name="insert" ref="0x7da5c998" scoped=""/>
+        <function-ref name="inserted" ref="0x7da5ca78" scoped=""/>
+        <function-ref name="edgeList" ref="0x7da5cb58" scoped=""/>
+        <function-ref name="edges" ref="0x7da5cc38" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/SourceShortestPathC.nc" name="GraphEdge" provided="0" ref="0x7da5cd78">
+      <component-ref nicename="GraphWeightedC.SourceShortestPathC" qname="GraphWeightedC.SourceShortestPathC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="GraphEdge" ref="0x7da5cd78" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="GraphEdge" qname="GraphEdge"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="src" ref="0x7da5b010" scoped=""/>
+        <function-ref name="dest" ref="0x7da5b0f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="41:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/SourceShortestPathC.nc" name="SourceShortestPath" provided="1" ref="0x7db11c68">
+      <component-ref nicename="GraphWeightedC.SourceShortestPathC" qname="GraphWeightedC.SourceShortestPathC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="SourceShortestPath" ref="0x7db11c68" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="SourceShortestPath" qname="SourceShortestPath"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="rebuildNeeded" ref="0x7db11e40" scoped=""/>
+        <function-ref name="buildTree" ref="0x7db11f20" scoped=""/>
+        <function-ref name="builtTree" ref="0x7da5d018" scoped=""/>
+        <function-ref name="buildingTree" ref="0x7da5d0f8" scoped=""/>
+        <function-ref name="edgeCount" ref="0x7da5d1d8" scoped=""/>
+        <function-ref name="buildTreeTo" ref="0x7da5d2b8" scoped=""/>
+        <function-ref name="builtTreeTo" ref="0x7da5d398" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="48:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/SourceShortestPathC.nc" name="GraphEdgeList" provided="0" ref="0x7da59370">
+      <component-ref nicename="GraphWeightedC.SourceShortestPathC" qname="GraphWeightedC.SourceShortestPathC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="GraphEdgeList" ref="0x7da59370" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="IndexedIterator" qname="IndexedIterator"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="graph_edge_id_t" ref="0x7dbe4020"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="end" ref="0x7da59c18" scoped=""/>
+        <function-ref name="next" ref="0x7da59998" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphSparseC.nc" name="GraphEdge" provided="1" ref="0x7db97cc8">
+      <component-ref nicename="GraphWeightedC.GraphSparseC" qname="GraphWeightedC.GraphSparseC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="GraphEdge" ref="0x7db97cc8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="GraphEdge" qname="GraphEdge"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="src" ref="0x7db97ea0" scoped=""/>
+        <function-ref name="dest" ref="0x7db15010" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/SourceShortestPathC.nc" name="GraphEdgeWeight" provided="0" ref="0x7da5b2c0">
+      <component-ref nicename="GraphWeightedC.SourceShortestPathC" qname="GraphWeightedC.SourceShortestPathC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="GraphEdgeWeight" ref="0x7da5b2c0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="GraphEdgeWeight" qname="GraphEdgeWeight"/>
+        <arguments>
+          <type-var alignment="U:" size="U:"><typedef-ref name="graph_edge_weight_t" ref="0x7dba7478" scoped=""/></type-var>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="canChangeWeights" ref="0x7da5b8e8" scoped=""/>
+        <function-ref name="weightChanged" ref="0x7da59088" scoped=""/>
+        <function-ref name="setWeight" ref="0x7da5bd48" scoped=""/>
+        <function-ref name="weight" ref="0x7da5bac8" scoped=""/>
+      </interface-functions>
+    </interface><component abstract="" loc="41(GraphWeightedC.GraphSparseC):/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphSparseC.nc" nicename="GraphWeightedC.GraphSparseC" qname="GraphWeightedC.GraphSparseC">
+      <documentation loc="41(GraphWeightedC.GraphSparseC):/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphSparseC.nc">
+        <short>
+
+ Wires supporting modules needed by any GraphSparseP. </short>
+        <long>
+
+ Wires supporting modules needed by any GraphSparseP.  This should be
+
+ combined with a weight module and any processing modules.
+
+
+
+ @author Ryan Stinnett
+
+</long>
+      </documentation>
+      <instance>
+        <component-ref nicename="GraphSparseC" qname="GraphSparseC"/>
+        <arguments>
+          <value cst="U:">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="graph_vertex_id_t" ref="0x7dbe5e40"/></typename>
+            </type-int>
+          </value>
+          <value cst="U:">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="graph_edge_id_t" ref="0x7dbe4020"/></typename>
+            </type-int>
+          </value>
+          <value cst="U:">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="bool" ref="0x7ec91520"/></typename>
+            </type-int>
+          </value>
+        </arguments>
+      </instance>
+      <configuration/>
+    </component><component abstract="" loc="38(GraphWeightedC.SourceShortestPathC):/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/SourceShortestPathC.nc" nicename="GraphWeightedC.SourceShortestPathC" qname="GraphWeightedC.SourceShortestPathC">
+      <documentation loc="38(GraphWeightedC.SourceShortestPathC):/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/SourceShortestPathC.nc">
+        <short>
+
+ Wires supporting modules needed by any SourceShortestPathP.
+
+
+
+</short>
+        <long>
+
+ Wires supporting modules needed by any SourceShortestPathP.
+
+
+
+ @author Ryan Stinnett
+
+</long>
+      </documentation>
+      <instance>
+        <component-ref nicename="SourceShortestPathC" qname="SourceShortestPathC"/>
+        <arguments>
+          <value cst="U:">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="graph_vertex_id_t" ref="0x7dbe5e40"/></typename>
+            </type-int>
+          </value>
+          <type-var alignment="U:" size="U:"><typedef-ref name="graph_edge_weight_t" ref="0x7dba7478" scoped=""/></type-var>
+        </arguments>
+      </instance>
+      <configuration/>
+    </component></referenced></component>

@@ -1,0 +1,165 @@
+<?xml version="1.0" ?><interfacedef loc="45:/opt/tinyos-2.x/tos/interfaces/Receive.nc" nicename="tos.interfaces.Receive" qname="Receive">
+      <documentation loc="45:/opt/tinyos-2.x/tos/interfaces/Receive.nc">
+        <short>
+</short>
+        <long>
+ @author Phil Levis
+ @author David Gay
+ Revision:  $Revision: 1.5 $
+
+ Defines global error codes for error_t in TinyOS.
+</long>
+      </documentation>
+      <function command="" loc="89:/opt/tinyos-2.x/tos/interfaces/Receive.nc" name="payloadLength" provided="0" ref="0x7e5a6290">
+        <documentation loc="81:/opt/tinyos-2.x/tos/interfaces/Receive.nc">
+          <short>
+ Return the length of the payload of msg.</short>
+          <long>
+ Return the length of the payload of msg. This call is identical
+ to &lt;TT&gt;Packet.payloadLength&lt;/TT&gt;, and is included in Receive as a
+ convenience.
+
+ @param  msg      the packet
+ @return          the length of the packet's payload
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.interfaces.Receive" qname="Receive"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x7fea0110"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-pointer alignment="I:4" size="I:4">
+              <type-tag alignment="I:1" size="I:50"><nx_struct-ref name="message_t" ref="0x7e872dd8"/>
+                <typename><typedef-ref name="message_t" ref="0x7e8707a8"/></typename>
+              </type-tag>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="89:/opt/tinyos-2.x/tos/interfaces/Receive.nc" name="msg" ref="0x7e5a6010">
+            <type-pointer alignment="I:4" size="I:4">
+              <type-tag alignment="I:1" size="I:50"><nx_struct-ref name="message_t" ref="0x7e872dd8"/>
+                <typename><typedef-ref name="message_t" ref="0x7e8707a8"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+      <function event="" loc="67:/opt/tinyos-2.x/tos/interfaces/Receive.nc" name="receive" provided="0" ref="0x7e5a8410">
+        <documentation loc="47:/opt/tinyos-2.x/tos/interfaces/Receive.nc">
+          <short>
+ Receive a packet buffer, returning a buffer for the signaling
+ component to use for the next reception.</short>
+          <long>
+ Receive a packet buffer, returning a buffer for the signaling
+ component to use for the next reception. The return value
+ can be the same as &lt;tt&gt;msg&lt;/tt&gt;, as long as the handling
+ component copies out the data it needs.
+
+ &lt;b&gt;Note&lt;/b&gt; that misuse of this interface is one of the most
+ common bugs in TinyOS code. For example, if a component both calls a
+ send on the passed message and returns it, then it is possible
+ the buffer will be reused before the send occurs, overwriting
+ the component's data. This would cause the mote to possibly
+ instead send a packet it most recently received.
+
+ @param  msg      the receied packet
+ @param  payload  a pointer to the packet's payload
+ @param  len      the length of the data region pointed to by payload
+ @return          a packet buffer for the stack to use for the next
+                  received packet.
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.interfaces.Receive" qname="Receive"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-pointer alignment="I:4" size="I:4">
+            <type-tag alignment="I:1" size="I:50"><nx_struct-ref name="message_t" ref="0x7e872dd8"/>
+              <typename><typedef-ref name="message_t" ref="0x7e8707a8"/></typename>
+            </type-tag>
+          </type-pointer>
+          <function-parameters>
+            <type-pointer alignment="I:4" size="I:4">
+              <type-tag alignment="I:1" size="I:50"><nx_struct-ref name="message_t" ref="0x7e872dd8"/>
+                <typename><typedef-ref name="message_t" ref="0x7e8707a8"/></typename>
+              </type-tag>
+            </type-pointer>
+            <type-pointer alignment="I:4" size="I:4">
+              <type-void alignment="I:1" size="I:1"/>
+            </type-pointer>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x7fea0110"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="67:/opt/tinyos-2.x/tos/interfaces/Receive.nc" name="msg" ref="0x7e5a99d8">
+            <type-pointer alignment="I:4" size="I:4">
+              <type-tag alignment="I:1" size="I:50"><nx_struct-ref name="message_t" ref="0x7e872dd8"/>
+                <typename><typedef-ref name="message_t" ref="0x7e8707a8"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+          <variable loc="67:/opt/tinyos-2.x/tos/interfaces/Receive.nc" name="payload" ref="0x7e5a9b78">
+            <type-pointer alignment="I:4" size="I:4">
+              <type-void alignment="I:1" size="I:1"/>
+            </type-pointer>
+          </variable>
+          <variable loc="67:/opt/tinyos-2.x/tos/interfaces/Receive.nc" name="len" ref="0x7e5a9d00">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x7fea0110"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="79:/opt/tinyos-2.x/tos/interfaces/Receive.nc" name="getPayload" provided="0" ref="0x7e5a8c58">
+        <documentation loc="69:/opt/tinyos-2.x/tos/interfaces/Receive.nc">
+          <short>
+ Return point to a protocol's payload region in a packet. </short>
+          <long>
+ Return point to a protocol's payload region in a packet.  If len
+ is not NULL, getPayload will return the length of the payload in
+ it. This call is identical to &lt;TT&gt;Packet.getPayload&lt;/TT&gt;, and is
+ included in Receive as a convenience.
+
+ @param  msg      the packet
+ @param  len      a pointer to where to store the payload length
+ @return          a pointer to the payload of the packet
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.interfaces.Receive" qname="Receive"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-pointer alignment="I:4" size="I:4">
+            <type-void alignment="I:1" size="I:1"/>
+          </type-pointer>
+          <function-parameters>
+            <type-pointer alignment="I:4" size="I:4">
+              <type-tag alignment="I:1" size="I:50"><nx_struct-ref name="message_t" ref="0x7e872dd8"/>
+                <typename><typedef-ref name="message_t" ref="0x7e8707a8"/></typename>
+              </type-tag>
+            </type-pointer>
+            <type-pointer alignment="I:4" size="I:4">
+              <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+                <typename><typedef-ref name="uint8_t" ref="0x7fea0110"/></typename>
+              </type-int>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="79:/opt/tinyos-2.x/tos/interfaces/Receive.nc" name="msg" ref="0x7e5a8758">
+            <type-pointer alignment="I:4" size="I:4">
+              <type-tag alignment="I:1" size="I:50"><nx_struct-ref name="message_t" ref="0x7e872dd8"/>
+                <typename><typedef-ref name="message_t" ref="0x7e8707a8"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+          <variable loc="79:/opt/tinyos-2.x/tos/interfaces/Receive.nc" name="len" ref="0x7e5a8900">
+            <type-pointer alignment="I:4" size="I:4">
+              <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+                <typename><typedef-ref name="uint8_t" ref="0x7fea0110"/></typename>
+              </type-int>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+    </interfacedef>

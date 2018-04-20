@@ -1,0 +1,159 @@
+2007-10-31 05:05:09,817 dot2tex INFO ------- Start of run -------
+2007-10-31 05:05:12,249 dot2tex INFO System information:
+  Python: (2, 5, 1, 'final', 0) 
+  Platform: CYGWIN_NT-5.1-1.5.24-0.156-4-2-i686-32bit-WindowsPE
+  Pydot: 0.9.10
+  Pyparsing: 1.4.8
+2007-10-31 05:05:12,250 dot2tex INFO dot2tex called with: ['/usr/bin/dot2tex', '--debug', '-ftikz', 'SingleSenderC.dot']
+2007-10-31 05:05:12,251 dot2tex INFO Program started in /home/jryans/tinyos-2.x-contrib-rice/doc/nesdoc/micaz/chtml
+2007-10-31 05:05:12,279 dot2tex INFO Data read from SingleSenderC.dot
+2007-10-31 05:05:12,279 dot2tex DEBUG Input data:
+digraph "SingleSenderC" {
+  n0x7dec0930 [shape=ellipse, style=filled, label="SinglePacket", fontsize=12];
+  "SinglePacketC" [fontsize=12, shape=box,peripheries=2, URL="SinglePacketC.html"];
+  n0x7ded0bf0 [shape=ellipse, style=filled, label="Packet", fontsize=12];
+  "SinglePacketC" [fontsize=12, shape=box,peripheries=2, URL="SinglePacketC.html"];
+  n0x7ded23e8 [shape=ellipse, style=filled, label="Send", fontsize=12];
+  "SinglePacketC" [fontsize=12, shape=box,peripheries=2, URL="SinglePacketC.html"];
+  n0x7ded0010 [shape=ellipse, style=filled, label="AMPacket", fontsize=12];
+  "ActiveMessageC" [fontsize=12, shape=box,peripheries=2, URL="tos.lib.tossim.ActiveMessageC.html"];
+  "SinglePacketC" [fontsize=12, shape=box,peripheries=2, URL="SinglePacketC.html"];
+  "SingleSenderC.PacketSenderC" [fontsize=12, shape=box,peripheries=2, style=dashed, label="PacketSenderC", URL="PacketSenderC.html"];
+  "n0x7dec0930" -> "SinglePacketC" [label="SinglePacket", URL="../ihtml/SinglePacket.html", fontsize=10];
+  "n0x7ded0bf0" -> "SinglePacketC" [label="Packet", URL="../ihtml/tos.interfaces.Packet.html", fontsize=10];
+  "n0x7ded23e8" -> "SinglePacketC" [label="AMSend", URL="../ihtml/tos.interfaces.AMSend.html", fontsize=10];
+  "n0x7ded0010" -> "ActiveMessageC" [label="AMPacket", URL="../ihtml/tos.interfaces.AMPacket.html", fontsize=10];
+  "SinglePacketC" -> "SingleSenderC.PacketSenderC" [label="AMSend[packet_client_id_t]", style=bold, URL="../ihtml/tos.interfaces.AMSend.html", fontsize=10];
+}
+
+2007-10-31 05:05:12,281 dot2tex DEBUG Start conversion
+2007-10-31 05:05:12,518 dot2tex DEBUG Output from pydot:
+
+2007-10-31 05:05:12,519 dot2tex DEBUG Trying to create xdotdata
+2007-10-31 05:05:12,908 dot2tex DEBUG Creating xdot data with: /cygdrive/c/progra~1/att/graphviz/bin/dot -Txdot /cygdrive/c/DOCUME~1/Ryan/LOCALS~1/Temp/tmpNDtAvh
+2007-10-31 05:05:14,528 dot2tex DEBUG xdotdata:
+
+2007-10-31 05:05:14,529 dot2tex ERROR Failed to create xdotdata. Is Graphviz installed?
+2007-10-31 05:05:14,530 dot2tex ERROR Failed to parse the input data. Is it a valid dot file?
+Try to input xdot data directly. Example:
+    dot -Txdot file.dot | dot2tex.py > file.tex
+
+If this does not work, check that you have an updated version of PyParsing and
+Graphviz. Users have reported problems with old versions. You can also run
+dot2tex in debug mode using the --debug option:
+    dot2tex.py --debug file.dot
+A file dot2tex.log will be written to the current directory with detailed
+information useful for debugging.
+2007-10-31 05:05:14,530 dot2tex INFO ------- End of run -------
+2007-10-31 05:20:20,827 dot2tex INFO ------- Start of run -------
+2007-10-31 05:20:21,518 dot2tex INFO System information:
+  Python: (2, 5, 1, 'final', 0) 
+  Platform: CYGWIN_NT-5.1-1.5.24-0.156-4-2-i686-32bit-WindowsPE
+  Pydot: 0.9.10
+  Pyparsing: 1.4.8
+2007-10-31 05:20:21,519 dot2tex INFO dot2tex called with: ['/usr/bin/dot2tex', '--debug', '--preproc', 'SingleSenderC.dot']
+2007-10-31 05:20:21,519 dot2tex INFO Program started in /home/jryans/tinyos-2.x-contrib-rice/doc/nesdoc/micaz/chtml
+2007-10-31 05:20:21,529 dot2tex INFO Data read from SingleSenderC.dot
+2007-10-31 05:20:21,529 dot2tex DEBUG Input data:
+digraph "SingleSenderC" {
+  n0x7dec0930 [shape=ellipse, style=filled, label="SinglePacket", fontsize=12];
+  "SinglePacketC" [fontsize=12, shape=box,peripheries=2, URL="SinglePacketC.html"];
+  n0x7ded0bf0 [shape=ellipse, style=filled, label="Packet", fontsize=12];
+  "SinglePacketC" [fontsize=12, shape=box,peripheries=2, URL="SinglePacketC.html"];
+  n0x7ded23e8 [shape=ellipse, style=filled, label="Send", fontsize=12];
+  "SinglePacketC" [fontsize=12, shape=box,peripheries=2, URL="SinglePacketC.html"];
+  n0x7ded0010 [shape=ellipse, style=filled, label="AMPacket", fontsize=12];
+  "ActiveMessageC" [fontsize=12, shape=box,peripheries=2, URL="tos.lib.tossim.ActiveMessageC.html"];
+  "SinglePacketC" [fontsize=12, shape=box,peripheries=2, URL="SinglePacketC.html"];
+  "SingleSenderC.PacketSenderC" [fontsize=12, shape=box,peripheries=2, style=dashed, label="PacketSenderC", URL="PacketSenderC.html"];
+  "n0x7dec0930" -> "SinglePacketC" [label="SinglePacket", URL="../ihtml/SinglePacket.html", fontsize=10];
+  "n0x7ded0bf0" -> "SinglePacketC" [label="Packet", URL="../ihtml/tos.interfaces.Packet.html", fontsize=10];
+  "n0x7ded23e8" -> "SinglePacketC" [label="AMSend", URL="../ihtml/tos.interfaces.AMSend.html", fontsize=10];
+  "n0x7ded0010" -> "ActiveMessageC" [label="AMPacket", URL="../ihtml/tos.interfaces.AMPacket.html", fontsize=10];
+  "SinglePacketC" -> "SingleSenderC.PacketSenderC" [label="AMSend[packet_client_id_t]", style=bold, URL="../ihtml/tos.interfaces.AMSend.html", fontsize=10];
+}
+
+2007-10-31 05:20:21,531 dot2tex DEBUG Start conversion
+2007-10-31 05:20:21,748 dot2tex DEBUG Output from pydot:
+
+2007-10-31 05:20:21,773 dot2tex DEBUG Creating temporary directroy /cygdrive/c/DOCUME~1/Ryan/LOCALS~1/Temp/dot2texul_xSK
+2007-10-31 05:20:21,774 dot2tex DEBUG Creating temporary file /cygdrive/c/DOCUME~1/Ryan/LOCALS~1/Temp/dot2texul_xSK/dot2tex.tex
+2007-10-31 05:20:21,775 dot2tex DEBUG Code written to /cygdrive/c/DOCUME~1/Ryan/LOCALS~1/Temp/dot2texul_xSK/dot2tex.tex
+\documentclass{article}
+\usepackage[x11names, rgb]{xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\usetikzlibrary{snakes,arrows,shapes}
+\usepackage{amsmath}
+%
+\usepackage[active,auctex]{preview}
+%
+%
+%
+%
+
+\begin{document}
+\pagestyle{empty}
+%
+%
+\begin{preview}%
+\tikz \node {SinglePacket};%
+\end{preview}%
+\begin{preview}%
+\tikz \node {Send};%
+\end{preview}%
+\begin{preview}%
+\tikz \node {SinglePacketC};%
+\end{preview}%
+\begin{preview}%
+\tikz \node {ActiveMessageC};%
+\end{preview}%
+\begin{preview}%
+\tikz \node {PacketSenderC};%
+\end{preview}%
+\begin{preview}%
+\tikz \node {AMPacket};%
+\end{preview}%
+\begin{preview}%
+\tikz \node {Packet};%
+\end{preview}%
+\begin{preview}%
+\tikz \node {Packet};%
+\end{preview}%
+\begin{preview}%
+\tikz \node {AMSend};%
+\end{preview}%
+\begin{preview}%
+\tikz \node {AMPacket};%
+\end{preview}%
+\begin{preview}%
+\tikz \node {SinglePacket};%
+\end{preview}%
+\begin{preview}%
+\tikz \node {AMSend[packet\_client\_id\_t]};%
+\end{preview}%
+
+%
+%
+
+%
+\end{document}
+%
+
+
+2007-10-31 05:20:21,776 dot2tex DEBUG Running command: latex -interaction=nonstopmode /cygdrive/c/DOCUME~1/Ryan/LOCALS~1/Temp/dot2texul_xSK/dot2tex.tex
+2007-10-31 05:20:23,089 dot2tex DEBUG errcode: 256
+2007-10-31 05:20:23,091 dot2tex ERROR Failed to process input
+Traceback (most recent call last):
+  File "build/bdist.cygwin-1.5.24-i686/egg/dot2tex/dot2tex.py", line 2529, in main
+    s =  conv.convert(dotdata)
+  File "build/bdist.cygwin-1.5.24-i686/egg/dot2tex/dot2tex.py", line 780, in convert
+    return self.doPreviewPreproc()
+  File "build/bdist.cygwin-1.5.24-i686/egg/dot2tex/dot2tex.py", line 1105, in doPreviewPreproc
+    ok = pp.process()
+  File "build/bdist.cygwin-1.5.24-i686/egg/dot2tex/dot2tex.py", line 2220, in process
+    self.parseLogFile()
+  File "build/bdist.cygwin-1.5.24-i686/egg/dot2tex/dot2tex.py", line 2243, in parseLogFile
+    f = open(logfilename,'r')
+IOError: [Errno 2] No such file or directory: '/cygdrive/c/DOCUME~1/Ryan/LOCALS~1/Temp/dot2texul_xSK/dot2tex.log'
+2007-10-31 05:20:23,149 dot2tex INFO ------- End of run -------

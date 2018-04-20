@@ -1,0 +1,23 @@
+<area shape="rect" href="tos.chips.atm128.timer.Atm128AlarmAsyncP.html" title="Atm128AlarmAsyncP" alt="Atm128AlarmAsyncP" coords="245,134,392,182">
+<area shape="rect" href="../ihtml/tos.lib.timer.Alarm.html" title="Alarm&lt;precision, uint32_t&gt;" alt="Alarm&lt;precision, uint32_t&gt;" coords="164,90,305,108">
+<area shape="rect" href="../ihtml/tos.lib.timer.Alarm.html" title="Alarm&lt;precision, uint32_t&gt;" alt="Alarm&lt;precision, uint32_t&gt;" coords="117,59,125,67">
+<area shape="rect" href="../ihtml/tos.lib.timer.Alarm.html" title="Alarm&lt;precision, uint32_t&gt;" alt="Alarm&lt;precision, uint32_t&gt;" coords="241,144,249,152">
+<area shape="rect" href="tos.chips.atm128.timer.sim.HplAtm128Timer0AsyncC.html" title="HplAtm128Timer0AsyncC" alt="HplAtm128Timer0AsyncC" coords="225,251,412,310">
+<area shape="rect" href="../ihtml/tos.chips.atm128.timer.HplAtm128Timer.html" title="HplAtm128Timer&lt;uint8_t&gt;" alt="HplAtm128Timer&lt;uint8_t&gt;" coords="61,207,197,226">
+<area shape="rect" href="../ihtml/tos.chips.atm128.timer.HplAtm128Timer.html" title="HplAtm128Timer&lt;uint8_t&gt;" alt="HplAtm128Timer&lt;uint8_t&gt;" coords="241,156,249,164">
+<area shape="rect" href="../ihtml/tos.chips.atm128.timer.HplAtm128Timer.html" title="HplAtm128Timer&lt;uint8_t&gt;" alt="HplAtm128Timer&lt;uint8_t&gt;" coords="221,271,229,279">
+<area shape="rect" href="../ihtml/tos.chips.atm128.timer.HplAtm128TimerCtrl8.html" title="HplAtm128TimerCtrl8" alt="HplAtm128TimerCtrl8" coords="258,207,371,226">
+<area shape="rect" href="../ihtml/tos.chips.atm128.timer.HplAtm128TimerCtrl8.html" title="HplAtm128TimerCtrl8" alt="HplAtm128TimerCtrl8" coords="268,178,276,186">
+<area shape="rect" href="../ihtml/tos.chips.atm128.timer.HplAtm128TimerCtrl8.html" title="HplAtm128TimerCtrl8" alt="HplAtm128TimerCtrl8" coords="263,247,271,255">
+<area shape="rect" href="../ihtml/tos.chips.atm128.timer.HplAtm128Compare.html" title="HplAtm128Compare&lt;uint8_t&gt;" alt="HplAtm128Compare&lt;uint8_t&gt;" coords="393,207,545,226">
+<area shape="rect" href="../ihtml/tos.chips.atm128.timer.HplAtm128Compare.html" title="HplAtm128Compare&lt;uint8_t&gt;" alt="HplAtm128Compare&lt;uint8_t&gt;" coords="359,178,367,186">
+<area shape="rect" href="../ihtml/tos.chips.atm128.timer.HplAtm128Compare.html" title="HplAtm128Compare&lt;uint8_t&gt;" alt="HplAtm128Compare&lt;uint8_t&gt;" coords="363,247,371,255">
+<area shape="rect" href="../ihtml/tos.chips.atm128.timer.HplAtm128TimerAsync.html" title="HplAtm128TimerAsync" alt="HplAtm128TimerAsync" coords="587,207,709,226">
+<area shape="rect" href="../ihtml/tos.chips.atm128.timer.HplAtm128TimerAsync.html" title="HplAtm128TimerAsync" alt="HplAtm128TimerAsync" coords="388,158,396,166">
+<area shape="rect" href="../ihtml/tos.chips.atm128.timer.HplAtm128TimerAsync.html" title="HplAtm128TimerAsync" alt="HplAtm128TimerAsync" coords="408,267,416,275">
+<area shape="rect" href="../ihtml/tos.interfaces.Init.html" title="Init" alt="Init" coords="321,90,348,108">
+<area shape="rect" href="../ihtml/tos.interfaces.Init.html" title="Init" alt="Init" coords="315,60,323,68">
+<area shape="rect" href="../ihtml/tos.interfaces.Init.html" title="Init" alt="Init" coords="315,130,323,138">
+<area shape="rect" href="../ihtml/tos.lib.timer.Counter.html" title="Counter&lt;precision, uint32_t&gt;" alt="Counter&lt;precision, uint32_t&gt;" coords="385,90,535,108">
+<area shape="rect" href="../ihtml/tos.lib.timer.Counter.html" title="Counter&lt;precision, uint32_t&gt;" alt="Counter&lt;precision, uint32_t&gt;" coords="393,58,401,66">
+<area shape="rect" href="../ihtml/tos.lib.timer.Counter.html" title="Counter&lt;precision, uint32_t&gt;" alt="Counter&lt;precision, uint32_t&gt;" coords="335,130,343,138">

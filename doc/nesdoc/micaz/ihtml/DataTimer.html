@@ -1,0 +1,125 @@
+<html>
+  <head>
+    <LINK rel="stylesheet" href="nesdoc.css" type="text/css" media="screen"><title>Interface: DataTimer</title>
+  </head>
+  <body>
+    <h2>Interface: DataTimer</h2>
+    <b>interface DataTimer&lt;typedef data_t&gt;</b><p><p><div id=heading>Commands</div><div id=funcsig><span id=funcnameshort>command error_t <a href="#start">start</a>(data_t data, data_timer_time_t delay)
+      </span><menu>
+
+ Starts the non-periodic timer for a given data item. 
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command error_t <a href="#stop">stop</a>(data_t data)
+      </span><menu>
+
+ Stops the timer for a given data item. 
+      </menu>
+    </div><p><div id=heading>Events</div><div id=funcsig><span id=funcnameshort>event void <a href="#expired">expired</a>(data_t data)
+      </span><menu>
+
+ The timer for a given data item has expired.
+
+
+
+
+      </menu>
+    </div><p><div id=heading>Commands - Details</div>
+    <a name="start"></a>
+    <h4>start
+    </h4>
+    <span id=funcnameshort>command error_t <b>start</b>(data_t data, data_timer_time_t delay)
+    </span>
+    <p>
+    <menu>
+      
+
+ Starts the non-periodic timer for a given data item.  If the same
+
+ item is started multiple times, it will be tracked multiple times.
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>data</code> -  The data item to start timing.
+
+ 
+        </dd>
+        <dd>
+          <code>delay</code> -  Time units before the data expires.
+
+ 
+        </dd>
+        <dt><b>Returns:</b>
+        <dd>
+          SUCCESS, or FAIL if already full.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="stop"></a>
+    <h4>stop
+    </h4>
+    <span id=funcnameshort>command error_t <b>stop</b>(data_t data)
+    </span>
+    <p>
+    <menu>
+      
+
+ Stops the timer for a given data item.  If the item was started
+
+ multiple times, this removes the instance that was closest to
+
+ expiring.
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>data</code> -  The data item to stop timing.
+
+ 
+        </dd>
+        <dt><b>Returns:</b>
+        <dd>
+          SUCCESS, or EINVAL if the item was not found.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <p><div id=heading>Events - Details</div>
+    <a name="expired"></a>
+    <h4>expired
+    </h4>
+    <span id=funcnameshort>event void <b>expired</b>(data_t data)
+    </span>
+    <p>
+    <menu>
+      
+
+ The timer for a given data item has expired.
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>data</code> -  The data item which expired.
+
+
+        </dd>
+      </dl>
+    </menu>
+  </body>
+</html>

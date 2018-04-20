@@ -1,0 +1,271 @@
+<?xml version="1.0" ?><component abstract="" loc="41:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphSparseC.nc" nicename="GraphSparseC" qname="GraphSparseC">
+      <documentation loc="41:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphSparseC.nc">
+        <short>
+
+ Wires supporting modules needed by any GraphSparseP. </short>
+        <long>
+
+ Wires supporting modules needed by any GraphSparseP.  This should be
+
+ combined with a weight module and any processing modules.
+
+
+
+ @author Ryan Stinnett
+
+</long>
+      </documentation>
+      <parameters>
+        <constant loc="41:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphSparseC.nc" name="maxVertices" ref="0x7db954a8">
+          <component-ref nicename="GraphSparseC" qname="GraphSparseC"/>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="graph_vertex_id_t" ref="0x7dbe4e40"/></typename>
+          </type-int>
+        </constant>
+        <constant loc="42:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphSparseC.nc" name="maxEdges" ref="0x7db95650">
+          <component-ref nicename="GraphSparseC" qname="GraphSparseC"/>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="graph_edge_id_t" ref="0x7dbe3020"/></typename>
+          </type-int>
+        </constant>
+        <constant loc="43:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphSparseC.nc" name="parallelEdges" ref="0x7db957f0">
+          <component-ref nicename="GraphSparseC" qname="GraphSparseC"/>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="bool" ref="0x7ec91520"/></typename>
+          </type-int>
+        </constant>
+      </parameters>
+      <configuration/>
+      <wiring>
+        <wire loc="56:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphSparseC.nc">
+          <from><interface-ref name="Graph" ref="0x7db95a40" scoped=""/></from>
+          <to><interface-ref name="Graph" ref="0x7db49ee0" scoped=""/></to>
+        </wire>
+        <wire loc="57:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphSparseC.nc">
+          <from><interface-ref name="GraphEdge" ref="0x7db93780" scoped=""/></from>
+          <to><interface-ref name="GraphEdge" ref="0x7db48bc0" scoped=""/></to>
+        </wire>
+        <wire loc="58:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphSparseC.nc">
+          <from><interface-ref name="GraphEdgeList" ref="0x7db93c58" scoped=""/></from>
+          <to><interface-ref name="GraphEdgeList" ref="0x7db180c0" scoped=""/></to>
+        </wire>
+        <wire loc="59:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphSparseC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x7e756348" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x7db49bc8" scoped=""/></to>
+        </wire>
+        <wire loc="61:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphSparseC.nc">
+          <from><interface-ref name="IndexedAlloc" ref="0x7db18bc0" scoped=""/></from>
+          <to><interface-ref name="IndexedAlloc" ref="0x7db90878" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="45:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphSparseC.nc" name="Graph" provided="1" ref="0x7db95a40">
+      <component-ref nicename="GraphSparseC" qname="GraphSparseC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Graph" ref="0x7db95a40" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="Graph" qname="Graph"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="maxEdges" ref="0x7db95c18" scoped=""/>
+        <function-ref name="removed" ref="0x7db95cf8" scoped=""/>
+        <function-ref name="remove" ref="0x7db95dd8" scoped=""/>
+        <function-ref name="edge" ref="0x7db95eb8" scoped=""/>
+        <function-ref name="directed" ref="0x7db93010" scoped=""/>
+        <function-ref name="vertices" ref="0x7db930f0" scoped=""/>
+        <function-ref name="parallelEdges" ref="0x7db931d0" scoped=""/>
+        <function-ref name="maxVertices" ref="0x7db932b0" scoped=""/>
+        <function-ref name="insert" ref="0x7db93390" scoped=""/>
+        <function-ref name="inserted" ref="0x7db93470" scoped=""/>
+        <function-ref name="edgeList" ref="0x7db93550" scoped=""/>
+        <function-ref name="edges" ref="0x7db93630" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphSparseC.nc" name="GraphEdge" provided="1" ref="0x7db93780">
+      <component-ref nicename="GraphSparseC" qname="GraphSparseC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="GraphEdge" ref="0x7db93780" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="GraphEdge" qname="GraphEdge"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="src" ref="0x7db93958" scoped=""/>
+        <function-ref name="dest" ref="0x7db93a38" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphSparseC.nc" name="GraphEdgeList" provided="1" ref="0x7db93c58">
+      <component-ref nicename="GraphSparseC" qname="GraphSparseC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="GraphEdgeList" ref="0x7db93c58" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="IndexedIterator" qname="IndexedIterator"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="graph_edge_id_t" ref="0x7dbe3020"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="end" ref="0x7db92548" scoped=""/>
+        <function-ref name="next" ref="0x7db922c8" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="45:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphSparseP.nc" name="Graph" provided="1" ref="0x7db49ee0">
+      <component-ref nicename="GraphSparseC.GraphSparseP" qname="GraphSparseC.GraphSparseP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Graph" ref="0x7db49ee0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="Graph" qname="Graph"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="maxEdges" ref="0x7db480e0" scoped=""/>
+        <function-ref name="removed" ref="0x7db481c0" scoped=""/>
+        <function-ref name="remove" ref="0x7db482a0" scoped=""/>
+        <function-ref name="edge" ref="0x7db48380" scoped=""/>
+        <function-ref name="directed" ref="0x7db48460" scoped=""/>
+        <function-ref name="vertices" ref="0x7db48540" scoped=""/>
+        <function-ref name="parallelEdges" ref="0x7db48620" scoped=""/>
+        <function-ref name="maxVertices" ref="0x7db48700" scoped=""/>
+        <function-ref name="insert" ref="0x7db487e0" scoped=""/>
+        <function-ref name="inserted" ref="0x7db488c0" scoped=""/>
+        <function-ref name="edgeList" ref="0x7db489a0" scoped=""/>
+        <function-ref name="edges" ref="0x7db48a80" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphSparseP.nc" name="GraphEdgeList" provided="1" ref="0x7db180c0">
+      <component-ref nicename="GraphSparseC.GraphSparseP" qname="GraphSparseC.GraphSparseP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="GraphEdgeList" ref="0x7db180c0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="IndexedIterator" qname="IndexedIterator"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="graph_edge_id_t" ref="0x7dbe3020"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="end" ref="0x7db18968" scoped=""/>
+        <function-ref name="next" ref="0x7db186e8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphSparseP.nc" name="Init" provided="1" ref="0x7db49bc8">
+      <component-ref nicename="GraphSparseC.GraphSparseP" qname="GraphSparseC.GraphSparseP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Init" ref="0x7db49bc8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x7db49da0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="49:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphSparseP.nc" name="IndexedAlloc" provided="0" ref="0x7db18bc0">
+      <component-ref nicename="GraphSparseC.GraphSparseP" qname="GraphSparseC.GraphSparseP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="IndexedAlloc" ref="0x7db18bc0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="IndexedAlloc" qname="IndexedAlloc"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="size" ref="0x7db16390" scoped=""/>
+        <function-ref name="allocated" ref="0x7db18e78" scoped=""/>
+        <function-ref name="maxSize" ref="0x7db16010" scoped=""/>
+        <function-ref name="alloc" ref="0x7db160f0" scoped=""/>
+        <function-ref name="none" ref="0x7db161d0" scoped=""/>
+        <function-ref name="free" ref="0x7db162b0" scoped=""/>
+        <function-ref name="all" ref="0x7db18d98" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphSparseP.nc" name="GraphEdge" provided="1" ref="0x7db48bc0">
+      <component-ref nicename="GraphSparseC.GraphSparseP" qname="GraphSparseC.GraphSparseP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="GraphEdge" ref="0x7db48bc0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="GraphEdge" qname="GraphEdge"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="src" ref="0x7db48d98" scoped=""/>
+        <function-ref name="dest" ref="0x7db48e78" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="42:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/alloc/IndexedAllocC.nc" name="IndexedAlloc" provided="1" ref="0x7db90878">
+      <component-ref nicename="GraphSparseC.IndexedAllocC" qname="GraphSparseC.IndexedAllocC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="IndexedAlloc" ref="0x7db90878" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="IndexedAlloc" qname="IndexedAlloc"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="size" ref="0x7db89010" scoped=""/>
+        <function-ref name="allocated" ref="0x7db90b30" scoped=""/>
+        <function-ref name="maxSize" ref="0x7db90c10" scoped=""/>
+        <function-ref name="alloc" ref="0x7db90cf0" scoped=""/>
+        <function-ref name="none" ref="0x7db90dd0" scoped=""/>
+        <function-ref name="free" ref="0x7db90eb0" scoped=""/>
+        <function-ref name="all" ref="0x7db90a50" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="41:/opt/tinyos-2.x/tos/lib/tossim/MainC.nc" name="SoftwareInit" provided="0" ref="0x7e756348">
+      <component-ref nicename="tos.lib.tossim.MainC" qname="MainC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="SoftwareInit" ref="0x7e756348" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x7e756520" scoped=""/>
+      </interface-functions>
+    </interface><component loc="39:/opt/tinyos-2.x/tos/lib/tossim/MainC.nc" nicename="tos.lib.tossim.MainC" qname="MainC">
+      <configuration/>
+      <wiring>
+        <wire loc="56:/opt/tinyos-2.x/tos/lib/tossim/MainC.nc">
+          <from><interface-ref name="Boot" ref="0x7e759bd8" scoped=""/></from>
+          <to><interface-ref name="Boot" ref="0x7e5f9770" scoped=""/></to>
+        </wire>
+        <wire loc="51:/opt/tinyos-2.x/tos/lib/tossim/MainC.nc">
+          <from><interface-ref name="Scheduler" ref="0x7e5f9ab8" scoped=""/></from>
+          <to><interface-ref name="Scheduler" ref="0x7e8d1c50" scoped=""/></to>
+        </wire>
+        <wire loc="52:/opt/tinyos-2.x/tos/lib/tossim/MainC.nc">
+          <from><interface-ref name="PlatformInit" ref="0x7e5f8010" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x7e7538e0" scoped=""/></to>
+        </wire>
+        <wire loc="55:/opt/tinyos-2.x/tos/lib/tossim/MainC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x7e5f8380" scoped=""/></from>
+          <to><interface-ref name="SoftwareInit" ref="0x7e756348" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component abstract="" loc="41(GraphSparseC.IndexedAllocC):/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/alloc/IndexedAllocC.nc" nicename="GraphSparseC.IndexedAllocC" qname="GraphSparseC.IndexedAllocC">
+      <instance>
+        <component-ref nicename="IndexedAllocC" qname="IndexedAllocC"/>
+        <arguments>
+          <value cst="U:">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="graph_edge_id_t" ref="0x7dbe3020"/></typename>
+            </type-int>
+          </value>
+        </arguments>
+      </instance>
+      <configuration/>
+    </component><component abstract="" loc="40(GraphSparseC.GraphSparseP):/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphSparseP.nc" nicename="GraphSparseC.GraphSparseP" qname="GraphSparseC.GraphSparseP">
+      <documentation loc="40(GraphSparseC.GraphSparseP):/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphSparseP.nc">
+        <short>
+
+ A sparse graph using adjacency lists.
+
+
+
+</short>
+        <long>
+
+ A sparse graph using adjacency lists.
+
+
+
+ @author Ryan Stinnett
+
+</long>
+      </documentation>
+      <instance>
+        <component-ref nicename="GraphSparseP" qname="GraphSparseP"/>
+        <arguments>
+          <value cst="U:">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="graph_vertex_id_t" ref="0x7dbe4e40"/></typename>
+            </type-int>
+          </value>
+          <value cst="U:">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="graph_edge_id_t" ref="0x7dbe3020"/></typename>
+            </type-int>
+          </value>
+          <value cst="U:">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="bool" ref="0x7ec91520"/></typename>
+            </type-int>
+          </value>
+        </arguments>
+      </instance>
+      <module/>
+    </component></referenced></component>

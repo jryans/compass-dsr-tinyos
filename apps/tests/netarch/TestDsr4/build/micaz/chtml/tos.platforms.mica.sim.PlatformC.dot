@@ -1,0 +1,14 @@
+digraph "tos.platforms.mica.sim.PlatformC" {
+  n0x7e7538e0 [shape=ellipse, style=filled, label="Init", fontsize=12];
+  "PlatformP" [fontsize=12, shape=box, URL="tos.platforms.mica.PlatformP.html"];
+  "PlatformP" [fontsize=12, shape=box, URL="tos.platforms.mica.PlatformP.html"];
+  "MotePlatformC" [fontsize=12, shape=box,peripheries=2, URL="tos.platforms.micaz.MotePlatformC.html"];
+  "MotePlatformC" [fontsize=12, shape=box,peripheries=2, URL="tos.platforms.micaz.MotePlatformC.html"];
+  n0x7e7521d0 [shape=ellipse, style=filled, label="SubInit", fontsize=12];
+  "PlatformP" [fontsize=12, shape=box, URL="tos.platforms.mica.PlatformP.html"];
+  "MeasureClockC" [fontsize=12, shape=box, URL="tos.platforms.mica.sim.MeasureClockC.html"];
+  "n0x7e7538e0" -> "PlatformP" [label="Init", URL="../ihtml/tos.interfaces.Init.html", fontsize=10];
+  "PlatformP" -> "MotePlatformC" [label="Init", URL="../ihtml/tos.interfaces.Init.html", fontsize=10];
+  "MotePlatformC" -> "n0x7e7521d0" [label="Init", URL="../ihtml/tos.interfaces.Init.html", fontsize=10];
+  "PlatformP" -> "MeasureClockC" [label="Init", URL="../ihtml/tos.interfaces.Init.html", fontsize=10];
+}

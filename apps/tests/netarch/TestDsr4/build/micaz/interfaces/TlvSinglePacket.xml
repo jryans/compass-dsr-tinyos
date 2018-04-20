@@ -1,0 +1,260 @@
+<?xml version="1.0" ?><interfacedef loc="42:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvSinglePacket.nc" nicename="TlvSinglePacket" qname="TlvSinglePacket">
+      <function command="" loc="75:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvSinglePacket.nc" name="value" provided="0" ref="0x7de7b710">
+        <documentation loc="68:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvSinglePacket.nc">
+          <short>
+
+ Returns the value in this type instance within the TLV block. </short>
+          <long>
+
+ Returns the value in this type instance within the TLV block.  If
+
+ the type instance is not found in the block, then NULL is returned.
+
+
+
+ @param pkt Pointer to the packet.
+
+ @return Pointer to the value in this TLV type.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="TlvSinglePacket" qname="TlvSinglePacket"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-pointer alignment="I:4" size="I:4">
+            <type-void alignment="I:1" size="I:1"/>
+          </type-pointer>
+          <function-parameters>
+            <type-pointer alignment="I:4" size="I:4">
+              <type-tag alignment="I:1" size="I:50"><nx_struct-ref name="message_t" ref="0x7e872dd8"/>
+                <typename><typedef-ref name="message_t" ref="0x7e8707a8"/></typename>
+              </type-tag>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="75:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvSinglePacket.nc" name="pkt" ref="0x7de7b458">
+            <type-pointer alignment="I:4" size="I:4">
+              <type-tag alignment="I:1" size="I:50"><nx_struct-ref name="message_t" ref="0x7e872dd8"/>
+                <typename><typedef-ref name="message_t" ref="0x7e8707a8"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="100:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvSinglePacket.nc" name="remove" provided="0" ref="0x7de7aab0">
+        <documentation loc="93:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvSinglePacket.nc">
+          <short>
+
+ Removes this type instance from the TLV block.
+
+
+
+</short>
+          <long>
+
+ Removes this type instance from the TLV block.
+
+
+
+ @param pkt Pointer to the packet.
+
+ @return SUCCESS if the type instance was found and removed, EINVAL
+
+         otherwise.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="TlvSinglePacket" qname="TlvSinglePacket"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="error_t" ref="0x7e8372e8"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-pointer alignment="I:4" size="I:4">
+              <type-tag alignment="I:1" size="I:50"><nx_struct-ref name="message_t" ref="0x7e872dd8"/>
+                <typename><typedef-ref name="message_t" ref="0x7e8707a8"/></typename>
+              </type-tag>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="100:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvSinglePacket.nc" name="pkt" ref="0x7de7a858">
+            <type-pointer alignment="I:4" size="I:4">
+              <type-tag alignment="I:1" size="I:50"><nx_struct-ref name="message_t" ref="0x7e872dd8"/>
+                <typename><typedef-ref name="message_t" ref="0x7e8707a8"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="51:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvSinglePacket.nc" name="length" provided="0" ref="0x7de7c3a8">
+        <documentation loc="44:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvSinglePacket.nc">
+          <short>
+
+ Returns the length of this type instance within the TLV block. </short>
+          <long>
+
+ Returns the length of this type instance within the TLV block.  If
+
+ the type instance is not found in the block, then 0 is returned.
+
+
+
+ @param pkt Pointer to the packet.
+
+ @return Length of this TLV type.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="TlvSinglePacket" qname="TlvSinglePacket"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x7fea0110"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-pointer alignment="I:4" size="I:4">
+              <type-tag alignment="I:1" size="I:50"><nx_struct-ref name="message_t" ref="0x7e872dd8"/>
+                <typename><typedef-ref name="message_t" ref="0x7e8707a8"/></typename>
+              </type-tag>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="51:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvSinglePacket.nc" name="pkt" ref="0x7de7c120">
+            <type-pointer alignment="I:4" size="I:4">
+              <type-tag alignment="I:1" size="I:50"><nx_struct-ref name="message_t" ref="0x7e872dd8"/>
+                <typename><typedef-ref name="message_t" ref="0x7e8707a8"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="66:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvSinglePacket.nc" name="setLength" provided="0" ref="0x7de7ceb0">
+        <documentation loc="53:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvSinglePacket.nc">
+          <short>
+
+ Sets the length of a type instance within the TLV block. </short>
+          <long>
+
+ Sets the length of a type instance within the TLV block.  This
+
+ operation moves data around and should always be performed before
+
+ storing a value with a different length than the one currently
+
+ stored.  If the type instance is not found in the block or there
+
+ is not enough room for the new length, returns ESIZE.
+
+
+
+ @param pkt Pointer to the packet.
+
+ @param len Length to set for this TLV type.
+
+ @return SUCCESS if the type instance was found, enough space was
+
+         available, and the length was set, ESIZE if there wasn't
+
+         enough space, EINVAL if the instance wasn't found.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="TlvSinglePacket" qname="TlvSinglePacket"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="error_t" ref="0x7e8372e8"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-pointer alignment="I:4" size="I:4">
+              <type-tag alignment="I:1" size="I:50"><nx_struct-ref name="message_t" ref="0x7e872dd8"/>
+                <typename><typedef-ref name="message_t" ref="0x7e8707a8"/></typename>
+              </type-tag>
+            </type-pointer>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x7fea0110"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="66:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvSinglePacket.nc" name="pkt" ref="0x7de7c918">
+            <type-pointer alignment="I:4" size="I:4">
+              <type-tag alignment="I:1" size="I:50"><nx_struct-ref name="message_t" ref="0x7e872dd8"/>
+                <typename><typedef-ref name="message_t" ref="0x7e8707a8"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+          <variable loc="66:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvSinglePacket.nc" name="len" ref="0x7de7caa0">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x7fea0110"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="91:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvSinglePacket.nc" name="add" provided="0" ref="0x7de7a2f0">
+        <documentation loc="77:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvSinglePacket.nc">
+          <short>
+
+ Adds an instance of a type to the TLV block and sets the initial
+
+ length of the instance. </short>
+          <long>
+
+ Adds an instance of a type to the TLV block and sets the initial
+
+ length of the instance.  This operation moves data around and
+
+ should always be performed before storing a value of the given
+
+ type.  The type instance will be added to the block as long as
+
+ there are at least len + 2 bytes available in the buffer holding
+
+ the TLV block.
+
+
+
+ @param pkt Pointer to the packet.
+
+ @param len Length to set for this TLV type.
+
+ @return SUCCESS if enough space was available and the length was
+
+         set, EALREADY if an instance already exists, ESIZE if
+
+         there wasn't enough space.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="TlvSinglePacket" qname="TlvSinglePacket"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="error_t" ref="0x7e8372e8"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-pointer alignment="I:4" size="I:4">
+              <type-tag alignment="I:1" size="I:50"><nx_struct-ref name="message_t" ref="0x7e872dd8"/>
+                <typename><typedef-ref name="message_t" ref="0x7e8707a8"/></typename>
+              </type-tag>
+            </type-pointer>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x7fea0110"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="91:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvSinglePacket.nc" name="pkt" ref="0x7de7bc78">
+            <type-pointer alignment="I:4" size="I:4">
+              <type-tag alignment="I:1" size="I:50"><nx_struct-ref name="message_t" ref="0x7e872dd8"/>
+                <typename><typedef-ref name="message_t" ref="0x7e8707a8"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+          <variable loc="91:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvSinglePacket.nc" name="len" ref="0x7de7be00">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x7fea0110"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+    </interfacedef>

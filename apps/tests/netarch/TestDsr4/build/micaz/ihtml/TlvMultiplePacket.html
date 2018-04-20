@@ -1,0 +1,329 @@
+<html>
+  <head>
+    <LINK rel="stylesheet" href="nesdoc.css" type="text/css" media="screen"><title>Interface: TlvMultiplePacket</title>
+  </head>
+  <body>
+    <h2>Interface: TlvMultiplePacket</h2>
+    <b>interface TlvMultiplePacket</b><p>
+
+ Access data stored in a generalized Type-Length-Value (TLV) block
+
+ within a packet.  This interface, when used together with the TlvList
+
+ interface, has no restrictions of the number of instances of a type.
+
+
+
+ 
+    <p>
+    <dl>
+      <dt><b>Author:</b>
+      <dd>
+        Ryan Stinnett
+
+
+      </dd>
+    </dl>
+    <p><p><div id=heading>Commands</div><div id=funcsig><span id=funcnameshort>command error_t <a href="#add">add</a>(message_t *pkt, tlv_key_t *key, uint8_t len)
+      </span><menu>
+
+ Adds an instance of a type to the TLV block and sets the initial
+
+ length of the instance. 
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command uint8_t <a href="#length">length</a>(message_t *pkt, tlv_key_t key)
+      </span><menu>
+
+ Returns the length of this type instance within the TLV block. 
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command tlv_key_t <a href="#list">list</a>(message_t *pkt)
+      </span><menu>
+
+ Access a list of all instances of a type within the TLV block.
+
+
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command error_t <a href="#remove">remove</a>(message_t *pkt, tlv_key_t key)
+      </span><menu>
+
+ Removes this type instance from the TLV block.
+
+
+
+
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command error_t <a href="#setLength">setLength</a>(message_t *pkt, tlv_key_t key, uint8_t len)
+      </span><menu>
+
+ Sets the length of a type instance within the TLV block. 
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command void *<a href="#value">value</a>(message_t *pkt, tlv_key_t key)
+      </span><menu>
+
+ Returns the value in this type instance within the TLV block. 
+      </menu>
+    </div><p><div id=heading>Commands - Details</div>
+    <a name="add"></a>
+    <h4>add
+    </h4>
+    <span id=funcnameshort>command error_t <b>add</b>(message_t *pkt, tlv_key_t *key, uint8_t len)
+    </span>
+    <p>
+    <menu>
+      
+
+ Adds an instance of a type to the TLV block and sets the initial
+
+ length of the instance.  This operation moves data around and
+
+ should always be performed before storing a value of the given
+
+ type.  The type instance will be added to the block as long as
+
+ there are at least len + 2 bytes available in the buffer holding
+
+ the TLV block.
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>pkt</code> -  Pointer to the packet.
+
+ 
+        </dd>
+        <dd>
+          <code>key</code> -  Pointer to store the key for the TLV type instance.
+
+ 
+        </dd>
+        <dd>
+          <code>len</code> -  Length to set for this TLV type.
+
+ 
+        </dd>
+        <dt><b>Returns:</b>
+        <dd>
+          SUCCESS if enough space was available and the length was
+
+         set, ESIZE if there wasn't enough space.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="length"></a>
+    <h4>length
+    </h4>
+    <span id=funcnameshort>command uint8_t <b>length</b>(message_t *pkt, tlv_key_t key)
+    </span>
+    <p>
+    <menu>
+      
+
+ Returns the length of this type instance within the TLV block.  If
+
+ the type instance is not found in the block, then 0 is returned.
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>pkt</code> -  Pointer to the packet.
+
+ 
+        </dd>
+        <dd>
+          <code>key</code> -  Key for the TLV type instance.
+
+ 
+        </dd>
+        <dt><b>Returns:</b>
+        <dd>
+          Length of this TLV type.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="list"></a>
+    <h4>list
+    </h4>
+    <span id=funcnameshort>command tlv_key_t <b>list</b>(message_t *pkt)
+    </span>
+    <p>
+    <menu>
+      
+
+ Access a list of all instances of a type within the TLV block.
+
+ This command gives the key for the first such instance.
+
+ Traverse the rest of the list with the TlvList interface.
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>pkt</code> -  Pointer to the packet.
+
+ 
+        </dd>
+        <dt><b>Returns:</b>
+        <dd>
+          The key for the first instance of a type in the TLV
+
+         block.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="remove"></a>
+    <h4>remove
+    </h4>
+    <span id=funcnameshort>command error_t <b>remove</b>(message_t *pkt, tlv_key_t key)
+    </span>
+    <p>
+    <menu>
+      
+
+ Removes this type instance from the TLV block.
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>pkt</code> -  Pointer to the packet.
+
+ 
+        </dd>
+        <dd>
+          <code>key</code> -  Key for the TLV type instance.
+
+ 
+        </dd>
+        <dt><b>Returns:</b>
+        <dd>
+          SUCCESS if the type instance was found and removed, EINVAL
+
+         otherwise.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="setLength"></a>
+    <h4>setLength
+    </h4>
+    <span id=funcnameshort>command error_t <b>setLength</b>(message_t *pkt, tlv_key_t key, uint8_t len)
+    </span>
+    <p>
+    <menu>
+      
+
+ Sets the length of a type instance within the TLV block.  This
+
+ operation moves data around and should always be performed before
+
+ storing a value with a different length than the one currently
+
+ stored.  If the type instance is not found in the block or there
+
+ is not enough room for the new length, returns ESIZE.
+
+
+
+ Setting the length of a type instance typically invalidates any
+
+ keys received prior to the change.
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>pkt</code> -  Pointer to the packet.
+
+ 
+        </dd>
+        <dd>
+          <code>key</code> -  Key for the TLV type instance.
+
+ 
+        </dd>
+        <dd>
+          <code>len</code> -  Length to set for this TLV type.
+
+ 
+        </dd>
+        <dt><b>Returns:</b>
+        <dd>
+          SUCCESS if the type instance was found, enough space was
+
+         available, and the length was set, ESIZE if wasn't enough
+
+         space, EINVAL if the instance wasn't found.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="value"></a>
+    <h4>value
+    </h4>
+    <span id=funcnameshort>command void *<b>value</b>(message_t *pkt, tlv_key_t key)
+    </span>
+    <p>
+    <menu>
+      
+
+ Returns the value in this type instance within the TLV block.  If
+
+ the type instance is not found in the block, then NULL is returned.
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>pkt</code> -  Pointer to the packet.
+
+ 
+        </dd>
+        <dd>
+          <code>key</code> -  Key for the TLV type instance.
+
+ 
+        </dd>
+        <dt><b>Returns:</b>
+        <dd>
+          Pointer to the value in this TLV type.
+
+
+        </dd>
+      </dl>
+    </menu>
+  </body>
+</html>

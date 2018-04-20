@@ -1,0 +1,15 @@
+#!/bin/bash
+wavelet="java edu.rice.compass.CompassTools"
+$wavelet -o -d 0 --power 31
+$wavelet -o -d 1 -c
+for i in `seq $1 $2`;
+do
+  $wavelet -o -d 1 --chan $i
+  $wavelet -o -d 0 --chan $i
+  $wavelet -o -d 0 --power 4
+  $wavelet --ping -d 1 -s 500
+  $wavelet -o -d 0 --power 31
+  tfile="`pwd`/$i.xml"
+  $wavelet --stats -d 1 `cygpath -w $tfile`
+  $wavelet -o -d 1 -c
+done

@@ -1,0 +1,38 @@
+<?xml version="1.0" ?><component loc="40:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphEdgeUnitWeightC.nc" nicename="GraphEdgeUnitWeightC" qname="GraphEdgeUnitWeightC">
+      <documentation loc="40:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphEdgeUnitWeightC.nc">
+        <short>
+
+ All edges are fixed at unit weight.
+
+
+
+</short>
+        <long>
+
+ All edges are fixed at unit weight.
+
+
+
+ @author Ryan Stinnett
+
+</long>
+      </documentation>
+      <module/>
+    <specification><interface loc="41:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphEdgeUnitWeightC.nc" name="GraphEdgeWeight" provided="1" ref="0x7da443b8">
+      <component-ref nicename="GraphEdgeUnitWeightC" qname="GraphEdgeUnitWeightC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="GraphEdgeWeight" ref="0x7da443b8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="GraphEdgeWeight" qname="GraphEdgeWeight"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="graph_edge_unit_weight_t" ref="0x7dbe3200"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="canChangeWeights" ref="0x7da449e0" scoped=""/>
+        <function-ref name="weightChanged" ref="0x7da42170" scoped=""/>
+        <function-ref name="setWeight" ref="0x7da44e40" scoped=""/>
+        <function-ref name="weight" ref="0x7da44bc0" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

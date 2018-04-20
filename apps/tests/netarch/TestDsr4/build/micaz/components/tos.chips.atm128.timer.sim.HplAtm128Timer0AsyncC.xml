@@ -1,0 +1,229 @@
+<?xml version="1.0" ?><component loc="42:/opt/tinyos-2.x/tos/chips/atm128/timer/sim/HplAtm128Timer0AsyncC.nc" nicename="tos.chips.atm128.timer.sim.HplAtm128Timer0AsyncC" qname="HplAtm128Timer0AsyncC">
+      <documentation loc="42:/opt/tinyos-2.x/tos/chips/atm128/timer/sim/HplAtm128Timer0AsyncC.nc">
+        <short>
+ The TOSSIM implementation of the Atm128 Timer0.</short>
+        <long>
+ The TOSSIM implementation of the Atm128 Timer0. It is built from a
+ timer-specific counter component and a generic compare
+ component. The counter component has an additional simulation-only
+ interface to let the compare component know when its state has
+ changed (e.g., TCNTX was set).
+
+ @date November 22 2005
+
+ @author Philip Levis &lt;pal@cs.stanford.edu&gt;
+ @author Martin Turon &lt;mturon@xbow.com&gt;
+ @author David Gay &lt;dgay@intel-research.net&gt;
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="55:/opt/tinyos-2.x/tos/chips/atm128/timer/sim/HplAtm128Timer0AsyncC.nc">
+          <from><interface-ref name="TimerCtrl" ref="0x7e17e938" scoped=""/></from>
+          <to><interface-ref name="Timer0Ctrl" ref="0x7e173758" scoped=""/></to>
+        </wire>
+        <wire loc="57:/opt/tinyos-2.x/tos/chips/atm128/timer/sim/HplAtm128Timer0AsyncC.nc">
+          <from><interface-ref name="TimerAsync" ref="0x7e17c908" scoped=""/></from>
+          <to><interface-ref name="TimerAsync" ref="0x7e170708" scoped=""/></to>
+        </wire>
+        <wire loc="56:/opt/tinyos-2.x/tos/chips/atm128/timer/sim/HplAtm128Timer0AsyncC.nc">
+          <from><interface-ref name="Compare" ref="0x7e17d228" scoped=""/></from>
+          <to><interface-ref name="Compare" ref="0x7e172010" scoped=""/></to>
+        </wire>
+        <wire loc="54:/opt/tinyos-2.x/tos/chips/atm128/timer/sim/HplAtm128Timer0AsyncC.nc">
+          <from><interface-ref name="Timer" ref="0x7e181b50" scoped=""/></from>
+          <to><interface-ref name="Timer0" ref="0x7e1759a8" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="47:/opt/tinyos-2.x/tos/chips/atm128/timer/sim/HplAtm128Timer0AsyncC.nc" name="TimerCtrl" provided="1" ref="0x7e17e938">
+      <component-ref nicename="tos.chips.atm128.timer.sim.HplAtm128Timer0AsyncC" qname="HplAtm128Timer0AsyncC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="TimerCtrl" ref="0x7e17e938" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128.timer.HplAtm128TimerCtrl8" qname="HplAtm128TimerCtrl8"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getControl" ref="0x7e17eb10" scoped=""/>
+        <function-ref name="getInterruptFlag" ref="0x7e17ebf0" scoped=""/>
+        <function-ref name="getInterruptMask" ref="0x7e17ecd0" scoped=""/>
+        <function-ref name="setInterruptMask" ref="0x7e17edb0" scoped=""/>
+        <function-ref name="setInterruptFlag" ref="0x7e17ee90" scoped=""/>
+        <function-ref name="setControl" ref="0x7e17d010" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="49:/opt/tinyos-2.x/tos/chips/atm128/timer/sim/HplAtm128Timer0AsyncC.nc" name="TimerAsync" provided="1" ref="0x7e17c908">
+      <component-ref nicename="tos.chips.atm128.timer.sim.HplAtm128Timer0AsyncC" qname="HplAtm128Timer0AsyncC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="TimerAsync" ref="0x7e17c908" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128.timer.HplAtm128TimerAsync" qname="HplAtm128TimerAsync"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="controlBusy" ref="0x7e17cae0" scoped=""/>
+        <function-ref name="compareBusy" ref="0x7e17cbc0" scoped=""/>
+        <function-ref name="setTimer0Asynchronous" ref="0x7e17cca0" scoped=""/>
+        <function-ref name="countBusy" ref="0x7e17cd80" scoped=""/>
+        <function-ref name="getAssr" ref="0x7e17ce60" scoped=""/>
+        <function-ref name="setAssr" ref="0x7e17a010" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="48:/opt/tinyos-2.x/tos/chips/atm128/timer/sim/HplAtm128Timer0AsyncC.nc" name="Compare" provided="1" ref="0x7e17d228">
+      <component-ref nicename="tos.chips.atm128.timer.sim.HplAtm128Timer0AsyncC" qname="HplAtm128Timer0AsyncC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Compare" ref="0x7e17d228" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128.timer.HplAtm128Compare" qname="HplAtm128Compare"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x7fea0110"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="test" ref="0x7e17c528" scoped=""/>
+        <function-ref name="fired" ref="0x7e17dd10" scoped=""/>
+        <function-ref name="get" ref="0x7e17d870" scoped=""/>
+        <function-ref name="reset" ref="0x7e17df10" scoped=""/>
+        <function-ref name="isOn" ref="0x7e17c728" scoped=""/>
+        <function-ref name="set" ref="0x7e17da70" scoped=""/>
+        <function-ref name="start" ref="0x7e17c128" scoped=""/>
+        <function-ref name="stop" ref="0x7e17c328" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/opt/tinyos-2.x/tos/chips/atm128/timer/sim/HplAtm128Timer0AsyncC.nc" name="Timer" provided="1" ref="0x7e181b50">
+      <component-ref nicename="tos.chips.atm128.timer.sim.HplAtm128Timer0AsyncC" qname="HplAtm128Timer0AsyncC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Timer" ref="0x7e181b50" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128.timer.HplAtm128Timer" qname="HplAtm128Timer"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x7fea0110"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="off" ref="0x7e17e2b8" scoped=""/>
+        <function-ref name="test" ref="0x7e180ea0" scoped=""/>
+        <function-ref name="get" ref="0x7e180200" scoped=""/>
+        <function-ref name="setScale" ref="0x7e17e4b8" scoped=""/>
+        <function-ref name="getScale" ref="0x7e17e758" scoped=""/>
+        <function-ref name="reset" ref="0x7e1808a0" scoped=""/>
+        <function-ref name="overflow" ref="0x7e1806a0" scoped=""/>
+        <function-ref name="isOn" ref="0x7e17e0b8" scoped=""/>
+        <function-ref name="set" ref="0x7e180400" scoped=""/>
+        <function-ref name="start" ref="0x7e180aa0" scoped=""/>
+        <function-ref name="stop" ref="0x7e180ca0" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="45:/opt/tinyos-2.x/tos/chips/atm128/timer/sim/HplAtm128Timer0AsyncP.nc" name="TimerAsync" provided="1" ref="0x7e170708">
+      <component-ref nicename="tos.chips.atm128.timer.sim.HplAtm128Timer0AsyncP" qname="HplAtm128Timer0AsyncP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="TimerAsync" ref="0x7e170708" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128.timer.HplAtm128TimerAsync" qname="HplAtm128TimerAsync"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="controlBusy" ref="0x7e1708e0" scoped=""/>
+        <function-ref name="compareBusy" ref="0x7e1709c0" scoped=""/>
+        <function-ref name="setTimer0Asynchronous" ref="0x7e170aa0" scoped=""/>
+        <function-ref name="countBusy" ref="0x7e170b80" scoped=""/>
+        <function-ref name="getAssr" ref="0x7e170c60" scoped=""/>
+        <function-ref name="setAssr" ref="0x7e170d40" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:/opt/tinyos-2.x/tos/chips/atm128/timer/sim/HplAtm128Timer0AsyncP.nc" name="Timer0Ctrl" provided="1" ref="0x7e173758">
+      <component-ref nicename="tos.chips.atm128.timer.sim.HplAtm128Timer0AsyncP" qname="HplAtm128Timer0AsyncP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Timer0Ctrl" ref="0x7e173758" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128.timer.HplAtm128TimerCtrl8" qname="HplAtm128TimerCtrl8"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getControl" ref="0x7e173930" scoped=""/>
+        <function-ref name="getInterruptFlag" ref="0x7e173a10" scoped=""/>
+        <function-ref name="getInterruptMask" ref="0x7e173af0" scoped=""/>
+        <function-ref name="setInterruptMask" ref="0x7e173bd0" scoped=""/>
+        <function-ref name="setInterruptFlag" ref="0x7e173cb0" scoped=""/>
+        <function-ref name="setControl" ref="0x7e173d90" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="42:/opt/tinyos-2.x/tos/chips/atm128/timer/sim/HplAtm128Timer0AsyncP.nc" name="Timer0" provided="1" ref="0x7e1759a8">
+      <component-ref nicename="tos.chips.atm128.timer.sim.HplAtm128Timer0AsyncP" qname="HplAtm128Timer0AsyncP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Timer0" ref="0x7e1759a8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128.timer.HplAtm128Timer" qname="HplAtm128Timer"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x7fea0110"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="off" ref="0x7e1730d8" scoped=""/>
+        <function-ref name="test" ref="0x7e174cb0" scoped=""/>
+        <function-ref name="get" ref="0x7e174010" scoped=""/>
+        <function-ref name="setScale" ref="0x7e1732d8" scoped=""/>
+        <function-ref name="getScale" ref="0x7e173578" scoped=""/>
+        <function-ref name="reset" ref="0x7e1746b0" scoped=""/>
+        <function-ref name="overflow" ref="0x7e1744b0" scoped=""/>
+        <function-ref name="isOn" ref="0x7e174eb0" scoped=""/>
+        <function-ref name="set" ref="0x7e174210" scoped=""/>
+        <function-ref name="start" ref="0x7e1748b0" scoped=""/>
+        <function-ref name="stop" ref="0x7e174ab0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/opt/tinyos-2.x/tos/chips/atm128/timer/sim/HplAtm128Timer0AsyncP.nc" name="Compare" provided="1" ref="0x7e172010">
+      <component-ref nicename="tos.chips.atm128.timer.sim.HplAtm128Timer0AsyncP" qname="HplAtm128Timer0AsyncP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Compare" ref="0x7e172010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128.timer.HplAtm128Compare" qname="HplAtm128Compare"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x7fea0110"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="test" ref="0x7e170328" scoped=""/>
+        <function-ref name="fired" ref="0x7e172af8" scoped=""/>
+        <function-ref name="get" ref="0x7e172658" scoped=""/>
+        <function-ref name="reset" ref="0x7e172cf8" scoped=""/>
+        <function-ref name="isOn" ref="0x7e170528" scoped=""/>
+        <function-ref name="set" ref="0x7e172858" scoped=""/>
+        <function-ref name="start" ref="0x7e172ef8" scoped=""/>
+        <function-ref name="stop" ref="0x7e170128" scoped=""/>
+      </interface-functions>
+    </interface><component loc="40:/opt/tinyos-2.x/tos/chips/atm128/timer/sim/HplAtm128Timer0AsyncP.nc" nicename="tos.chips.atm128.timer.sim.HplAtm128Timer0AsyncP" qname="HplAtm128Timer0AsyncP">
+      <documentation loc="40:/opt/tinyos-2.x/tos/chips/atm128/timer/sim/HplAtm128Timer0AsyncP.nc">
+        <short>                                                                     tab:4
+  IMPORTANT: READ BEFORE DOWNLOADING, COPYING, INSTALLING OR USING. </short>
+        <long>                                                                     tab:4
+  IMPORTANT: READ BEFORE DOWNLOADING, COPYING, INSTALLING OR USING.  By
+  downloading, copying, installing or using the software you agree to
+  this license.  If you do not agree to this license, do not download,
+  install, copy or use the software.
+
+  Copyright (c) 2004-2005 Crossbow Technology, Inc.
+  Copyright (c) 2002-2003 Intel Corporation.
+  Copyright (c) 2000-2003 The Regents of the University  of California.    
+  All rights reserved.
+
+  Permission to use, copy, modify, and distribute this software and its
+  documentation for any purpose, without fee, and without written
+  agreement is hereby granted, provided that the above copyright
+  notice, the (updated) modification history and the author appear in
+  all copies of this source code.
+
+  Permission is also granted to distribute this software under the
+  standard BSD license as contained in the TinyOS distribution.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+  PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE INTEL OR ITS
+  CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+  EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+  PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+  PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+  LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+  @author Jason Hill, Philip Levis, Nelson Lee, David Gay
+  @author Alan Broad &lt;abroad@xbow.com&gt;
+  @author Matt Miller &lt;mmiller@xbow.com&gt;
+  @author Martin Turon &lt;mturon@xbow.com&gt;
+
+  $Id: platform_hardware.h,v 1.4 2006/12/12 18:23:44 vlahan Exp $
+</long>
+      </documentation>
+      <module/>
+    </component></referenced></component>

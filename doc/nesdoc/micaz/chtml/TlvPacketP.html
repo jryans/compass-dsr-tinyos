@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <LINK rel="stylesheet" href="nesdoc.css" type="text/css" media="screen"><title>Component: TlvPacketP</title>
+  </head>
+  <body>
+    <h2>Component: TlvPacketP
+    </h2>
+    <b>generic module TlvPacketP()</b>
+    <p>
+
+ A general Type-Length-Value (TLV) data processor within a packet.
+
+ This component does not assume any ordering by type among the TLV
+
+ types in a block of types.  If at most one instance of a type is
+
+ allowed, access the type via the TlvSingle interface.  If any number
+
+ of instances are allowed, access the type via the TlvMultiple and
+
+ TlvList interfaces.
+
+
+
+ 
+    <p>
+    <dl>
+      <dt><b>Author:</b>
+      <dd>
+        Ryan Stinnett
+
+
+      </dd>
+    </dl>
+    <p><p><div id=heading>Provides</div><div id=funcsig>interface <a href="../ihtml/tos.interfaces.Packet.html">Packet</a></div><div id=funcsig>interface <a href="../ihtml/TlvBlockPacket.html">TlvBlockPacket</a></div><div id=funcsig>interface <a href="../ihtml/StaticIndexedIterator.html">StaticIndexedIterator</a>&lt;message_t, tlv_key_t&gt; as <b>TlvListPacket</b>[uint8_t]</div><div id=funcsig>interface <a href="../ihtml/TlvMultiplePacket.html">TlvMultiplePacket</a>[uint8_t]</div><div id=funcsig>interface <a href="../ihtml/TlvSinglePacket.html">TlvSinglePacket</a>[uint8_t]</div><p><div id=heading>Uses</div><div id=funcsig>interface <a href="../ihtml/tos.interfaces.Packet.html">Packet</a> as <b>SubPacket</b></div><div id=funcsig>interface <a href="../ihtml/TlvBlock.html">TlvBlock</a></div><div id=funcsig>interface <a href="../ihtml/StaticVoidIndexedIterator.html">StaticVoidIndexedIterator</a>&lt;tlv_key_t&gt; as <b>TlvList</b>[uint8_t]</div><div id=funcsig>interface <a href="../ihtml/TlvMultiple.html">TlvMultiple</a>[uint8_t]</div><div id=funcsig>interface <a href="../ihtml/TlvSingle.html">TlvSingle</a>[uint8_t]</div>
+  </body>
+</html>

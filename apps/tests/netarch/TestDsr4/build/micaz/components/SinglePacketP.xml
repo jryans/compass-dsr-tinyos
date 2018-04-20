@@ -1,0 +1,167 @@
+<?xml version="1.0" ?><component loc="42:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/single/SinglePacketP.nc" nicename="SinglePacketP" qname="SinglePacketP">
+      <documentation loc="42:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/single/SinglePacketP.nc">
+        <short>
+
+ Access and set the properties of a multihop packet with a single
+
+ node address based destination.
+
+
+
+</short>
+        <long>
+
+ Access and set the properties of a multihop packet with a single
+
+ node address based destination.
+
+
+
+ @author Ryan Stinnett
+
+</long>
+      </documentation>
+      <module/>
+    <specification><interface loc="51:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/single/SinglePacketP.nc" name="SubSend" provided="0" ref="0x7d96cbe8">
+      <component-ref nicename="SinglePacketP" qname="SinglePacketP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="SubSend" ref="0x7d96cbe8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMSend" qname="AMSend"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="packet_client_id_t" ref="0x7e50b868"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="send" ref="0x7d96cdc0" scoped=""/>
+        <function-ref name="getPayload" ref="0x7d96cea0" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x7d96a010" scoped=""/>
+        <function-ref name="cancel" ref="0x7d96a0f0" scoped=""/>
+        <function-ref name="sendDone" ref="0x7d96a1d0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/single/SinglePacketP.nc" name="SinglePacket" provided="1" ref="0x7d970240">
+      <component-ref nicename="SinglePacketP" qname="SinglePacketP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="SinglePacket" ref="0x7d970240" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="SinglePacket" qname="SinglePacket"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="source" ref="0x7d970418" scoped=""/>
+        <function-ref name="destination" ref="0x7d9704f8" scoped=""/>
+        <function-ref name="setSource" ref="0x7d9705d8" scoped=""/>
+        <function-ref name="setDestination" ref="0x7d9706b8" scoped=""/>
+        <function-ref name="isForMe" ref="0x7d970798" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="52:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/single/SinglePacketP.nc" name="SubReceive" provided="0" ref="0x7d96a5d8">
+      <component-ref nicename="SinglePacketP" qname="SinglePacketP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="SubReceive" ref="0x7d96a5d8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Receive" qname="Receive"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="am_id_t" ref="0x7e881588"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="payloadLength" ref="0x7d96a7b0" scoped=""/>
+        <function-ref name="receive" ref="0x7d96a890" scoped=""/>
+        <function-ref name="getPayload" ref="0x7d96a970" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="48:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/single/SinglePacketP.nc" name="Packet" provided="1" ref="0x7d96c238">
+      <component-ref nicename="SinglePacketP" qname="SinglePacketP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Packet" ref="0x7d96c238" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Packet" qname="Packet"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x7d96c410" scoped=""/>
+        <function-ref name="payloadLength" ref="0x7d96c4f0" scoped=""/>
+        <function-ref name="getPayload" ref="0x7d96c5d0" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x7d96c6b0" scoped=""/>
+        <function-ref name="setPayloadLength" ref="0x7d96c790" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/single/SinglePacketP.nc" name="Send" provided="1" ref="0x7d970bb0">
+      <component-ref nicename="SinglePacketP" qname="SinglePacketP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Send" ref="0x7d970bb0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMSend" qname="AMSend"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="packet_client_id_t" ref="0x7e50b868"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="send" ref="0x7d970d88" scoped=""/>
+        <function-ref name="getPayload" ref="0x7d970e68" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x7d96d010" scoped=""/>
+        <function-ref name="cancel" ref="0x7d96d0f0" scoped=""/>
+        <function-ref name="sendDone" ref="0x7d96d1d0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/single/SinglePacketP.nc" name="Snoop" provided="1" ref="0x7d96dd40">
+      <component-ref nicename="SinglePacketP" qname="SinglePacketP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Snoop" ref="0x7d96dd40" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Receive" qname="Receive"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="am_id_t" ref="0x7e881588"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="payloadLength" ref="0x7d96df18" scoped=""/>
+        <function-ref name="receive" ref="0x7d96c010" scoped=""/>
+        <function-ref name="getPayload" ref="0x7d96c0f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="53:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/single/SinglePacketP.nc" name="SubPacket" provided="0" ref="0x7d96aae8">
+      <component-ref nicename="SinglePacketP" qname="SinglePacketP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="SubPacket" ref="0x7d96aae8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Packet" qname="Packet"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x7d96acc0" scoped=""/>
+        <function-ref name="payloadLength" ref="0x7d96ada0" scoped=""/>
+        <function-ref name="getPayload" ref="0x7d96ae80" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x7d969010" scoped=""/>
+        <function-ref name="setPayloadLength" ref="0x7d9690f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/single/SinglePacketP.nc" name="Receive" provided="1" ref="0x7d96d5a8">
+      <component-ref nicename="SinglePacketP" qname="SinglePacketP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Receive" ref="0x7d96d5a8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Receive" qname="Receive"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="am_id_t" ref="0x7e881588"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="payloadLength" ref="0x7d96d780" scoped=""/>
+        <function-ref name="receive" ref="0x7d96d860" scoped=""/>
+        <function-ref name="getPayload" ref="0x7d96d940" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="54:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/single/SinglePacketP.nc" name="AMPacket" provided="0" ref="0x7d969240">
+      <component-ref nicename="SinglePacketP" qname="SinglePacketP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="AMPacket" ref="0x7d969240" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMPacket" qname="AMPacket"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="group" ref="0x7d969418" scoped=""/>
+        <function-ref name="source" ref="0x7d9694f8" scoped=""/>
+        <function-ref name="address" ref="0x7d9695d8" scoped=""/>
+        <function-ref name="destination" ref="0x7d9696b8" scoped=""/>
+        <function-ref name="setSource" ref="0x7d969798" scoped=""/>
+        <function-ref name="setDestination" ref="0x7d969878" scoped=""/>
+        <function-ref name="type" ref="0x7d969958" scoped=""/>
+        <function-ref name="setType" ref="0x7d969a38" scoped=""/>
+        <function-ref name="isForMe" ref="0x7d969b18" scoped=""/>
+        <function-ref name="setGroup" ref="0x7d969bf8" scoped=""/>
+        <function-ref name="localGroup" ref="0x7d969cd8" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

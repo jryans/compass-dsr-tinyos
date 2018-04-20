@@ -1,0 +1,172 @@
+<?xml version="1.0" ?><component abstract="" loc="30:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/cache/LruDataCacheC.nc" nicename="LruDataCacheC" qname="LruDataCacheC">
+      <documentation loc="30:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/cache/LruDataCacheC.nc">
+        <short>
+ A LRU data cache that stores data items, where an insert operation
+ indicates &quot;use&quot;.
+
+</short>
+        <long>
+ A LRU data cache that stores data items, where an insert operation
+ indicates &quot;use&quot;.
+
+ @author Ryan Stinnett
+</long>
+      </documentation>
+      <parameters>
+        <typedef loc="30:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/cache/LruDataCacheC.nc" name="data_cache_item_t" ref="0x7e326440">
+          <component-ref nicename="LruDataCacheC" qname="LruDataCacheC"/>
+          <type-var alignment="U:" size="U:"><typedef-ref name="data_cache_item_t" ref="0x7e326440" scoped=""/></type-var>
+        </typedef>
+        <constant loc="30:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/cache/LruDataCacheC.nc" name="size" ref="0x7e3265c8">
+          <component-ref nicename="LruDataCacheC" qname="LruDataCacheC"/>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x7fea0110"/></typename>
+          </type-int>
+        </constant>
+      </parameters>
+      <configuration/>
+      <wiring>
+        <wire loc="39:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/cache/LruDataCacheC.nc">
+          <from><interface-ref name="DataCache" ref="0x7e3268b8" scoped=""/></from>
+          <to><interface-ref name="DataCache" ref="0x7e3218b8" scoped=""/></to>
+        </wire>
+        <wire loc="40:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/cache/LruDataCacheC.nc">
+          <from><interface-ref name="Equal" ref="0x7e320e00" scoped=""/></from>
+          <to><interface-ref name="Equal" ref="0x7e325e20" scoped=""/></to>
+        </wire>
+        <wire loc="41:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/cache/LruDataCacheC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x7e756348" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x7e321510" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="32:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/cache/LruDataCacheC.nc" name="Equal" provided="0" ref="0x7e325e20">
+      <component-ref nicename="LruDataCacheC" qname="LruDataCacheC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Equal" ref="0x7e325e20" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="Equal" qname="Equal"/>
+        <arguments>
+          <type-pointer alignment="I:4" size="I:4">
+            <type-var alignment="U:" size="U:"><typedef-ref name="data_cache_item_t" ref="0x7e326440" scoped=""/></type-var>
+          </type-pointer>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="test" ref="0x7e323468" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="31:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/cache/LruDataCacheC.nc" name="DataCache" provided="1" ref="0x7e3268b8">
+      <component-ref nicename="LruDataCacheC" qname="LruDataCacheC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="DataCache" ref="0x7e3268b8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="DataCache" qname="DataCache"/>
+        <arguments>
+          <type-var alignment="U:" size="U:"><typedef-ref name="data_cache_item_t" ref="0x7e326440" scoped=""/></type-var>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="remove" ref="0x7e3258f8" scoped=""/>
+        <function-ref name="evicted" ref="0x7e325398" scoped=""/>
+        <function-ref name="insert" ref="0x7e3250d8" scoped=""/>
+        <function-ref name="flush" ref="0x7e325b98" scoped=""/>
+        <function-ref name="lookup" ref="0x7e325638" scoped=""/>
+        <function-ref name="size" ref="0x7e326ee0" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="69:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/cache/LruDataCacheP.nc" name="Init" provided="1" ref="0x7e321510">
+      <component-ref nicename="LruDataCacheC.CacheP" qname="LruDataCacheC.CacheP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Init" ref="0x7e321510" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x7e3216e8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="70:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/cache/LruDataCacheP.nc" name="DataCache" provided="1" ref="0x7e3218b8">
+      <component-ref nicename="LruDataCacheC.CacheP" qname="LruDataCacheC.CacheP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="DataCache" ref="0x7e3218b8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="DataCache" qname="DataCache"/>
+        <arguments>
+          <type-var alignment="U:" size="U:"><typedef-ref name="data_cache_item_t" ref="0x7e326440" scoped=""/></type-var>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="remove" ref="0x7e3208f8" scoped=""/>
+        <function-ref name="evicted" ref="0x7e320398" scoped=""/>
+        <function-ref name="insert" ref="0x7e3200d8" scoped=""/>
+        <function-ref name="flush" ref="0x7e320b98" scoped=""/>
+        <function-ref name="lookup" ref="0x7e320638" scoped=""/>
+        <function-ref name="size" ref="0x7e321ee0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="72:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/cache/LruDataCacheP.nc" name="Equal" provided="0" ref="0x7e320e00">
+      <component-ref nicename="LruDataCacheC.CacheP" qname="LruDataCacheC.CacheP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Equal" ref="0x7e320e00" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="Equal" qname="Equal"/>
+        <arguments>
+          <type-pointer alignment="I:4" size="I:4">
+            <type-var alignment="U:" size="U:"><typedef-ref name="data_cache_item_t" ref="0x7e326440" scoped=""/></type-var>
+          </type-pointer>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="test" ref="0x7e304448" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="41:/opt/tinyos-2.x/tos/lib/tossim/MainC.nc" name="SoftwareInit" provided="0" ref="0x7e756348">
+      <component-ref nicename="tos.lib.tossim.MainC" qname="MainC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="SoftwareInit" ref="0x7e756348" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x7e756520" scoped=""/>
+      </interface-functions>
+    </interface><component abstract="" loc="67(LruDataCacheC.CacheP):/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/cache/LruDataCacheP.nc" nicename="LruDataCacheC.CacheP" qname="LruDataCacheC.CacheP">
+      <documentation loc="67(LruDataCacheC.CacheP):/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/cache/LruDataCacheP.nc">
+        <short>
+ A LRU data cache that stores data items, where an insert operation
+ indicates &quot;use&quot;. </short>
+        <long>
+ A LRU data cache that stores data items, where an insert operation
+ indicates &quot;use&quot;.  Inserting a data item not in the cache will replace
+ the oldest, and inserting an element already in the cache will refresh
+ its age.  Insert and lookup return a pointer to the cached data.  This
+ component should be wired to an Equal interface to check for equality
+ on the data type used.
+
+ @author Ryan Stinnett
+ @author Rodrigo Fonseca
+ @author Philip Levis
+</long>
+      </documentation>
+      <instance>
+        <component-ref nicename="LruDataCacheP" qname="LruDataCacheP"/>
+        <arguments>
+          <type-var alignment="U:" size="U:"><typedef-ref name="data_cache_item_t" ref="0x7e326440" scoped=""/></type-var>
+          <value cst="U:">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x7fea0110"/></typename>
+            </type-int>
+          </value>
+        </arguments>
+      </instance>
+      <module/>
+    </component><component loc="39:/opt/tinyos-2.x/tos/lib/tossim/MainC.nc" nicename="tos.lib.tossim.MainC" qname="MainC">
+      <configuration/>
+      <wiring>
+        <wire loc="56:/opt/tinyos-2.x/tos/lib/tossim/MainC.nc">
+          <from><interface-ref name="Boot" ref="0x7e759bd8" scoped=""/></from>
+          <to><interface-ref name="Boot" ref="0x7e5f9770" scoped=""/></to>
+        </wire>
+        <wire loc="51:/opt/tinyos-2.x/tos/lib/tossim/MainC.nc">
+          <from><interface-ref name="Scheduler" ref="0x7e5f9ab8" scoped=""/></from>
+          <to><interface-ref name="Scheduler" ref="0x7e8d1c50" scoped=""/></to>
+        </wire>
+        <wire loc="52:/opt/tinyos-2.x/tos/lib/tossim/MainC.nc">
+          <from><interface-ref name="PlatformInit" ref="0x7e5f8010" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x7e7538e0" scoped=""/></to>
+        </wire>
+        <wire loc="55:/opt/tinyos-2.x/tos/lib/tossim/MainC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x7e5f8380" scoped=""/></from>
+          <to><interface-ref name="SoftwareInit" ref="0x7e756348" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component></referenced></component>

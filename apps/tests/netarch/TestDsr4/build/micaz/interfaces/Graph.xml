@@ -1,0 +1,460 @@
+<?xml version="1.0" ?><interfacedef loc="40:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/Graph.nc" nicename="Graph" qname="Graph">
+      <documentation loc="40:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/Graph.nc">
+        <short>
+
+ Basic operations for processsing and modifying a graph.
+
+
+
+</short>
+        <long>
+
+ Basic operations for processsing and modifying a graph.
+
+
+
+ @author Ryan Stinnett
+
+</long>
+      </documentation>
+      <function command="" loc="77:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/Graph.nc" name="maxEdges" provided="0" ref="0x7dbd3d88">
+        <documentation loc="69:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/Graph.nc">
+          <short>
+
+ Gets the maximum number of edges that the graph can hold. </short>
+          <long>
+
+ Gets the maximum number of edges that the graph can hold.  This should
+
+ return the number of &quot;conceptual&quot; edges.  For example, an undirected graph
+
+ might use two directed edges for each undirected edge in its
+
+ implementation, but this only counts as one edge here.
+
+
+
+ @return The maximum number of edges that the graph can hold.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="Graph" qname="Graph"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="graph_edge_id_t" ref="0x7dbe3020"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+      </function>
+      <function event="" loc="150:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/Graph.nc" name="removed" provided="0" ref="0x7dbc8eb8">
+        <documentation loc="145:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/Graph.nc">
+          <short>
+
+ The structure of the graph changed because an edge was removed.
+
+
+
+</short>
+          <long>
+
+ The structure of the graph changed because an edge was removed.
+
+
+
+ @param m The key for the edge that was removed.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="Graph" qname="Graph"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="graph_edge_id_t" ref="0x7dbe3020"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="150:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/Graph.nc" name="m" ref="0x7dbc8c88">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="graph_edge_id_t" ref="0x7dbe3020"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="115:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/Graph.nc" name="remove" provided="0" ref="0x7dbd0d80">
+        <documentation loc="107:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/Graph.nc">
+          <short>
+
+ Remove an edge from the graph between vertices s and d.
+
+
+
+</short>
+          <long>
+
+ Remove an edge from the graph between vertices s and d.
+
+
+
+ @param s The first vertex or source of the edge.
+
+ @param d The second vertex or destination of the edge.
+
+ @return SUCCESS if the edge was found and removed, EINVAL if it was not.
+
+         ESIZE returned if either vertex is too large.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="Graph" qname="Graph"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="error_t" ref="0x7e8372e8"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="graph_vertex_id_t" ref="0x7dbe4e40"/></typename>
+            </type-int>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="graph_vertex_id_t" ref="0x7dbe4e40"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="115:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/Graph.nc" name="s" ref="0x7dbd0908">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="graph_vertex_id_t" ref="0x7dbe4e40"/></typename>
+            </type-int>
+          </variable>
+          <variable loc="115:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/Graph.nc" name="d" ref="0x7dbd0aa0">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="graph_vertex_id_t" ref="0x7dbe4e40"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="126:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/Graph.nc" name="edge" provided="0" ref="0x7dbc97a0">
+        <documentation loc="117:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/Graph.nc">
+          <short>
+
+ Retrieves an edge between vertices s and d, if it exists. </short>
+          <long>
+
+ Retrieves an edge between vertices s and d, if it exists.  If the graph is
+
+ directed, s is taken to be the source and d is taken to be the destination
+
+ of the directed edge.
+
+
+
+ @param s The first vertex or source of the edge.
+
+ @param d The second vertex or destination of the edge.
+
+ @return The edge key if the edge was found, maxEdges() if it was not.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="Graph" qname="Graph"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="graph_edge_id_t" ref="0x7dbe3020"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="graph_vertex_id_t" ref="0x7dbe4e40"/></typename>
+            </type-int>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="graph_vertex_id_t" ref="0x7dbe4e40"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="126:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/Graph.nc" name="s" ref="0x7dbc92e8">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="graph_vertex_id_t" ref="0x7dbe4e40"/></typename>
+            </type-int>
+          </variable>
+          <variable loc="126:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/Graph.nc" name="d" ref="0x7dbc9480">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="graph_vertex_id_t" ref="0x7dbe4e40"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="85:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/Graph.nc" name="directed" provided="0" ref="0x7dbd2380">
+        <documentation loc="79:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/Graph.nc">
+          <short>
+
+ Checks if the graph is directed or not. </short>
+          <long>
+
+ Checks if the graph is directed or not.  This value should not change at
+
+ run-time.
+
+
+
+ @return TRUE if the graph is directed, FALSE if it is undirected.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="Graph" qname="Graph"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="bool" ref="0x7ec91520"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+      </function>
+      <function command="" loc="49:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/Graph.nc" name="vertices" provided="0" ref="0x7dbd49a0">
+        <documentation loc="42:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/Graph.nc">
+          <short>
+
+ Gets the number of vertices currently in the graph. </short>
+          <long>
+
+ Gets the number of vertices currently in the graph.  For some
+
+ implementations, this will always equal maxVertices() if all vertices
+
+ are preallocated.
+
+
+
+ @return The number of vertices currently in the graph.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="Graph" qname="Graph"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="graph_vertex_id_t" ref="0x7dbe4e40"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+      </function>
+      <function command="" loc="93:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/Graph.nc" name="parallelEdges" provided="0" ref="0x7dbd2960">
+        <documentation loc="87:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/Graph.nc">
+          <short>
+
+ Checks if parallel edges are allowed or not. </short>
+          <long>
+
+ Checks if parallel edges are allowed or not.  This value should not change
+
+ at run-time.
+
+
+
+ @return TRUE if parallel edges are allowed, FALSE if they are not.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="Graph" qname="Graph"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="bool" ref="0x7ec91520"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+      </function>
+      <function command="" loc="56:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/Graph.nc" name="maxVertices" provided="0" ref="0x7dbd3010">
+        <documentation loc="51:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/Graph.nc">
+          <short>
+
+ Gets the maximum number of vertices that the graph can hold.
+
+
+
+</short>
+          <long>
+
+ Gets the maximum number of vertices that the graph can hold.
+
+
+
+ @return The maximum number of vertices that the graph can hold.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="Graph" qname="Graph"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="graph_vertex_id_t" ref="0x7dbe4e40"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+      </function>
+      <function command="" loc="105:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/Graph.nc" name="insert" provided="0" ref="0x7dbd03d8">
+        <documentation loc="95:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/Graph.nc">
+          <short>
+
+ Add a new edge to the graph between vertices s and d.
+
+
+
+</short>
+          <long>
+
+ Add a new edge to the graph between vertices s and d.
+
+
+
+ @param s The first vertex or source of the edge.
+
+ @param d The second vertex or destination of the edge.
+
+ @return If all of the edges have already been allocated or if parallel
+
+         edges are not supported and this edge has already been added or if either
+
+         vertex is too large, then maxEdges() is returned.  Otherwise, the key for
+
+         the new edge is returned.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="Graph" qname="Graph"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="graph_edge_id_t" ref="0x7dbe3020"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="graph_vertex_id_t" ref="0x7dbe4e40"/></typename>
+            </type-int>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="graph_vertex_id_t" ref="0x7dbe4e40"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="105:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/Graph.nc" name="s" ref="0x7dbd2e98">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="graph_vertex_id_t" ref="0x7dbe4e40"/></typename>
+            </type-int>
+          </variable>
+          <variable loc="105:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/Graph.nc" name="d" ref="0x7dbd0068">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="graph_vertex_id_t" ref="0x7dbe4e40"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function event="" loc="143:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/Graph.nc" name="inserted" provided="0" ref="0x7dbc8768">
+        <documentation loc="138:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/Graph.nc">
+          <short>
+
+ The structure of the graph changed because an edge was inserted.
+
+
+
+</short>
+          <long>
+
+ The structure of the graph changed because an edge was inserted.
+
+
+
+ @param m The key for the edge that was inserted.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="Graph" qname="Graph"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="graph_edge_id_t" ref="0x7dbe3020"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="143:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/Graph.nc" name="m" ref="0x7dbc8538">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="graph_edge_id_t" ref="0x7dbe3020"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="136:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/Graph.nc" name="edgeList" provided="0" ref="0x7dbc8010">
+        <documentation loc="128:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/Graph.nc">
+          <short>
+
+ Retrieves a list of edges adjacent to vertex s. </short>
+          <long>
+
+ Retrieves a list of edges adjacent to vertex s.  If the graph is directed,
+
+ s is taken to be the source of the directed edge.
+
+
+
+ @param s The first vertex or source of the edge.
+
+ @return The key to the first node of the list if the vertex was valid,
+
+         maxEdges() if it was not.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="Graph" qname="Graph"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="graph_edge_id_t" ref="0x7dbe3020"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="graph_vertex_id_t" ref="0x7dbe4e40"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="136:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/Graph.nc" name="s" ref="0x7dbc9ce0">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="graph_vertex_id_t" ref="0x7dbe4e40"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="67:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/Graph.nc" name="edges" provided="0" ref="0x7dbd36e8">
+        <documentation loc="58:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/Graph.nc">
+          <short>
+
+ Gets the number of edges currently in the graph. </short>
+          <long>
+
+ Gets the number of edges currently in the graph.  This should return the
+
+ number of &quot;conceptual&quot; edges.  For example, an undirected graph might use
+
+ two directed edges for each undirected edge in its implementation, but this
+
+ only counts as one edge here.  For some implementations, this will always
+
+ equal maxEdges() if all edges are preallocated.
+
+
+
+ @return The number of edges currently in the graph.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="Graph" qname="Graph"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="graph_edge_id_t" ref="0x7dbe3020"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+      </function>
+    </interfacedef>

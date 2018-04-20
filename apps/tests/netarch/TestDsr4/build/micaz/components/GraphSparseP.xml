@@ -1,0 +1,110 @@
+<?xml version="1.0" ?><component abstract="" loc="40:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphSparseP.nc" nicename="GraphSparseP" qname="GraphSparseP">
+      <documentation loc="40:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphSparseP.nc">
+        <short>
+
+ A sparse graph using adjacency lists.
+
+
+
+</short>
+        <long>
+
+ A sparse graph using adjacency lists.
+
+
+
+ @author Ryan Stinnett
+
+</long>
+      </documentation>
+      <parameters>
+        <constant loc="40:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphSparseP.nc" name="maxVertices" ref="0x7db47dc0">
+          <component-ref nicename="GraphSparseP" qname="GraphSparseP"/>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="graph_vertex_id_t" ref="0x7dbe4e40"/></typename>
+          </type-int>
+        </constant>
+        <constant loc="41:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphSparseP.nc" name="maxEdges" ref="0x7db46010">
+          <component-ref nicename="GraphSparseP" qname="GraphSparseP"/>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="graph_edge_id_t" ref="0x7dbe3020"/></typename>
+          </type-int>
+        </constant>
+        <constant loc="42:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphSparseP.nc" name="parallelEdges" ref="0x7db461b0">
+          <component-ref nicename="GraphSparseP" qname="GraphSparseP"/>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="bool" ref="0x7ec91520"/></typename>
+          </type-int>
+        </constant>
+      </parameters>
+      <module/>
+    <specification><interface loc="45:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphSparseP.nc" name="Graph" provided="1" ref="0x7db46720">
+      <component-ref nicename="GraphSparseP" qname="GraphSparseP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Graph" ref="0x7db46720" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="Graph" qname="Graph"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="maxEdges" ref="0x7db468f8" scoped=""/>
+        <function-ref name="removed" ref="0x7db469d8" scoped=""/>
+        <function-ref name="remove" ref="0x7db46ab8" scoped=""/>
+        <function-ref name="edge" ref="0x7db46b98" scoped=""/>
+        <function-ref name="directed" ref="0x7db46c78" scoped=""/>
+        <function-ref name="vertices" ref="0x7db46d58" scoped=""/>
+        <function-ref name="parallelEdges" ref="0x7db46e38" scoped=""/>
+        <function-ref name="maxVertices" ref="0x7db46f18" scoped=""/>
+        <function-ref name="insert" ref="0x7db45010" scoped=""/>
+        <function-ref name="inserted" ref="0x7db450f0" scoped=""/>
+        <function-ref name="edgeList" ref="0x7db451d0" scoped=""/>
+        <function-ref name="edges" ref="0x7db452b0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphSparseP.nc" name="Init" provided="1" ref="0x7db46400">
+      <component-ref nicename="GraphSparseP" qname="GraphSparseP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Init" ref="0x7db46400" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x7db465d8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="49:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphSparseP.nc" name="IndexedAlloc" provided="0" ref="0x7db43418">
+      <component-ref nicename="GraphSparseP" qname="GraphSparseP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="IndexedAlloc" ref="0x7db43418" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="IndexedAlloc" qname="IndexedAlloc"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="all" ref="0x7db43b30" scoped=""/>
+        <function-ref name="allocated" ref="0x7db436d0" scoped=""/>
+        <function-ref name="maxSize" ref="0x7db437b0" scoped=""/>
+        <function-ref name="alloc" ref="0x7db43890" scoped=""/>
+        <function-ref name="none" ref="0x7db43970" scoped=""/>
+        <function-ref name="free" ref="0x7db43a50" scoped=""/>
+        <function-ref name="size" ref="0x7db435f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphSparseP.nc" name="GraphEdge" provided="1" ref="0x7db45400">
+      <component-ref nicename="GraphSparseP" qname="GraphSparseP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="GraphEdge" ref="0x7db45400" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="GraphEdge" qname="GraphEdge"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="src" ref="0x7db455d8" scoped=""/>
+        <function-ref name="dest" ref="0x7db456b8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphSparseP.nc" name="GraphEdgeList" provided="1" ref="0x7db458d8">
+      <component-ref nicename="GraphSparseP" qname="GraphSparseP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="GraphEdgeList" ref="0x7db458d8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="IndexedIterator" qname="IndexedIterator"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="graph_edge_id_t" ref="0x7dbe3020"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="end" ref="0x7db431a0" scoped=""/>
+        <function-ref name="next" ref="0x7db45f00" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

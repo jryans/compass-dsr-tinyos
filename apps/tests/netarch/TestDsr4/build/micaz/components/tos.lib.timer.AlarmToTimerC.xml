@@ -1,0 +1,77 @@
+<?xml version="1.0" ?><component abstract="" loc="35:/opt/tinyos-2.x/tos/lib/timer/AlarmToTimerC.nc" nicename="tos.lib.timer.AlarmToTimerC" qname="AlarmToTimerC">
+      <documentation loc="35:/opt/tinyos-2.x/tos/lib/timer/AlarmToTimerC.nc">
+        <short>
+ AlarmToTimerC converts a 32-bit Alarm to a Timer.  
+
+</short>
+        <long>
+ AlarmToTimerC converts a 32-bit Alarm to a Timer.  
+
+ &lt;p&gt;See TEP102 for more details.
+ @param precision_tag A type indicating the precision of the Alarm and
+ Timer being converted.
+
+ @author Cory Sharp &lt;cssharp@eecs.berkeley.edu&gt;
+</long>
+      </documentation>
+      <parameters>
+        <typedef loc="35:/opt/tinyos-2.x/tos/lib/timer/AlarmToTimerC.nc" name="precision_tag" ref="0x7e0905c8">
+          <component-ref nicename="tos.lib.timer.AlarmToTimerC" qname="AlarmToTimerC"/>
+          <type-var alignment="U:" size="U:"><typedef-ref name="precision_tag" ref="0x7e0905c8" scoped=""/></type-var>
+        </typedef>
+      </parameters>
+      <module/>
+    <specification><interface loc="63:/opt/tinyos-2.x/tos/lib/timer/AlarmToTimerC.nc" name="fired" provided="0" ref="0x7e0799a8">
+      <component-ref nicename="tos.lib.timer.AlarmToTimerC" qname="AlarmToTimerC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="fired" ref="0x7e0799a8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.TaskBasic" qname="TaskBasic"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="postTask" ref="0x7e079b80" scoped=""/>
+        <function-ref name="runTask" ref="0x7e079c60" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="38:/opt/tinyos-2.x/tos/lib/timer/AlarmToTimerC.nc" name="Alarm" provided="0" ref="0x7e080888">
+      <component-ref nicename="tos.lib.timer.AlarmToTimerC" qname="AlarmToTimerC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Alarm" ref="0x7e080888" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Alarm" qname="Alarm"/>
+        <arguments>
+          <type-var alignment="U:" size="U:"><typedef-ref name="precision_tag" ref="0x7e0905c8" scoped=""/></type-var>
+          <type-int alignment="I:4" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="uint32_t" ref="0x7fea04e0"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x7e07fbf0" scoped=""/>
+        <function-ref name="fired" ref="0x7e07f4b0" scoped=""/>
+        <function-ref name="startAt" ref="0x7e07f8b0" scoped=""/>
+        <function-ref name="isRunning" ref="0x7e07f6b0" scoped=""/>
+        <function-ref name="getAlarm" ref="0x7e07fdf0" scoped=""/>
+        <function-ref name="start" ref="0x7e07f010" scoped=""/>
+        <function-ref name="stop" ref="0x7e07f2b0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="37:/opt/tinyos-2.x/tos/lib/timer/AlarmToTimerC.nc" name="Timer" provided="1" ref="0x7e0908b8">
+      <component-ref nicename="tos.lib.timer.AlarmToTimerC" qname="AlarmToTimerC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Timer" ref="0x7e0908b8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-var alignment="U:" size="U:"><typedef-ref name="precision_tag" ref="0x7e0905c8" scoped=""/></type-var>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x7e0801c8" scoped=""/>
+        <function-ref name="fired" ref="0x7e0825d0" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x7e082b70" scoped=""/>
+        <function-ref name="isOneShot" ref="0x7e082990" scoped=""/>
+        <function-ref name="getdt" ref="0x7e080588" scoped=""/>
+        <function-ref name="gett0" ref="0x7e0803a8" scoped=""/>
+        <function-ref name="isRunning" ref="0x7e0827b0" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x7e090ee0" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x7e082e90" scoped=""/>
+        <function-ref name="startOneShot" ref="0x7e082170" scoped=""/>
+        <function-ref name="stop" ref="0x7e0823f0" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

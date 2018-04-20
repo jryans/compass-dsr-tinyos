@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <LINK rel="stylesheet" href="nesdoc.css" type="text/css" media="screen"><title>Interface: tos.lib.tossim.GainRadioModel</title>
+  </head>
+  <body>
+    <h2>Interface: tos.lib.tossim.GainRadioModel</h2>
+    <b>interface GainRadioModel</b><p>
+ 
+    <p>
+    <dl>
+      <dt><b>Author:</b>
+      <dd>
+        Phil Levis
+ 
+      </dd>
+      <dd>
+        David Gay
+ Revision:  $Revision: 1.5 $
+
+ Defines global error codes for error_t in TinyOS.
+
+      </dd>
+    </dl>
+    <p><p><div id=heading>Commands</div><div id=funcsig><span id=funcnameshort>command bool <a href="#clearChannel">clearChannel</a>()
+      </span></div><div id=funcsig><span id=funcnameshort>command void <a href="#putOnAirTo">putOnAirTo</a>(int dest, message_t *msg, bool ack, sim_time_t endTime, double gain, double reverseGain)
+      </span></div><div id=funcsig><span id=funcnameshort>command void <a href="#setClearValue">setClearValue</a>(double value)
+      </span></div><p><div id=heading>Events</div><div id=funcsig><span id=funcnameshort>event void <a href="#acked">acked</a>(message_t *msg)
+      </span></div><div id=funcsig><span id=funcnameshort>event void <a href="#receive">receive</a>(message_t *msg)
+      </span></div><div id=funcsig><span id=funcnameshort>event bool <a href="#shouldAck">shouldAck</a>(message_t *msg)
+      </span></div><p><div id=heading>Commands - Details</div>
+    <a name="clearChannel"></a>
+    <h4>clearChannel
+    </h4>
+    <span id=funcnameshort>command bool <b>clearChannel</b>()
+    </span><hr>
+    <a name="putOnAirTo"></a>
+    <h4>putOnAirTo
+    </h4>
+    <span id=funcnameshort>command void <b>putOnAirTo</b>(int dest, message_t *msg, bool ack, sim_time_t endTime, double gain, double reverseGain)
+    </span><hr>
+    <a name="setClearValue"></a>
+    <h4>setClearValue
+    </h4>
+    <span id=funcnameshort>command void <b>setClearValue</b>(double value)
+    </span><p><div id=heading>Events - Details</div>
+    <a name="acked"></a>
+    <h4>acked
+    </h4>
+    <span id=funcnameshort>event void <b>acked</b>(message_t *msg)
+    </span><hr>
+    <a name="receive"></a>
+    <h4>receive
+    </h4>
+    <span id=funcnameshort>event void <b>receive</b>(message_t *msg)
+    </span><hr>
+    <a name="shouldAck"></a>
+    <h4>shouldAck
+    </h4>
+    <span id=funcnameshort>event bool <b>shouldAck</b>(message_t *msg)
+    </span>
+  </body>
+</html>

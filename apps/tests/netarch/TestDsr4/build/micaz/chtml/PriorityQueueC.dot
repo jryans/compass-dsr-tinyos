@@ -1,0 +1,11 @@
+digraph "PriorityQueueC" {
+  n0x7dafd010 [shape=ellipse, style=filled, label="PriorityQueue", fontsize=12];
+  "PriorityQueueC.PriorityQueueP" [fontsize=12, shape=box, style=dashed, label="PriorityQueueP", URL="PriorityQueueP.html"];
+  "PriorityQueueC.PriorityQueueP" [fontsize=12, shape=box, style=dashed, label="PriorityQueueP", URL="PriorityQueueP.html"];
+  n0x7daf2998 [shape=ellipse, style=filled, label="Compare", fontsize=12];
+  "MainC" [fontsize=12, shape=box,peripheries=2, URL="tos.lib.tossim.MainC.html"];
+  "PriorityQueueC.PriorityQueueP" [fontsize=12, shape=box, style=dashed, label="PriorityQueueP", URL="PriorityQueueP.html"];
+  "n0x7dafd010" -> "PriorityQueueC.PriorityQueueP" [label="PriorityQueue", URL="../ihtml/PriorityQueue.html", fontsize=10];
+  "PriorityQueueC.PriorityQueueP" -> "n0x7daf2998" [label="Compare<priority_queue_id_t>", URL="../ihtml/Compare.html", fontsize=10];
+  "MainC" -> "PriorityQueueC.PriorityQueueP" [label="Init", URL="../ihtml/tos.interfaces.Init.html", fontsize=10];
+}

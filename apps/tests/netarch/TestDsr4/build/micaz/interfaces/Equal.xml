@@ -1,0 +1,66 @@
+<?xml version="1.0" ?><interfacedef loc="39:/home/jryans/tinyos-2.x-contrib-rice/tos/interfaces/Equal.nc" nicename="Equal" qname="Equal">
+      <documentation loc="39:/home/jryans/tinyos-2.x-contrib-rice/tos/interfaces/Equal.nc">
+        <short>
+
+ Generalized equality interface between two items. </short>
+        <long>
+
+ Generalized equality interface between two items.  Many uses are possible
+
+ here, since the inputs could be array indices, as just one example.
+
+
+
+ @author Ryan Stinnett
+
+</long>
+      </documentation>
+      <parameters>
+        <typedef loc="39:/home/jryans/tinyos-2.x-contrib-rice/tos/interfaces/Equal.nc" name="equal_t" ref="0x7e4bb010">
+          <interfacedef-ref nicename="Equal" qname="Equal"/>
+          <type-var alignment="U:" size="U:"><typedef-ref name="equal_t" ref="0x7e4bb010" scoped=""/></type-var>
+        </typedef>
+      </parameters>
+      <function command="" loc="48:/home/jryans/tinyos-2.x-contrib-rice/tos/interfaces/Equal.nc" name="test" provided="0" ref="0x7e4bb9c0">
+        <documentation loc="41:/home/jryans/tinyos-2.x-contrib-rice/tos/interfaces/Equal.nc">
+          <short>
+
+ Checks whether two items are equal.
+
+
+
+</short>
+          <long>
+
+ Checks whether two items are equal.
+
+
+
+ @param a First item to test.
+
+ @param b Second item to test.
+
+ @return TRUE if they are equal, FALSE if they are not.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="Equal" qname="Equal"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="bool" ref="0x7ec91520"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-var alignment="U:" size="U:"><typedef-ref name="equal_t" ref="0x7e4bb010" scoped=""/></type-var>
+            <type-var alignment="U:" size="U:"><typedef-ref name="equal_t" ref="0x7e4bb010" scoped=""/></type-var>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="48:/home/jryans/tinyos-2.x-contrib-rice/tos/interfaces/Equal.nc" name="a" ref="0x7e4bb5f0">
+            <type-var alignment="U:" size="U:"><typedef-ref name="equal_t" ref="0x7e4bb010" scoped=""/></type-var>
+          </variable>
+          <variable loc="48:/home/jryans/tinyos-2.x-contrib-rice/tos/interfaces/Equal.nc" name="b" ref="0x7e4bb778">
+            <type-var alignment="U:" size="U:"><typedef-ref name="equal_t" ref="0x7e4bb010" scoped=""/></type-var>
+          </variable>
+        </parameters>
+      </function>
+    </interfacedef>

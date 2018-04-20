@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <LINK rel="stylesheet" href="nesdoc.css" type="text/css" media="screen"><title>Component: PriorityQueueP</title>
+  </head>
+  <body>
+    <h2>Component: PriorityQueueP
+    </h2>
+    <b>generic module PriorityQueueP(priority_queue_id_t maxSize)</b>
+    <p>
+
+ Implements a priority queue sitting on top of an index heap.  It be either a
+
+ min or max heap depending on the implementation of the Compare.test command.
+
+ Since this is an index heap, none of the priorities are actually stored here.
+
+ Instead, a component needs only to answer calls of Compare.test (which would
+
+ typically be based on the priorities in some array owned by that component).
+
+
+
+ 
+    <p>
+    <dl>
+      <dt><b>Author:</b>
+      <dd>
+        Ryan Stinnett
+
+
+      </dd>
+    </dl>
+    <p><p><div id=heading>Provides</div><div id=funcsig>interface <a href="../ihtml/tos.interfaces.Init.html">Init</a></div><div id=funcsig>interface <a href="../ihtml/PriorityQueue.html">PriorityQueue</a></div><p><div id=heading>Uses</div><div id=funcsig>interface <a href="../ihtml/Compare.html">Compare</a>&lt;priority_queue_id_t&gt;</div>
+  </body>
+</html>

@@ -1,0 +1,312 @@
+<?xml version="1.0" ?><interfacedef loc="39:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/RouteCache.nc" nicename="RouteCache" qname="RouteCache">
+      <documentation loc="39:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/RouteCache.nc">
+        <short>
+
+ Access some kind of route cache or table that stores information about
+
+ paths or links in the network and looks for routes when requested.
+
+
+
+</short>
+        <long>
+
+ Access some kind of route cache or table that stores information about
+
+ paths or links in the network and looks for routes when requested.
+
+
+
+ @author Ryan Stinnett
+
+</long>
+      </documentation>
+      <function command="" loc="61:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/RouteCache.nc" name="removeLink" provided="0" ref="0x7dd418c0">
+        <documentation loc="51:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/RouteCache.nc">
+          <short>
+
+ Removes any information stored for a given link from the route cache.
+
+</short>
+          <long>
+
+ Removes any information stored for a given link from the route cache.
+
+ If the cache stores entire paths, then any path containing the link
+
+ must at least be shortened enough to remove the given link or else
+
+ discarded entirely.
+
+
+
+ @param src The source node in the link to remove.
+
+ @param dest The destination node in the link to remove.
+
+ @param reverse If TRUE, the reverse path is also removed.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="RouteCache" qname="RouteCache"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="route_cache_node_id_t" ref="0x7dd5c8a8"/></typename>
+            </type-int>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="route_cache_node_id_t" ref="0x7dd5c8a8"/></typename>
+            </type-int>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="bool" ref="0x7ec91520"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="61:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/RouteCache.nc" name="src" ref="0x7dd41240">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="route_cache_node_id_t" ref="0x7dd5c8a8"/></typename>
+            </type-int>
+          </variable>
+          <variable loc="61:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/RouteCache.nc" name="dest" ref="0x7dd413d8">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="route_cache_node_id_t" ref="0x7dd5c8a8"/></typename>
+            </type-int>
+          </variable>
+          <variable loc="61:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/RouteCache.nc" name="reverse" ref="0x7dd41560">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="bool" ref="0x7ec91520"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function event="" loc="97:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/RouteCache.nc" name="routeUpdate" provided="0" ref="0x7dd3f9e8">
+        <documentation loc="80:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/RouteCache.nc">
+          <short>
+
+ Provides the newest information available pertaining to a requested
+
+ route. </short>
+          <long>
+
+ Provides the newest information available pertaining to a requested
+
+ route.  Whether or not a route is available when the request is made,
+
+ a routeUpdate will be signaled once the current availability is known.
+
+ If the route is not initially available, a subsequent routeUpdate will
+
+ be signaled if a route is later found and the route was requested via
+
+ the trackRoute command.  If a route was found, numLinks is the number
+
+ of links along the route.  If a route was not found, numLinks is 0.
+
+ The route itself is accessible via the RouteNodeList interface.  Note
+
+ that RouteNodeList traverses the route &lt;b&gt;in reverse&lt;/b&gt;, returning the
+
+ previous or source node for a given node in the route.
+
+
+
+ @param src The source node of the route.
+
+ @param dest The destination node of the route.
+
+ @param numLinks Number of links along the route if one was found, 0
+
+                 if no route was found.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="RouteCache" qname="RouteCache"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="route_cache_node_id_t" ref="0x7dd5c8a8"/></typename>
+            </type-int>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="route_cache_node_id_t" ref="0x7dd5c8a8"/></typename>
+            </type-int>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="route_cache_link_id_t" ref="0x7dd5c6d0"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="97:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/RouteCache.nc" name="src" ref="0x7dd3f138">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="route_cache_node_id_t" ref="0x7dd5c8a8"/></typename>
+            </type-int>
+          </variable>
+          <variable loc="97:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/RouteCache.nc" name="dest" ref="0x7dd3f2d0">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="route_cache_node_id_t" ref="0x7dd5c8a8"/></typename>
+            </type-int>
+          </variable>
+          <variable loc="98:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/RouteCache.nc" name="numLinks" ref="0x7dd3f480">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="route_cache_link_id_t" ref="0x7dd5c6d0"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="49:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/RouteCache.nc" name="addPath" provided="0" ref="0x7dd42cf0">
+        <documentation loc="41:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/RouteCache.nc">
+          <short>
+
+ Adds a path to the route cache with a given number of links along the
+
+ path and optionally adds the reverse path as well.
+
+
+
+</short>
+          <long>
+
+ Adds a path to the route cache with a given number of links along the
+
+ path and optionally adds the reverse path as well.
+
+
+
+ @param nodes An array of nodes that make up the path to add.
+
+ @param numLinks The number of links along the path.
+
+ @param reverse If TRUE, the reverse path is also added.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="RouteCache" qname="RouteCache"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-pointer alignment="I:4" size="I:4">
+              <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+                <typename><typedef-ref name="route_cache_node_id_t" ref="0x7dd5c8a8"/></typename>
+              </type-int>
+            </type-pointer>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="route_cache_link_id_t" ref="0x7dd5c6d0"/></typename>
+            </type-int>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="bool" ref="0x7ec91520"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="49:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/RouteCache.nc" name="nodes" ref="0x7dd42690">
+            <type-pointer alignment="I:4" size="I:4">
+              <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+                <typename><typedef-ref name="route_cache_node_id_t" ref="0x7dd5c8a8"/></typename>
+              </type-int>
+            </type-pointer>
+          </variable>
+          <variable loc="49:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/RouteCache.nc" name="numLinks" ref="0x7dd42830">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="route_cache_link_id_t" ref="0x7dd5c6d0"/></typename>
+            </type-int>
+          </variable>
+          <variable loc="49:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/RouteCache.nc" name="reverse" ref="0x7dd429b8">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="bool" ref="0x7ec91520"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="70:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/RouteCache.nc" name="trackRoute" provided="0" ref="0x7dd402a0">
+        <documentation loc="63:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/RouteCache.nc">
+          <short>
+
+ Indicates the need for a route from node src to node dest. </short>
+          <long>
+
+ Indicates the need for a route from node src to node dest.  This is
+
+ tracked by the route cache until the need is met.
+
+
+
+ @param src The source node of the route.
+
+ @param dest The destination node of the route.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="RouteCache" qname="RouteCache"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="route_cache_node_id_t" ref="0x7dd5c8a8"/></typename>
+            </type-int>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="route_cache_node_id_t" ref="0x7dd5c8a8"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="70:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/RouteCache.nc" name="src" ref="0x7dd41e00">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="route_cache_node_id_t" ref="0x7dd5c8a8"/></typename>
+            </type-int>
+          </variable>
+          <variable loc="70:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/RouteCache.nc" name="dest" ref="0x7dd40010">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="route_cache_node_id_t" ref="0x7dd5c8a8"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="78:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/RouteCache.nc" name="checkRoute" provided="0" ref="0x7dd40be0">
+        <documentation loc="72:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/RouteCache.nc">
+          <short>
+
+ Requests an initial check for a route from node src to node dest.
+
+
+
+</short>
+          <long>
+
+ Requests an initial check for a route from node src to node dest.
+
+
+
+ @param src The source node of the route.
+
+ @param dest The destination node of the route.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="RouteCache" qname="RouteCache"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="route_cache_node_id_t" ref="0x7dd5c8a8"/></typename>
+            </type-int>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="route_cache_node_id_t" ref="0x7dd5c8a8"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="78:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/RouteCache.nc" name="src" ref="0x7dd407e0">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="route_cache_node_id_t" ref="0x7dd5c8a8"/></typename>
+            </type-int>
+          </variable>
+          <variable loc="78:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/RouteCache.nc" name="dest" ref="0x7dd40978">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="route_cache_node_id_t" ref="0x7dd5c8a8"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+    </interfacedef>

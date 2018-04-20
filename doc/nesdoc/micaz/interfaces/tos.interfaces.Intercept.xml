@@ -1,0 +1,75 @@
+<?xml version="1.0" ?><interfacedef loc="15:/opt/tinyos-2.x/tos/interfaces/Intercept.nc" nicename="tos.interfaces.Intercept" qname="Intercept">
+      <documentation loc="15:/opt/tinyos-2.x/tos/interfaces/Intercept.nc">
+        <short>
+</short>
+        <long>
+ @author Phil Levis
+ @author David Gay
+ Revision:  $Revision: 1.5 $
+
+ Defines global error codes for error_t in TinyOS.
+</long>
+      </documentation>
+      <function event="" loc="31:/opt/tinyos-2.x/tos/interfaces/Intercept.nc" name="forward" provided="0" ref="0x7e4fa398">
+        <documentation loc="16:/opt/tinyos-2.x/tos/interfaces/Intercept.nc">
+          <short>
+ Signals that a message has been received, which is supposed to be
+ forwarded to another destination. 
+
+</short>
+          <long>
+ Signals that a message has been received, which is supposed to be
+ forwarded to another destination. 
+
+ @param msg The complete message received.
+
+ @param payload The payload portion of the packet for this
+ protocol layer.
+
+ @param len The length of the payload buffer.
+
+ @return TRUE indicates the packet should be forwarded, FALSE
+ indicates that it should not be forwarded.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.interfaces.Intercept" qname="Intercept"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="bool" ref="0x7ec91520"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-pointer alignment="I:4" size="I:4">
+              <type-tag alignment="I:1" size="I:50"><nx_struct-ref name="message_t" ref="0x7e872dd8"/>
+                <typename><typedef-ref name="message_t" ref="0x7e8707a8"/></typename>
+              </type-tag>
+            </type-pointer>
+            <type-pointer alignment="I:4" size="I:4">
+              <type-void alignment="I:1" size="I:1"/>
+            </type-pointer>
+            <type-int alignment="I:2" cname="unsigned short" size="I:2" unsigned="">
+              <typename><typedef-ref name="uint16_t" ref="0x7fea02f8"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="31:/opt/tinyos-2.x/tos/interfaces/Intercept.nc" name="msg" ref="0x7e4fbcf0">
+            <type-pointer alignment="I:4" size="I:4">
+              <type-tag alignment="I:1" size="I:50"><nx_struct-ref name="message_t" ref="0x7e872dd8"/>
+                <typename><typedef-ref name="message_t" ref="0x7e8707a8"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+          <variable loc="31:/opt/tinyos-2.x/tos/interfaces/Intercept.nc" name="payload" ref="0x7e4fbe90">
+            <type-pointer alignment="I:4" size="I:4">
+              <type-void alignment="I:1" size="I:1"/>
+            </type-pointer>
+          </variable>
+          <variable loc="31:/opt/tinyos-2.x/tos/interfaces/Intercept.nc" name="len" ref="0x7e4fa030">
+            <type-int alignment="I:2" cname="unsigned short" size="I:2" unsigned="">
+              <typename><typedef-ref name="uint16_t" ref="0x7fea02f8"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+    </interfacedef>

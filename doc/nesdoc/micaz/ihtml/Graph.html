@@ -1,0 +1,481 @@
+<html>
+  <head>
+    <LINK rel="stylesheet" href="nesdoc.css" type="text/css" media="screen"><title>Interface: Graph</title>
+  </head>
+  <body>
+    <h2>Interface: Graph</h2>
+    <b>interface Graph</b><p>
+
+ Basic operations for processsing and modifying a graph.
+
+
+
+ 
+    <p>
+    <dl>
+      <dt><b>Author:</b>
+      <dd>
+        Ryan Stinnett
+
+
+      </dd>
+    </dl>
+    <p><p><div id=heading>Commands</div><div id=funcsig><span id=funcnameshort>command bool <a href="#directed">directed</a>()
+      </span><menu>
+
+ Checks if the graph is directed or not. 
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command graph_edge_id_t <a href="#edge">edge</a>(graph_vertex_id_t s, graph_vertex_id_t d)
+      </span><menu>
+
+ Retrieves an edge between vertices s and d, if it exists. 
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command graph_edge_id_t <a href="#edgeList">edgeList</a>(graph_vertex_id_t s)
+      </span><menu>
+
+ Retrieves a list of edges adjacent to vertex s. 
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command graph_edge_id_t <a href="#edges">edges</a>()
+      </span><menu>
+
+ Gets the number of edges currently in the graph. 
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command graph_edge_id_t <a href="#insert">insert</a>(graph_vertex_id_t s, graph_vertex_id_t d)
+      </span><menu>
+
+ Add a new edge to the graph between vertices s and d.
+
+
+
+
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command graph_edge_id_t <a href="#maxEdges">maxEdges</a>()
+      </span><menu>
+
+ Gets the maximum number of edges that the graph can hold. 
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command graph_vertex_id_t <a href="#maxVertices">maxVertices</a>()
+      </span><menu>
+
+ Gets the maximum number of vertices that the graph can hold.
+
+
+
+
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command bool <a href="#parallelEdges">parallelEdges</a>()
+      </span><menu>
+
+ Checks if parallel edges are allowed or not. 
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command error_t <a href="#remove">remove</a>(graph_vertex_id_t s, graph_vertex_id_t d)
+      </span><menu>
+
+ Remove an edge from the graph between vertices s and d.
+
+
+
+
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command graph_vertex_id_t <a href="#vertices">vertices</a>()
+      </span><menu>
+
+ Gets the number of vertices currently in the graph. 
+      </menu>
+    </div><p><div id=heading>Events</div><div id=funcsig><span id=funcnameshort>event void <a href="#inserted">inserted</a>(graph_edge_id_t m)
+      </span><menu>
+
+ The structure of the graph changed because an edge was inserted.
+
+
+
+
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>event void <a href="#removed">removed</a>(graph_edge_id_t m)
+      </span><menu>
+
+ The structure of the graph changed because an edge was removed.
+
+
+
+
+      </menu>
+    </div><p><div id=heading>Commands - Details</div>
+    <a name="directed"></a>
+    <h4>directed
+    </h4>
+    <span id=funcnameshort>command bool <b>directed</b>()
+    </span>
+    <p>
+    <menu>
+      
+
+ Checks if the graph is directed or not.  This value should not change at
+
+ run-time.
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Returns:</b>
+        <dd>
+          TRUE if the graph is directed, FALSE if it is undirected.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="edge"></a>
+    <h4>edge
+    </h4>
+    <span id=funcnameshort>command graph_edge_id_t <b>edge</b>(graph_vertex_id_t s, graph_vertex_id_t d)
+    </span>
+    <p>
+    <menu>
+      
+
+ Retrieves an edge between vertices s and d, if it exists.  If the graph is
+
+ directed, s is taken to be the source and d is taken to be the destination
+
+ of the directed edge.
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>s</code> -  The first vertex or source of the edge.
+
+ 
+        </dd>
+        <dd>
+          <code>d</code> -  The second vertex or destination of the edge.
+
+ 
+        </dd>
+        <dt><b>Returns:</b>
+        <dd>
+          The edge key if the edge was found, maxEdges() if it was not.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="edgeList"></a>
+    <h4>edgeList
+    </h4>
+    <span id=funcnameshort>command graph_edge_id_t <b>edgeList</b>(graph_vertex_id_t s)
+    </span>
+    <p>
+    <menu>
+      
+
+ Retrieves a list of edges adjacent to vertex s.  If the graph is directed,
+
+ s is taken to be the source of the directed edge.
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>s</code> -  The first vertex or source of the edge.
+
+ 
+        </dd>
+        <dt><b>Returns:</b>
+        <dd>
+          The key to the first node of the list if the vertex was valid,
+
+         maxEdges() if it was not.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="edges"></a>
+    <h4>edges
+    </h4>
+    <span id=funcnameshort>command graph_edge_id_t <b>edges</b>()
+    </span>
+    <p>
+    <menu>
+      
+
+ Gets the number of edges currently in the graph.  This should return the
+
+ number of "conceptual" edges.  For example, an undirected graph might use
+
+ two directed edges for each undirected edge in its implementation, but this
+
+ only counts as one edge here.  For some implementations, this will always
+
+ equal maxEdges() if all edges are preallocated.
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Returns:</b>
+        <dd>
+          The number of edges currently in the graph.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="insert"></a>
+    <h4>insert
+    </h4>
+    <span id=funcnameshort>command graph_edge_id_t <b>insert</b>(graph_vertex_id_t s, graph_vertex_id_t d)
+    </span>
+    <p>
+    <menu>
+      
+
+ Add a new edge to the graph between vertices s and d.
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>s</code> -  The first vertex or source of the edge.
+
+ 
+        </dd>
+        <dd>
+          <code>d</code> -  The second vertex or destination of the edge.
+
+ 
+        </dd>
+        <dt><b>Returns:</b>
+        <dd>
+          If all of the edges have already been allocated or if parallel
+
+         edges are not supported and this edge has already been added or if either
+
+         vertex is too large, then maxEdges() is returned.  Otherwise, the key for
+
+         the new edge is returned.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="maxEdges"></a>
+    <h4>maxEdges
+    </h4>
+    <span id=funcnameshort>command graph_edge_id_t <b>maxEdges</b>()
+    </span>
+    <p>
+    <menu>
+      
+
+ Gets the maximum number of edges that the graph can hold.  This should
+
+ return the number of "conceptual" edges.  For example, an undirected graph
+
+ might use two directed edges for each undirected edge in its
+
+ implementation, but this only counts as one edge here.
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Returns:</b>
+        <dd>
+          The maximum number of edges that the graph can hold.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="maxVertices"></a>
+    <h4>maxVertices
+    </h4>
+    <span id=funcnameshort>command graph_vertex_id_t <b>maxVertices</b>()
+    </span>
+    <p>
+    <menu>
+      
+
+ Gets the maximum number of vertices that the graph can hold.
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Returns:</b>
+        <dd>
+          The maximum number of vertices that the graph can hold.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="parallelEdges"></a>
+    <h4>parallelEdges
+    </h4>
+    <span id=funcnameshort>command bool <b>parallelEdges</b>()
+    </span>
+    <p>
+    <menu>
+      
+
+ Checks if parallel edges are allowed or not.  This value should not change
+
+ at run-time.
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Returns:</b>
+        <dd>
+          TRUE if parallel edges are allowed, FALSE if they are not.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="remove"></a>
+    <h4>remove
+    </h4>
+    <span id=funcnameshort>command error_t <b>remove</b>(graph_vertex_id_t s, graph_vertex_id_t d)
+    </span>
+    <p>
+    <menu>
+      
+
+ Remove an edge from the graph between vertices s and d.
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>s</code> -  The first vertex or source of the edge.
+
+ 
+        </dd>
+        <dd>
+          <code>d</code> -  The second vertex or destination of the edge.
+
+ 
+        </dd>
+        <dt><b>Returns:</b>
+        <dd>
+          SUCCESS if the edge was found and removed, EINVAL if it was not.
+
+         ESIZE returned if either vertex is too large.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="vertices"></a>
+    <h4>vertices
+    </h4>
+    <span id=funcnameshort>command graph_vertex_id_t <b>vertices</b>()
+    </span>
+    <p>
+    <menu>
+      
+
+ Gets the number of vertices currently in the graph.  For some
+
+ implementations, this will always equal maxVertices() if all vertices
+
+ are preallocated.
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Returns:</b>
+        <dd>
+          The number of vertices currently in the graph.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <p><div id=heading>Events - Details</div>
+    <a name="inserted"></a>
+    <h4>inserted
+    </h4>
+    <span id=funcnameshort>event void <b>inserted</b>(graph_edge_id_t m)
+    </span>
+    <p>
+    <menu>
+      
+
+ The structure of the graph changed because an edge was inserted.
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>m</code> -  The key for the edge that was inserted.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="removed"></a>
+    <h4>removed
+    </h4>
+    <span id=funcnameshort>event void <b>removed</b>(graph_edge_id_t m)
+    </span>
+    <p>
+    <menu>
+      
+
+ The structure of the graph changed because an edge was removed.
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>m</code> -  The key for the edge that was removed.
+
+
+        </dd>
+      </dl>
+    </menu>
+  </body>
+</html>

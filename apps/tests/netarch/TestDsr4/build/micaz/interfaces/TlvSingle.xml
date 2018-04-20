@@ -1,0 +1,308 @@
+<?xml version="1.0" ?><interfacedef loc="41:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvSingle.nc" nicename="TlvSingle" qname="TlvSingle">
+      <documentation loc="41:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvSingle.nc">
+        <short>
+
+ Access data stored in a generalized Type-Length-Value (TLV) block.
+
+</short>
+        <long>
+
+ Access data stored in a generalized Type-Length-Value (TLV) block.
+
+ This interface allows at most one instance of a type.
+
+
+
+ @author Ryan Stinnett
+
+</long>
+      </documentation>
+      <function command="" loc="77:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvSingle.nc" name="value" provided="0" ref="0x7de36e88">
+        <documentation loc="70:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvSingle.nc">
+          <short>
+
+ Returns the value in this type instance within the TLV block. </short>
+          <long>
+
+ Returns the value in this type instance within the TLV block.  If
+
+ the type instance is not found in the block, then NULL is returned.
+
+
+
+ @param block Pointer to the TLV block.
+
+ @return Pointer to the value in this TLV type.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="TlvSingle" qname="TlvSingle"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-pointer alignment="I:4" size="I:4">
+            <type-void alignment="I:1" size="I:1"/>
+          </type-pointer>
+          <function-parameters>
+            <type-pointer alignment="I:4" size="I:4">
+              <type-void alignment="I:1" size="I:1"/>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="77:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvSingle.nc" name="block" ref="0x7de36bc8">
+            <type-pointer alignment="I:4" size="I:4">
+              <type-void alignment="I:1" size="I:1"/>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="106:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvSingle.nc" name="remove" provided="0" ref="0x7de34710">
+        <documentation loc="98:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvSingle.nc">
+          <short>
+
+ Removes this type instance from the TLV block.
+
+
+
+</short>
+          <long>
+
+ Removes this type instance from the TLV block.
+
+
+
+ @param block Pointer to the TLV block.
+
+ @param trailLen Current length of trailing data.
+
+ @return SUCCESS if the type instance was found and removed, EINVAL
+
+         otherwise.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="TlvSingle" qname="TlvSingle"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="error_t" ref="0x7e8372e8"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-pointer alignment="I:4" size="I:4">
+              <type-void alignment="I:1" size="I:1"/>
+            </type-pointer>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x7fea0110"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="106:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvSingle.nc" name="block" ref="0x7de342e8">
+            <type-pointer alignment="I:4" size="I:4">
+              <type-void alignment="I:1" size="I:1"/>
+            </type-pointer>
+          </variable>
+          <variable loc="106:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvSingle.nc" name="trailLen" ref="0x7de34478">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x7fea0110"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="50:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvSingle.nc" name="length" provided="0" ref="0x7de387c8">
+        <documentation loc="43:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvSingle.nc">
+          <short>
+
+ Returns the length of this type instance within the TLV block. </short>
+          <long>
+
+ Returns the length of this type instance within the TLV block.  If
+
+ the type instance is not found in the block, then 0 is returned.
+
+
+
+ @param block Pointer to the TLV block.
+
+ @return Length of this TLV type.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="TlvSingle" qname="TlvSingle"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x7fea0110"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-pointer alignment="I:4" size="I:4">
+              <type-void alignment="I:1" size="I:1"/>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="50:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvSingle.nc" name="block" ref="0x7de38538">
+            <type-pointer alignment="I:4" size="I:4">
+              <type-void alignment="I:1" size="I:1"/>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="67:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvSingle.nc" name="setLength" provided="0" ref="0x7de36690">
+        <documentation loc="52:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvSingle.nc">
+          <short>
+
+ Sets the length of a type instance within the TLV block. </short>
+          <long>
+
+ Sets the length of a type instance within the TLV block.  This
+
+ operation moves data around and should always be performed before
+
+ storing a value with a different length than the one currently
+
+ stored.  If the type instance is not found in the block or there
+
+ is not enough room for the new length, returns ESIZE.
+
+
+
+ @param block Pointer to the TLV block.
+
+ @param len Length to set for this TLV type.
+
+ @param trailLen Current length of trailing data.
+
+ @param maxLen Maximum possible length of TLV block and trailing data.
+
+ @return SUCCESS if the type instance was found, enough space was
+
+         available, and the length was set, ESIZE if there wasn't
+
+         enough space, EINVAL if the instance wasn't found.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="TlvSingle" qname="TlvSingle"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="error_t" ref="0x7e8372e8"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-pointer alignment="I:4" size="I:4">
+              <type-void alignment="I:1" size="I:1"/>
+            </type-pointer>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x7fea0110"/></typename>
+            </type-int>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x7fea0110"/></typename>
+            </type-int>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x7fea0110"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="67:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvSingle.nc" name="block" ref="0x7de38d10">
+            <type-pointer alignment="I:4" size="I:4">
+              <type-void alignment="I:1" size="I:1"/>
+            </type-pointer>
+          </variable>
+          <variable loc="67:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvSingle.nc" name="len" ref="0x7de38e98">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x7fea0110"/></typename>
+            </type-int>
+          </variable>
+          <variable loc="68:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvSingle.nc" name="trailLen" ref="0x7de36068">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x7fea0110"/></typename>
+            </type-int>
+          </variable>
+          <variable loc="68:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvSingle.nc" name="maxLen" ref="0x7de361f0">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x7fea0110"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="95:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvSingle.nc" name="add" provided="0" ref="0x7de35d50">
+        <documentation loc="79:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvSingle.nc">
+          <short>
+
+ Adds an instance of a type to the TLV block and sets the initial
+
+ length of the instance. </short>
+          <long>
+
+ Adds an instance of a type to the TLV block and sets the initial
+
+ length of the instance.  This operation moves data around and
+
+ should always be performed before storing a value of the given
+
+ type.  The type instance will be added to the block as long as
+
+ there are at least len + 2 bytes available in the buffer holding
+
+ the TLV block.
+
+
+
+ @param block Pointer to the TLV block.
+
+ @param len Length to set for this TLV type.
+
+ @param trailLen Current length of trailing data.
+
+ @param maxLen Maximum possible length of TLV block and trailing data.
+
+ @return SUCCESS if enough space was available and the length was
+
+         set, EALREADY if an instance already exists, ESIZE if
+
+         there wasn't enough space.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="TlvSingle" qname="TlvSingle"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="error_t" ref="0x7e8372e8"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-pointer alignment="I:4" size="I:4">
+              <type-void alignment="I:1" size="I:1"/>
+            </type-pointer>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x7fea0110"/></typename>
+            </type-int>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x7fea0110"/></typename>
+            </type-int>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x7fea0110"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="95:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvSingle.nc" name="block" ref="0x7de353e8">
+            <type-pointer alignment="I:4" size="I:4">
+              <type-void alignment="I:1" size="I:1"/>
+            </type-pointer>
+          </variable>
+          <variable loc="95:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvSingle.nc" name="len" ref="0x7de35570">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x7fea0110"/></typename>
+            </type-int>
+          </variable>
+          <variable loc="96:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvSingle.nc" name="trailLen" ref="0x7de35710">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x7fea0110"/></typename>
+            </type-int>
+          </variable>
+          <variable loc="96:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvSingle.nc" name="maxLen" ref="0x7de35898">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x7fea0110"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+    </interfacedef>

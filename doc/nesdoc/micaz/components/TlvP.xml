@@ -1,0 +1,95 @@
+<?xml version="1.0" ?><component loc="45:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvP.nc" nicename="TlvP" qname="TlvP">
+      <documentation loc="45:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvP.nc">
+        <short>
+
+ A general Type-Length-Value (TLV) data processor. </short>
+        <long>
+
+ A general Type-Length-Value (TLV) data processor.  This component
+
+ does not assume any ordering by type among the TLV types in a
+
+ block of types.  If at most one instance of a type is allowed,
+
+ access the type via the TlvSingle interface.  If any number of
+
+ instances are allowed, access the type via the TlvMultiple and
+
+ TlvList interfaces.
+
+
+
+ @author Ryan Stinnett
+
+</long>
+      </documentation>
+      <module/>
+    <specification><interface loc="49:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvP.nc" name="TlvMultiple" provided="1" ref="0x7ddc0010">
+      <component-ref nicename="TlvP" qname="TlvP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="TlvMultiple" ref="0x7ddc0010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="TlvMultiple" qname="TlvMultiple"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x7fea0110"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="value" ref="0x7ddc01e8" scoped=""/>
+        <function-ref name="list" ref="0x7ddc02c8" scoped=""/>
+        <function-ref name="remove" ref="0x7ddc03a8" scoped=""/>
+        <function-ref name="length" ref="0x7ddc0488" scoped=""/>
+        <function-ref name="setLength" ref="0x7ddc0568" scoped=""/>
+        <function-ref name="add" ref="0x7ddc0648" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="50:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvP.nc" name="TlvList" provided="1" ref="0x7ddc0b00">
+      <component-ref nicename="TlvP" qname="TlvP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="TlvList" ref="0x7ddc0b00" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="StaticVoidIndexedIterator" qname="StaticVoidIndexedIterator"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="tlv_key_t" ref="0x7de80b38"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x7fea0110"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="end" ref="0x7ddbf520" scoped=""/>
+        <function-ref name="next" ref="0x7ddbf1e0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvP.nc" name="TlvBlock" provided="1" ref="0x7ddc3f08">
+      <component-ref nicename="TlvP" qname="TlvP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="TlvBlock" ref="0x7ddc3f08" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="TlvBlock" qname="TlvBlock"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="remove" ref="0x7ddc20f0" scoped=""/>
+        <function-ref name="length" ref="0x7ddc21d0" scoped=""/>
+        <function-ref name="add" ref="0x7ddc22b0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="48:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/tlv/TlvP.nc" name="TlvSingle" provided="1" ref="0x7ddc2690">
+      <component-ref nicename="TlvP" qname="TlvP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="TlvSingle" ref="0x7ddc2690" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="TlvSingle" qname="TlvSingle"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x7fea0110"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="value" ref="0x7ddc2868" scoped=""/>
+        <function-ref name="remove" ref="0x7ddc2948" scoped=""/>
+        <function-ref name="length" ref="0x7ddc2a28" scoped=""/>
+        <function-ref name="setLength" ref="0x7ddc2b08" scoped=""/>
+        <function-ref name="add" ref="0x7ddc2be8" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

@@ -1,0 +1,35 @@
+#!/bin/bash
+ct="java edu.rice.compass.CompassTools"
+stime=$(echo "scale (2); 0.03 * $6 * $7" | bc)
+for src in `seq $1 $2`;
+do
+  [ ! -e "src$src" ] && mkdir src$src
+  $ct -o -d $src -c
+  for dest in `seq $3 $4`;
+  do
+    if [ "$src" -eq "$dest" ]
+    then
+      continue
+    fi
+    $ct -o -d $src --power $5 --radioretries $6 --ping $7 --radioofftime $dest
+    sleep $stime
+    vari=1
+    while [ "$vari" -lt 4 ]
+    do
+      echo "Stats read attempt #$vari"
+      $ct -o -d $src --power 31 --radioretries 5
+      $ct --stats -d $src `cygpath -w $PWD/src$src/$dest.xml`
+      if [ "$?" -eq 0 ]
+      then
+        break
+      fi
+      ((vari += 1))
+    done
+    if [ "$vari" -eq 4 ]
+    then
+      echo "Can't read stats from mote $src!"
+      exit 1
+    fi
+    $ct -o -d $src -c
+  done
+done

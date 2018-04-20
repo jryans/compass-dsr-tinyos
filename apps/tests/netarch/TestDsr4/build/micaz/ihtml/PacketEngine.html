@@ -1,0 +1,599 @@
+<html>
+  <head>
+    <LINK rel="stylesheet" href="nesdoc.css" type="text/css" media="screen"><title>Interface: PacketEngine</title>
+  </head>
+  <body>
+    <h2>Interface: PacketEngine</h2>
+    <b>interface PacketEngine</b><p>
+
+ The PacketEngine interface connects the packet engine to any data
+
+ control components.  Data control components can implement any number
+
+ of functions on set of packets.  In fact, an entire routing Allow a data control component to manage its packets in the data
+
+ engine.  Packet IDs are passed to the control component to simplify
+
+ management of any additional data structures for each packet in the
+
+ buffer.
+
+
+
+ 
+    <p>
+    <dl>
+      <dt><b>Author:</b>
+      <dd>
+        Ryan Stinnett
+
+
+      </dd>
+    </dl>
+    <p><p><div id=heading>Commands</div><div id=funcsig><span id=funcnameshort>command error_t <a href="#drop">drop</a>(packet_id_t pid)
+      </span><menu>
+
+ Drops the packet from the buffer immediately. 
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command message_t *<a href="#packet">packet</a>(packet_id_t pid)
+      </span><menu>
+
+ Gets the packet associated with a given ID in the packet engine.
+
+
+
+
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command error_t <a href="#receive">receive</a>(packet_id_t pid)
+      </span><menu>
+
+ Passes this packet to upper layer as a received packet immediately. 
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command error_t <a href="#send">send</a>(packet_id_t pid)
+      </span><menu>
+
+ Marks this packet as next in line to be sent. 
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command error_t <a href="#sendIntercept">sendIntercept</a>(packet_id_t pid)
+      </span><menu>
+
+ Marks this packet as next in line to be sent, but allows the upper layer
+
+ to intercept the packet first. 
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command void <a href="#setUpperType">setUpperType</a>(packet_id_t pid, am_id_t newUid)
+      </span><menu>
+
+ Sets the upper layer AM type of a given packet.
+
+
+
+
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command error_t <a href="#upperSendDone">upperSendDone</a>(packet_id_t pid, error_t result)
+      </span><menu>
+
+ Manually signals the upper layer sendDone event with the given result
+
+ for the given packet. 
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command packet_am_id_t <a href="#upperType">upperType</a>(packet_id_t pid)
+      </span><menu>
+
+ Returns the upper layer AM type of a given packet.
+
+
+
+
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command packet_id_t <a href="#waitList">waitList</a>()
+      </span><menu>
+
+ Access a list of all packets still waiting for a control descision. 
+      </menu>
+    </div><p><div id=heading>Events</div><div id=funcsig><span id=funcnameshort>event void <a href="#receiveAdded">receiveAdded</a>(packet_id_t pid, message_t *msg)
+      </span><menu>
+
+ A received packet was added to the packet engine from a lower layer.
+
+
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>event void <a href="#sendAdded">sendAdded</a>(packet_id_t pid, message_t *msg)
+      </span><menu>
+
+ A packet to be sent was added to the packet engine by an upper layer.
+
+
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>event packet_send_action_t <a href="#sendDone">sendDone</a>(packet_id_t pid, message_t *msg, error_t result)
+      </span><menu>
+
+ Signals the completion of a send event to the lower layer. 
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>event void <a href="#snoopAdded">snoopAdded</a>(packet_id_t pid, message_t *msg)
+      </span><menu>
+
+ An overheard packet (this node is not the intended destination) was
+
+ added to the packet engine from a lower layer. 
+      </menu>
+    </div><p><div id=heading>Commands - Details</div>
+    <a name="drop"></a>
+    <h4>drop
+    </h4>
+    <span id=funcnameshort>command error_t <b>drop</b>(packet_id_t pid)
+    </span>
+    <p>
+    <menu>
+      
+
+ Drops the packet from the buffer immediately.  The packet must be one
+
+ that was signaled via the added event and cannot be the ID of any
+
+ arbitrary packet.
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>pid</code> -  ID of the packet.
+
+ 
+        </dd>
+        <dt><b>Returns:</b>
+        <dd>
+          SUCCESS if the action takes place, FAIL if not, EINVAL if the
+
+         packet is not found in the buffer or is not a waiting packet.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="packet"></a>
+    <h4>packet
+    </h4>
+    <span id=funcnameshort>command message_t *<b>packet</b>(packet_id_t pid)
+    </span>
+    <p>
+    <menu>
+      
+
+ Gets the packet associated with a given ID in the packet engine.
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>pid</code> -  ID of packet to access.
+
+ 
+        </dd>
+        <dt><b>Returns:</b>
+        <dd>
+          Pointer to the packet, NULL if the ID is not in use or too large.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="receive"></a>
+    <h4>receive
+    </h4>
+    <span id=funcnameshort>command error_t <b>receive</b>(packet_id_t pid)
+    </span>
+    <p>
+    <menu>
+      
+
+ Passes this packet to upper layer as a received packet immediately.  The
+
+ packet must be one that was signaled via the added event and cannot be
+
+ the ID of any arbitrary packet.
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>pid</code> -  ID of the packet.
+
+ 
+        </dd>
+        <dt><b>Returns:</b>
+        <dd>
+          SUCCESS if the action takes place, FAIL if not, EINVAL if the
+
+         packet is not found in the buffer or is not a waiting packet.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="send"></a>
+    <h4>send
+    </h4>
+    <span id=funcnameshort>command error_t <b>send</b>(packet_id_t pid)
+    </span>
+    <p>
+    <menu>
+      
+
+ Marks this packet as next in line to be sent.  The packet must be one
+
+ that was signaled via the added event and cannot be the ID of any
+
+ arbitrary packet.
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>pid</code> -  ID of the packet.
+
+ 
+        </dd>
+        <dt><b>Returns:</b>
+        <dd>
+          SUCCESS if the action takes place, FAIL if not, EINVAL if the
+
+         packet is not found in the buffer or is not a waiting packet.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="sendIntercept"></a>
+    <h4>sendIntercept
+    </h4>
+    <span id=funcnameshort>command error_t <b>sendIntercept</b>(packet_id_t pid)
+    </span>
+    <p>
+    <menu>
+      
+
+ Marks this packet as next in line to be sent, but allows the upper layer
+
+ to intercept the packet first.  The packet must be one that was signaled
+
+ via the added event and cannot be the ID of any arbitrary packet.
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>pid</code> -  ID of the packet.
+
+ 
+        </dd>
+        <dt><b>Returns:</b>
+        <dd>
+          SUCCESS if the action takes place, FAIL if not, EINVAL if the
+
+         packet is not found in the buffer or is not a waiting packet.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="setUpperType"></a>
+    <h4>setUpperType
+    </h4>
+    <span id=funcnameshort>command void <b>setUpperType</b>(packet_id_t pid, am_id_t newUid)
+    </span>
+    <p>
+    <menu>
+      
+
+ Sets the upper layer AM type of a given packet.
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>pid</code> -  ID of the packet.
+
+ 
+        </dd>
+        <dd>
+          <code>newUid</code> -  The new upper layer AM type.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="upperSendDone"></a>
+    <h4>upperSendDone
+    </h4>
+    <span id=funcnameshort>command error_t <b>upperSendDone</b>(packet_id_t pid, error_t result)
+    </span>
+    <p>
+    <menu>
+      
+
+ Manually signals the upper layer sendDone event with the given result
+
+ for the given packet.  This should be used carefully to avoid signally
+
+ sendDone multiple times for the same packet.
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>pid</code> -  ID of the packet.
+
+ 
+        </dd>
+        <dd>
+          <code>result</code> -  Send result.
+
+ 
+        </dd>
+        <dt><b>Returns:</b>
+        <dd>
+          SUCCESS if the action takes place, FAIL if not, EINVAL if the
+
+         packet is not found in the buffer or is not a waiting packet.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="upperType"></a>
+    <h4>upperType
+    </h4>
+    <span id=funcnameshort>command packet_am_id_t <b>upperType</b>(packet_id_t pid)
+    </span>
+    <p>
+    <menu>
+      
+
+ Returns the upper layer AM type of a given packet.
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>pid</code> -  ID of the packet.
+
+ 
+        </dd>
+        <dt><b>Returns:</b>
+        <dd>
+          The upper layer AM type.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="waitList"></a>
+    <h4>waitList
+    </h4>
+    <span id=funcnameshort>command packet_id_t <b>waitList</b>()
+    </span>
+    <p>
+    <menu>
+      
+
+ Access a list of all packets still waiting for a control descision.  For
+
+ example, if a routing path is found to destination B, this could be used
+
+ to check if any other packets were also waiting for that same path since
+
+ they can now be sent.  This command gives the index of the first packet
+
+ in a list of waiting packets.  Traverse the rest of the list with the
+
+ PacketWaitList interface provided by the engine.
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Returns:</b>
+        <dd>
+          The ID for the first waiting packet, bufferSize if there aren't
+
+         any waiting packets.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <p><div id=heading>Events - Details</div>
+    <a name="receiveAdded"></a>
+    <h4>receiveAdded
+    </h4>
+    <span id=funcnameshort>event void <b>receiveAdded</b>(packet_id_t pid, message_t *msg)
+    </span>
+    <p>
+    <menu>
+      
+
+ A received packet was added to the packet engine from a lower layer.
+
+ Unlike the Receive interface, this event does not allow swapping packet
+
+ buffers because ownership of the packet does not leave the packet
+
+ engine.
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>pid</code> -  Packet ID within the packet engine.
+
+ 
+        </dd>
+        <dd>
+          <code>msg</code> -  Pointer to the packet that was added.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="sendAdded"></a>
+    <h4>sendAdded
+    </h4>
+    <span id=funcnameshort>event void <b>sendAdded</b>(packet_id_t pid, message_t *msg)
+    </span>
+    <p>
+    <menu>
+      
+
+ A packet to be sent was added to the packet engine by an upper layer.
+
+ Unlike the Receive interface, this event does not allow swapping packet
+
+ buffers because ownership of the packet does not leave the packet
+
+ engine.
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>pid</code> -  Packet ID within the packet engine.
+
+ 
+        </dd>
+        <dd>
+          <code>msg</code> -  Pointer to the packet that was added.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="sendDone"></a>
+    <h4>sendDone
+    </h4>
+    <span id=funcnameshort>event packet_send_action_t <b>sendDone</b>(packet_id_t pid, message_t *msg, error_t result)
+    </span>
+    <p>
+    <menu>
+      
+
+ Signals the completion of a send event to the lower layer.  The return
+
+ value indicates what should be done next with the packet.
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>pid</code> -  Packet ID within the packet engine.
+
+ 
+        </dd>
+        <dd>
+          <code>msg</code> -  Pointer to the packet.
+
+ 
+        </dd>
+        <dd>
+          <code>result</code> -  SUCCESS if it was transmitted successfully, FAIL if
+
+               it was not, ECANCEL if it was cancelled by the upper
+
+               layer.
+
+ 
+        </dd>
+        <dt><b>Returns:</b>
+        <dd>
+          If the packet is no longer needed, return PKT_SEND_DONE. If the
+
+         packet should be resent, return PKT_SEND_RETRY.  If the packet
+
+         should move back to the wait state, return PKT_SEND_WAIT.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="snoopAdded"></a>
+    <h4>snoopAdded
+    </h4>
+    <span id=funcnameshort>event void <b>snoopAdded</b>(packet_id_t pid, message_t *msg)
+    </span>
+    <p>
+    <menu>
+      
+
+ An overheard packet (this node is not the intended destination) was
+
+ added to the packet engine from a lower layer.  Unlike the Receive
+
+ interface, this event does not allow swapping packet buffers because
+
+ ownership of the packet does not leave the packet engine.
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>pid</code> -  Packet ID within the packet engine.
+
+ 
+        </dd>
+        <dd>
+          <code>msg</code> -  Pointer to the packet that was added.
+
+
+        </dd>
+      </dl>
+    </menu>
+  </body>
+</html>

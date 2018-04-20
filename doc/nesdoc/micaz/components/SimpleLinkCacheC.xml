@@ -1,0 +1,516 @@
+<?xml version="1.0" ?><component abstract="" loc="42:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/SimpleLinkCacheC.nc" nicename="SimpleLinkCacheC" qname="SimpleLinkCacheC">
+      <parameters>
+        <constant loc="42:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/SimpleLinkCacheC.nc" name="maxNodes" ref="0x7dbe2668">
+          <component-ref nicename="SimpleLinkCacheC" qname="SimpleLinkCacheC"/>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="route_cache_node_id_t" ref="0x7dd5d8a8"/></typename>
+          </type-int>
+        </constant>
+        <constant loc="43:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/SimpleLinkCacheC.nc" name="maxLinks" ref="0x7dbe2818">
+          <component-ref nicename="SimpleLinkCacheC" qname="SimpleLinkCacheC"/>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="route_cache_link_id_t" ref="0x7dd5d6d0"/></typename>
+          </type-int>
+        </constant>
+      </parameters>
+      <configuration/>
+      <wiring>
+        <wire loc="58:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/SimpleLinkCacheC.nc">
+          <from><interface-ref name="RouteCache" ref="0x7dbe2a70" scoped=""/></from>
+          <to><interface-ref name="RouteCache" ref="0x7dbdc600" scoped=""/></to>
+        </wire>
+        <wire loc="60:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/SimpleLinkCacheC.nc">
+          <from><interface-ref name="RouteNodeList" ref="0x7dbe1238" scoped=""/></from>
+          <to><interface-ref name="PathEdgeList" ref="0x7da542e0" scoped=""/></to>
+        </wire>
+        <wire loc="62:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/SimpleLinkCacheC.nc">
+          <from><interface-ref name="GraphEdgeWeight" ref="0x7da54e70" scoped=""/></from>
+          <to><interface-ref name="GraphEdgeWeight" ref="0x7da453b8" scoped=""/></to>
+        </wire>
+        <wire loc="64:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/SimpleLinkCacheC.nc">
+          <from><interface-ref name="Graph" ref="0x7dbc8050" scoped=""/></from>
+          <to><interface-ref name="Graph" ref="0x7dba9c40" scoped=""/></to>
+        </wire>
+        <wire loc="65:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/SimpleLinkCacheC.nc">
+          <from><interface-ref name="SourceShortestPath" ref="0x7dbc1a30" scoped=""/></from>
+          <to><interface-ref name="SourceShortestPath" ref="0x7da55900" scoped=""/></to>
+        </wire>
+        <wire loc="67:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/SimpleLinkCacheC.nc">
+          <from><interface-ref name="Track" ref="0x7dbdb030" scoped=""/></from>
+          <to><interface-ref name="BitVector" ref="0x7da503c8" scoped=""/></to>
+        </wire>
+        <wire loc="68:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/SimpleLinkCacheC.nc">
+          <from><interface-ref name="Initial" ref="0x7dbdb9a0" scoped=""/></from>
+          <to><interface-ref name="BitVector" ref="0x7da4bcb0" scoped=""/></to>
+        </wire>
+        <wire loc="70:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/SimpleLinkCacheC.nc">
+          <from><interface-ref name="AMPacket" ref="0x7dbda320" scoped=""/></from>
+          <to><interface-ref name="AMPacket" ref="0x7dffd400" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="45:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/SimpleLinkCacheC.nc" name="RouteCache" provided="1" ref="0x7dbe2a70">
+      <component-ref nicename="SimpleLinkCacheC" qname="SimpleLinkCacheC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="RouteCache" ref="0x7dbe2a70" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="RouteCache" qname="RouteCache"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="removeLink" ref="0x7dbe2c48" scoped=""/>
+        <function-ref name="routeUpdate" ref="0x7dbe2d28" scoped=""/>
+        <function-ref name="addPath" ref="0x7dbe2e08" scoped=""/>
+        <function-ref name="trackRoute" ref="0x7dbe2ee8" scoped=""/>
+        <function-ref name="checkRoute" ref="0x7dbe1010" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/SimpleLinkCacheC.nc" name="RouteNodeList" provided="1" ref="0x7dbe1238">
+      <component-ref nicename="SimpleLinkCacheC" qname="SimpleLinkCacheC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="RouteNodeList" ref="0x7dbe1238" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="IndexedIterator" qname="IndexedIterator"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="route_cache_node_id_t" ref="0x7dd5d8a8"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="end" ref="0x7dbe1ae0" scoped=""/>
+        <function-ref name="next" ref="0x7dbe1860" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="52:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphWeightedC.nc" name="GraphEdgeWeight" provided="0" ref="0x7da54e70">
+      <component-ref nicename="SimpleLinkCacheC.GraphWeightedC" qname="SimpleLinkCacheC.GraphWeightedC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="GraphEdgeWeight" ref="0x7da54e70" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="GraphEdgeWeight" qname="GraphEdgeWeight"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="graph_edge_unit_weight_t" ref="0x7dbe4200"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="canChangeWeights" ref="0x7da524b8" scoped=""/>
+        <function-ref name="weightChanged" ref="0x7da52c38" scoped=""/>
+        <function-ref name="setWeight" ref="0x7da52918" scoped=""/>
+        <function-ref name="weight" ref="0x7da52698" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="42:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/SimpleLinkCacheP.nc" name="RouteCache" provided="1" ref="0x7dbdc600">
+      <component-ref nicename="SimpleLinkCacheP" qname="SimpleLinkCacheP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="RouteCache" ref="0x7dbdc600" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="RouteCache" qname="RouteCache"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="removeLink" ref="0x7dbdc7d8" scoped=""/>
+        <function-ref name="routeUpdate" ref="0x7dbdc8b8" scoped=""/>
+        <function-ref name="addPath" ref="0x7dbdc998" scoped=""/>
+        <function-ref name="trackRoute" ref="0x7dbdca78" scoped=""/>
+        <function-ref name="checkRoute" ref="0x7dbdcb58" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="36:/opt/tinyos-2.x/tos/system/BitVectorC.nc" name="BitVector" provided="1" ref="0x7da503c8">
+      <component-ref nicename="tos.system.BitVectorC" qname="SimpleLinkCacheC.TrackC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="BitVector" ref="0x7da503c8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.BitVector" qname="BitVector"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clearAll" ref="0x7da505a0" scoped=""/>
+        <function-ref name="clear" ref="0x7da50680" scoped=""/>
+        <function-ref name="toggle" ref="0x7da50760" scoped=""/>
+        <function-ref name="get" ref="0x7da50840" scoped=""/>
+        <function-ref name="assign" ref="0x7da50920" scoped=""/>
+        <function-ref name="setAll" ref="0x7da50a00" scoped=""/>
+        <function-ref name="set" ref="0x7da50ae0" scoped=""/>
+        <function-ref name="size" ref="0x7da50bc0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="50:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphWeightedC.nc" name="PathEdgeList" provided="1" ref="0x7da542e0">
+      <component-ref nicename="SimpleLinkCacheC.GraphWeightedC" qname="SimpleLinkCacheC.GraphWeightedC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="PathEdgeList" ref="0x7da542e0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="IndexedIterator" qname="IndexedIterator"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="graph_vertex_id_t" ref="0x7dbe5e40"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="end" ref="0x7da54b88" scoped=""/>
+        <function-ref name="next" ref="0x7da54908" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/SimpleLinkCacheP.nc" name="Initial" provided="0" ref="0x7dbdb9a0">
+      <component-ref nicename="SimpleLinkCacheP" qname="SimpleLinkCacheP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Initial" ref="0x7dbdb9a0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.BitVector" qname="BitVector"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clearAll" ref="0x7dbdbb78" scoped=""/>
+        <function-ref name="clear" ref="0x7dbdbc58" scoped=""/>
+        <function-ref name="toggle" ref="0x7dbdbd38" scoped=""/>
+        <function-ref name="get" ref="0x7dbdbe18" scoped=""/>
+        <function-ref name="assign" ref="0x7dbdbef8" scoped=""/>
+        <function-ref name="setAll" ref="0x7dbda010" scoped=""/>
+        <function-ref name="set" ref="0x7dbda0f0" scoped=""/>
+        <function-ref name="size" ref="0x7dbda1d0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="49:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/SimpleLinkCacheP.nc" name="SourceShortestPath" provided="0" ref="0x7dbc1a30">
+      <component-ref nicename="SimpleLinkCacheP" qname="SimpleLinkCacheP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="SourceShortestPath" ref="0x7dbc1a30" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="SourceShortestPath" qname="SourceShortestPath"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="rebuildNeeded" ref="0x7dbc1c08" scoped=""/>
+        <function-ref name="buildTree" ref="0x7dbc1ce8" scoped=""/>
+        <function-ref name="builtTree" ref="0x7dbc1dc8" scoped=""/>
+        <function-ref name="buildingTree" ref="0x7dbc1ea8" scoped=""/>
+        <function-ref name="edgeCount" ref="0x7dbc7010" scoped=""/>
+        <function-ref name="buildTreeTo" ref="0x7dbc70f0" scoped=""/>
+        <function-ref name="builtTreeTo" ref="0x7dbc71d0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:/opt/tinyos-2.x/tos/lib/tossim/ActiveMessageC.nc" name="AMPacket" provided="1" ref="0x7dffd400">
+      <component-ref nicename="tos.lib.tossim.ActiveMessageC" qname="ActiveMessageC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="AMPacket" ref="0x7dffd400" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMPacket" qname="AMPacket"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="group" ref="0x7dffd5d8" scoped=""/>
+        <function-ref name="source" ref="0x7dffd6b8" scoped=""/>
+        <function-ref name="address" ref="0x7dffd798" scoped=""/>
+        <function-ref name="destination" ref="0x7dffd878" scoped=""/>
+        <function-ref name="setSource" ref="0x7dffd958" scoped=""/>
+        <function-ref name="setDestination" ref="0x7dffda38" scoped=""/>
+        <function-ref name="type" ref="0x7dffdb18" scoped=""/>
+        <function-ref name="setType" ref="0x7dffdbf8" scoped=""/>
+        <function-ref name="isForMe" ref="0x7dffdcd8" scoped=""/>
+        <function-ref name="setGroup" ref="0x7dffddb8" scoped=""/>
+        <function-ref name="localGroup" ref="0x7dffde98" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="48:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/SimpleLinkCacheP.nc" name="Graph" provided="0" ref="0x7dbc8050">
+      <component-ref nicename="SimpleLinkCacheP" qname="SimpleLinkCacheP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Graph" ref="0x7dbc8050" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="Graph" qname="Graph"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="maxEdges" ref="0x7dbc8228" scoped=""/>
+        <function-ref name="removed" ref="0x7dbc8308" scoped=""/>
+        <function-ref name="remove" ref="0x7dbc83e8" scoped=""/>
+        <function-ref name="edge" ref="0x7dbc84c8" scoped=""/>
+        <function-ref name="directed" ref="0x7dbc85a8" scoped=""/>
+        <function-ref name="vertices" ref="0x7dbc8688" scoped=""/>
+        <function-ref name="parallelEdges" ref="0x7dbc8768" scoped=""/>
+        <function-ref name="maxVertices" ref="0x7dbc8848" scoped=""/>
+        <function-ref name="insert" ref="0x7dbc8928" scoped=""/>
+        <function-ref name="inserted" ref="0x7dbc8a08" scoped=""/>
+        <function-ref name="edgeList" ref="0x7dbc8ae8" scoped=""/>
+        <function-ref name="edges" ref="0x7dbc8bc8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/SimpleLinkCacheP.nc" name="Track" provided="0" ref="0x7dbdb030">
+      <component-ref nicename="SimpleLinkCacheP" qname="SimpleLinkCacheP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Track" ref="0x7dbdb030" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.BitVector" qname="BitVector"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clearAll" ref="0x7dbdb208" scoped=""/>
+        <function-ref name="clear" ref="0x7dbdb2e8" scoped=""/>
+        <function-ref name="toggle" ref="0x7dbdb3c8" scoped=""/>
+        <function-ref name="get" ref="0x7dbdb4a8" scoped=""/>
+        <function-ref name="assign" ref="0x7dbdb588" scoped=""/>
+        <function-ref name="setAll" ref="0x7dbdb668" scoped=""/>
+        <function-ref name="set" ref="0x7dbdb748" scoped=""/>
+        <function-ref name="size" ref="0x7dbdb828" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="49:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphWeightedC.nc" name="SourceShortestPath" provided="1" ref="0x7da55900">
+      <component-ref nicename="SimpleLinkCacheC.GraphWeightedC" qname="SimpleLinkCacheC.GraphWeightedC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="SourceShortestPath" ref="0x7da55900" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="SourceShortestPath" qname="SourceShortestPath"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="rebuildNeeded" ref="0x7da55ad8" scoped=""/>
+        <function-ref name="buildTree" ref="0x7da55bb8" scoped=""/>
+        <function-ref name="builtTree" ref="0x7da55c98" scoped=""/>
+        <function-ref name="buildingTree" ref="0x7da55d78" scoped=""/>
+        <function-ref name="edgeCount" ref="0x7da55e58" scoped=""/>
+        <function-ref name="buildTreeTo" ref="0x7da54010" scoped=""/>
+        <function-ref name="builtTreeTo" ref="0x7da540f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphWeightedC.nc" name="Graph" provided="1" ref="0x7dba9c40">
+      <component-ref nicename="SimpleLinkCacheC.GraphWeightedC" qname="SimpleLinkCacheC.GraphWeightedC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Graph" ref="0x7dba9c40" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="Graph" qname="Graph"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="maxEdges" ref="0x7dba9e18" scoped=""/>
+        <function-ref name="removed" ref="0x7dba9ef8" scoped=""/>
+        <function-ref name="remove" ref="0x7da56010" scoped=""/>
+        <function-ref name="edge" ref="0x7da560f0" scoped=""/>
+        <function-ref name="directed" ref="0x7da561d0" scoped=""/>
+        <function-ref name="vertices" ref="0x7da562b0" scoped=""/>
+        <function-ref name="parallelEdges" ref="0x7da56390" scoped=""/>
+        <function-ref name="maxVertices" ref="0x7da56470" scoped=""/>
+        <function-ref name="insert" ref="0x7da56550" scoped=""/>
+        <function-ref name="inserted" ref="0x7da56630" scoped=""/>
+        <function-ref name="edgeList" ref="0x7da56710" scoped=""/>
+        <function-ref name="edges" ref="0x7da567f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="36:/opt/tinyos-2.x/tos/system/BitVectorC.nc" name="BitVector" provided="1" ref="0x7da4bcb0">
+      <component-ref nicename="tos.system.BitVectorC" qname="SimpleLinkCacheC.InitialC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="BitVector" ref="0x7da4bcb0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.BitVector" qname="BitVector"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clearAll" ref="0x7da4be88" scoped=""/>
+        <function-ref name="clear" ref="0x7da4a010" scoped=""/>
+        <function-ref name="toggle" ref="0x7da4a0f0" scoped=""/>
+        <function-ref name="get" ref="0x7da4a1d0" scoped=""/>
+        <function-ref name="assign" ref="0x7da4a2b0" scoped=""/>
+        <function-ref name="setAll" ref="0x7da4a390" scoped=""/>
+        <function-ref name="set" ref="0x7da4a470" scoped=""/>
+        <function-ref name="size" ref="0x7da4a550" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="41:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphEdgeUnitWeightC.nc" name="GraphEdgeWeight" provided="1" ref="0x7da453b8">
+      <component-ref nicename="GraphEdgeUnitWeightC" qname="GraphEdgeUnitWeightC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="GraphEdgeWeight" ref="0x7da453b8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="GraphEdgeWeight" qname="GraphEdgeWeight"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="graph_edge_unit_weight_t" ref="0x7dbe4200"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="canChangeWeights" ref="0x7da459e0" scoped=""/>
+        <function-ref name="weightChanged" ref="0x7da43170" scoped=""/>
+        <function-ref name="setWeight" ref="0x7da45e40" scoped=""/>
+        <function-ref name="weight" ref="0x7da45bc0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/SimpleLinkCacheP.nc" name="AMPacket" provided="0" ref="0x7dbda320">
+      <component-ref nicename="SimpleLinkCacheP" qname="SimpleLinkCacheP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="AMPacket" ref="0x7dbda320" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMPacket" qname="AMPacket"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="group" ref="0x7dbda4f8" scoped=""/>
+        <function-ref name="source" ref="0x7dbda5d8" scoped=""/>
+        <function-ref name="address" ref="0x7dbda6b8" scoped=""/>
+        <function-ref name="destination" ref="0x7dbda798" scoped=""/>
+        <function-ref name="setSource" ref="0x7dbda878" scoped=""/>
+        <function-ref name="setDestination" ref="0x7dbda958" scoped=""/>
+        <function-ref name="type" ref="0x7dbdaa38" scoped=""/>
+        <function-ref name="setType" ref="0x7dbdab18" scoped=""/>
+        <function-ref name="isForMe" ref="0x7dbdabf8" scoped=""/>
+        <function-ref name="setGroup" ref="0x7dbdacd8" scoped=""/>
+        <function-ref name="localGroup" ref="0x7dbdadb8" scoped=""/>
+      </interface-functions>
+    </interface><component loc="34:/opt/tinyos-2.x/tos/lib/tossim/ActiveMessageC.nc" nicename="tos.lib.tossim.ActiveMessageC" qname="ActiveMessageC">
+      <documentation loc="34:/opt/tinyos-2.x/tos/lib/tossim/ActiveMessageC.nc">
+        <short>
+
+ The basic chip-independent TOSSIM Active Message layer for radio chips
+ that do not have simulation support.
+
+</short>
+        <long>
+
+ The basic chip-independent TOSSIM Active Message layer for radio chips
+ that do not have simulation support.
+
+ @author Philip Levis
+ @date December 2 2005
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="57:/opt/tinyos-2.x/tos/lib/tossim/ActiveMessageC.nc">
+          <from><interface-ref name="SplitControl" ref="0x7e003de8" scoped=""/></from>
+          <to><interface-ref name="Control" ref="0x7dff3280" scoped=""/></to>
+        </wire>
+        <wire loc="59:/opt/tinyos-2.x/tos/lib/tossim/ActiveMessageC.nc">
+          <from><interface-ref name="AMSend" ref="0x7dfff688" scoped=""/></from>
+          <to><interface-ref name="AMSend" ref="0x7e5b0d00" scoped=""/></to>
+        </wire>
+        <wire loc="61:/opt/tinyos-2.x/tos/lib/tossim/ActiveMessageC.nc">
+          <from><interface-ref name="Snoop" ref="0x7dffe7a8" scoped=""/></from>
+          <to><interface-ref name="Snoop" ref="0x7e5a6e40" scoped=""/></to>
+        </wire>
+        <wire loc="62:/opt/tinyos-2.x/tos/lib/tossim/ActiveMessageC.nc">
+          <from><interface-ref name="Packet" ref="0x7dffec88" scoped=""/></from>
+          <to><interface-ref name="Packet" ref="0x7e5a07a0" scoped=""/></to>
+        </wire>
+        <wire loc="60:/opt/tinyos-2.x/tos/lib/tossim/ActiveMessageC.nc">
+          <from><interface-ref name="Receive" ref="0x7dffe010" scoped=""/></from>
+          <to><interface-ref name="Receive" ref="0x7e5a66a8" scoped=""/></to>
+        </wire>
+        <wire loc="64:/opt/tinyos-2.x/tos/lib/tossim/ActiveMessageC.nc">
+          <from><interface-ref name="PacketAcknowledgements" ref="0x7dff6198" scoped=""/></from>
+          <to><interface-ref name="PacketAcknowledgements" ref="0x7dff3850" scoped=""/></to>
+        </wire>
+        <wire loc="63:/opt/tinyos-2.x/tos/lib/tossim/ActiveMessageC.nc">
+          <from><interface-ref name="AMPacket" ref="0x7dffd400" scoped=""/></from>
+          <to><interface-ref name="AMPacket" ref="0x7e595ea8" scoped=""/></to>
+        </wire>
+        <wire loc="56:/opt/tinyos-2.x/tos/lib/tossim/ActiveMessageC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x7e756348" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x7dff4f18" scoped=""/></to>
+        </wire>
+        <wire loc="66:/opt/tinyos-2.x/tos/lib/tossim/ActiveMessageC.nc">
+          <from><interface-ref name="Model" ref="0x7e58b218" scoped=""/></from>
+          <to><interface-ref name="Packet" ref="0x7dff3d68" scoped=""/></to>
+        </wire>
+        <wire loc="67:/opt/tinyos-2.x/tos/lib/tossim/ActiveMessageC.nc">
+          <from><function-ref name="amAddress" ref="0x7e58ba58" scoped=""/></from>
+          <to><function-ref name="amAddress" ref="0x7def0408" scoped=""/></to>
+        </wire>
+        <wire loc="69:/opt/tinyos-2.x/tos/lib/tossim/ActiveMessageC.nc">
+          <from><interface-ref name="GainRadioModel" ref="0x7dfdf8b8" scoped=""/></from>
+          <to><interface-ref name="Model" ref="0x7df7e170" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component abstract="" loc="41(SimpleLinkCacheC.GraphWeightedC):/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphWeightedC.nc" nicename="SimpleLinkCacheC.GraphWeightedC" qname="SimpleLinkCacheC.GraphWeightedC">
+      <documentation loc="41(SimpleLinkCacheC.GraphWeightedC):/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphWeightedC.nc">
+        <short>
+
+ Builds a weighted graph as edges are added and supports finding the single
+
+ source shortest path.
+
+
+
+</short>
+        <long>
+
+ Builds a weighted graph as edges are added and supports finding the single
+
+ source shortest path.
+
+
+
+ @author Ryan Stinnett
+
+</long>
+      </documentation>
+      <instance>
+        <component-ref nicename="GraphWeightedC" qname="GraphWeightedC"/>
+        <arguments>
+          <value cst="U:">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="route_cache_node_id_t" ref="0x7dd5d8a8"/></typename>
+            </type-int>
+          </value>
+          <value cst="U:">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="route_cache_link_id_t" ref="0x7dd5d6d0"/></typename>
+            </type-int>
+          </value>
+          <value cst="I:0">
+            <type-int alignment="I:4" cname="int" size="I:4"/>
+          </value>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="graph_edge_unit_weight_t" ref="0x7dbe4200"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <configuration/>
+    </component><component loc="41:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/SimpleLinkCacheP.nc" nicename="SimpleLinkCacheP" qname="SimpleLinkCacheP">
+      <documentation loc="41:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/dsr/SimpleLinkCacheP.nc">
+        <short>
+
+ A simple link cache that does not automatically remove links and
+
+ assigns a weight of 1 to all links.
+
+
+
+</short>
+        <long>
+
+ A simple link cache that does not automatically remove links and
+
+ assigns a weight of 1 to all links.
+
+
+
+ @author Ryan Stinnett
+
+</long>
+      </documentation>
+      <module/>
+    </component><component abstract="" loc="33(SimpleLinkCacheC.TrackC):/opt/tinyos-2.x/tos/system/BitVectorC.nc" nicename="tos.system.BitVectorC" qname="SimpleLinkCacheC.TrackC">
+      <documentation loc="33(SimpleLinkCacheC.TrackC):/opt/tinyos-2.x/tos/system/BitVectorC.nc">
+        <short>
+ Generic bit vector implementation.</short>
+        <long>
+ Generic bit vector implementation. Note that if you use this bit vector
+ from interrupt code, you must use appropriate &lt;code&gt;atomic&lt;/code&gt;
+ statements to ensure atomicity.
+
+ @param max_bits Bit vector length.
+
+ @author Cory Sharp &lt;cssharp@eecs.berkeley.edu&gt;
+</long>
+      </documentation>
+      <instance>
+        <component-ref nicename="tos.system.BitVectorC" qname="BitVectorC"/>
+        <arguments>
+          <value cst="U:">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="route_cache_node_id_t" ref="0x7dd5d8a8"/></typename>
+            </type-int>
+          </value>
+        </arguments>
+      </instance>
+      <module/>
+    </component><component loc="40:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphEdgeUnitWeightC.nc" nicename="GraphEdgeUnitWeightC" qname="GraphEdgeUnitWeightC">
+      <documentation loc="40:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphEdgeUnitWeightC.nc">
+        <short>
+
+ All edges are fixed at unit weight.
+
+
+
+</short>
+        <long>
+
+ All edges are fixed at unit weight.
+
+
+
+ @author Ryan Stinnett
+
+</long>
+      </documentation>
+      <module/>
+    </component><component abstract="" loc="33(SimpleLinkCacheC.InitialC):/opt/tinyos-2.x/tos/system/BitVectorC.nc" nicename="tos.system.BitVectorC" qname="SimpleLinkCacheC.InitialC">
+      <documentation loc="33(SimpleLinkCacheC.InitialC):/opt/tinyos-2.x/tos/system/BitVectorC.nc">
+        <short>
+ Generic bit vector implementation.</short>
+        <long>
+ Generic bit vector implementation. Note that if you use this bit vector
+ from interrupt code, you must use appropriate &lt;code&gt;atomic&lt;/code&gt;
+ statements to ensure atomicity.
+
+ @param max_bits Bit vector length.
+
+ @author Cory Sharp &lt;cssharp@eecs.berkeley.edu&gt;
+</long>
+      </documentation>
+      <instance>
+        <component-ref nicename="tos.system.BitVectorC" qname="BitVectorC"/>
+        <arguments>
+          <value cst="U:">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="route_cache_node_id_t" ref="0x7dd5d8a8"/></typename>
+            </type-int>
+          </value>
+        </arguments>
+      </instance>
+      <module/>
+    </component></referenced></component>

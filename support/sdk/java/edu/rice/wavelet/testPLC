@@ -1,0 +1,21 @@
+#!/bin/bash
+ct="java edu.rice.compass.CompassTools"
+$ct -o -d 0 --power 31
+$ct -o -d 0 --radioretries 5
+$ct -o -d 1 -c
+for chan in $1
+do
+  [ ! -e "chan$chan" ] && mkdir chan$chan
+  $ct -o -d 1 --chan $chan
+  $ct -o -d 0 --chan $chan
+  for pl in $2
+  do
+    $ct -o -d 0 --power $pl
+    $ct -o -d 0 --radioretries 1
+    $ct -d 1 --ping $3
+    $ct -o -d 0 --power 31
+    $ct -o -d 0 --radioretries 5
+    $ct --stats -d 1 `cygpath -w $PWD/chan$chan/$pl.xml`
+    $ct -o -d 1 -c
+  done
+done

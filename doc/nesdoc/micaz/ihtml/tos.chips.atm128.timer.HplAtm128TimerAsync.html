@@ -1,0 +1,161 @@
+<html>
+  <head>
+    <LINK rel="stylesheet" href="nesdoc.css" type="text/css" media="screen"><title>Interface: tos.chips.atm128.timer.HplAtm128TimerAsync</title>
+  </head>
+  <body>
+    <h2>Interface: tos.chips.atm128.timer.HplAtm128TimerAsync</h2>
+    <b>interface HplAtm128TimerAsync</b><p>
+
+ 
+    <p>
+    <dl>
+      <dt><b>Author:</b>
+      <dd>
+        David Gay
+
+      </dd>
+    </dl>
+    <p><p><div id=heading>Commands</div><div id=funcsig><span id=funcnameshort>command int <a href="#compareBusy">compareBusy</a>()
+      </span><menu>
+ Check if compare register OCR0 is busy (should not be updated if true)
+
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command int <a href="#controlBusy">controlBusy</a>()
+      </span><menu>
+ Check if control register TCCR0 is busy (should not be updated if true)
+
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command int <a href="#countBusy">countBusy</a>()
+      </span><menu>
+ Check if current timer value (TCNT0) is busy (should not be updated if true)
+
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command Atm128Assr_t <a href="#getAssr">getAssr</a>()
+      </span><menu>
+ Read timer0 asynchronous status register (ASSR)
+
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command void <a href="#setAssr">setAssr</a>(Atm128Assr_t x)
+      </span><menu>
+ Set timer0 asynchronous status register (ASSR)
+
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command void <a href="#setTimer0Asynchronous">setTimer0Asynchronous</a>()
+      </span><menu>
+ Turn on timer 0 asynchronous mode
+
+      </menu>
+    </div><p><div id=heading>Commands - Details</div>
+    <a name="compareBusy"></a>
+    <h4>compareBusy
+    </h4>
+    <span id=funcnameshort>command int <b>compareBusy</b>()
+    </span>
+    <p>
+    <menu>
+      
+ Check if compare register OCR0 is busy (should not be updated if true)
+ 
+      <p>
+      <dl>
+        <dt><b>Returns:</b>
+        <dd>
+          TRUE if OCR0 is busy, FALSE otherwise (can be updated)
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="controlBusy"></a>
+    <h4>controlBusy
+    </h4>
+    <span id=funcnameshort>command int <b>controlBusy</b>()
+    </span>
+    <p>
+    <menu>
+      
+ Check if control register TCCR0 is busy (should not be updated if true)
+ 
+      <p>
+      <dl>
+        <dt><b>Returns:</b>
+        <dd>
+          TRUE if TCCR0 is busy, FALSE otherwise (can be updated)
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="countBusy"></a>
+    <h4>countBusy
+    </h4>
+    <span id=funcnameshort>command int <b>countBusy</b>()
+    </span>
+    <p>
+    <menu>
+      
+ Check if current timer value (TCNT0) is busy (should not be updated if true)
+ 
+      <p>
+      <dl>
+        <dt><b>Returns:</b>
+        <dd>
+          TRUE if TCNT0 is busy, FALSE otherwise (can be updated)
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="getAssr"></a>
+    <h4>getAssr
+    </h4>
+    <span id=funcnameshort>command Atm128Assr_t <b>getAssr</b>()
+    </span>
+    <p>
+    <menu>
+      
+ Read timer0 asynchronous status register (ASSR)
+ 
+      <p>
+      <dl>
+        <dt><b>Returns:</b>
+        <dd>
+          Current value of ASSR
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="setAssr"></a>
+    <h4>setAssr
+    </h4>
+    <span id=funcnameshort>command void <b>setAssr</b>(Atm128Assr_t x)
+    </span>
+    <p>
+    <menu>
+      
+ Set timer0 asynchronous status register (ASSR)
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>x</code> -  New value for ASSR
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="setTimer0Asynchronous"></a>
+    <h4>setTimer0Asynchronous
+    </h4>
+    <span id=funcnameshort>command void <b>setTimer0Asynchronous</b>()
+    </span>
+    <p>
+    <menu>
+      
+ Turn on timer 0 asynchronous mode
+
+    </menu>
+  </body>
+</html>

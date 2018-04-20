@@ -1,0 +1,308 @@
+<html>
+  <head>
+    <LINK rel="stylesheet" href="nesdoc.css" type="text/css" media="screen"><title>Interface: SourceShortestPath</title>
+  </head>
+  <body>
+    <h2>Interface: SourceShortestPath</h2>
+    <b>interface SourceShortestPath</b><p>
+
+ Access details on the shortest path between vertices of a graph.
+
+
+
+ 
+    <p>
+    <dl>
+      <dt><b>Author:</b>
+      <dd>
+        Ryan Stinnett
+
+
+      </dd>
+    </dl>
+    <p><p><div id=heading>Commands</div><div id=funcsig><span id=funcnameshort>command bool <a href="#buildingTree">buildingTree</a>()
+      </span><menu>
+
+ Checks if the tree is currently being built.
+
+
+
+
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command error_t <a href="#buildTree">buildTree</a>(graph_vertex_id_t src)
+      </span><menu>
+
+ Build a shortest path tree from vertex src.
+
+
+
+
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command error_t <a href="#buildTreeTo">buildTreeTo</a>(graph_vertex_id_t src, graph_vertex_id_t dest)
+      </span><menu>
+
+ Build the shortest path from vertex src to vertex dest.
+
+
+
+
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command graph_edge_id_t <a href="#edgeCount">edgeCount</a>(graph_vertex_id_t dest)
+      </span><menu>
+
+ Get the number of edges to the destination vertex.
+
+
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command bool <a href="#rebuildNeeded">rebuildNeeded</a>(graph_vertex_id_t src)
+      </span><menu>
+
+ Checks if the tree should be rebuilt either because the source has changed
+
+ or because the underlying graph structure has changed.
+
+
+
+
+      </menu>
+    </div><p><div id=heading>Events</div><div id=funcsig><span id=funcnameshort>event void <a href="#builtTree">builtTree</a>(graph_vertex_id_t src)
+      </span><menu>
+
+ The shortest path tree from vertex src is complete.
+
+
+
+
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>event void <a href="#builtTreeTo">builtTreeTo</a>(graph_vertex_id_t src, graph_vertex_id_t dest, error_t pathResult)
+      </span><menu>
+
+ The shortest path from vertex src to vertex dest is complete.
+
+
+
+
+      </menu>
+    </div><p><div id=heading>Commands - Details</div>
+    <a name="buildingTree"></a>
+    <h4>buildingTree
+    </h4>
+    <span id=funcnameshort>command bool <b>buildingTree</b>()
+    </span>
+    <p>
+    <menu>
+      
+
+ Checks if the tree is currently being built.
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Returns:</b>
+        <dd>
+          Whether the tree is being built.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="buildTree"></a>
+    <h4>buildTree
+    </h4>
+    <span id=funcnameshort>command error_t <b>buildTree</b>(graph_vertex_id_t src)
+    </span>
+    <p>
+    <menu>
+      
+
+ Build a shortest path tree from vertex src.
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>src</code> -  The source vertex.
+
+ 
+        </dd>
+        <dt><b>Returns:</b>
+        <dd>
+          If the vertex is too large then ESIZE or if a tree is currently
+
+         being built then EBUSY, else SUCCESS.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="buildTreeTo"></a>
+    <h4>buildTreeTo
+    </h4>
+    <span id=funcnameshort>command error_t <b>buildTreeTo</b>(graph_vertex_id_t src, graph_vertex_id_t dest)
+    </span>
+    <p>
+    <menu>
+      
+
+ Build the shortest path from vertex src to vertex dest.
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>src</code> -  The source vertex.
+
+ 
+        </dd>
+        <dd>
+          <code>dest</code> -  The destination vertex.
+
+ 
+        </dd>
+        <dt><b>Returns:</b>
+        <dd>
+          If the vertex is too large then ESIZE or if a tree is currently
+
+         being built then EBUSY, else SUCCESS.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="edgeCount"></a>
+    <h4>edgeCount
+    </h4>
+    <span id=funcnameshort>command graph_edge_id_t <b>edgeCount</b>(graph_vertex_id_t dest)
+    </span>
+    <p>
+    <menu>
+      
+
+ Get the number of edges to the destination vertex.
+
+ For example, if the shortest path from A to C was A -> D -> C, edgeCount()
+
+ would return 2.
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>dest</code> -  The destination vertex.
+
+ 
+        </dd>
+        <dt><b>Returns:</b>
+        <dd>
+          The number of edges.  If there is no path to the given destination,
+
+         or if an input vertex is too large, then the count is 0.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="rebuildNeeded"></a>
+    <h4>rebuildNeeded
+    </h4>
+    <span id=funcnameshort>command bool <b>rebuildNeeded</b>(graph_vertex_id_t src)
+    </span>
+    <p>
+    <menu>
+      
+
+ Checks if the tree should be rebuilt either because the source has changed
+
+ or because the underlying graph structure has changed.
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>src</code> -  The source vertex.
+
+ 
+        </dd>
+        <dt><b>Returns:</b>
+        <dd>
+          Whether a rebuild is needed.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <p><div id=heading>Events - Details</div>
+    <a name="builtTree"></a>
+    <h4>builtTree
+    </h4>
+    <span id=funcnameshort>event void <b>builtTree</b>(graph_vertex_id_t src)
+    </span>
+    <p>
+    <menu>
+      
+
+ The shortest path tree from vertex src is complete.
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>src</code> -  The source vertex.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="builtTreeTo"></a>
+    <h4>builtTreeTo
+    </h4>
+    <span id=funcnameshort>event void <b>builtTreeTo</b>(graph_vertex_id_t src, graph_vertex_id_t dest, error_t pathResult)
+    </span>
+    <p>
+    <menu>
+      
+
+ The shortest path from vertex src to vertex dest is complete.
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>src</code> -  The source vertex.
+
+ 
+        </dd>
+        <dd>
+          <code>dest</code> -  The destination vertex.
+
+
+        </dd>
+      </dl>
+    </menu>
+  </body>
+</html>

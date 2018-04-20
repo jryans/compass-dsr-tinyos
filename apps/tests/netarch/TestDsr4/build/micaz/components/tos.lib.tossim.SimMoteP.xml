@@ -1,0 +1,31 @@
+<?xml version="1.0" ?><component loc="37:/opt/tinyos-2.x/tos/lib/tossim/SimMoteP.nc" nicename="tos.lib.tossim.SimMoteP" qname="SimMoteP">
+      <documentation loc="37:/opt/tinyos-2.x/tos/lib/tossim/SimMoteP.nc">
+        <short>
+ The TOSSIM abstraction of a mote.</short>
+        <long>
+ The TOSSIM abstraction of a mote. By putting simulation state into
+ a component, we can scale and reference this state automatically
+ using nesC's rewriting, rather than managing and indexing into
+ arrays manually.
+
+ @author Phil Levis
+ @date   August 19 2005
+</long>
+      </documentation>
+      <module/>
+    <specification><interface loc="38:/opt/tinyos-2.x/tos/lib/tossim/SimMoteP.nc" name="SimMote" provided="1" ref="0x7e5e6188">
+      <component-ref nicename="tos.lib.tossim.SimMoteP" qname="SimMoteP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="SimMote" ref="0x7e5e6188" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.tossim.SimMote" qname="SimMote"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="setEuid" ref="0x7e5e6360" scoped=""/>
+        <function-ref name="getVariableInfo" ref="0x7e5e6440" scoped=""/>
+        <function-ref name="turnOff" ref="0x7e5e6520" scoped=""/>
+        <function-ref name="turnOn" ref="0x7e5e6600" scoped=""/>
+        <function-ref name="getEuid" ref="0x7e5e66e0" scoped=""/>
+        <function-ref name="isOn" ref="0x7e5e67c0" scoped=""/>
+        <function-ref name="getStartTime" ref="0x7e5e68a0" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

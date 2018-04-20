@@ -1,0 +1,104 @@
+<html>
+  <head>
+    <LINK rel="stylesheet" href="nesdoc.css" type="text/css" media="screen"><title>Component: TlvPacketC</title>
+  </head>
+  <body>
+    <h2>Component: TlvPacketC
+    </h2>
+    <b>generic configuration TlvPacketC()</b>
+    <p>
+
+ A general Type-Length-Value (TLV) data processor within a packet.
+
+ This component does not assume any ordering by type among the TLV
+
+ types in a block of types.  If at most one instance of a type is
+
+ allowed, access the type via the TlvSingle interface.  If any number
+
+ of instances are allowed, access the type via the TlvMultiple and
+
+ TlvList interfaces.
+
+
+
+ 
+    <p>
+    <dl>
+      <dt><b>Author:</b>
+      <dd>
+        Ryan Stinnett
+
+
+      </dd>
+    </dl>
+    <p><p><div id=heading>Provides</div><div id=funcsig>interface <a href="../ihtml/tos.interfaces.Packet.html">Packet</a></div><div id=funcsig>interface <a href="../ihtml/TlvBlockPacket.html">TlvBlockPacket</a></div><div id=funcsig>interface <a href="../ihtml/StaticIndexedIterator.html">StaticIndexedIterator</a>&lt;message_t, tlv_key_t&gt; as <b>TlvListPacket</b>[uint8_t]</div><div id=funcsig>interface <a href="../ihtml/TlvMultiplePacket.html">TlvMultiplePacket</a>[uint8_t]</div><div id=funcsig>interface <a href="../ihtml/TlvSinglePacket.html">TlvSinglePacket</a>[uint8_t]</div><p><div id=heading>Uses</div><div id=funcsig>interface <a href="../ihtml/tos.interfaces.Packet.html">Packet</a> as <b>SubPacket</b></div><p><div id=heading>Wiring</div><p>
+    <map name="comp">
+      <area shape="rect" href="TlvPacketP.html" title="TlvPacketP" alt="TlvPacketP" coords="475,133,557,181">
+
+      <area shape="rect" href="../ihtml/StaticIndexedIterator.html" title="StaticIndexedIterator&lt;message_t, tlv_key_t&gt;[uint8_t]" alt="StaticIndexedIterator&lt;message_t, tlv_key_t&gt;[uint8_t]" coords="152,89,416,108">
+
+      <area shape="rect" href="../ihtml/StaticIndexedIterator.html" title="StaticIndexedIterator&lt;message_t, tlv_key_t&gt;[uint8_t]" alt="StaticIndexedIterator&lt;message_t, tlv_key_t&gt;[uint8_t]" coords="75,59,83,67">
+
+      <area shape="rect" href="../ihtml/StaticIndexedIterator.html" title="StaticIndexedIterator&lt;message_t, tlv_key_t&gt;[uint8_t]" alt="StaticIndexedIterator&lt;message_t, tlv_key_t&gt;[uint8_t]" coords="471,151,479,159">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.Packet.html" title="Packet" alt="Packet" coords="371,207,413,225">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.Packet.html" title="Packet" alt="Packet" coords="471,156,479,164">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.Packet.html" title="Packet" alt="Packet" coords="320,248,328,256">
+
+      <area shape="rect" href="TlvP.html" title="TlvP" alt="TlvP" coords="559,251,631,299">
+
+      <area shape="rect" href="../ihtml/TlvBlock.html" title="TlvBlock" alt="TlvBlock" coords="429,207,483,225">
+
+      <area shape="rect" href="../ihtml/TlvBlock.html" title="TlvBlock" alt="TlvBlock" coords="471,167,479,175">
+
+      <area shape="rect" href="../ihtml/TlvBlock.html" title="TlvBlock" alt="TlvBlock" coords="555,265,563,273">
+
+      <area shape="rect" href="../ihtml/TlvSingle.html" title="TlvSingle[uint8_t]" alt="TlvSingle[uint8_t]" coords="541,207,638,225">
+
+      <area shape="rect" href="../ihtml/TlvSingle.html" title="TlvSingle[uint8_t]" alt="TlvSingle[uint8_t]" coords="515,177,523,185">
+
+      <area shape="rect" href="../ihtml/TlvSingle.html" title="TlvSingle[uint8_t]" alt="TlvSingle[uint8_t]" coords="555,248,563,256">
+
+      <area shape="rect" href="../ihtml/TlvMultiple.html" title="TlvMultiple[uint8_t]" alt="TlvMultiple[uint8_t]" coords="658,207,766,225">
+
+      <area shape="rect" href="../ihtml/TlvMultiple.html" title="TlvMultiple[uint8_t]" alt="TlvMultiple[uint8_t]" coords="553,163,561,171">
+
+      <area shape="rect" href="../ihtml/TlvMultiple.html" title="TlvMultiple[uint8_t]" alt="TlvMultiple[uint8_t]" coords="627,248,635,256">
+
+      <area shape="rect" href="../ihtml/StaticVoidIndexedIterator.html" title="StaticVoidIndexedIterator&lt;tlv_key_t&gt;[uint8_t]" alt="StaticVoidIndexedIterator&lt;tlv_key_t&gt;[uint8_t]" coords="799,207,1028,225">
+
+      <area shape="rect" href="../ihtml/StaticVoidIndexedIterator.html" title="StaticVoidIndexedIterator&lt;tlv_key_t&gt;[uint8_t]" alt="StaticVoidIndexedIterator&lt;tlv_key_t&gt;[uint8_t]" coords="553,155,561,163">
+
+      <area shape="rect" href="../ihtml/StaticVoidIndexedIterator.html" title="StaticVoidIndexedIterator&lt;tlv_key_t&gt;[uint8_t]" alt="StaticVoidIndexedIterator&lt;tlv_key_t&gt;[uint8_t]" coords="627,269,635,277">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.Packet.html" title="Packet" alt="Packet" coords="467,89,509,108">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.Packet.html" title="Packet" alt="Packet" coords="412,56,420,64">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.Packet.html" title="Packet" alt="Packet" coords="484,129,492,137">
+
+      <area shape="rect" href="../ihtml/TlvMultiplePacket.html" title="TlvMultiplePacket[uint8_t]" alt="TlvMultiplePacket[uint8_t]" coords="528,89,667,108">
+
+      <area shape="rect" href="../ihtml/TlvMultiplePacket.html" title="TlvMultiplePacket[uint8_t]" alt="TlvMultiplePacket[uint8_t]" coords="519,60,527,68">
+
+      <area shape="rect" href="../ihtml/TlvMultiplePacket.html" title="TlvMultiplePacket[uint8_t]" alt="TlvMultiplePacket[uint8_t]" coords="513,129,521,137">
+
+      <area shape="rect" href="../ihtml/TlvBlockPacket.html" title="TlvBlockPacket" alt="TlvBlockPacket" coords="705,89,791,108">
+
+      <area shape="rect" href="../ihtml/TlvBlockPacket.html" title="TlvBlockPacket" alt="TlvBlockPacket" coords="707,60,715,68">
+
+      <area shape="rect" href="../ihtml/TlvBlockPacket.html" title="TlvBlockPacket" alt="TlvBlockPacket" coords="553,151,561,159">
+
+      <area shape="rect" href="../ihtml/TlvSinglePacket.html" title="TlvSinglePacket[uint8_t]" alt="TlvSinglePacket[uint8_t]" coords="837,89,965,108">
+
+      <area shape="rect" href="../ihtml/TlvSinglePacket.html" title="TlvSinglePacket[uint8_t]" alt="TlvSinglePacket[uint8_t]" coords="845,60,853,68">
+
+      <area shape="rect" href="../ihtml/TlvSinglePacket.html" title="TlvSinglePacket[uint8_t]" alt="TlvSinglePacket[uint8_t]" coords="553,152,561,160">
+
+    </map>
+    <img src="TlvPacketC.gif" usemap="#comp" id=imgwiring>
+  </body>
+</html>

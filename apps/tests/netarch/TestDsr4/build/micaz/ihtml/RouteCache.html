@@ -1,0 +1,260 @@
+<html>
+  <head>
+    <LINK rel="stylesheet" href="nesdoc.css" type="text/css" media="screen"><title>Interface: RouteCache</title>
+  </head>
+  <body>
+    <h2>Interface: RouteCache</h2>
+    <b>interface RouteCache</b><p>
+
+ Access some kind of route cache or table that stores information about
+
+ paths or links in the network and looks for routes when requested.
+
+
+
+ 
+    <p>
+    <dl>
+      <dt><b>Author:</b>
+      <dd>
+        Ryan Stinnett
+
+
+      </dd>
+    </dl>
+    <p><p><div id=heading>Commands</div><div id=funcsig><span id=funcnameshort>command void <a href="#addPath">addPath</a>(route_cache_node_id_t *nodes, route_cache_link_id_t numLinks, bool reverse)
+      </span><menu>
+
+ Adds a path to the route cache with a given number of links along the
+
+ path and optionally adds the reverse path as well.
+
+
+
+
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command void <a href="#checkRoute">checkRoute</a>(route_cache_node_id_t src, route_cache_node_id_t dest)
+      </span><menu>
+
+ Requests an initial check for a route from node src to node dest.
+
+
+
+
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command void <a href="#removeLink">removeLink</a>(route_cache_node_id_t src, route_cache_node_id_t dest, bool reverse)
+      </span><menu>
+
+ Removes any information stored for a given link from the route cache.
+
+
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command void <a href="#trackRoute">trackRoute</a>(route_cache_node_id_t src, route_cache_node_id_t dest)
+      </span><menu>
+
+ Indicates the need for a route from node src to node dest. 
+      </menu>
+    </div><p><div id=heading>Events</div><div id=funcsig><span id=funcnameshort>event void <a href="#routeUpdate">routeUpdate</a>(route_cache_node_id_t src, route_cache_node_id_t dest, route_cache_link_id_t numLinks)
+      </span><menu>
+
+ Provides the newest information available pertaining to a requested
+
+ route. 
+      </menu>
+    </div><p><div id=heading>Commands - Details</div>
+    <a name="addPath"></a>
+    <h4>addPath
+    </h4>
+    <span id=funcnameshort>command void <b>addPath</b>(route_cache_node_id_t *nodes, route_cache_link_id_t numLinks, bool reverse)
+    </span>
+    <p>
+    <menu>
+      
+
+ Adds a path to the route cache with a given number of links along the
+
+ path and optionally adds the reverse path as well.
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>nodes</code> -  An array of nodes that make up the path to add.
+
+ 
+        </dd>
+        <dd>
+          <code>numLinks</code> -  The number of links along the path.
+
+ 
+        </dd>
+        <dd>
+          <code>reverse</code> -  If TRUE, the reverse path is also added.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="checkRoute"></a>
+    <h4>checkRoute
+    </h4>
+    <span id=funcnameshort>command void <b>checkRoute</b>(route_cache_node_id_t src, route_cache_node_id_t dest)
+    </span>
+    <p>
+    <menu>
+      
+
+ Requests an initial check for a route from node src to node dest.
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>src</code> -  The source node of the route.
+
+ 
+        </dd>
+        <dd>
+          <code>dest</code> -  The destination node of the route.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="removeLink"></a>
+    <h4>removeLink
+    </h4>
+    <span id=funcnameshort>command void <b>removeLink</b>(route_cache_node_id_t src, route_cache_node_id_t dest, bool reverse)
+    </span>
+    <p>
+    <menu>
+      
+
+ Removes any information stored for a given link from the route cache.
+
+ If the cache stores entire paths, then any path containing the link
+
+ must at least be shortened enough to remove the given link or else
+
+ discarded entirely.
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>src</code> -  The source node in the link to remove.
+
+ 
+        </dd>
+        <dd>
+          <code>dest</code> -  The destination node in the link to remove.
+
+ 
+        </dd>
+        <dd>
+          <code>reverse</code> -  If TRUE, the reverse path is also removed.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="trackRoute"></a>
+    <h4>trackRoute
+    </h4>
+    <span id=funcnameshort>command void <b>trackRoute</b>(route_cache_node_id_t src, route_cache_node_id_t dest)
+    </span>
+    <p>
+    <menu>
+      
+
+ Indicates the need for a route from node src to node dest.  This is
+
+ tracked by the route cache until the need is met.
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>src</code> -  The source node of the route.
+
+ 
+        </dd>
+        <dd>
+          <code>dest</code> -  The destination node of the route.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <p><div id=heading>Events - Details</div>
+    <a name="routeUpdate"></a>
+    <h4>routeUpdate
+    </h4>
+    <span id=funcnameshort>event void <b>routeUpdate</b>(route_cache_node_id_t src, route_cache_node_id_t dest, route_cache_link_id_t numLinks)
+    </span>
+    <p>
+    <menu>
+      
+
+ Provides the newest information available pertaining to a requested
+
+ route.  Whether or not a route is available when the request is made,
+
+ a routeUpdate will be signaled once the current availability is known.
+
+ If the route is not initially available, a subsequent routeUpdate will
+
+ be signaled if a route is later found and the route was requested via
+
+ the trackRoute command.  If a route was found, numLinks is the number
+
+ of links along the route.  If a route was not found, numLinks is 0.
+
+ The route itself is accessible via the RouteNodeList interface.  Note
+
+ that RouteNodeList traverses the route <b>in reverse</b>, returning the
+
+ previous or source node for a given node in the route.
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>src</code> -  The source node of the route.
+
+ 
+        </dd>
+        <dd>
+          <code>dest</code> -  The destination node of the route.
+
+ 
+        </dd>
+        <dd>
+          <code>numLinks</code> -  Number of links along the route if one was found, 0
+
+                 if no route was found.
+
+
+        </dd>
+      </dl>
+    </menu>
+  </body>
+</html>

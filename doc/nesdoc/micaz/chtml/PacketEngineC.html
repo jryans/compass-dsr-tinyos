@@ -1,0 +1,158 @@
+<html>
+  <head>
+    <LINK rel="stylesheet" href="nesdoc.css" type="text/css" media="screen"><title>Component: PacketEngineC</title>
+  </head>
+  <body>
+    <h2>Component: PacketEngineC
+    </h2>
+    <b>configuration PacketEngineC</b>
+    <p><p><div id=heading>Provides</div><div id=funcsig>interface <a href="../ihtml/tos.interfaces.Intercept.html">Intercept</a>[am_id_t]</div><div id=funcsig>interface <a href="../ihtml/tos.interfaces.Packet.html">Packet</a></div><div id=funcsig>interface <a href="../ihtml/PacketEngine.html">PacketEngine</a>[am_id_t]</div><div id=funcsig>interface <a href="../ihtml/IndexedIterator.html">IndexedIterator</a>&lt;packet_id_t&gt; as <b>PacketWaitList</b>[am_id_t]</div><div id=funcsig>interface <a href="../ihtml/tos.interfaces.Receive.html">Receive</a>[am_id_t]</div><div id=funcsig>interface <a href="../ihtml/tos.interfaces.AMSend.html">AMSend</a> as <b>Send</b>[packet_client_id_t]</div><div id=funcsig>interface <a href="../ihtml/tos.interfaces.StdControl.html">StdControl</a></div><p><div id=heading>Uses</div><div id=funcsig>interface <a href="../ihtml/PacketEngineClient.html">PacketEngineClient</a>[packet_client_id_t]</div><div id=funcsig>interface <a href="../ihtml/tos.interfaces.Packet.html">Packet</a> as <b>SubPacket</b>[am_id_t]</div><div id=funcsig>interface <a href="../ihtml/tos.interfaces.Receive.html">Receive</a> as <b>SubReceive</b>[am_id_t]</div><div id=funcsig>interface <a href="../ihtml/tos.interfaces.AMSend.html">AMSend</a> as <b>SubSend</b>[am_id_t]</div><p><div id=heading>Wiring</div><p>
+    <map name="comp">
+      <area shape="rect" href="PacketEngineP.html" title="PacketEngineP" alt="PacketEngineP" coords="1196,144,1300,192">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.Intercept.html" title="Intercept[am_id_t]" alt="Intercept[am_id_t]" coords="729,100,828,118">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.Intercept.html" title="Intercept[am_id_t]" alt="Intercept[am_id_t]" coords="655,62,663,70">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.Intercept.html" title="Intercept[am_id_t]" alt="Intercept[am_id_t]" coords="1192,164,1200,172">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.AMSend.html" title="AMSend[am_id_t]" alt="AMSend[am_id_t]" coords="176,217,277,236">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.AMSend.html" title="AMSend[am_id_t]" alt="AMSend[am_id_t]" coords="1192,164,1200,172">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.AMSend.html" title="AMSend[am_id_t]" alt="AMSend[am_id_t]" coords="64,266,72,274">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.Receive.html" title="Receive[am_id_t]" alt="Receive[am_id_t]" coords="333,217,427,236">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.Receive.html" title="Receive[am_id_t]" alt="Receive[am_id_t]" coords="1192,165,1200,173">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.Receive.html" title="Receive[am_id_t]" alt="Receive[am_id_t]" coords="225,265,233,273">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.Packet.html" title="Packet[am_id_t]" alt="Packet[am_id_t]" coords="474,217,561,236">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.Packet.html" title="Packet[am_id_t]" alt="Packet[am_id_t]" coords="1192,165,1200,173">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.Packet.html" title="Packet[am_id_t]" alt="Packet[am_id_t]" coords="376,265,384,273">
+
+      <area shape="rect" href="../ihtml/PacketEngineClient.html" title="PacketEngineClient[packet_client_id_t]" alt="PacketEngineClient[packet_client_id_t]" coords="614,217,810,236">
+
+      <area shape="rect" href="../ihtml/PacketEngineClient.html" title="PacketEngineClient[packet_client_id_t]" alt="PacketEngineClient[packet_client_id_t]" coords="1192,165,1200,173">
+
+      <area shape="rect" href="../ihtml/PacketEngineClient.html" title="PacketEngineClient[packet_client_id_t]" alt="PacketEngineClient[packet_client_id_t]" coords="520,264,528,272">
+
+      <area shape="rect" href="LruDataCacheC.html" title="LruDataCacheC\n(SendQueueC)" alt="LruDataCacheC\n(SendQueueC)" coords="835,261,960,320">
+
+      <area shape="rect" href="../ihtml/DataCache.html" title="DataCache&lt;packet_send_entry_t&gt;" alt="DataCache&lt;packet_send_entry_t&gt;" coords="838,217,1013,236">
+
+      <area shape="rect" href="../ihtml/DataCache.html" title="DataCache&lt;packet_send_entry_t&gt;" alt="DataCache&lt;packet_send_entry_t&gt;" coords="1192,166,1200,174">
+
+      <area shape="rect" href="../ihtml/DataCache.html" title="DataCache&lt;packet_send_entry_t&gt;" alt="DataCache&lt;packet_send_entry_t&gt;" coords="835,257,843,265">
+
+      <area shape="rect" href="tos.lib.tossim.ActiveMessageC.html" title="ActiveMessageC" alt="ActiveMessageC" coords="1232,261,1360,320">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.SplitControl.html" title="SplitControl" alt="SplitControl" coords="1271,217,1340,236">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.SplitControl.html" title="SplitControl" alt="SplitControl" coords="1249,188,1257,196">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.SplitControl.html" title="SplitControl" alt="SplitControl" coords="1273,257,1281,265">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.AMPacket.html" title="AMPacket" alt="AMPacket" coords="1355,217,1419,236">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.AMPacket.html" title="AMPacket" alt="AMPacket" coords="1296,176,1304,184">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.AMPacket.html" title="AMPacket" alt="AMPacket" coords="1332,257,1340,265">
+
+      <area shape="rect" href="tos.system.PoolC.html" title="PoolC\n(ReceivePoolC)" alt="PoolC\n(ReceivePoolC)" coords="1433,261,1553,320">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.Pool.html" title="Pool&lt;message_t&gt;" alt="Pool&lt;message_t&gt;" coords="1454,217,1549,236">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.Pool.html" title="Pool&lt;message_t&gt;" alt="Pool&lt;message_t&gt;" coords="1296,166,1304,174">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.Pool.html" title="Pool&lt;message_t&gt;" alt="Pool&lt;message_t&gt;" coords="1469,257,1477,265">
+
+      <area shape="rect" href="tos.system.PoolC.html" title="PoolC\n(SendPoolC)" alt="PoolC\n(SendPoolC)" coords="1596,261,1700,320">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.Pool.html" title="Pool&lt;message_t&gt;" alt="Pool&lt;message_t&gt;" coords="1594,217,1689,236">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.Pool.html" title="Pool&lt;message_t&gt;" alt="Pool&lt;message_t&gt;" coords="1296,166,1304,174">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.Pool.html" title="Pool&lt;message_t&gt;" alt="Pool&lt;message_t&gt;" coords="1616,257,1624,265">
+
+      <area shape="rect" href="tos.system.StateC.html" title="StateC\n(SendStateC)" alt="StateC\n(SendStateC)" coords="1736,261,1843,320">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.State.html" title="State" alt="State" coords="1732,217,1767,236">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.State.html" title="State" alt="State" coords="1296,165,1304,173">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.State.html" title="State" alt="State" coords="1757,257,1765,265">
+
+      <area shape="rect" href="tos.system.RandomC.html" title="RandomC" alt="RandomC" coords="1867,261,1952,320">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.Random.html" title="Random" alt="Random" coords="1824,217,1875,236">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.Random.html" title="Random" alt="Random" coords="1296,165,1304,173">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.Random.html" title="Random" alt="Random" coords="1863,257,1871,265">
+
+      <area shape="rect" href="tos.system.TimerMilliC.html" title="TimerMilliC\n(SendBackoffC)" alt="TimerMilliC\n(SendBackoffC)" coords="1976,261,2099,320">
+
+      <area shape="rect" href="../ihtml/tos.lib.timer.Timer.html" title="Timer&lt;TMilli&gt;" alt="Timer&lt;TMilli&gt;" coords="1941,217,2019,236">
+
+      <area shape="rect" href="../ihtml/tos.lib.timer.Timer.html" title="Timer&lt;TMilli&gt;" alt="Timer&lt;TMilli&gt;" coords="1296,165,1304,173">
+
+      <area shape="rect" href="../ihtml/tos.lib.timer.Timer.html" title="Timer&lt;TMilli&gt;" alt="Timer&lt;TMilli&gt;" coords="1983,257,1991,265">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.AMSend.html" title="AMSend[packet_client_id_t]" alt="AMSend[packet_client_id_t]" coords="877,100,1027,118">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.AMSend.html" title="AMSend[packet_client_id_t]" alt="AMSend[packet_client_id_t]" coords="809,64,817,72">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.AMSend.html" title="AMSend[packet_client_id_t]" alt="AMSend[packet_client_id_t]" coords="1192,162,1200,170">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.Packet.html" title="Packet" alt="Packet" coords="1069,100,1112,118">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.Packet.html" title="Packet" alt="Packet" coords="1015,64,1023,72">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.Packet.html" title="Packet" alt="Packet" coords="1192,162,1200,170">
+
+      <area shape="rect" href="../ihtml/IndexedIterator.html" title="IndexedIterator&lt;packet_id_t&gt;[am_id_t]" alt="IndexedIterator&lt;packet_id_t&gt;[am_id_t]" coords="1144,100,1341,118">
+
+      <area shape="rect" href="../ihtml/IndexedIterator.html" title="IndexedIterator&lt;packet_id_t&gt;[am_id_t]" alt="IndexedIterator&lt;packet_id_t&gt;[am_id_t]" coords="1116,65,1124,73">
+
+      <area shape="rect" href="../ihtml/IndexedIterator.html" title="IndexedIterator&lt;packet_id_t&gt;[am_id_t]" alt="IndexedIterator&lt;packet_id_t&gt;[am_id_t]" coords="1192,154,1200,162">
+
+      <area shape="rect" href="../ihtml/PacketEngine.html" title="PacketEngine[am_id_t]" alt="PacketEngine[am_id_t]" coords="1379,100,1499,118">
+
+      <area shape="rect" href="../ihtml/PacketEngine.html" title="PacketEngine[am_id_t]" alt="PacketEngine[am_id_t]" coords="1376,65,1384,73">
+
+      <area shape="rect" href="../ihtml/PacketEngine.html" title="PacketEngine[am_id_t]" alt="PacketEngine[am_id_t]" coords="1296,152,1304,160">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.Receive.html" title="Receive[am_id_t]" alt="Receive[am_id_t]" coords="1539,100,1632,118">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.Receive.html" title="Receive[am_id_t]" alt="Receive[am_id_t]" coords="1551,64,1559,72">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.Receive.html" title="Receive[am_id_t]" alt="Receive[am_id_t]" coords="1296,162,1304,170">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.StdControl.html" title="StdControl" alt="StdControl" coords="1678,100,1741,118">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.StdControl.html" title="StdControl" alt="StdControl" coords="1699,64,1707,72">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.StdControl.html" title="StdControl" alt="StdControl" coords="1296,164,1304,172">
+
+      <area shape="rect" href="tos.lib.tossim.MainC.html" title="MainC" alt="MainC" coords="1796,16,1879,74">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.Init.html" title="Init" alt="Init" coords="1788,100,1815,118">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.Init.html" title="Init" alt="Init" coords="1807,70,1815,78">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.Init.html" title="Init" alt="Init" coords="1296,164,1304,172">
+
+      <area shape="rect" href="../ihtml/Equal.html" title="Equal&lt;packet_send_entry_t *&gt;" alt="Equal&lt;packet_send_entry_t *&gt;" coords="1089,217,1249,236">
+
+      <area shape="rect" href="../ihtml/Equal.html" title="Equal&lt;packet_send_entry_t *&gt;" alt="Equal&lt;packet_send_entry_t *&gt;" coords="956,257,964,265">
+
+      <area shape="rect" href="../ihtml/Equal.html" title="Equal&lt;packet_send_entry_t *&gt;" alt="Equal&lt;packet_send_entry_t *&gt;" coords="1192,176,1200,184">
+
+    </map>
+    <img src="PacketEngineC.gif" usemap="#comp" id=imgwiring>
+  </body>
+</html>

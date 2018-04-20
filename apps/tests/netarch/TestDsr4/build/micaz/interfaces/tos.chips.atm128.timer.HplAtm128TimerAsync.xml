@@ -1,0 +1,121 @@
+<?xml version="1.0" ?><interfacedef loc="15:/opt/tinyos-2.x/tos/chips/atm128/timer/HplAtm128TimerAsync.nc" nicename="tos.chips.atm128.timer.HplAtm128TimerAsync" qname="HplAtm128TimerAsync">
+      <documentation loc="15:/opt/tinyos-2.x/tos/chips/atm128/timer/HplAtm128TimerAsync.nc">
+        <short>
+
+</short>
+        <long>
+
+ @author David Gay
+</long>
+      </documentation>
+      <function command="" loc="38:/opt/tinyos-2.x/tos/chips/atm128/timer/HplAtm128TimerAsync.nc" name="controlBusy" provided="0" ref="0x7e1d4510">
+        <documentation loc="34:/opt/tinyos-2.x/tos/chips/atm128/timer/HplAtm128TimerAsync.nc">
+          <short>
+ Check if control register TCCR0 is busy (should not be updated if true)
+</short>
+          <long>
+ Check if control register TCCR0 is busy (should not be updated if true)
+ @return TRUE if TCCR0 is busy, FALSE otherwise (can be updated)
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.chips.atm128.timer.HplAtm128TimerAsync" qname="HplAtm128TimerAsync"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:4" cname="int" size="I:4"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+      </function>
+      <function command="" loc="44:/opt/tinyos-2.x/tos/chips/atm128/timer/HplAtm128TimerAsync.nc" name="compareBusy" provided="0" ref="0x7e1d4908">
+        <documentation loc="40:/opt/tinyos-2.x/tos/chips/atm128/timer/HplAtm128TimerAsync.nc">
+          <short>
+ Check if compare register OCR0 is busy (should not be updated if true)
+</short>
+          <long>
+ Check if compare register OCR0 is busy (should not be updated if true)
+ @return TRUE if OCR0 is busy, FALSE otherwise (can be updated)
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.chips.atm128.timer.HplAtm128TimerAsync" qname="HplAtm128TimerAsync"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:4" cname="int" size="I:4"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+      </function>
+      <function command="" loc="32:/opt/tinyos-2.x/tos/chips/atm128/timer/HplAtm128TimerAsync.nc" name="setTimer0Asynchronous" provided="0" ref="0x7e1d4118">
+        <documentation loc="29:/opt/tinyos-2.x/tos/chips/atm128/timer/HplAtm128TimerAsync.nc">
+          <short>
+ Turn on timer 0 asynchronous mode
+</short>
+        </documentation>
+        <interfacedef-ref nicename="tos.chips.atm128.timer.HplAtm128TimerAsync" qname="HplAtm128TimerAsync"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+      </function>
+      <function command="" loc="50:/opt/tinyos-2.x/tos/chips/atm128/timer/HplAtm128TimerAsync.nc" name="countBusy" provided="0" ref="0x7e1d4d08">
+        <documentation loc="46:/opt/tinyos-2.x/tos/chips/atm128/timer/HplAtm128TimerAsync.nc">
+          <short>
+ Check if current timer value (TCNT0) is busy (should not be updated if true)
+</short>
+          <long>
+ Check if current timer value (TCNT0) is busy (should not be updated if true)
+ @return TRUE if TCNT0 is busy, FALSE otherwise (can be updated)
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.chips.atm128.timer.HplAtm128TimerAsync" qname="HplAtm128TimerAsync"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:4" cname="int" size="I:4"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+      </function>
+      <function command="" loc="21:/opt/tinyos-2.x/tos/chips/atm128/timer/HplAtm128TimerAsync.nc" name="getAssr" provided="0" ref="0x7e1d5880">
+        <documentation loc="17:/opt/tinyos-2.x/tos/chips/atm128/timer/HplAtm128TimerAsync.nc">
+          <short>
+ Read timer0 asynchronous status register (ASSR)
+</short>
+          <long>
+ Read timer0 asynchronous status register (ASSR)
+ @return Current value of ASSR
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.chips.atm128.timer.HplAtm128TimerAsync" qname="HplAtm128TimerAsync"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-tag alignment="I:1" size="I:1"><union-ref ref="0x7e259df8"/>
+            <typename><typedef-ref name="Atm128Assr_t" ref="0x7e257078"/></typename>
+          </type-tag>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+      </function>
+      <function command="" loc="27:/opt/tinyos-2.x/tos/chips/atm128/timer/HplAtm128TimerAsync.nc" name="setAssr" provided="0" ref="0x7e1d5db0">
+        <documentation loc="23:/opt/tinyos-2.x/tos/chips/atm128/timer/HplAtm128TimerAsync.nc">
+          <short>
+ Set timer0 asynchronous status register (ASSR)
+</short>
+          <long>
+ Set timer0 asynchronous status register (ASSR)
+ @param x New value for ASSR
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.chips.atm128.timer.HplAtm128TimerAsync" qname="HplAtm128TimerAsync"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-tag alignment="I:1" size="I:1"><union-ref ref="0x7e259df8"/>
+              <typename><typedef-ref name="Atm128Assr_t" ref="0x7e257078"/></typename>
+            </type-tag>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="27:/opt/tinyos-2.x/tos/chips/atm128/timer/HplAtm128TimerAsync.nc" name="x" ref="0x7e1d5bc0">
+            <type-tag alignment="I:1" size="I:1"><union-ref ref="0x7e259df8"/>
+              <typename><typedef-ref name="Atm128Assr_t" ref="0x7e257078"/></typename>
+            </type-tag>
+          </variable>
+        </parameters>
+      </function>
+    </interfacedef>

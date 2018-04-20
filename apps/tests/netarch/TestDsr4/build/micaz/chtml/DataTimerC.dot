@@ -1,0 +1,11 @@
+digraph "DataTimerC" {
+  n0x7da2b4b0 [shape=ellipse, style=filled, label="DataTimer", fontsize=12];
+  "DataTimerC.DataTimerP" [fontsize=12, shape=box, style=dashed, label="DataTimerP", URL="DataTimerP.html"];
+  "MainC" [fontsize=12, shape=box,peripheries=2, URL="tos.lib.tossim.MainC.html"];
+  "DataTimerC.DataTimerP" [fontsize=12, shape=box, style=dashed, label="DataTimerP", URL="DataTimerP.html"];
+  "DataTimerC.DataTimerP" [fontsize=12, shape=box, style=dashed, label="DataTimerP", URL="DataTimerP.html"];
+  "DataTimerC.TimerMilliC" [fontsize=12, shape=box,peripheries=2, style=dashed, label="TimerMilliC", URL="tos.system.TimerMilliC.html"];
+  "n0x7da2b4b0" -> "DataTimerC.DataTimerP" [label="DataTimer<data_timer_data_t>", URL="../ihtml/DataTimer.html", fontsize=10];
+  "MainC" -> "DataTimerC.DataTimerP" [label="Init", URL="../ihtml/tos.interfaces.Init.html", fontsize=10];
+  "DataTimerC.DataTimerP" -> "DataTimerC.TimerMilliC" [label="Timer<TMilli>", URL="../ihtml/tos.lib.timer.Timer.html", fontsize=10];
+}

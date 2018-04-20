@@ -1,0 +1,7 @@
+#!/bin/bash
+ct="java edu.rice.compass.CompassTools"
+for i in `seq $1 $2`;
+do
+  tfile="`pwd`/$i.xml"
+  $ct --stats -d $i `cygpath -w $tfile`
+done

@@ -1,0 +1,41 @@
+<?xml version="1.0" ?><component loc="64:/opt/tinyos-2.x/tos/system/StateImplP.nc" nicename="tos.system.StateImplP" qname="StateImplP">
+      <documentation loc="64:/opt/tinyos-2.x/tos/system/StateImplP.nc">
+        <short>
+
+</short>
+        <long>
+
+ @author David Moss
+
+</long>
+      </documentation>
+      <module/>
+    <specification><interface loc="66:/opt/tinyos-2.x/tos/system/StateImplP.nc" name="Init" provided="1" ref="0x7e2d74b0">
+      <component-ref nicename="tos.system.StateImplP" qname="StateImplP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Init" ref="0x7e2d74b0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x7e2d7688" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="67:/opt/tinyos-2.x/tos/system/StateImplP.nc" name="State" provided="1" ref="0x7e2d7a60">
+      <component-ref nicename="tos.system.StateImplP" qname="StateImplP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="State" ref="0x7e2d7a60" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.State" qname="State"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x7fea0110"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="getState" ref="0x7e2d7c38" scoped=""/>
+        <function-ref name="toIdle" ref="0x7e2d7d18" scoped=""/>
+        <function-ref name="isState" ref="0x7e2d7df8" scoped=""/>
+        <function-ref name="isIdle" ref="0x7e2d7ed8" scoped=""/>
+        <function-ref name="requestState" ref="0x7e2d6010" scoped=""/>
+        <function-ref name="forceState" ref="0x7e2d60f0" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

@@ -1,0 +1,106 @@
+<?xml version="1.0" ?><component loc="52:/opt/tinyos-2.x/tos/lib/tossim/TossimPacketModelC.nc" nicename="tos.lib.tossim.TossimPacketModelC" qname="TossimPacketModelC">
+      <documentation loc="52:/opt/tinyos-2.x/tos/lib/tossim/TossimPacketModelC.nc">
+        <short>
+
+ Configuration parameters for a CSMA link.
+
+</short>
+        <long>
+
+ Configuration parameters for a CSMA link.
+
+ @author Philip Levis
+ @date   Dec 10 2005
+</long>
+      </documentation>
+      <module/>
+    <specification><interface loc="93:/opt/tinyos-2.x/tos/lib/tossim/TossimPacketModelC.nc" name="stopDoneTask" provided="0" ref="0x7dfdbe08">
+      <component-ref nicename="tos.lib.tossim.TossimPacketModelC" qname="TossimPacketModelC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="stopDoneTask" ref="0x7dfdbe08" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.TaskBasic" qname="TaskBasic"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="postTask" ref="0x7dfd9010" scoped=""/>
+        <function-ref name="runTask" ref="0x7dfd90f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="57:/opt/tinyos-2.x/tos/lib/tossim/TossimPacketModelC.nc" name="Packet" provided="1" ref="0x7dff3d68">
+      <component-ref nicename="tos.lib.tossim.TossimPacketModelC" qname="TossimPacketModelC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Packet" ref="0x7dff3d68" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.tossim.TossimPacketModel" qname="TossimPacketModel"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x7dff2010" scoped=""/>
+        <function-ref name="receive" ref="0x7dff20f0" scoped=""/>
+        <function-ref name="cancel" ref="0x7dff21d0" scoped=""/>
+        <function-ref name="sendDone" ref="0x7dff22b0" scoped=""/>
+        <function-ref name="shouldAck" ref="0x7dff2390" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="137:/opt/tinyos-2.x/tos/lib/tossim/TossimPacketModelC.nc" name="sendDoneTask" provided="0" ref="0x7dfc3e28">
+      <component-ref nicename="tos.lib.tossim.TossimPacketModelC" qname="TossimPacketModelC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="sendDoneTask" ref="0x7dfc3e28" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.TaskBasic" qname="TaskBasic"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="postTask" ref="0x7dfc2050" scoped=""/>
+        <function-ref name="runTask" ref="0x7dfc2130" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="54:/opt/tinyos-2.x/tos/lib/tossim/TossimPacketModelC.nc" name="Init" provided="1" ref="0x7dff4f18">
+      <component-ref nicename="tos.lib.tossim.TossimPacketModelC" qname="TossimPacketModelC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Init" ref="0x7dff4f18" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x7dff3108" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="88:/opt/tinyos-2.x/tos/lib/tossim/TossimPacketModelC.nc" name="startDoneTask" provided="0" ref="0x7dfdcd60">
+      <component-ref nicename="tos.lib.tossim.TossimPacketModelC" qname="TossimPacketModelC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="startDoneTask" ref="0x7dfdcd60" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.TaskBasic" qname="TaskBasic"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="postTask" ref="0x7dfdb010" scoped=""/>
+        <function-ref name="runTask" ref="0x7dfdb0f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="55:/opt/tinyos-2.x/tos/lib/tossim/TossimPacketModelC.nc" name="Control" provided="1" ref="0x7dff3280">
+      <component-ref nicename="tos.lib.tossim.TossimPacketModelC" qname="TossimPacketModelC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Control" ref="0x7dff3280" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SplitControl" qname="SplitControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="startDone" ref="0x7dff3458" scoped=""/>
+        <function-ref name="stopDone" ref="0x7dff3538" scoped=""/>
+        <function-ref name="start" ref="0x7dff3618" scoped=""/>
+        <function-ref name="stop" ref="0x7dff36f8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="56:/opt/tinyos-2.x/tos/lib/tossim/TossimPacketModelC.nc" name="PacketAcknowledgements" provided="1" ref="0x7dff3850">
+      <component-ref nicename="tos.lib.tossim.TossimPacketModelC" qname="TossimPacketModelC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="PacketAcknowledgements" ref="0x7dff3850" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.PacketAcknowledgements" qname="PacketAcknowledgements"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="requestAck" ref="0x7dff3a28" scoped=""/>
+        <function-ref name="noAck" ref="0x7dff3b08" scoped=""/>
+        <function-ref name="wasAcked" ref="0x7dff3be8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="59:/opt/tinyos-2.x/tos/lib/tossim/TossimPacketModelC.nc" name="GainRadioModel" provided="0" ref="0x7dfdf8b8">
+      <component-ref nicename="tos.lib.tossim.TossimPacketModelC" qname="TossimPacketModelC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="GainRadioModel" ref="0x7dfdf8b8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.tossim.GainRadioModel" qname="GainRadioModel"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="putOnAirTo" ref="0x7dfdfa90" scoped=""/>
+        <function-ref name="receive" ref="0x7dfdfb70" scoped=""/>
+        <function-ref name="clearChannel" ref="0x7dfdfc50" scoped=""/>
+        <function-ref name="setClearValue" ref="0x7dfdfd30" scoped=""/>
+        <function-ref name="acked" ref="0x7dfdfe10" scoped=""/>
+        <function-ref name="shouldAck" ref="0x7dfdfef0" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

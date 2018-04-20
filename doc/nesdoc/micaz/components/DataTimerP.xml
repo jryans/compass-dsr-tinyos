@@ -1,0 +1,84 @@
+<?xml version="1.0" ?><component abstract="" loc="44:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/timer/DataTimerP.nc" nicename="DataTimerP" qname="DataTimerP">
+      <documentation loc="44:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/timer/DataTimerP.nc">
+        <short>
+
+ A timed series of data items. </short>
+        <long>
+
+ A timed series of data items.  The client is notified as each item
+
+ expires.  Uses the Equal interface to allow complex data types, but
+
+ the default supplied works for primitive types.
+
+
+
+ TODO: Change to use a &quot;first&quot;.
+
+
+
+ @author Ryan Stinnett
+
+</long>
+      </documentation>
+      <parameters>
+        <typedef loc="44:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/timer/DataTimerP.nc" name="data_timer_data_t" ref="0x7da228f8">
+          <component-ref nicename="DataTimerP" qname="DataTimerP"/>
+          <type-var alignment="U:" size="U:"><typedef-ref name="data_timer_data_t" ref="0x7da228f8" scoped=""/></type-var>
+        </typedef>
+        <constant loc="44:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/timer/DataTimerP.nc" name="maxSize" ref="0x7da22a80">
+          <component-ref nicename="DataTimerP" qname="DataTimerP"/>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x7fea0110"/></typename>
+          </type-int>
+        </constant>
+      </parameters>
+      <module/>
+    <specification><interface loc="47:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/timer/DataTimerP.nc" name="DataTimer" provided="1" ref="0x7da210b0">
+      <component-ref nicename="DataTimerP" qname="DataTimerP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="DataTimer" ref="0x7da210b0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="DataTimer" qname="DataTimer"/>
+        <arguments>
+          <type-var alignment="U:" size="U:"><typedef-ref name="data_timer_data_t" ref="0x7da228f8" scoped=""/></type-var>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="expired" ref="0x7da21c78" scoped=""/>
+        <function-ref name="start" ref="0x7da216d8" scoped=""/>
+        <function-ref name="stop" ref="0x7da219f8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/timer/DataTimerP.nc" name="Init" provided="1" ref="0x7da22cd0">
+      <component-ref nicename="DataTimerP" qname="DataTimerP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Init" ref="0x7da22cd0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x7da22ea8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="50:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/timer/DataTimerP.nc" name="Timer" provided="0" ref="0x7da20010">
+      <component-ref nicename="DataTimerP" qname="DataTimerP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Timer" ref="0x7da20010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:4" size="I:4"><struct-ref ref="0x7e52c440"/>
+            <typename><typedef-ref name="TMilli" ref="0x7e52c628"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x7da1f928" scoped=""/>
+        <function-ref name="fired" ref="0x7da20d18" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x7da1f2e8" scoped=""/>
+        <function-ref name="isOneShot" ref="0x7da1f108" scoped=""/>
+        <function-ref name="getdt" ref="0x7da1fce8" scoped=""/>
+        <function-ref name="gett0" ref="0x7da1fb08" scoped=""/>
+        <function-ref name="isRunning" ref="0x7da20ef8" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x7da20638" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x7da1f608" scoped=""/>
+        <function-ref name="startOneShot" ref="0x7da208b8" scoped=""/>
+        <function-ref name="stop" ref="0x7da20b38" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

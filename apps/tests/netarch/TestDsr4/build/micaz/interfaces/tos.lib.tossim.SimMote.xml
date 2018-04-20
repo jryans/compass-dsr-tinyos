@@ -1,0 +1,111 @@
+<?xml version="1.0" ?><interfacedef loc="34:/opt/tinyos-2.x/tos/lib/tossim/SimMote.nc" nicename="tos.lib.tossim.SimMote" qname="SimMote">
+      <documentation loc="34:/opt/tinyos-2.x/tos/lib/tossim/SimMote.nc">
+        <short>
+ TOSSIM-specific interface to access a mote's state.</short>
+        <long>
+ TOSSIM-specific interface to access a mote's state. TinyOS programs
+ should never use this interface.
+
+ @author Philip Levis
+ @date   Nov 22 2005
+</long>
+      </documentation>
+      <function command="" loc="36:/opt/tinyos-2.x/tos/lib/tossim/SimMote.nc" name="setEuid" provided="0" ref="0x7e5e9ac8">
+        <interfacedef-ref nicename="tos.lib.tossim.SimMote" qname="SimMote"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:8" cname="long long" size="I:8"/>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="36:/opt/tinyos-2.x/tos/lib/tossim/SimMote.nc" name="euid" ref="0x7e5e9960">
+            <type-int alignment="I:8" cname="long long" size="I:8"/>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="39:/opt/tinyos-2.x/tos/lib/tossim/SimMote.nc" name="getVariableInfo" provided="0" ref="0x7e5e7998">
+        <interfacedef-ref nicename="tos.lib.tossim.SimMote" qname="SimMote"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:4" cname="int" size="I:4"/>
+          <function-parameters>
+            <type-pointer alignment="I:4" size="I:4">
+              <type-int alignment="I:1" cname="char" size="I:1"/>
+            </type-pointer>
+            <type-pointer alignment="I:4" size="I:4">
+              <type-pointer alignment="I:4" size="I:4">
+                <type-void alignment="I:1" size="I:1"/>
+              </type-pointer>
+            </type-pointer>
+            <type-pointer alignment="I:4" size="I:4">
+              <type-int alignment="I:4" cname="unsigned int" size="I:4" unsigned="">
+                <typename><typedef-ref name="size_t" ref="0x7f3e0748"/></typename>
+              </type-int>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="39:/opt/tinyos-2.x/tos/lib/tossim/SimMote.nc" name="name" ref="0x7e5e74b8">
+            <type-pointer alignment="I:4" size="I:4">
+              <type-int alignment="I:1" cname="char" size="I:1"/>
+            </type-pointer>
+          </variable>
+          <variable loc="39:/opt/tinyos-2.x/tos/lib/tossim/SimMote.nc" name="ptr" ref="0x7e5e7678">
+            <type-pointer alignment="I:4" size="I:4">
+              <type-pointer alignment="I:4" size="I:4">
+                <type-void alignment="I:1" size="I:1"/>
+              </type-pointer>
+            </type-pointer>
+          </variable>
+          <variable loc="39:/opt/tinyos-2.x/tos/lib/tossim/SimMote.nc" name="len" ref="0x7e5e7820">
+            <type-pointer alignment="I:4" size="I:4">
+              <type-int alignment="I:4" cname="unsigned int" size="I:4" unsigned="">
+                <typename><typedef-ref name="size_t" ref="0x7f3e0748"/></typename>
+              </type-int>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="41:/opt/tinyos-2.x/tos/lib/tossim/SimMote.nc" name="turnOff" provided="0" ref="0x7e5e6010">
+        <interfacedef-ref nicename="tos.lib.tossim.SimMote" qname="SimMote"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+      </function>
+      <function command="" loc="40:/opt/tinyos-2.x/tos/lib/tossim/SimMote.nc" name="turnOn" provided="0" ref="0x7e5e7c88">
+        <interfacedef-ref nicename="tos.lib.tossim.SimMote" qname="SimMote"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+      </function>
+      <function command="" loc="35:/opt/tinyos-2.x/tos/lib/tossim/SimMote.nc" name="getEuid" provided="0" ref="0x7e5e95f0">
+        <interfacedef-ref nicename="tos.lib.tossim.SimMote" qname="SimMote"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:8" cname="long long" size="I:8"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+      </function>
+      <function command="" loc="38:/opt/tinyos-2.x/tos/lib/tossim/SimMote.nc" name="isOn" provided="0" ref="0x7e5e7160">
+        <interfacedef-ref nicename="tos.lib.tossim.SimMote" qname="SimMote"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="bool" ref="0x7ec91520"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+      </function>
+      <function command="" loc="37:/opt/tinyos-2.x/tos/lib/tossim/SimMote.nc" name="getStartTime" provided="0" ref="0x7e5e9e20">
+        <interfacedef-ref nicename="tos.lib.tossim.SimMote" qname="SimMote"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:8" cname="long long" size="I:8"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+      </function>
+    </interfacedef>

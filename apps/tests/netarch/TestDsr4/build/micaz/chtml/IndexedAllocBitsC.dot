@@ -1,0 +1,14 @@
+digraph "IndexedAllocBitsC" {
+  n0x7db7cca0 [shape=ellipse, style=filled, label="IndexedAlloc", fontsize=12];
+  "IndexedAllocBitsC.IndexedBits" [fontsize=12, shape=box, style=dashed, label="IndexedAllocBitsP\n(IndexedBits)", URL="IndexedAllocBitsP.html"];
+  "IndexedAllocBitsC.IndexedBits" [fontsize=12, shape=box, style=dashed, label="IndexedAllocBitsP\n(IndexedBits)", URL="IndexedAllocBitsP.html"];
+  "MainC" [fontsize=12, shape=box,peripheries=2, URL="tos.lib.tossim.MainC.html"];
+  "MainC" [fontsize=12, shape=box,peripheries=2, URL="tos.lib.tossim.MainC.html"];
+  "IndexedAllocBitsC.Bits" [fontsize=12, shape=box, style=dashed, label="BitVectorC\n(Bits)", URL="tos.system.BitVectorC.html"];
+  "IndexedAllocBitsC.IndexedBits" [fontsize=12, shape=box, style=dashed, label="IndexedAllocBitsP\n(IndexedBits)", URL="IndexedAllocBitsP.html"];
+  "IndexedAllocBitsC.Bits" [fontsize=12, shape=box, style=dashed, label="BitVectorC\n(Bits)", URL="tos.system.BitVectorC.html"];
+  "n0x7db7cca0" -> "IndexedAllocBitsC.IndexedBits" [label="IndexedAlloc", URL="../ihtml/IndexedAlloc.html", fontsize=10];
+  "IndexedAllocBitsC.IndexedBits" -> "MainC" [label="Boot", URL="../ihtml/tos.interfaces.Boot.html", fontsize=10];
+  "MainC" -> "IndexedAllocBitsC.Bits" [label="Init", URL="../ihtml/tos.interfaces.Init.html", fontsize=10];
+  "IndexedAllocBitsC.IndexedBits" -> "IndexedAllocBitsC.Bits" [label="BitVector", URL="../ihtml/tos.interfaces.BitVector.html", fontsize=10];
+}

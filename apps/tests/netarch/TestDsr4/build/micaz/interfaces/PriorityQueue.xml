@@ -1,0 +1,375 @@
+<?xml version="1.0" ?><interfacedef loc="40:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/queue/PriorityQueue.nc" nicename="PriorityQueue" qname="PriorityQueue">
+      <documentation loc="40:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/queue/PriorityQueue.nc">
+        <short>
+
+ Interface to a priority queue sitting on top of an index heap. </short>
+        <long>
+
+ Interface to a priority queue sitting on top of an index heap.  The meaning
+
+ of some terms defined here is implementation dependent since either a min or
+
+ max heap could be used.
+
+
+
+ @author Ryan Stinnett
+
+</long>
+      </documentation>
+      <function command="" loc="122:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/queue/PriorityQueue.nc" name="clear" provided="0" ref="0x7daf6db8">
+        <documentation loc="119:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/queue/PriorityQueue.nc">
+          <short>
+
+ Removes all elements from the priority queue.
+
+</short>
+        </documentation>
+        <interfacedef-ref nicename="PriorityQueue" qname="PriorityQueue"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+      </function>
+      <function command="" loc="109:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/queue/PriorityQueue.nc" name="findBest" provided="0" ref="0x7daf61f8">
+        <documentation loc="103:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/queue/PriorityQueue.nc">
+          <short>
+
+ Finds the index of the element with the best priority (at the root of the
+
+ heap), but does not remove it.
+
+ 
+
+</short>
+          <long>
+
+ Finds the index of the element with the best priority (at the root of the
+
+ heap), but does not remove it.
+
+ 
+
+ @return Index of the element with the best priority.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="PriorityQueue" qname="PriorityQueue"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="priority_queue_id_t" ref="0x7db00ae8"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+      </function>
+      <function command="" loc="62:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/queue/PriorityQueue.nc" name="maxSize" provided="0" ref="0x7dafa488">
+        <documentation loc="57:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/queue/PriorityQueue.nc">
+          <short>
+
+ The maximum number of elements the priority queue can hold.
+
+
+
+</short>
+          <long>
+
+ The maximum number of elements the priority queue can hold.
+
+
+
+ @return The maximum priority queue size.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="PriorityQueue" qname="PriorityQueue"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="priority_queue_id_t" ref="0x7db00ae8"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+      </function>
+      <function command="" loc="72:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/queue/PriorityQueue.nc" name="insert" provided="0" ref="0x7dafaca0">
+        <documentation loc="64:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/queue/PriorityQueue.nc">
+          <short>
+
+ Insert the element at index m into the priority queue.
+
+
+
+</short>
+          <long>
+
+ Insert the element at index m into the priority queue.
+
+
+
+ @param m Index of the element to insert.
+
+ @return If the priority queue is full then FAIL, if m is too large for the
+
+         queue then ESIZE, if m has already been inserted then EALREADY,
+
+         otherwise SUCCESS.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="PriorityQueue" qname="PriorityQueue"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="error_t" ref="0x7e8372e8"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="priority_queue_id_t" ref="0x7db00ae8"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="72:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/queue/PriorityQueue.nc" name="m" ref="0x7dafa9d8">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="priority_queue_id_t" ref="0x7db00ae8"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="87:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/queue/PriorityQueue.nc" name="moveUp" provided="0" ref="0x7daf9c18">
+        <documentation loc="82:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/queue/PriorityQueue.nc">
+          <short>
+
+ If the priority of element m has improved, move that element up the heap
+
+ if needed.
+
+</short>
+          <long>
+
+ If the priority of element m has improved, move that element up the heap
+
+ if needed.
+
+ @param m Index of the element with altered priority.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="PriorityQueue" qname="PriorityQueue"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="priority_queue_id_t" ref="0x7db00ae8"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="87:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/queue/PriorityQueue.nc" name="m" ref="0x7daf99b8">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="priority_queue_id_t" ref="0x7db00ae8"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="101:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/queue/PriorityQueue.nc" name="move" provided="0" ref="0x7daf7b90">
+        <documentation loc="96:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/queue/PriorityQueue.nc">
+          <short>
+
+ If the priority of element m has changed, move that element up or down the 
+
+ heap if needed.
+
+</short>
+          <long>
+
+ If the priority of element m has changed, move that element up or down the 
+
+ heap if needed.
+
+ @param m Index of the element with altered priority.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="PriorityQueue" qname="PriorityQueue"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="priority_queue_id_t" ref="0x7db00ae8"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="101:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/queue/PriorityQueue.nc" name="m" ref="0x7daf7920">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="priority_queue_id_t" ref="0x7db00ae8"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="80:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/queue/PriorityQueue.nc" name="inserted" provided="0" ref="0x7daf9470">
+        <documentation loc="74:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/queue/PriorityQueue.nc">
+          <short>
+
+ Checks whether element m has already been inserted.
+
+ 
+
+</short>
+          <long>
+
+ Checks whether element m has already been inserted.
+
+ 
+
+ @param m Index of the element to check on.
+
+ @return TRUE if element m has already been inserted, otherwise FALSE.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="PriorityQueue" qname="PriorityQueue"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="bool" ref="0x7ec91520"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="priority_queue_id_t" ref="0x7db00ae8"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="80:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/queue/PriorityQueue.nc" name="m" ref="0x7daf9210">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="priority_queue_id_t" ref="0x7db00ae8"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="94:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/queue/PriorityQueue.nc" name="moveDown" provided="0" ref="0x7daf73d8">
+        <documentation loc="89:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/queue/PriorityQueue.nc">
+          <short>
+
+ If the priority of element m has worsened, move that element down the heap
+
+ if needed.
+
+</short>
+          <long>
+
+ If the priority of element m has worsened, move that element down the heap
+
+ if needed.
+
+ @param m Index of the element with altered priority.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="PriorityQueue" qname="PriorityQueue"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="priority_queue_id_t" ref="0x7db00ae8"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="94:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/queue/PriorityQueue.nc" name="m" ref="0x7daf7178">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="priority_queue_id_t" ref="0x7db00ae8"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="47:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/queue/PriorityQueue.nc" name="empty" provided="0" ref="0x7dafb888">
+        <documentation loc="42:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/queue/PriorityQueue.nc">
+          <short>
+
+ Checks if the priority queue is empty.
+
+
+
+</short>
+          <long>
+
+ Checks if the priority queue is empty.
+
+
+
+ @return Whether the priority queue is empty.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="PriorityQueue" qname="PriorityQueue"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="bool" ref="0x7ec91520"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+      </function>
+      <function command="" loc="117:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/queue/PriorityQueue.nc" name="removeBest" provided="0" ref="0x7daf6870">
+        <documentation loc="111:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/queue/PriorityQueue.nc">
+          <short>
+
+ Finds the index of the element with the best priority (at the root of the
+
+ heap) and removes it from the priority queue.
+
+ 
+
+</short>
+          <long>
+
+ Finds the index of the element with the best priority (at the root of the
+
+ heap) and removes it from the priority queue.
+
+ 
+
+ @return Index of the element with the best priority.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="PriorityQueue" qname="PriorityQueue"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="priority_queue_id_t" ref="0x7db00ae8"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+      </function>
+      <function command="" loc="55:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/queue/PriorityQueue.nc" name="size" provided="0" ref="0x7dafbe98">
+        <documentation loc="49:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/queue/PriorityQueue.nc">
+          <short>
+
+ The number of elements currently in the priority queue.
+
+</short>
+          <long>
+
+ The number of elements currently in the priority queue.
+
+ Always less than or equal to maxSize().
+
+
+
+ @return The number of elements in the priority queue.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="PriorityQueue" qname="PriorityQueue"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="priority_queue_id_t" ref="0x7db00ae8"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+      </function>
+    </interfacedef>

@@ -1,0 +1,37 @@
+<?xml version="1.0" ?><component loc="45:/opt/tinyos-2.x/tos/lib/tossim/ActiveMessageAddressC.nc" nicename="tos.lib.tossim.ActiveMessageAddressC" qname="ActiveMessageAddressC">
+      <documentation loc="45:/opt/tinyos-2.x/tos/lib/tossim/ActiveMessageAddressC.nc">
+        <short>
+ Accessor methods for Active Messages.
+
+</short>
+        <long>
+ Accessor methods for Active Messages.
+
+ @author Philip Levis
+ @date June 19 2005
+</long>
+      </documentation>
+      <module/>
+    <specification><function command="" loc="53:/opt/tinyos-2.x/tos/lib/tossim/ActiveMessageAddressC.nc" name="amAddress" provided="1" ref="0x7def0408">
+      <component-ref nicename="tos.lib.tossim.ActiveMessageAddressC" qname="ActiveMessageAddressC"/>
+      <type-function alignment="I:1" size="I:1">
+        <type-int alignment="I:2" cname="unsigned short" size="I:2" unsigned=""/>
+        <function-parameters>
+        </function-parameters>
+      </type-function>
+    </function><function command="" loc="61:/opt/tinyos-2.x/tos/lib/tossim/ActiveMessageAddressC.nc" name="setAmAddress" provided="1" ref="0x7def08d8">
+      <component-ref nicename="tos.lib.tossim.ActiveMessageAddressC" qname="ActiveMessageAddressC"/>
+      <type-function alignment="I:1" size="I:1">
+        <type-void alignment="I:1" size="I:1"/>
+        <function-parameters>
+          <type-int alignment="I:2" cname="unsigned short" size="I:2" unsigned=""/>
+        </function-parameters>
+      </type-function>
+      <parameters>
+        <variable loc="47:/opt/tinyos-2.x/tos/lib/tossim/ActiveMessageAddressC.nc" name="a" ref="0x7def0770">
+          <type-int alignment="I:2" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="am_addr_t" ref="0x7e881930"/></typename>
+          </type-int>
+        </variable>
+      </parameters>
+    </function></specification><referenced/></component>

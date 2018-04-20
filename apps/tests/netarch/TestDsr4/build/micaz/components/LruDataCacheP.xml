@@ -1,0 +1,72 @@
+<?xml version="1.0" ?><component abstract="" loc="67:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/cache/LruDataCacheP.nc" nicename="LruDataCacheP" qname="LruDataCacheP">
+      <documentation loc="67:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/cache/LruDataCacheP.nc">
+        <short>
+ A LRU data cache that stores data items, where an insert operation
+ indicates &quot;use&quot;. </short>
+        <long>
+ A LRU data cache that stores data items, where an insert operation
+ indicates &quot;use&quot;.  Inserting a data item not in the cache will replace
+ the oldest, and inserting an element already in the cache will refresh
+ its age.  Insert and lookup return a pointer to the cached data.  This
+ component should be wired to an Equal interface to check for equality
+ on the data type used.
+
+ @author Ryan Stinnett
+ @author Rodrigo Fonseca
+ @author Philip Levis
+</long>
+      </documentation>
+      <parameters>
+        <typedef loc="67:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/cache/LruDataCacheP.nc" name="data_cache_item_t" ref="0x7e31ea78">
+          <component-ref nicename="LruDataCacheP" qname="LruDataCacheP"/>
+          <type-var alignment="U:" size="U:"><typedef-ref name="data_cache_item_t" ref="0x7e31ea78" scoped=""/></type-var>
+        </typedef>
+        <constant loc="67:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/cache/LruDataCacheP.nc" name="size" ref="0x7e31ec00">
+          <component-ref nicename="LruDataCacheP" qname="LruDataCacheP"/>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x7fea0110"/></typename>
+          </type-int>
+        </constant>
+      </parameters>
+      <module/>
+    <specification><interface loc="69:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/cache/LruDataCacheP.nc" name="Init" provided="1" ref="0x7e31ee50">
+      <component-ref nicename="LruDataCacheP" qname="LruDataCacheP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Init" ref="0x7e31ee50" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x7e31d050" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="72:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/cache/LruDataCacheP.nc" name="Equal" provided="0" ref="0x7e31c808">
+      <component-ref nicename="LruDataCacheP" qname="LruDataCacheP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Equal" ref="0x7e31c808" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="Equal" qname="Equal"/>
+        <arguments>
+          <type-pointer alignment="I:4" size="I:4">
+            <type-var alignment="U:" size="U:"><typedef-ref name="data_cache_item_t" ref="0x7e31ea78" scoped=""/></type-var>
+          </type-pointer>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="test" ref="0x7e31ce30" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="70:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/cache/LruDataCacheP.nc" name="DataCache" provided="1" ref="0x7e31d248">
+      <component-ref nicename="LruDataCacheP" qname="LruDataCacheP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="DataCache" ref="0x7e31d248" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="DataCache" qname="DataCache"/>
+        <arguments>
+          <type-var alignment="U:" size="U:"><typedef-ref name="data_cache_item_t" ref="0x7e31ea78" scoped=""/></type-var>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="remove" ref="0x7e31c2d0" scoped=""/>
+        <function-ref name="evicted" ref="0x7e31dd10" scoped=""/>
+        <function-ref name="insert" ref="0x7e31da50" scoped=""/>
+        <function-ref name="flush" ref="0x7e31c570" scoped=""/>
+        <function-ref name="lookup" ref="0x7e31c010" scoped=""/>
+        <function-ref name="size" ref="0x7e31d870" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

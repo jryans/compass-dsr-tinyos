@@ -1,0 +1,272 @@
+<?xml version="1.0" ?><interfacedef loc="39:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/single/SinglePacket.nc" nicename="SinglePacket" qname="SinglePacket">
+      <documentation loc="39:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/single/SinglePacket.nc">
+        <short>
+
+ Access and set the properties of a multihop packet with a single
+
+ node address based destination.
+
+
+
+</short>
+        <long>
+
+ Access and set the properties of a multihop packet with a single
+
+ node address based destination.
+
+
+
+ @author Ryan Stinnett
+
+</long>
+      </documentation>
+      <function command="" loc="47:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/single/SinglePacket.nc" name="source" provided="0" ref="0x7dec22b0">
+        <documentation loc="41:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/single/SinglePacket.nc">
+          <short>
+
+ Returns the address of the source of the multihop packet.
+
+
+
+</short>
+          <long>
+
+ Returns the address of the source of the multihop packet.
+
+
+
+ @param msg Pointer to the packet.
+
+ @return The source node of the multihop packet.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="SinglePacket" qname="SinglePacket"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:2" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="am_addr_t" ref="0x7e881930"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-pointer alignment="I:4" size="I:4">
+              <type-tag alignment="I:1" size="I:50"><nx_struct-ref name="message_t" ref="0x7e872dd8"/>
+                <typename><typedef-ref name="message_t" ref="0x7e8707a8"/></typename>
+              </type-tag>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="47:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/single/SinglePacket.nc" name="msg" ref="0x7dec2068">
+            <type-pointer alignment="I:4" size="I:4">
+              <type-tag alignment="I:1" size="I:50"><nx_struct-ref name="message_t" ref="0x7e872dd8"/>
+                <typename><typedef-ref name="message_t" ref="0x7e8707a8"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="67:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/single/SinglePacket.nc" name="destination" provided="0" ref="0x7dec14c0">
+        <documentation loc="61:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/single/SinglePacket.nc">
+          <short>
+
+ Returns the address of the destination of the multihop packet.
+
+
+
+</short>
+          <long>
+
+ Returns the address of the destination of the multihop packet.
+
+
+
+ @param msg Pointer to the packet.
+
+ @return The destination node of the multihop packet.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="SinglePacket" qname="SinglePacket"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:2" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="am_addr_t" ref="0x7e881930"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-pointer alignment="I:4" size="I:4">
+              <type-tag alignment="I:1" size="I:50"><nx_struct-ref name="message_t" ref="0x7e872dd8"/>
+                <typename><typedef-ref name="message_t" ref="0x7e8707a8"/></typename>
+              </type-tag>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="67:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/single/SinglePacket.nc" name="msg" ref="0x7dec1268">
+            <type-pointer alignment="I:4" size="I:4">
+              <type-tag alignment="I:1" size="I:50"><nx_struct-ref name="message_t" ref="0x7e872dd8"/>
+                <typename><typedef-ref name="message_t" ref="0x7e8707a8"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="59:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/single/SinglePacket.nc" name="setSource" provided="0" ref="0x7dec2cd8">
+        <documentation loc="49:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/single/SinglePacket.nc">
+          <short>
+
+ Sets the address of the source of the multihop packet. </short>
+          <long>
+
+ Sets the address of the source of the multihop packet.  As with
+
+ the AM layer, this is set by the multihop layer, and should not
+
+ need to be used when sending a packet.  However, buffers or other
+
+ storage components may wish to use it to store the address for
+
+ later retrieval.
+
+
+
+ @param msg Pointer to the packet.
+
+ @param src The source node of the multihop packet.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="SinglePacket" qname="SinglePacket"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-pointer alignment="I:4" size="I:4">
+              <type-tag alignment="I:1" size="I:50"><nx_struct-ref name="message_t" ref="0x7e872dd8"/>
+                <typename><typedef-ref name="message_t" ref="0x7e8707a8"/></typename>
+              </type-tag>
+            </type-pointer>
+            <type-int alignment="I:2" cname="unsigned short" size="I:2" unsigned="">
+              <typename><typedef-ref name="am_addr_t" ref="0x7e881930"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="59:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/single/SinglePacket.nc" name="msg" ref="0x7dec2818">
+            <type-pointer alignment="I:4" size="I:4">
+              <type-tag alignment="I:1" size="I:50"><nx_struct-ref name="message_t" ref="0x7e872dd8"/>
+                <typename><typedef-ref name="message_t" ref="0x7e8707a8"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+          <variable loc="59:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/single/SinglePacket.nc" name="src" ref="0x7dec29a8">
+            <type-int alignment="I:2" cname="unsigned short" size="I:2" unsigned="">
+              <typename><typedef-ref name="am_addr_t" ref="0x7e881930"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="79:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/single/SinglePacket.nc" name="setDestination" provided="0" ref="0x7dec1ef0">
+        <documentation loc="69:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/single/SinglePacket.nc">
+          <short>
+
+ Sets the address of the destination of the multihop packet. </short>
+          <long>
+
+ Sets the address of the destination of the multihop packet.  As
+
+ with the AM layer, this is set by the multihop layer, and should not
+
+ need to be used when sending a packet.  However, buffers or other
+
+ storage components may wish to use it to store the address for
+
+ later retrieval.
+
+
+
+ @param msg Pointer to the packet.
+
+ @param dest The destination node of the multihop packet.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="SinglePacket" qname="SinglePacket"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-pointer alignment="I:4" size="I:4">
+              <type-tag alignment="I:1" size="I:50"><nx_struct-ref name="message_t" ref="0x7e872dd8"/>
+                <typename><typedef-ref name="message_t" ref="0x7e8707a8"/></typename>
+              </type-tag>
+            </type-pointer>
+            <type-int alignment="I:2" cname="unsigned short" size="I:2" unsigned="">
+              <typename><typedef-ref name="am_addr_t" ref="0x7e881930"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="79:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/single/SinglePacket.nc" name="msg" ref="0x7dec1a28">
+            <type-pointer alignment="I:4" size="I:4">
+              <type-tag alignment="I:1" size="I:50"><nx_struct-ref name="message_t" ref="0x7e872dd8"/>
+                <typename><typedef-ref name="message_t" ref="0x7e8707a8"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+          <variable loc="79:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/single/SinglePacket.nc" name="dest" ref="0x7dec1bb8">
+            <type-int alignment="I:2" cname="unsigned short" size="I:2" unsigned="">
+              <typename><typedef-ref name="am_addr_t" ref="0x7e881930"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="89:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/single/SinglePacket.nc" name="isForMe" provided="0" ref="0x7dec07b8">
+        <documentation loc="81:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/single/SinglePacket.nc">
+          <short>
+
+ As with the AM layer, returns whether this node is the destination
+
+ for the packet, but can also include special processing for broadcast
+
+ addresses or similar values.
+
+
+
+</short>
+          <long>
+
+ As with the AM layer, returns whether this node is the destination
+
+ for the packet, but can also include special processing for broadcast
+
+ addresses or similar values.
+
+
+
+ @param msg Pointer to the packet.
+
+ @return Whether this node is the destination of the multihop packet.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="SinglePacket" qname="SinglePacket"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="bool" ref="0x7ec91520"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-pointer alignment="I:4" size="I:4">
+              <type-tag alignment="I:1" size="I:50"><nx_struct-ref name="message_t" ref="0x7e872dd8"/>
+                <typename><typedef-ref name="message_t" ref="0x7e8707a8"/></typename>
+              </type-tag>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="89:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/single/SinglePacket.nc" name="msg" ref="0x7dec0478">
+            <type-pointer alignment="I:4" size="I:4">
+              <type-tag alignment="I:1" size="I:50"><nx_struct-ref name="message_t" ref="0x7e872dd8"/>
+                <typename><typedef-ref name="message_t" ref="0x7e8707a8"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+    </interfacedef>

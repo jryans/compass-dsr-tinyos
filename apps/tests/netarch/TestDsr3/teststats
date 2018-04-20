@@ -1,0 +1,20 @@
+#! /bin/awk -f
+BEGIN { err = 0 }
+/^ERROR/ { err++ }
+/Received Data/ { rpkt[$6]++ }
+/Send done with result/ { if ($7 == 0) sgood++; spkts++ }
+/route error!/ { rerr++ }
+END {
+  for (i = 0; i < spkts; i++) {
+    allrpkts += rpkt[i]
+    if (rpkt[i] > 0)
+      rpkts++
+  }
+  print "Simulation Summary:"
+  print "  Program Errors: " err
+  print "  Total Packets Sent: " spkts
+  print "    Received: " rpkts " (" (rpkts / spkts * 100) "%)"
+  print "    Avg. Copies Received: " allrpkts / spkts
+  print "    Sent Successfully: " sgood " (" (sgood / spkts * 100) "%)"
+  print "  Route Errors: " rerr
+}

@@ -1,0 +1,26 @@
+digraph "GraphWeightedC" {
+  n0x7dba76c8 [shape=ellipse, style=filled, label="Graph", fontsize=12];
+  "GraphWeightedC.GraphSparseC" [fontsize=12, shape=box,peripheries=2, style=dashed, label="GraphSparseC", URL="GraphSparseC.html"];
+  n0x7dba4ce0 [shape=ellipse, style=filled, label="PathEdgeList", fontsize=12];
+  "GraphWeightedC.SourceShortestPathC" [fontsize=12, shape=box,peripheries=2, style=dashed, label="SourceShortestPathC", URL="SourceShortestPathC.html"];
+  n0x7dba43a0 [shape=ellipse, style=filled, label="SourceShortestPath", fontsize=12];
+  "GraphWeightedC.SourceShortestPathC" [fontsize=12, shape=box,peripheries=2, style=dashed, label="SourceShortestPathC", URL="SourceShortestPathC.html"];
+  n0x7dba13b8 [shape=ellipse, style=filled, label="GraphEdge", fontsize=12];
+  "GraphWeightedC.GraphSparseC" [fontsize=12, shape=box,peripheries=2, style=dashed, label="GraphSparseC", URL="GraphSparseC.html"];
+  n0x7dba1890 [shape=ellipse, style=filled, label="GraphEdgeList", fontsize=12];
+  "GraphWeightedC.GraphSparseC" [fontsize=12, shape=box,peripheries=2, style=dashed, label="GraphSparseC", URL="GraphSparseC.html"];
+  "GraphWeightedC.SourceShortestPathC" [fontsize=12, shape=box,peripheries=2, style=dashed, label="SourceShortestPathC", URL="SourceShortestPathC.html"];
+  "GraphWeightedC.SourceShortestPathC" [fontsize=12, shape=box,peripheries=2, style=dashed, label="SourceShortestPathC", URL="SourceShortestPathC.html"];
+  "GraphWeightedC.SourceShortestPathC" [fontsize=12, shape=box,peripheries=2, style=dashed, label="SourceShortestPathC", URL="SourceShortestPathC.html"];
+  "GraphWeightedC.SourceShortestPathC" [fontsize=12, shape=box,peripheries=2, style=dashed, label="SourceShortestPathC", URL="SourceShortestPathC.html"];
+  n0x7db9aac0 [shape=ellipse, style=filled, label="GraphEdgeWeight", fontsize=12];
+  "n0x7dba76c8" -> "GraphWeightedC.GraphSparseC" [label="Graph", URL="../ihtml/Graph.html", fontsize=10];
+  "n0x7dba4ce0" -> "GraphWeightedC.SourceShortestPathC" [label="IndexedIterator<graph_vertex_id_t>", URL="../ihtml/IndexedIterator.html", fontsize=10];
+  "n0x7dba43a0" -> "GraphWeightedC.SourceShortestPathC" [label="SourceShortestPath", URL="../ihtml/SourceShortestPath.html", fontsize=10];
+  "n0x7dba13b8" -> "GraphWeightedC.GraphSparseC" [label="GraphEdge", URL="../ihtml/GraphEdge.html", fontsize=10];
+  "n0x7dba1890" -> "GraphWeightedC.GraphSparseC" [label="IndexedIterator<graph_edge_id_t>", URL="../ihtml/IndexedIterator.html", fontsize=10];
+  "GraphWeightedC.SourceShortestPathC" -> "GraphWeightedC.GraphSparseC" [label="Graph", URL="../ihtml/Graph.html", fontsize=10];
+  "GraphWeightedC.SourceShortestPathC" -> "GraphWeightedC.GraphSparseC" [label="GraphEdge", URL="../ihtml/GraphEdge.html", fontsize=10];
+  "GraphWeightedC.SourceShortestPathC" -> "GraphWeightedC.GraphSparseC" [label="IndexedIterator<graph_edge_id_t>", URL="../ihtml/IndexedIterator.html", fontsize=10];
+  "GraphWeightedC.SourceShortestPathC" -> "n0x7db9aac0" [label="GraphEdgeWeight<graph_edge_weight_t>", URL="../ihtml/GraphEdgeWeight.html", fontsize=10];
+}

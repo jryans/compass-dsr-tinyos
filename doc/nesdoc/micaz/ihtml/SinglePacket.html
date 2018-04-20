@@ -1,0 +1,240 @@
+<html>
+  <head>
+    <LINK rel="stylesheet" href="nesdoc.css" type="text/css" media="screen"><title>Interface: SinglePacket</title>
+  </head>
+  <body>
+    <h2>Interface: SinglePacket</h2>
+    <b>interface SinglePacket</b><p>
+
+ Access and set the properties of a multihop packet with a single
+
+ node address based destination.
+
+
+
+ 
+    <p>
+    <dl>
+      <dt><b>Author:</b>
+      <dd>
+        Ryan Stinnett
+
+
+      </dd>
+    </dl>
+    <p><p><div id=heading>Commands</div><div id=funcsig><span id=funcnameshort>command am_addr_t <a href="#destination">destination</a>(message_t *msg)
+      </span><menu>
+
+ Returns the address of the destination of the multihop packet.
+
+
+
+
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command bool <a href="#isForMe">isForMe</a>(message_t *msg)
+      </span><menu>
+
+ As with the AM layer, returns whether this node is the destination
+
+ for the packet, but can also include special processing for broadcast
+
+ addresses or similar values.
+
+
+
+
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command void <a href="#setDestination">setDestination</a>(message_t *msg, am_addr_t dest)
+      </span><menu>
+
+ Sets the address of the destination of the multihop packet. 
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command void <a href="#setSource">setSource</a>(message_t *msg, am_addr_t src)
+      </span><menu>
+
+ Sets the address of the source of the multihop packet. 
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command am_addr_t <a href="#source">source</a>(message_t *msg)
+      </span><menu>
+
+ Returns the address of the source of the multihop packet.
+
+
+
+
+      </menu>
+    </div><p><div id=heading>Commands - Details</div>
+    <a name="destination"></a>
+    <h4>destination
+    </h4>
+    <span id=funcnameshort>command am_addr_t <b>destination</b>(message_t *msg)
+    </span>
+    <p>
+    <menu>
+      
+
+ Returns the address of the destination of the multihop packet.
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>msg</code> -  Pointer to the packet.
+
+ 
+        </dd>
+        <dt><b>Returns:</b>
+        <dd>
+          The destination node of the multihop packet.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="isForMe"></a>
+    <h4>isForMe
+    </h4>
+    <span id=funcnameshort>command bool <b>isForMe</b>(message_t *msg)
+    </span>
+    <p>
+    <menu>
+      
+
+ As with the AM layer, returns whether this node is the destination
+
+ for the packet, but can also include special processing for broadcast
+
+ addresses or similar values.
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>msg</code> -  Pointer to the packet.
+
+ 
+        </dd>
+        <dt><b>Returns:</b>
+        <dd>
+          Whether this node is the destination of the multihop packet.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="setDestination"></a>
+    <h4>setDestination
+    </h4>
+    <span id=funcnameshort>command void <b>setDestination</b>(message_t *msg, am_addr_t dest)
+    </span>
+    <p>
+    <menu>
+      
+
+ Sets the address of the destination of the multihop packet.  As
+
+ with the AM layer, this is set by the multihop layer, and should not
+
+ need to be used when sending a packet.  However, buffers or other
+
+ storage components may wish to use it to store the address for
+
+ later retrieval.
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>msg</code> -  Pointer to the packet.
+
+ 
+        </dd>
+        <dd>
+          <code>dest</code> -  The destination node of the multihop packet.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="setSource"></a>
+    <h4>setSource
+    </h4>
+    <span id=funcnameshort>command void <b>setSource</b>(message_t *msg, am_addr_t src)
+    </span>
+    <p>
+    <menu>
+      
+
+ Sets the address of the source of the multihop packet.  As with
+
+ the AM layer, this is set by the multihop layer, and should not
+
+ need to be used when sending a packet.  However, buffers or other
+
+ storage components may wish to use it to store the address for
+
+ later retrieval.
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>msg</code> -  Pointer to the packet.
+
+ 
+        </dd>
+        <dd>
+          <code>src</code> -  The source node of the multihop packet.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="source"></a>
+    <h4>source
+    </h4>
+    <span id=funcnameshort>command am_addr_t <b>source</b>(message_t *msg)
+    </span>
+    <p>
+    <menu>
+      
+
+ Returns the address of the source of the multihop packet.
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>msg</code> -  Pointer to the packet.
+
+ 
+        </dd>
+        <dt><b>Returns:</b>
+        <dd>
+          The source node of the multihop packet.
+
+
+        </dd>
+      </dl>
+    </menu>
+  </body>
+</html>

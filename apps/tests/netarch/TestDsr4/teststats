@@ -1,0 +1,74 @@
+#! /bin/awk -f
+BEGIN { err = 0 }
+/^ERROR/ { err++ }
+/Can't hold any more edges/ { edgeerr++ }
+/max route requests/ { maxrreqerr++ }
+/Received Data/ { rpkt[$6]++ }
+/Sending Data/ { spkts++ }
+/Send done with result/ { if ($7 == 0) sgood++ }
+/Composing route request/ { rreq++; $12 == "Single" ? rreqsingle++ : rreqdsr++ }
+/route error!/ { rerr++ }
+/Base packet's source/ { rerrbasesrc++ }
+/already has route error/ { rerrbase++ }
+/Route error's source/ { rerrerrsrc++ }
+/Attempting to salvage/ { sals++ }
+/Sending salvaged/ { salsent++ }
+/Base packet has route reply/ { salrrep++ }
+/salvaged too many/ { saltoomany++ }
+/No route.*salvaged/ { salnoroute++ }
+/extend source route/ { salnoroom++ }
+/PE: Free:/ { node = strtonum(substr($2, 2, length($2) - 3))
+              if (node > maxnode)
+                maxnode = node
+              pewait[node] = substr($9, 1, length($9) - 1)
+              peact[node] = $11 }
+/Send Buffer:/ { node = strtonum(substr($2, 2, length($2) - 3))
+                 sendsize = $8
+                 sendfinal[node] = strtonum($6)
+                 if (sendfinal[node] > sendmax[node])
+                   sendmax[node] = sendfinal[node] }
+/Receive Buffer:/ { node = strtonum(substr($2, 2, length($2) - 3))
+                    rcvsize = $8
+                    rcvfinal[node] = strtonum($6)
+                    if (rcvfinal[node] > rcvmax[node])
+                      rcvmax[node] = rcvfinal[node] }
+END {
+  for (i = 0; i < spkts; i++) {
+    allrpkts += rpkt[i]
+    if (rpkt[i] > 0)
+      rpkts++
+  }
+  print "Simulation Summary:"
+  print "  Program Errors: " err
+  if (err > 0) {
+    print "    Too Many Edges: " edgeerr " (" (edgeerr / err * 100) "%)"
+    print "    Max Route Requests: " maxrreqerr " (" (maxrreqerr / err * 100) "%)"
+  }
+  print "  Total Packets Sent: " spkts
+  print "    Received: " rpkts " (" (rpkts / spkts * 100) "%)"
+  print "    Avg. Copies Received: " allrpkts / spkts
+  print "    Sent Successfully: " sgood " (" (sgood / spkts * 100) "%)"
+  print "  Route Requests: " rreq
+  print "    Single Orig.: " rreqsingle " (" (rreqsingle / rreq * 100) "%)"
+  print "    DSR Orig.: " rreqdsr " (" (rreqdsr / rreq * 100) "%)"
+  print "  Route Errors: " rerr
+  print "    Base Packet's Source is This Node: " rerrbasesrc " (" (rerrbasesrc / rerr * 100) "%)"
+  print "    Base Packet has Route Error: " rerrbase " (" (rerrbase / rerr * 100) "%)"
+  print "      Route Error's Source is This Node: " rerrerrsrc " (" (rerrerrsrc / rerrbase * 100) "%)"
+  print "  Salvage Attempts: " sals
+  print "    Salvaged Successfully: " salsent " (" (salsent / sals * 100) "%)"
+  print "    Had Route Reply: " salrrep " (" (salrrep / sals * 100) "%)"
+  print "    Salvaged Too Many Times: " saltoomany " (" (saltoomany / sals * 100) "%)"
+  print "    No Route Found: " salnoroute " (" (salnoroute / sals * 100) "%)"
+  print "    Route Too Big: " salnoroom " (" (salnoroom / sals * 100) "%)"
+  print "  Packet Engine:"
+  print "    Send Buffer Size: " sendsize
+  print "    Receive Buffer Size: " rcvsize
+  print ""
+  print "               Wait  Action  Send   Send  Rcv    Rcv"
+  print "               Idx.   Idx.   Final  Max   Final  Max"
+  print "               ----  ------  -----  ----  -----  ----"
+  for (i = 0; i <= maxnode; i++)
+    printf "    Node # %-2u: %-4u  %-6u  %-5u  %-4u  %-5u  %-4u\n", \
+           i, pewait[i], peact[i], sendfinal[i], sendmax[i], rcvfinal[i], rcvmax[i]
+}

@@ -1,0 +1,400 @@
+<?xml version="1.0" ?><component abstract="" loc="38:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/SourceShortestPathC.nc" nicename="SourceShortestPathC" qname="SourceShortestPathC">
+      <documentation loc="38:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/SourceShortestPathC.nc">
+        <short>
+
+ Wires supporting modules needed by any SourceShortestPathP.
+
+
+
+</short>
+        <long>
+
+ Wires supporting modules needed by any SourceShortestPathP.
+
+
+
+ @author Ryan Stinnett
+
+</long>
+      </documentation>
+      <parameters>
+        <constant loc="38:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/SourceShortestPathC.nc" name="maxVertices" ref="0x7db10768">
+          <component-ref nicename="SourceShortestPathC" qname="SourceShortestPathC"/>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="graph_vertex_id_t" ref="0x7dbe5e40"/></typename>
+          </type-int>
+        </constant>
+        <typedef loc="39:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/SourceShortestPathC.nc" name="graph_edge_weight_t" ref="0x7db10a30">
+          <component-ref nicename="SourceShortestPathC" qname="SourceShortestPathC"/>
+          <type-var alignment="U:" size="U:"><typedef-ref name="graph_edge_weight_t" ref="0x7db10a30" scoped=""/></type-var>
+        </typedef>
+      </parameters>
+      <configuration/>
+      <wiring>
+        <wire loc="58:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/SourceShortestPathC.nc">
+          <from><interface-ref name="PathEdgeList" ref="0x7db0a698" scoped=""/></from>
+          <to><interface-ref name="PathEdgeList" ref="0x7da667f0" scoped=""/></to>
+        </wire>
+        <wire loc="57:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/SourceShortestPathC.nc">
+          <from><interface-ref name="SourceShortestPath" ref="0x7db10c90" scoped=""/></from>
+          <to><interface-ref name="SourceShortestPath" ref="0x7daa7ea8" scoped=""/></to>
+        </wire>
+        <wire loc="59:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/SourceShortestPathC.nc">
+          <from><interface-ref name="Graph" ref="0x7da64930" scoped=""/></from>
+          <to><interface-ref name="Graph" ref="0x7db09290" scoped=""/></to>
+        </wire>
+        <wire loc="60:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/SourceShortestPathC.nc">
+          <from><interface-ref name="GraphEdge" ref="0x7da63690" scoped=""/></from>
+          <to><interface-ref name="GraphEdge" ref="0x7db08010" scoped=""/></to>
+        </wire>
+        <wire loc="61:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/SourceShortestPathC.nc">
+          <from><interface-ref name="GraphEdgeWeight" ref="0x7da63b18" scoped=""/></from>
+          <to><interface-ref name="GraphEdgeWeight" ref="0x7db084c0" scoped=""/></to>
+        </wire>
+        <wire loc="62:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/SourceShortestPathC.nc">
+          <from><interface-ref name="GraphEdgeList" ref="0x7da61c48" scoped=""/></from>
+          <to><interface-ref name="GraphEdgeList" ref="0x7db06648" scoped=""/></to>
+        </wire>
+        <wire loc="63:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/SourceShortestPathC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x7e756348" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x7daa7b90" scoped=""/></to>
+        </wire>
+        <wire loc="64:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/SourceShortestPathC.nc">
+          <from><interface-ref name="Compare" ref="0x7db02740" scoped=""/></from>
+          <to><interface-ref name="Compare" ref="0x7da65380" scoped=""/></to>
+        </wire>
+        <wire loc="66:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/SourceShortestPathC.nc">
+          <from><interface-ref name="PriorityQueue" ref="0x7da65cb0" scoped=""/></from>
+          <to><interface-ref name="PriorityQueue" ref="0x7db039f8" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="45:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/SourceShortestPathC.nc" name="Graph" provided="0" ref="0x7db09290">
+      <component-ref nicename="SourceShortestPathC" qname="SourceShortestPathC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Graph" ref="0x7db09290" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="Graph" qname="Graph"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="maxEdges" ref="0x7db09468" scoped=""/>
+        <function-ref name="removed" ref="0x7db09548" scoped=""/>
+        <function-ref name="remove" ref="0x7db09628" scoped=""/>
+        <function-ref name="edge" ref="0x7db09708" scoped=""/>
+        <function-ref name="directed" ref="0x7db097e8" scoped=""/>
+        <function-ref name="vertices" ref="0x7db098c8" scoped=""/>
+        <function-ref name="parallelEdges" ref="0x7db099a8" scoped=""/>
+        <function-ref name="maxVertices" ref="0x7db09a88" scoped=""/>
+        <function-ref name="insert" ref="0x7db09b68" scoped=""/>
+        <function-ref name="inserted" ref="0x7db09c48" scoped=""/>
+        <function-ref name="edgeList" ref="0x7db09d28" scoped=""/>
+        <function-ref name="edges" ref="0x7db09e08" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="42:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/SourceShortestPathC.nc" name="PathEdgeList" provided="1" ref="0x7db0a698">
+      <component-ref nicename="SourceShortestPathC" qname="SourceShortestPathC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="PathEdgeList" ref="0x7db0a698" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="IndexedIterator" qname="IndexedIterator"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="graph_vertex_id_t" ref="0x7dbe5e40"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="end" ref="0x7db09010" scoped=""/>
+        <function-ref name="next" ref="0x7db0acc0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="41:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/SourceShortestPathC.nc" name="SourceShortestPath" provided="1" ref="0x7db10c90">
+      <component-ref nicename="SourceShortestPathC" qname="SourceShortestPathC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="SourceShortestPath" ref="0x7db10c90" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="SourceShortestPath" qname="SourceShortestPath"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="rebuildNeeded" ref="0x7db10e68" scoped=""/>
+        <function-ref name="buildTree" ref="0x7db0a010" scoped=""/>
+        <function-ref name="builtTree" ref="0x7db0a0f0" scoped=""/>
+        <function-ref name="buildingTree" ref="0x7db0a1d0" scoped=""/>
+        <function-ref name="edgeCount" ref="0x7db0a2b0" scoped=""/>
+        <function-ref name="buildTreeTo" ref="0x7db0a390" scoped=""/>
+        <function-ref name="builtTreeTo" ref="0x7db0a470" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/SourceShortestPathC.nc" name="GraphEdge" provided="0" ref="0x7db08010">
+      <component-ref nicename="SourceShortestPathC" qname="SourceShortestPathC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="GraphEdge" ref="0x7db08010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="GraphEdge" qname="GraphEdge"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="src" ref="0x7db081e8" scoped=""/>
+        <function-ref name="dest" ref="0x7db082c8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/SourceShortestPathC.nc" name="GraphEdgeWeight" provided="0" ref="0x7db084c0">
+      <component-ref nicename="SourceShortestPathC" qname="SourceShortestPathC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="GraphEdgeWeight" ref="0x7db084c0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="GraphEdgeWeight" qname="GraphEdgeWeight"/>
+        <arguments>
+          <type-var alignment="U:" size="U:"><typedef-ref name="graph_edge_weight_t" ref="0x7db10a30" scoped=""/></type-var>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="canChangeWeights" ref="0x7db08ae8" scoped=""/>
+        <function-ref name="weightChanged" ref="0x7db06330" scoped=""/>
+        <function-ref name="setWeight" ref="0x7db06010" scoped=""/>
+        <function-ref name="weight" ref="0x7db08cc8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="48:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/SourceShortestPathC.nc" name="GraphEdgeList" provided="0" ref="0x7db06648">
+      <component-ref nicename="SourceShortestPathC" qname="SourceShortestPathC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="GraphEdgeList" ref="0x7db06648" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="IndexedIterator" qname="IndexedIterator"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="graph_edge_id_t" ref="0x7dbe4020"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="end" ref="0x7db06ef0" scoped=""/>
+        <function-ref name="next" ref="0x7db06c70" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="49:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/SourceShortestPathP.nc" name="PriorityQueue" provided="0" ref="0x7da65cb0">
+      <component-ref nicename="SourceShortestPathC.SourceShortestPathP" qname="SourceShortestPathC.SourceShortestPathP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="PriorityQueue" ref="0x7da65cb0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="PriorityQueue" qname="PriorityQueue"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x7da65e88" scoped=""/>
+        <function-ref name="findBest" ref="0x7da64010" scoped=""/>
+        <function-ref name="maxSize" ref="0x7da640f0" scoped=""/>
+        <function-ref name="insert" ref="0x7da641d0" scoped=""/>
+        <function-ref name="moveUp" ref="0x7da642b0" scoped=""/>
+        <function-ref name="move" ref="0x7da64390" scoped=""/>
+        <function-ref name="inserted" ref="0x7da64470" scoped=""/>
+        <function-ref name="moveDown" ref="0x7da64550" scoped=""/>
+        <function-ref name="empty" ref="0x7da64630" scoped=""/>
+        <function-ref name="removeBest" ref="0x7da64710" scoped=""/>
+        <function-ref name="size" ref="0x7da647f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="41:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/queue/PriorityQueueC.nc" name="PriorityQueue" provided="1" ref="0x7db039f8">
+      <component-ref nicename="SourceShortestPathC.PriorityQueueC" qname="SourceShortestPathC.PriorityQueueC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="PriorityQueue" ref="0x7db039f8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="PriorityQueue" qname="PriorityQueue"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x7db03bd0" scoped=""/>
+        <function-ref name="findBest" ref="0x7db03cb0" scoped=""/>
+        <function-ref name="maxSize" ref="0x7db03d90" scoped=""/>
+        <function-ref name="insert" ref="0x7db03e70" scoped=""/>
+        <function-ref name="moveUp" ref="0x7db02010" scoped=""/>
+        <function-ref name="move" ref="0x7db020f0" scoped=""/>
+        <function-ref name="inserted" ref="0x7db021d0" scoped=""/>
+        <function-ref name="moveDown" ref="0x7db022b0" scoped=""/>
+        <function-ref name="empty" ref="0x7db02390" scoped=""/>
+        <function-ref name="removeBest" ref="0x7db02470" scoped=""/>
+        <function-ref name="size" ref="0x7db02550" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/SourceShortestPathP.nc" name="Compare" provided="1" ref="0x7da65380">
+      <component-ref nicename="SourceShortestPathC.SourceShortestPathP" qname="SourceShortestPathC.SourceShortestPathP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Compare" ref="0x7da65380" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="Compare" qname="Compare"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="graph_vertex_id_t" ref="0x7dbe5e40"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="test" ref="0x7da659a8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="50:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/SourceShortestPathP.nc" name="Graph" provided="0" ref="0x7da64930">
+      <component-ref nicename="SourceShortestPathC.SourceShortestPathP" qname="SourceShortestPathC.SourceShortestPathP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Graph" ref="0x7da64930" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="Graph" qname="Graph"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="maxEdges" ref="0x7da64b08" scoped=""/>
+        <function-ref name="removed" ref="0x7da64be8" scoped=""/>
+        <function-ref name="remove" ref="0x7da64cc8" scoped=""/>
+        <function-ref name="edge" ref="0x7da64da8" scoped=""/>
+        <function-ref name="directed" ref="0x7da64e88" scoped=""/>
+        <function-ref name="vertices" ref="0x7da63010" scoped=""/>
+        <function-ref name="parallelEdges" ref="0x7da630f0" scoped=""/>
+        <function-ref name="maxVertices" ref="0x7da631d0" scoped=""/>
+        <function-ref name="insert" ref="0x7da632b0" scoped=""/>
+        <function-ref name="inserted" ref="0x7da63390" scoped=""/>
+        <function-ref name="edgeList" ref="0x7da63470" scoped=""/>
+        <function-ref name="edges" ref="0x7da63550" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="52:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/SourceShortestPathP.nc" name="GraphEdgeWeight" provided="0" ref="0x7da63b18">
+      <component-ref nicename="SourceShortestPathC.SourceShortestPathP" qname="SourceShortestPathC.SourceShortestPathP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="GraphEdgeWeight" ref="0x7da63b18" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="GraphEdgeWeight" qname="GraphEdgeWeight"/>
+        <arguments>
+          <type-var alignment="U:" size="U:"><typedef-ref name="graph_edge_weight_t" ref="0x7db10a30" scoped=""/></type-var>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="canChangeWeights" ref="0x7da611e0" scoped=""/>
+        <function-ref name="weightChanged" ref="0x7da61960" scoped=""/>
+        <function-ref name="setWeight" ref="0x7da61640" scoped=""/>
+        <function-ref name="weight" ref="0x7da613c0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/SourceShortestPathP.nc" name="Init" provided="1" ref="0x7daa7b90">
+      <component-ref nicename="SourceShortestPathC.SourceShortestPathP" qname="SourceShortestPathC.SourceShortestPathP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Init" ref="0x7daa7b90" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x7daa7d68" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="42:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/queue/PriorityQueueC.nc" name="Compare" provided="0" ref="0x7db02740">
+      <component-ref nicename="SourceShortestPathC.PriorityQueueC" qname="SourceShortestPathC.PriorityQueueC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Compare" ref="0x7db02740" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="Compare" qname="Compare"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="priority_queue_id_t" ref="0x7db01ae8"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="test" ref="0x7db02d68" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/SourceShortestPathP.nc" name="SourceShortestPath" provided="1" ref="0x7daa7ea8">
+      <component-ref nicename="SourceShortestPathC.SourceShortestPathP" qname="SourceShortestPathC.SourceShortestPathP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="SourceShortestPath" ref="0x7daa7ea8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="SourceShortestPath" qname="SourceShortestPath"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="rebuildNeeded" ref="0x7da660c0" scoped=""/>
+        <function-ref name="buildTree" ref="0x7da661a0" scoped=""/>
+        <function-ref name="builtTree" ref="0x7da66280" scoped=""/>
+        <function-ref name="buildingTree" ref="0x7da66360" scoped=""/>
+        <function-ref name="edgeCount" ref="0x7da66440" scoped=""/>
+        <function-ref name="buildTreeTo" ref="0x7da66520" scoped=""/>
+        <function-ref name="builtTreeTo" ref="0x7da66600" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="53:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/SourceShortestPathP.nc" name="GraphEdgeList" provided="0" ref="0x7da61c48">
+      <component-ref nicename="SourceShortestPathC.SourceShortestPathP" qname="SourceShortestPathC.SourceShortestPathP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="GraphEdgeList" ref="0x7da61c48" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="IndexedIterator" qname="IndexedIterator"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="graph_edge_id_t" ref="0x7dbe4020"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="end" ref="0x7da60508" scoped=""/>
+        <function-ref name="next" ref="0x7da60288" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/SourceShortestPathP.nc" name="PathEdgeList" provided="1" ref="0x7da667f0">
+      <component-ref nicename="SourceShortestPathC.SourceShortestPathP" qname="SourceShortestPathC.SourceShortestPathP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="PathEdgeList" ref="0x7da667f0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="IndexedIterator" qname="IndexedIterator"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="graph_vertex_id_t" ref="0x7dbe5e40"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="end" ref="0x7da650b8" scoped=""/>
+        <function-ref name="next" ref="0x7da66e18" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="51:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/SourceShortestPathP.nc" name="GraphEdge" provided="0" ref="0x7da63690">
+      <component-ref nicename="SourceShortestPathC.SourceShortestPathP" qname="SourceShortestPathC.SourceShortestPathP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="GraphEdge" ref="0x7da63690" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="GraphEdge" qname="GraphEdge"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="src" ref="0x7da63868" scoped=""/>
+        <function-ref name="dest" ref="0x7da63948" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="41:/opt/tinyos-2.x/tos/lib/tossim/MainC.nc" name="SoftwareInit" provided="0" ref="0x7e756348">
+      <component-ref nicename="tos.lib.tossim.MainC" qname="MainC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="SoftwareInit" ref="0x7e756348" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x7e756520" scoped=""/>
+      </interface-functions>
+    </interface><component loc="39:/opt/tinyos-2.x/tos/lib/tossim/MainC.nc" nicename="tos.lib.tossim.MainC" qname="MainC">
+      <configuration/>
+      <wiring>
+        <wire loc="56:/opt/tinyos-2.x/tos/lib/tossim/MainC.nc">
+          <from><interface-ref name="Boot" ref="0x7e759bd8" scoped=""/></from>
+          <to><interface-ref name="Boot" ref="0x7e5f9770" scoped=""/></to>
+        </wire>
+        <wire loc="51:/opt/tinyos-2.x/tos/lib/tossim/MainC.nc">
+          <from><interface-ref name="Scheduler" ref="0x7e5f9ab8" scoped=""/></from>
+          <to><interface-ref name="Scheduler" ref="0x7e8d1c50" scoped=""/></to>
+        </wire>
+        <wire loc="52:/opt/tinyos-2.x/tos/lib/tossim/MainC.nc">
+          <from><interface-ref name="PlatformInit" ref="0x7e5f8010" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x7e7538e0" scoped=""/></to>
+        </wire>
+        <wire loc="55:/opt/tinyos-2.x/tos/lib/tossim/MainC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x7e5f8380" scoped=""/></from>
+          <to><interface-ref name="SoftwareInit" ref="0x7e756348" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component abstract="" loc="40(SourceShortestPathC.PriorityQueueC):/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/queue/PriorityQueueC.nc" nicename="SourceShortestPathC.PriorityQueueC" qname="SourceShortestPathC.PriorityQueueC">
+      <instance>
+        <component-ref nicename="PriorityQueueC" qname="PriorityQueueC"/>
+        <arguments>
+          <value cst="U:">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="graph_vertex_id_t" ref="0x7dbe5e40"/></typename>
+            </type-int>
+          </value>
+        </arguments>
+      </instance>
+      <configuration/>
+    </component><component abstract="" loc="40(SourceShortestPathC.SourceShortestPathP):/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/SourceShortestPathP.nc" nicename="SourceShortestPathC.SourceShortestPathP" qname="SourceShortestPathC.SourceShortestPathP">
+      <documentation loc="40(SourceShortestPathC.SourceShortestPathP):/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/SourceShortestPathP.nc">
+        <short>
+
+ Uses Djikstra's algorithm with a priority queue holding fringe vertices to
+
+ find the single source shortest path. </short>
+        <long>
+
+ Uses Djikstra's algorithm with a priority queue holding fringe vertices to
+
+ find the single source shortest path.  All weights are assumed to be
+
+ non-negative.
+
+
+
+ @author Ryan Stinnett
+
+</long>
+      </documentation>
+      <instance>
+        <component-ref nicename="SourceShortestPathP" qname="SourceShortestPathP"/>
+        <arguments>
+          <value cst="U:">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="graph_vertex_id_t" ref="0x7dbe5e40"/></typename>
+            </type-int>
+          </value>
+          <type-var alignment="U:" size="U:"><typedef-ref name="graph_edge_weight_t" ref="0x7db10a30" scoped=""/></type-var>
+        </arguments>
+      </instance>
+      <module/>
+    </component></referenced></component>

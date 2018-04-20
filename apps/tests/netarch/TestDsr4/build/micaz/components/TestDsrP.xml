@@ -1,0 +1,124 @@
+<?xml version="1.0" ?><component loc="40:TestDsrP.nc" nicename="TestDsrP" qname="TestDsrP">
+      <module/>
+    <specification><interface loc="43:TestDsrP.nc" name="AMControl" provided="0" ref="0x7e536608">
+      <component-ref nicename="TestDsrP" qname="TestDsrP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="AMControl" ref="0x7e536608" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SplitControl" qname="SplitControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="startDone" ref="0x7e5367e0" scoped=""/>
+        <function-ref name="stopDone" ref="0x7e5368c0" scoped=""/>
+        <function-ref name="start" ref="0x7e5369a0" scoped=""/>
+        <function-ref name="stop" ref="0x7e536a80" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="42:TestDsrP.nc" name="Boot" provided="0" ref="0x7e540a78">
+      <component-ref nicename="TestDsrP" qname="TestDsrP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Boot" ref="0x7e540a78" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Boot" qname="Boot"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="booted" ref="0x7e540c50" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="48:TestDsrP.nc" name="Packet" provided="0" ref="0x7e535010">
+      <component-ref nicename="TestDsrP" qname="TestDsrP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Packet" ref="0x7e535010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Packet" qname="Packet"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x7e5351e8" scoped=""/>
+        <function-ref name="payloadLength" ref="0x7e5352c8" scoped=""/>
+        <function-ref name="getPayload" ref="0x7e5353a8" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x7e535488" scoped=""/>
+        <function-ref name="setPayloadLength" ref="0x7e535568" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:TestDsrP.nc" name="PEControl" provided="0" ref="0x7e533360">
+      <component-ref nicename="TestDsrP" qname="TestDsrP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="PEControl" ref="0x7e533360" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.StdControl" qname="StdControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="start" ref="0x7e533538" scoped=""/>
+        <function-ref name="stop" ref="0x7e533618" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:TestDsrP.nc" name="Send" provided="0" ref="0x7e533788">
+      <component-ref nicename="TestDsrP" qname="TestDsrP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Send" ref="0x7e533788" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMSend" qname="AMSend"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x7e533960" scoped=""/>
+        <function-ref name="getPayload" ref="0x7e533a40" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x7e533b20" scoped=""/>
+        <function-ref name="cancel" ref="0x7e533c00" scoped=""/>
+        <function-ref name="sendDone" ref="0x7e533ce0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="50:TestDsrP.nc" name="Random" provided="0" ref="0x7e523010">
+      <component-ref nicename="TestDsrP" qname="TestDsrP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Random" ref="0x7e523010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Random" qname="Random"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="rand16" ref="0x7e5231e8" scoped=""/>
+        <function-ref name="rand32" ref="0x7e5232c8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:TestDsrP.nc" name="Receive" provided="0" ref="0x7e533e28">
+      <component-ref nicename="TestDsrP" qname="TestDsrP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Receive" ref="0x7e533e28" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Receive" qname="Receive"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="payloadLength" ref="0x7e538050" scoped=""/>
+        <function-ref name="receive" ref="0x7e538130" scoped=""/>
+        <function-ref name="getPayload" ref="0x7e538210" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:TestDsrP.nc" name="AMPacket" provided="0" ref="0x7e538360">
+      <component-ref nicename="TestDsrP" qname="TestDsrP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="AMPacket" ref="0x7e538360" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMPacket" qname="AMPacket"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="group" ref="0x7e538538" scoped=""/>
+        <function-ref name="source" ref="0x7e538618" scoped=""/>
+        <function-ref name="address" ref="0x7e5386f8" scoped=""/>
+        <function-ref name="destination" ref="0x7e5387d8" scoped=""/>
+        <function-ref name="setSource" ref="0x7e5388b8" scoped=""/>
+        <function-ref name="setDestination" ref="0x7e538998" scoped=""/>
+        <function-ref name="type" ref="0x7e538a78" scoped=""/>
+        <function-ref name="setType" ref="0x7e538b58" scoped=""/>
+        <function-ref name="isForMe" ref="0x7e538c38" scoped=""/>
+        <function-ref name="setGroup" ref="0x7e538d18" scoped=""/>
+        <function-ref name="localGroup" ref="0x7e538df8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="49:TestDsrP.nc" name="Timer" provided="0" ref="0x7e526df8">
+      <component-ref nicename="TestDsrP" qname="TestDsrP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Timer" ref="0x7e526df8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:4" size="I:4"><struct-ref ref="0x7e52c440"/>
+            <typename><typedef-ref name="TMilli" ref="0x7e52c628"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x7e530718" scoped=""/>
+        <function-ref name="fired" ref="0x7e531b28" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x7e5300d8" scoped=""/>
+        <function-ref name="isOneShot" ref="0x7e531ee8" scoped=""/>
+        <function-ref name="getdt" ref="0x7e530ad8" scoped=""/>
+        <function-ref name="gett0" ref="0x7e5308f8" scoped=""/>
+        <function-ref name="isRunning" ref="0x7e531d08" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x7e531448" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x7e5303f8" scoped=""/>
+        <function-ref name="startOneShot" ref="0x7e5316c8" scoped=""/>
+        <function-ref name="stop" ref="0x7e531948" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

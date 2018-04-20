@@ -1,0 +1,49 @@
+<?xml version="1.0" ?><component abstract="" loc="33:/opt/tinyos-2.x/tos/system/BitVectorC.nc" nicename="tos.system.BitVectorC" qname="BitVectorC">
+      <documentation loc="33:/opt/tinyos-2.x/tos/system/BitVectorC.nc">
+        <short>
+ Generic bit vector implementation.</short>
+        <long>
+ Generic bit vector implementation. Note that if you use this bit vector
+ from interrupt code, you must use appropriate &lt;code&gt;atomic&lt;/code&gt;
+ statements to ensure atomicity.
+
+ @param max_bits Bit vector length.
+
+ @author Cory Sharp &lt;cssharp@eecs.berkeley.edu&gt;
+</long>
+      </documentation>
+      <parameters>
+        <constant loc="33:/opt/tinyos-2.x/tos/system/BitVectorC.nc" name="max_bits" ref="0x7db77600">
+          <component-ref nicename="tos.system.BitVectorC" qname="BitVectorC"/>
+          <type-int alignment="I:2" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x7fea02f8"/></typename>
+          </type-int>
+        </constant>
+      </parameters>
+      <module/>
+    <specification><interface loc="35:/opt/tinyos-2.x/tos/system/BitVectorC.nc" name="Init" provided="1" ref="0x7db77850">
+      <component-ref nicename="tos.system.BitVectorC" qname="BitVectorC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Init" ref="0x7db77850" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x7db77a28" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="36:/opt/tinyos-2.x/tos/system/BitVectorC.nc" name="BitVector" provided="1" ref="0x7db77b98">
+      <component-ref nicename="tos.system.BitVectorC" qname="BitVectorC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="BitVector" ref="0x7db77b98" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.BitVector" qname="BitVector"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clearAll" ref="0x7db77d70" scoped=""/>
+        <function-ref name="clear" ref="0x7db77e50" scoped=""/>
+        <function-ref name="toggle" ref="0x7db76010" scoped=""/>
+        <function-ref name="get" ref="0x7db760f0" scoped=""/>
+        <function-ref name="assign" ref="0x7db761d0" scoped=""/>
+        <function-ref name="setAll" ref="0x7db762b0" scoped=""/>
+        <function-ref name="set" ref="0x7db76390" scoped=""/>
+        <function-ref name="size" ref="0x7db76470" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

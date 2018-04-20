@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <LINK rel="stylesheet" href="nesdoc.css" type="text/css" media="screen"><title>Component: LruDataCacheP</title>
+  </head>
+  <body>
+    <h2>Component: LruDataCacheP
+    </h2>
+    <b>generic module LruDataCacheP(typedef data_cache_item_t, uint8_t size)</b>
+    <p>
+ A LRU data cache that stores data items, where an insert operation
+ indicates "use".  Inserting a data item not in the cache will replace
+ the oldest, and inserting an element already in the cache will refresh
+ its age.  Insert and lookup return a pointer to the cached data.  This
+ component should be wired to an Equal interface to check for equality
+ on the data type used.
+
+ 
+    <p>
+    <dl>
+      <dt><b>Author:</b>
+      <dd>
+        Ryan Stinnett
+ 
+      </dd>
+      <dd>
+        Rodrigo Fonseca
+ 
+      </dd>
+      <dd>
+        Philip Levis
+
+      </dd>
+    </dl>
+    <p><p><div id=heading>Provides</div><div id=funcsig>interface <a href="../ihtml/DataCache.html">DataCache</a>&lt;data_cache_item_t&gt;</div><div id=funcsig>interface <a href="../ihtml/tos.interfaces.Init.html">Init</a></div><p><div id=heading>Uses</div><div id=funcsig>interface <a href="../ihtml/Equal.html">Equal</a>&lt;data_cache_item_t *&gt;</div>
+  </body>
+</html>

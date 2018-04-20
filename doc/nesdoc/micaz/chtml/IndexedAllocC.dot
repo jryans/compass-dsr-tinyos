@@ -1,0 +1,5 @@
+digraph "IndexedAllocC" {
+  n0x7db81c80 [shape=ellipse, style=filled, label="IndexedAlloc", fontsize=12];
+  "IndexedAllocC.IndexedBits" [fontsize=12, shape=box,peripheries=2, style=dashed, label="IndexedAllocBitsC\n(IndexedBits)", URL="IndexedAllocBitsC.html"];
+  "n0x7db81c80" -> "IndexedAllocC.IndexedBits" [label="IndexedAlloc", URL="../ihtml/IndexedAlloc.html", fontsize=10];
+}

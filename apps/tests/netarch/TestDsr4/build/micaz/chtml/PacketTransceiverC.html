@@ -1,0 +1,70 @@
+<html>
+  <head>
+    <LINK rel="stylesheet" href="nesdoc.css" type="text/css" media="screen"><title>Component: PacketTransceiverC</title>
+  </head>
+  <body>
+    <h2>Component: PacketTransceiverC
+    </h2>
+    <b>generic configuration PacketTransceiverC(am_id_t lowerId)</b>
+    <p>
+
+ Multihop protocols instantiate this component to connect the packet
+
+ engine to the AM layer for a given link layer AM type.  The Packet
+
+ interface used by this component should be provided by the protocol.
+
+ Similarly, the SubPacket interface provided by this component should
+
+ be used by the protocol to complete the chain of Packet interfaces.
+
+
+
+ 
+    <p>
+    <dl>
+      <dt><b>Author:</b>
+      <dd>
+        Ryan Stinnett
+
+
+      </dd>
+    </dl>
+    <p><p><div id=heading>Provides</div><div id=funcsig>interface <a href="../ihtml/tos.interfaces.Packet.html">Packet</a> as <b>SubPacket</b></div><p><div id=heading>Uses</div><div id=funcsig>interface <a href="../ihtml/tos.interfaces.Packet.html">Packet</a></div><p><div id=heading>Wiring</div><p>
+    <map name="comp">
+      <area shape="rect" href="tos.lib.tossim.ActiveMessageC.html" title="ActiveMessageC" alt="ActiveMessageC" coords="7,144,135,203">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.Packet.html" title="Packet" alt="Packet" coords="73,100,116,119">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.Packet.html" title="Packet" alt="Packet" coords="67,65,75,73">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.Packet.html" title="Packet" alt="Packet" coords="67,140,75,148">
+
+      <area shape="rect" href="PacketEngineC.html" title="PacketEngineC" alt="PacketEngineC" coords="313,16,431,75">
+
+      <area shape="rect" href="tos.system.AMSenderC.html" title="AMSenderC" alt="AMSenderC" coords="159,144,263,203">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.AMSend.html" title="AMSend[am_id_t]" alt="AMSend[am_id_t]" coords="264,100,365,119">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.AMSend.html" title="AMSend[am_id_t]" alt="AMSend[am_id_t]" coords="309,59,317,67">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.AMSend.html" title="AMSend[am_id_t]" alt="AMSend[am_id_t]" coords="219,140,227,148">
+
+      <area shape="rect" href="tos.system.AMSnoopingReceiverC.html" title="AMSnoopingReceiverC" alt="AMSnoopingReceiverC" coords="287,144,457,203">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.Receive.html" title="Receive[am_id_t]" alt="Receive[am_id_t]" coords="377,100,471,119">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.Receive.html" title="Receive[am_id_t]" alt="Receive[am_id_t]" coords="368,71,376,79">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.Receive.html" title="Receive[am_id_t]" alt="Receive[am_id_t]" coords="368,140,376,148">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.Packet.html" title="Packet[am_id_t]" alt="Packet[am_id_t]" coords="502,100,589,119">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.Packet.html" title="Packet[am_id_t]" alt="Packet[am_id_t]" coords="427,63,435,71">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.Packet.html" title="Packet[am_id_t]" alt="Packet[am_id_t]" coords="512,145,520,153">
+
+    </map>
+    <img src="PacketTransceiverC.gif" usemap="#comp" id=imgwiring>
+  </body>
+</html>

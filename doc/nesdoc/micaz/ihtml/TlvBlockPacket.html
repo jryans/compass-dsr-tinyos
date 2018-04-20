@@ -1,0 +1,144 @@
+<html>
+  <head>
+    <LINK rel="stylesheet" href="nesdoc.css" type="text/css" media="screen"><title>Interface: TlvBlockPacket</title>
+  </head>
+  <body>
+    <h2>Interface: TlvBlockPacket</h2>
+    <b>interface TlvBlockPacket</b><p>
+
+ Manipulate a packet with a TLV block independent of the types it
+
+ contains.
+
+
+
+ 
+    <p>
+    <dl>
+      <dt><b>Author:</b>
+      <dd>
+        Ryan Stinnett
+
+
+      </dd>
+    </dl>
+    <p><p><div id=heading>Commands</div><div id=funcsig><span id=funcnameshort>command error_t <a href="#add">add</a>(message_t *pkt)
+      </span><menu>
+
+ Adds a TLV block at the beginning of a given packet. 
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command uint8_t <a href="#length">length</a>(message_t *pkt)
+      </span><menu>
+
+ Returns the length of the entire TLV block, including the block
+
+ length value itself.
+
+
+
+
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command void <a href="#remove">remove</a>(message_t *pkt)
+      </span><menu>
+
+ Removes a TLV block from the beginning of a given packet.
+      </menu>
+    </div><p><div id=heading>Commands - Details</div>
+    <a name="add"></a>
+    <h4>add
+    </h4>
+    <span id=funcnameshort>command error_t <b>add</b>(message_t *pkt)
+    </span>
+    <p>
+    <menu>
+      
+
+ Adds a TLV block at the beginning of a given packet.  Other
+
+ data is moved to accomidate it.  This must be called on any new TLV
+
+ block before using any other TLV commands.
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>pkt</code> -  Pointer to the packet.
+
+ 
+        </dd>
+        <dt><b>Returns:</b>
+        <dd>
+          SUCCESS if the add completed, ESIZE if there wasn't enough
+
+         space.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="length"></a>
+    <h4>length
+    </h4>
+    <span id=funcnameshort>command uint8_t <b>length</b>(message_t *pkt)
+    </span>
+    <p>
+    <menu>
+      
+
+ Returns the length of the entire TLV block, including the block
+
+ length value itself.
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>pkt</code> -  Pointer to the packet.
+
+ 
+        </dd>
+        <dt><b>Returns:</b>
+        <dd>
+          Length of the TLV block.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="remove"></a>
+    <h4>remove
+    </h4>
+    <span id=funcnameshort>command void <b>remove</b>(message_t *pkt)
+    </span>
+    <p>
+    <menu>
+      
+
+ Removes a TLV block from the beginning of a given packet. Other
+
+ data is moved to fill the gap.
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>pkt</code> -  Pointer to the packet.
+
+
+        </dd>
+      </dl>
+    </menu>
+  </body>
+</html>

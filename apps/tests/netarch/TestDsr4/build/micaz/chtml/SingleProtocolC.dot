@@ -1,0 +1,5 @@
+digraph "SingleProtocolC" {
+  "SingleProtocolC.TransceiverC" [fontsize=12, shape=box,peripheries=2, style=dashed, label="PacketTransceiverC\n(TransceiverC)", URL="PacketTransceiverC.html"];
+  "SingleProtocolC.TransceiverC" [fontsize=12, shape=box,peripheries=2, style=dashed, label="PacketTransceiverC\n(TransceiverC)", URL="PacketTransceiverC.html"];
+  "SingleProtocolC.TransceiverC" -> "SingleProtocolC.TransceiverC" [label="Packet", URL="../ihtml/tos.interfaces.Packet.html", fontsize=10];
+}

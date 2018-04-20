@@ -1,0 +1,192 @@
+<?xml version="1.0" ?><component abstract="" loc="39:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketReceiverC.nc" nicename="PacketReceiverC" qname="PacketReceiverC">
+      <documentation loc="39:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketReceiverC.nc">
+        <short>
+
+ Receiver for generic multihop packets of a given application layer
+
+ AM type that are destined for this node.
+
+
+
+</short>
+        <long>
+
+ Receiver for generic multihop packets of a given application layer
+
+ AM type that are destined for this node.
+
+
+
+ @author Ryan Stinnett
+
+</long>
+      </documentation>
+      <parameters>
+        <constant loc="39:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketReceiverC.nc" name="upperId" ref="0x7d901e70">
+          <component-ref nicename="PacketReceiverC" qname="PacketReceiverC"/>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="am_id_t" ref="0x7e881588"/></typename>
+          </type-int>
+        </constant>
+      </parameters>
+      <configuration/>
+      <wiring>
+        <wire loc="51:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketReceiverC.nc">
+          <from><interface-ref name="Packet" ref="0x7d9005c8" scoped=""/></from>
+          <to><interface-ref name="Packet" ref="0x7e4faad0" scoped=""/></to>
+        </wire>
+        <wire loc="50:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketReceiverC.nc">
+          <from><interface-ref name="Receive" ref="0x7d9000e8" scoped=""/></from>
+          <to><interface-ref name="Receive" ref="0x7e5011e8" scoped=""/>
+          <arguments>
+            <value cst="U:">
+              <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+                <typename><typedef-ref name="am_id_t" ref="0x7e881588"/></typename>
+              </type-int>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+      </wiring>
+    <specification><interface loc="42:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketReceiverC.nc" name="Packet" provided="1" ref="0x7d9005c8">
+      <component-ref nicename="PacketReceiverC" qname="PacketReceiverC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Packet" ref="0x7d9005c8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Packet" qname="Packet"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x7d9007a0" scoped=""/>
+        <function-ref name="payloadLength" ref="0x7d900880" scoped=""/>
+        <function-ref name="getPayload" ref="0x7d900960" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x7d900a40" scoped=""/>
+        <function-ref name="setPayloadLength" ref="0x7d900b20" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="41:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketReceiverC.nc" name="Receive" provided="1" ref="0x7d9000e8">
+      <component-ref nicename="PacketReceiverC" qname="PacketReceiverC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Receive" ref="0x7d9000e8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Receive" qname="Receive"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="payloadLength" ref="0x7d9002c0" scoped=""/>
+        <function-ref name="receive" ref="0x7d9003a0" scoped=""/>
+        <function-ref name="getPayload" ref="0x7d900480" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="46:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketEngineC.nc" name="Packet" provided="1" ref="0x7e4faad0">
+      <component-ref nicename="PacketEngineC" qname="PacketEngineC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Packet" ref="0x7e4faad0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Packet" qname="Packet"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x7e4faca8" scoped=""/>
+        <function-ref name="payloadLength" ref="0x7e4fad88" scoped=""/>
+        <function-ref name="getPayload" ref="0x7e4fae68" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x7e4fc010" scoped=""/>
+        <function-ref name="setPayloadLength" ref="0x7e4fc0f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketEngineC.nc" name="Receive" provided="1" ref="0x7e5011e8">
+      <component-ref nicename="PacketEngineC" qname="PacketEngineC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Receive" ref="0x7e5011e8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Receive" qname="Receive"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="am_id_t" ref="0x7e881588"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="payloadLength" ref="0x7e5013c0" scoped=""/>
+        <function-ref name="receive" ref="0x7e5014a0" scoped=""/>
+        <function-ref name="getPayload" ref="0x7e501580" scoped=""/>
+      </interface-functions>
+    </interface><component loc="40:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketEngineC.nc" nicename="PacketEngineC" qname="PacketEngineC">
+      <configuration/>
+      <wiring>
+        <wire loc="70:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketEngineC.nc">
+          <from><interface-ref name="Intercept" ref="0x7e4fa7b0" scoped=""/></from>
+          <to><interface-ref name="Intercept" ref="0x7e4d69d0" scoped=""/></to>
+        </wire>
+        <wire loc="68:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketEngineC.nc">
+          <from><interface-ref name="Send" ref="0x7e502870" scoped=""/></from>
+          <to><interface-ref name="Send" ref="0x7e4d78e0" scoped=""/></to>
+        </wire>
+        <wire loc="71:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketEngineC.nc">
+          <from><interface-ref name="Packet" ref="0x7e4faad0" scoped=""/></from>
+          <to><interface-ref name="Packet" ref="0x7e4d6cf0" scoped=""/></to>
+        </wire>
+        <wire loc="73:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketEngineC.nc">
+          <from><interface-ref name="PacketWaitList" ref="0x7e4e4a08" scoped=""/></from>
+          <to><interface-ref name="PacketWaitList" ref="0x7e4d48c0" scoped=""/></to>
+        </wire>
+        <wire loc="72:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketEngineC.nc">
+          <from><interface-ref name="PacketEngine" ref="0x7e4eba58" scoped=""/></from>
+          <to><interface-ref name="PacketEngine" ref="0x7e4d5690" scoped=""/></to>
+        </wire>
+        <wire loc="69:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketEngineC.nc">
+          <from><interface-ref name="Receive" ref="0x7e5011e8" scoped=""/></from>
+          <to><interface-ref name="Receive" ref="0x7e4d6258" scoped=""/></to>
+        </wire>
+        <wire loc="67:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketEngineC.nc">
+          <from><interface-ref name="StdControl" ref="0x7e5021a0" scoped=""/></from>
+          <to><interface-ref name="StdControl" ref="0x7e4d7210" scoped=""/></to>
+        </wire>
+        <wire loc="74:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketEngineC.nc">
+          <from><interface-ref name="SubSend" ref="0x7e4bd2c8" scoped=""/></from>
+          <to><interface-ref name="SubSend" ref="0x7e4e9800" scoped=""/></to>
+        </wire>
+        <wire loc="75:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketEngineC.nc">
+          <from><interface-ref name="SubReceive" ref="0x7e4bdc28" scoped=""/></from>
+          <to><interface-ref name="SubReceive" ref="0x7e4e8178" scoped=""/></to>
+        </wire>
+        <wire loc="76:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketEngineC.nc">
+          <from><interface-ref name="SubPacket" ref="0x7e4ba418" scoped=""/></from>
+          <to><interface-ref name="SubPacket" ref="0x7e4e8918" scoped=""/></to>
+        </wire>
+        <wire loc="77:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketEngineC.nc">
+          <from><interface-ref name="PacketEngineClient" ref="0x7e4badf0" scoped=""/></from>
+          <to><interface-ref name="PacketEngineClient" ref="0x7e4e0120" scoped=""/></to>
+        </wire>
+        <wire loc="79:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketEngineC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x7e756348" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x7e4d8eb8" scoped=""/></to>
+        </wire>
+        <wire loc="81:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketEngineC.nc">
+          <from><interface-ref name="Equal" ref="0x7e3025e0" scoped=""/></from>
+          <to><interface-ref name="SendQueueEqual" ref="0x7e4d00b8" scoped=""/></to>
+        </wire>
+        <wire loc="83:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketEngineC.nc">
+          <from><interface-ref name="RadioControl" ref="0x7e4d0a38" scoped=""/></from>
+          <to><interface-ref name="SplitControl" ref="0x7e003de8" scoped=""/></to>
+        </wire>
+        <wire loc="84:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketEngineC.nc">
+          <from><interface-ref name="SendQueue" ref="0x7e4b2dd0" scoped=""/></from>
+          <to><interface-ref name="DataCache" ref="0x7e3270a0" scoped=""/></to>
+        </wire>
+        <wire loc="85:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketEngineC.nc">
+          <from><interface-ref name="ReceivePool" ref="0x7e4ad9c8" scoped=""/></from>
+          <to><interface-ref name="Pool" ref="0x7e2feec0" scoped=""/></to>
+        </wire>
+        <wire loc="86:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketEngineC.nc">
+          <from><interface-ref name="SendPool" ref="0x7e4aa8a8" scoped=""/></from>
+          <to><interface-ref name="Pool" ref="0x7e2e8cc8" scoped=""/></to>
+        </wire>
+        <wire loc="87:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketEngineC.nc">
+          <from><interface-ref name="SendState" ref="0x7e4a7010" scoped=""/></from>
+          <to><interface-ref name="State" ref="0x7e2e4d18" scoped=""/></to>
+        </wire>
+        <wire loc="88:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketEngineC.nc">
+          <from><interface-ref name="Random" ref="0x7e4a7790" scoped=""/></from>
+          <to><interface-ref name="Random" ref="0x7e2b5b18" scoped=""/></to>
+        </wire>
+        <wire loc="89:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketEngineC.nc">
+          <from><interface-ref name="SendBackoff" ref="0x7e4a7c58" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x7e2b3d40" scoped=""/></to>
+        </wire>
+        <wire loc="90:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketEngineC.nc">
+          <from><interface-ref name="AMPacket" ref="0x7e4b9240" scoped=""/></from>
+          <to><interface-ref name="AMPacket" ref="0x7dffd400" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component></referenced></component>

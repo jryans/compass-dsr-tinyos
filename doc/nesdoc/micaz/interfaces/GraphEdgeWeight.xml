@@ -1,0 +1,164 @@
+<?xml version="1.0" ?><interfacedef loc="38:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphEdgeWeight.nc" nicename="GraphEdgeWeight" qname="GraphEdgeWeight">
+      <documentation loc="38:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphEdgeWeight.nc">
+        <short>
+
+ Access information about the weight of an edge of the graph.
+
+
+
+</short>
+        <long>
+
+ Access information about the weight of an edge of the graph.
+
+
+
+ @author Ryan Stinnett
+
+</long>
+      </documentation>
+      <parameters>
+        <typedef loc="38:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphEdgeWeight.nc" name="weight_t" ref="0x7db9c968">
+          <interfacedef-ref nicename="GraphEdgeWeight" qname="GraphEdgeWeight"/>
+          <type-var alignment="U:" size="U:"><typedef-ref name="weight_t" ref="0x7db9c968" scoped=""/></type-var>
+        </typedef>
+      </parameters>
+      <function command="" loc="46:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphEdgeWeight.nc" name="canChangeWeights" provided="0" ref="0x7db9b058">
+        <documentation loc="40:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphEdgeWeight.nc">
+          <short>
+
+ Checks if the graph weights can be changed. </short>
+          <long>
+
+ Checks if the graph weights can be changed.  This value should not change 
+
+ at run-time.
+
+ 
+
+ @return TRUE if the graph weights can change, FALSE if they cannot.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="GraphEdgeWeight" qname="GraphEdgeWeight"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="bool" ref="0x7ec91520"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+      </function>
+      <function event="" loc="71:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphEdgeWeight.nc" name="weightChanged" provided="0" ref="0x7db9a890">
+        <documentation loc="66:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphEdgeWeight.nc">
+          <short>
+
+ The weight of an edge in the graph changed.
+
+ 
+
+</short>
+          <long>
+
+ The weight of an edge in the graph changed.
+
+ 
+
+ @param m The key for the edge that had its weight changed.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="GraphEdgeWeight" qname="GraphEdgeWeight"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="graph_edge_id_t" ref="0x7dbe4020"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="71:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphEdgeWeight.nc" name="m" ref="0x7db9a678">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="graph_edge_id_t" ref="0x7dbe4020"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="64:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphEdgeWeight.nc" name="setWeight" provided="0" ref="0x7db9a130">
+        <documentation loc="57:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphEdgeWeight.nc">
+          <short>
+
+ Set the weight of the edge. </short>
+          <long>
+
+ Set the weight of the edge.  If the graph is actually unweighted, no
+
+ action is taken.
+
+ 
+
+ @param m The key for the edge.
+
+ @param w The updated weight.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="GraphEdgeWeight" qname="GraphEdgeWeight"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="graph_edge_id_t" ref="0x7dbe4020"/></typename>
+            </type-int>
+            <type-var alignment="U:" size="U:"><typedef-ref name="weight_t" ref="0x7db9c968" scoped=""/></type-var>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="64:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphEdgeWeight.nc" name="m" ref="0x7db9bd30">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="graph_edge_id_t" ref="0x7dbe4020"/></typename>
+            </type-int>
+          </variable>
+          <variable loc="64:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphEdgeWeight.nc" name="w" ref="0x7db9bec0">
+            <type-var alignment="U:" size="U:"><typedef-ref name="weight_t" ref="0x7db9c968" scoped=""/></type-var>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="55:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphEdgeWeight.nc" name="weight" provided="0" ref="0x7db9b7e8">
+        <documentation loc="48:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphEdgeWeight.nc">
+          <short>
+
+ Get the weight of the edge. </short>
+          <long>
+
+ Get the weight of the edge.  If the graph is actually unweighted, a unit
+
+ weight is always returned.
+
+ 
+
+ @param m The key for the edge.
+
+ @return The weight of the edge.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="GraphEdgeWeight" qname="GraphEdgeWeight"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-var alignment="U:" size="U:"><typedef-ref name="weight_t" ref="0x7db9c968" scoped=""/></type-var>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="graph_edge_id_t" ref="0x7dbe4020"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="55:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphEdgeWeight.nc" name="m" ref="0x7db9b5a8">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="graph_edge_id_t" ref="0x7dbe4020"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+    </interfacedef>

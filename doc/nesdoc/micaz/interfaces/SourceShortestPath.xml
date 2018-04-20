@@ -1,0 +1,320 @@
+<?xml version="1.0" ?><interfacedef loc="38:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/SourceShortestPath.nc" nicename="SourceShortestPath" qname="SourceShortestPath">
+      <documentation loc="38:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/SourceShortestPath.nc">
+        <short>
+
+ Access details on the shortest path between vertices of a graph.
+
+
+
+</short>
+        <long>
+
+ Access details on the shortest path between vertices of a graph.
+
+
+
+ @author Ryan Stinnett
+
+</long>
+      </documentation>
+      <function command="" loc="82:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/SourceShortestPath.nc" name="rebuildNeeded" provided="0" ref="0x7dbc2a90">
+        <documentation loc="75:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/SourceShortestPath.nc">
+          <short>
+
+ Checks if the tree should be rebuilt either because the source has changed
+
+ or because the underlying graph structure has changed.
+
+
+
+</short>
+          <long>
+
+ Checks if the tree should be rebuilt either because the source has changed
+
+ or because the underlying graph structure has changed.
+
+
+
+ @param src The source vertex.
+
+ @return Whether a rebuild is needed.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="SourceShortestPath" qname="SourceShortestPath"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="bool" ref="0x7ec91520"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="graph_vertex_id_t" ref="0x7dbe5e40"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="82:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/SourceShortestPath.nc" name="src" ref="0x7dbc27c0">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="graph_vertex_id_t" ref="0x7dbe5e40"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="47:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/SourceShortestPath.nc" name="buildTree" provided="0" ref="0x7dbc5600">
+        <documentation loc="40:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/SourceShortestPath.nc">
+          <short>
+
+ Build a shortest path tree from vertex src.
+
+
+
+</short>
+          <long>
+
+ Build a shortest path tree from vertex src.
+
+
+
+ @param src The source vertex.
+
+ @return If the vertex is too large then ESIZE or if a tree is currently
+
+         being built then EBUSY, else SUCCESS.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="SourceShortestPath" qname="SourceShortestPath"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="error_t" ref="0x7e8372e8"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="graph_vertex_id_t" ref="0x7dbe5e40"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="47:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/SourceShortestPath.nc" name="src" ref="0x7dbc5390">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="graph_vertex_id_t" ref="0x7dbe5e40"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function event="" loc="54:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/SourceShortestPath.nc" name="builtTree" provided="0" ref="0x7dbc5d60">
+        <documentation loc="49:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/SourceShortestPath.nc">
+          <short>
+
+ The shortest path tree from vertex src is complete.
+
+
+
+</short>
+          <long>
+
+ The shortest path tree from vertex src is complete.
+
+
+
+ @param src The source vertex.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="SourceShortestPath" qname="SourceShortestPath"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="graph_vertex_id_t" ref="0x7dbe5e40"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="54:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/SourceShortestPath.nc" name="src" ref="0x7dbc5b58">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="graph_vertex_id_t" ref="0x7dbe5e40"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="89:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/SourceShortestPath.nc" name="buildingTree" provided="0" ref="0x7dbc1060">
+        <documentation loc="84:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/SourceShortestPath.nc">
+          <short>
+
+ Checks if the tree is currently being built.
+
+
+
+</short>
+          <long>
+
+ Checks if the tree is currently being built.
+
+
+
+ @return Whether the tree is being built.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="SourceShortestPath" qname="SourceShortestPath"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="bool" ref="0x7ec91520"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+      </function>
+      <function command="" loc="100:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/SourceShortestPath.nc" name="edgeCount" provided="0" ref="0x7dbc18b8">
+        <documentation loc="91:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/SourceShortestPath.nc">
+          <short>
+
+ Get the number of edges to the destination vertex.
+
+</short>
+          <long>
+
+ Get the number of edges to the destination vertex.
+
+ For example, if the shortest path from A to C was A -&gt; D -&gt; C, edgeCount()
+
+ would return 2.
+
+
+
+ @param dest The destination vertex.
+
+ @return The number of edges.  If there is no path to the given destination,
+
+         or if an input vertex is too large, then the count is 0.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="SourceShortestPath" qname="SourceShortestPath"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="graph_edge_id_t" ref="0x7dbe4020"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="graph_vertex_id_t" ref="0x7dbe5e40"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="100:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/SourceShortestPath.nc" name="dest" ref="0x7dbc15c8">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="graph_vertex_id_t" ref="0x7dbe5e40"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="64:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/SourceShortestPath.nc" name="buildTreeTo" provided="0" ref="0x7dbc3738">
+        <documentation loc="56:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/SourceShortestPath.nc">
+          <short>
+
+ Build the shortest path from vertex src to vertex dest.
+
+
+
+</short>
+          <long>
+
+ Build the shortest path from vertex src to vertex dest.
+
+
+
+ @param src The source vertex.
+
+ @param dest The destination vertex.
+
+ @return If the vertex is too large then ESIZE or if a tree is currently
+
+         being built then EBUSY, else SUCCESS.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="SourceShortestPath" qname="SourceShortestPath"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="error_t" ref="0x7e8372e8"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="graph_vertex_id_t" ref="0x7dbe5e40"/></typename>
+            </type-int>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="graph_vertex_id_t" ref="0x7dbe5e40"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="64:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/SourceShortestPath.nc" name="src" ref="0x7dbc32f0">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="graph_vertex_id_t" ref="0x7dbe5e40"/></typename>
+            </type-int>
+          </variable>
+          <variable loc="64:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/SourceShortestPath.nc" name="dest" ref="0x7dbc3488">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="graph_vertex_id_t" ref="0x7dbe5e40"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function event="" loc="72:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/SourceShortestPath.nc" name="builtTreeTo" provided="0" ref="0x7dbc2260">
+        <documentation loc="66:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/SourceShortestPath.nc">
+          <short>
+
+ The shortest path from vertex src to vertex dest is complete.
+
+
+
+</short>
+          <long>
+
+ The shortest path from vertex src to vertex dest is complete.
+
+
+
+ @param src The source vertex.
+
+ @param dest The destination vertex.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="SourceShortestPath" qname="SourceShortestPath"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="graph_vertex_id_t" ref="0x7dbe5e40"/></typename>
+            </type-int>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="graph_vertex_id_t" ref="0x7dbe5e40"/></typename>
+            </type-int>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="error_t" ref="0x7e8372e8"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="72:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/SourceShortestPath.nc" name="src" ref="0x7dbc3c90">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="graph_vertex_id_t" ref="0x7dbe5e40"/></typename>
+            </type-int>
+          </variable>
+          <variable loc="72:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/SourceShortestPath.nc" name="dest" ref="0x7dbc3e28">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="graph_vertex_id_t" ref="0x7dbe5e40"/></typename>
+            </type-int>
+          </variable>
+          <variable loc="73:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/SourceShortestPath.nc" name="pathResult" ref="0x7dbc2010">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="error_t" ref="0x7e8372e8"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+    </interfacedef>

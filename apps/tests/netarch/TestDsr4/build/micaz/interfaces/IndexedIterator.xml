@@ -1,0 +1,78 @@
+<?xml version="1.0" ?><interfacedef loc="40:/home/jryans/tinyos-2.x-contrib-rice/tos/interfaces/IndexedIterator.nc" nicename="IndexedIterator" qname="IndexedIterator">
+      <parameters>
+        <typedef loc="40:/home/jryans/tinyos-2.x-contrib-rice/tos/interfaces/IndexedIterator.nc" name="iterator_item_t" ref="0x7e4e56b8">
+          <interfacedef-ref nicename="IndexedIterator" qname="IndexedIterator"/>
+          <type-var alignment="U:" size="U:"><typedef-ref name="iterator_item_t" ref="0x7e4e56b8" scoped=""/></type-var>
+        </typedef>
+      </parameters>
+      <function command="" loc="56:/home/jryans/tinyos-2.x-contrib-rice/tos/interfaces/IndexedIterator.nc" name="end" provided="0" ref="0x7e4e4678">
+        <documentation loc="50:/home/jryans/tinyos-2.x-contrib-rice/tos/interfaces/IndexedIterator.nc">
+          <short>
+
+ Checks whether you have already reached the end.
+
+
+
+</short>
+          <long>
+
+ Checks whether you have already reached the end.
+
+
+
+ @param m Current item's index.
+
+ @return TRUE if the current item is the end, FALSE otherwise.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="IndexedIterator" qname="IndexedIterator"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="iterator_end_t" ref="0x7e4e6520"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-var alignment="U:" size="U:"><typedef-ref name="iterator_item_t" ref="0x7e4e56b8" scoped=""/></type-var>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="56:/home/jryans/tinyos-2.x-contrib-rice/tos/interfaces/IndexedIterator.nc" name="m" ref="0x7e4e4438">
+            <type-var alignment="U:" size="U:"><typedef-ref name="iterator_item_t" ref="0x7e4e56b8" scoped=""/></type-var>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="48:/home/jryans/tinyos-2.x-contrib-rice/tos/interfaces/IndexedIterator.nc" name="next" provided="0" ref="0x7e4e5ed0">
+        <documentation loc="42:/home/jryans/tinyos-2.x-contrib-rice/tos/interfaces/IndexedIterator.nc">
+          <short>
+
+ Gets the index of the next item.
+
+
+
+</short>
+          <long>
+
+ Gets the index of the next item.
+
+
+
+ @param m Current item's index.
+
+ @return The next item's index.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="IndexedIterator" qname="IndexedIterator"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-var alignment="U:" size="U:"><typedef-ref name="iterator_item_t" ref="0x7e4e56b8" scoped=""/></type-var>
+          <function-parameters>
+            <type-var alignment="U:" size="U:"><typedef-ref name="iterator_item_t" ref="0x7e4e56b8" scoped=""/></type-var>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="48:/home/jryans/tinyos-2.x-contrib-rice/tos/interfaces/IndexedIterator.nc" name="m" ref="0x7e4e5cd0">
+            <type-var alignment="U:" size="U:"><typedef-ref name="iterator_item_t" ref="0x7e4e56b8" scoped=""/></type-var>
+          </variable>
+        </parameters>
+      </function>
+    </interfacedef>

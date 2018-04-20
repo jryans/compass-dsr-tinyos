@@ -1,0 +1,198 @@
+6756:DEBUG (0): DSR: Pkt 9: Unicast send wasn't acked, route error!
+6814:DEBUG (0): DSR: Pkt 9: Composing route error to 7
+6815:DEBUG (0): DSR: Pkt 9: Finding route for route error to 7
+7134:DEBUG (10): DSR: Pkt 0: Found route error option at 0 from 0 to 7
+7196:DEBUG (4): DSR: Pkt 3: Found route error option at 0 from 0 to 7
+7257:DEBUG (7): DSR: Pkt 11: Found route error option at 0 from 0 to 7
+7320:DEBUG (12): DSR: Pkt 0: Found route error option at 0 from 0 to 7
+7386:DEBUG (6): DSR: Pkt 3: Found route error option at 0 from 0 to 7
+17570:DEBUG (14): DSR: Pkt 1: Unicast send wasn't acked, route error!
+24817:DEBUG (11): DSR: Pkt 11: Unicast send wasn't acked, route error!
+24877:DEBUG (11): DSR: Pkt 11: Composing route error to 5
+24878:DEBUG (11): DSR: Pkt 11: Finding route for route error to 5
+25076:DEBUG (7): DSR: Pkt 4: Unicast send wasn't acked, route error!
+25133:DEBUG (7): DSR: Pkt 4: Composing route error to 14
+25134:DEBUG (7): DSR: Pkt 4: Finding route for route error to 14
+26938:DEBUG (6): DSR: Pkt 1: Unicast send wasn't acked, route error!
+26994:DEBUG (6): DSR: Pkt 1: Composing route error to 14
+26995:DEBUG (6): DSR: Pkt 1: Finding route for route error to 14
+27667:DEBUG (5): DSR: Pkt 3: Found route error option at 0 from 11 to 5
+27730:DEBUG (4): DSR: Pkt 11: Found route error option at 0 from 11 to 5
+27792:DEBUG (9): DSR: Pkt 7: Found route error option at 0 from 11 to 5
+27854:DEBUG (12): DSR: Pkt 1: Found route error option at 0 from 11 to 5
+28377:DEBUG (3): DSR: Pkt 11: Found route error option at 0 from 7 to 14
+28439:DEBUG (4): DSR: Pkt 12: Found route error option at 0 from 7 to 14
+28501:DEBUG (10): DSR: Pkt 9: Found route error option at 0 from 7 to 14
+28561:DEBUG (6): DSR: Pkt 5: Found route error option at 0 from 7 to 14
+28897:DEBUG (2): DSR: Pkt 6: Found route error option at 0 from 11 to 5
+28958:DEBUG (5): DSR: Pkt 4: Found route error option at 0 from 11 to 5
+28982:DEBUG (9): DSR: Pkt 8: Found route error option at 0 from 11 to 5
+29005:DEBUG (10): DSR: Pkt 10: Found route error option at 0 from 11 to 5
+29067:DEBUG (4): DSR: Pkt 13: Found route error option at 0 from 11 to 5
+29090:DEBUG (14): DSR: Pkt 4: Found route error option at 0 from 11 to 5
+29369:DEBUG (14): DSR: Pkt 5: Found route error option at 0 from 7 to 14
+29432:DEBUG (0): DSR: Pkt 12: Found route error option at 0 from 7 to 14
+29494:DEBUG (10): DSR: Pkt 11: Found route error option at 0 from 7 to 14
+29515:DEBUG (6): DSR: Pkt 6: Found route error option at 0 from 7 to 14
+29923:DEBUG (6): DSR: Pkt 2: Unicast send wasn't acked, route error!
+29957:DEBUG (6): DSR: Pkt 2: Composing route error to 14
+29958:DEBUG (6): DSR: Pkt 2: Finding route for route error to 14
+31355:DEBUG (17): DSR: Pkt 3: Found route error option at 0 from 6 to 14
+31417:DEBUG (7): DSR: Pkt 1: Found route error option at 0 from 6 to 14
+31479:DEBUG (8): DSR: Pkt 5: Found route error option at 0 from 6 to 14
+33192:DEBUG (17): DSR: Pkt 4: Found route error option at 0 from 6 to 14
+33215:DEBUG (8): DSR: Pkt 6: Found route error option at 0 from 6 to 14
+33238:DEBUG (13): DSR: Pkt 4: Found route error option at 0 from 6 to 14
+33304:DEBUG (1): DSR: Pkt 9: Found route error option at 0 from 6 to 14
+33496:DEBUG (6): DSR: Pkt 8: Found route error option at 0 from 6 to 14
+33517:DEBUG (4): DSR: Pkt 5: Found route error option at 0 from 6 to 14
+34121:DEBUG (7): DSR: Pkt 12: Unicast send wasn't acked, route error!
+34178:DEBUG (7): DSR: Pkt 12: Composing route error to 14
+34179:DEBUG (7): DSR: Pkt 12: Finding route for route error to 14
+34685:DEBUG (0): DSR: Pkt 6: Found route error option at 0 from 6 to 14
+34745:DEBUG (8): DSR: Pkt 9: Found route error option at 0 from 6 to 14
+34764:DEBUG (6): DSR: Pkt 10: Found route error option at 0 from 6 to 14
+34824:DEBUG (17): DSR: Pkt 5: Found route error option at 0 from 6 to 14
+34846:DEBUG (14): DSR: Pkt 12: Found route error option at 0 from 6 to 14
+35094:DEBUG (1): DSR: Pkt 11: Found route error option at 0 from 6 to 14
+35115:DEBUG (8): DSR: Pkt 10: Found route error option at 0 from 6 to 14
+35136:DEBUG (17): DSR: Pkt 6: Found route error option at 0 from 6 to 14
+35491:DEBUG (0): DSR: Pkt 7: Found route error option at 0 from 6 to 14
+35512:DEBUG (8): DSR: Pkt 11: Found route error option at 0 from 6 to 14
+35533:DEBUG (4): DSR: Pkt 8: Found route error option at 0 from 6 to 14
+35593:DEBUG (6): DSR: Pkt 12: Found route error option at 0 from 6 to 14
+35715:DEBUG (1): DSR: Pkt 9: Unicast send wasn't acked, route error!
+35771:DEBUG (1): DSR: Pkt 9: Composing route error to 6
+35772:DEBUG (1): DSR: Pkt 9: Finding route for route error to 6
+40944:DEBUG (14): DSR: Pkt 1: Found route error option at 0 from 7 to 14
+41007:DEBUG (0): DSR: Pkt 1: Found route error option at 0 from 7 to 14
+41069:DEBUG (4): DSR: Pkt 3: Found route error option at 0 from 7 to 14
+41131:DEBUG (3): DSR: Pkt 3: Found route error option at 0 from 7 to 14
+41191:DEBUG (6): DSR: Pkt 0: Found route error option at 0 from 7 to 14
+41920:DEBUG (4): DSR: Pkt 4: Found route error option at 0 from 6 to 14
+41982:DEBUG (6): DSR: Pkt 2: Found route error option at 0 from 6 to 14
+42003:DEBUG (8): DSR: Pkt 0: Found route error option at 0 from 6 to 14
+42024:DEBUG (17): DSR: Pkt 8: Found route error option at 0 from 6 to 14
+43571:DEBUG (8): DSR: Pkt 2: Found route error option at 0 from 6 to 14
+43591:DEBUG (14): DSR: Pkt 4: Found route error option at 0 from 6 to 14
+43654:DEBUG (6): DSR: Pkt 4: Found route error option at 0 from 6 to 14
+43716:DEBUG (3): DSR: Pkt 4: Found route error option at 0 from 6 to 14
+44220:DEBUG (5): DSR: Pkt 3: Found route error option at 0 from 1 to 6
+44280:DEBUG (8): DSR: Pkt 3: Found route error option at 0 from 1 to 6
+44339:DEBUG (6): DSR: Pkt 5: Found route error option at 0 from 1 to 6
+47094:DEBUG (12): DSR: Pkt 0: Unicast send wasn't acked, route error!
+58163:DEBUG (8): DSR: Pkt 7: Unicast send wasn't acked, route error!
+59921:DEBUG (14): DSR: Pkt 12: Unicast send wasn't acked, route error!
+69969:DEBUG (5): DSR: Pkt 9: Unicast send wasn't acked, route error!
+70030:DEBUG (5): DSR: Pkt 9: Composing route error to 17
+70031:DEBUG (5): DSR: Pkt 9: Finding route for route error to 17
+70526:DEBUG (1): DSR: Pkt 6: Unicast send wasn't acked, route error!
+70585:DEBUG (1): DSR: Pkt 6: Composing route error to 17
+70586:DEBUG (1): DSR: Pkt 6: Finding route for route error to 17
+71567:DEBUG (1): DSR: Pkt 9: Found route error option at 0 from 5 to 17
+71671:DEBUG (16): DSR: Pkt 9: Found route error option at 0 from 5 to 17
+71731:DEBUG (10): DSR: Pkt 7: Found route error option at 0 from 5 to 17
+71793:DEBUG (11): DSR: Pkt 11: Found route error option at 0 from 5 to 17
+71855:DEBUG (12): DSR: Pkt 7: Found route error option at 0 from 5 to 17
+71917:DEBUG (14): DSR: Pkt 13: Found route error option at 0 from 5 to 17
+71979:DEBUG (0): DSR: Pkt 0: Found route error option at 0 from 5 to 17
+72041:DEBUG (7): DSR: Pkt 9: Found route error option at 0 from 5 to 17
+72892:DEBUG (14): DSR: Pkt 1: Found route error option at 0 from 5 to 17
+72915:DEBUG (10): DSR: Pkt 8: Found route error option at 0 from 5 to 17
+72938:DEBUG (12): DSR: Pkt 9: Found route error option at 0 from 5 to 17
+72961:DEBUG (11): DSR: Pkt 12: Found route error option at 0 from 5 to 17
+72984:DEBUG (4): DSR: Pkt 1: Found route error option at 0 from 5 to 17
+73273:DEBUG (1): DSR: Pkt 7: Unicast send wasn't acked, route error!
+73332:DEBUG (1): DSR: Pkt 7: Composing route error to 17
+73333:DEBUG (1): DSR: Pkt 7: Finding route for route error to 17
+73446:DEBUG (11): DSR: Pkt 13: Found route error option at 0 from 5 to 17
+73469:DEBUG (10): DSR: Pkt 9: Found route error option at 0 from 5 to 17
+73492:DEBUG (4): DSR: Pkt 2: Found route error option at 0 from 5 to 17
+73513:DEBUG (16): DSR: Pkt 10: Found route error option at 0 from 5 to 17
+73534:DEBUG (14): DSR: Pkt 2: Found route error option at 0 from 5 to 17
+73656:DEBUG (5): DSR: Pkt 11: Unicast send wasn't acked, route error!
+73795:DEBUG (6): DSR: Pkt 11: Found route error option at 0 from 1 to 17
+73857:DEBUG (5): DSR: Pkt 12: Found route error option at 0 from 1 to 17
+73880:DEBUG (8): DSR: Pkt 4: Found route error option at 0 from 1 to 17
+74085:DEBUG (12): DSR: Pkt 11: Found route error option at 0 from 1 to 17
+74147:DEBUG (8): DSR: Pkt 5: Found route error option at 0 from 1 to 17
+74170:DEBUG (6): DSR: Pkt 12: Found route error option at 0 from 1 to 17
+74316:DEBUG (6): DSR: Pkt 13: Found route error option at 0 from 1 to 17
+74339:DEBUG (8): DSR: Pkt 6: Found route error option at 0 from 1 to 17
+74362:DEBUG (14): DSR: Pkt 3: Found route error option at 0 from 1 to 17
+74424:DEBUG (0): DSR: Pkt 1: Found route error option at 0 from 1 to 17
+74632:DEBUG (1): DSR: Pkt 8: Unicast send wasn't acked, route error!
+76265:DEBUG (8): DSR: Pkt 7: Found route error option at 0 from 5 to 17
+76371:DEBUG (6): DSR: Pkt 0: Found route error option at 0 from 5 to 17
+76795:DEBUG (17): DSR: Pkt 13: Found route error option at 0 from 5 to 17
+76856:DEBUG (6): DSR: Pkt 1: Found route error option at 0 from 5 to 17
+76879:DEBUG (8): DSR: Pkt 8: Found route error option at 0 from 5 to 17
+78378:DEBUG (6): DSR: Pkt 4: Found route error option at 0 from 1 to 17
+78440:DEBUG (8): DSR: Pkt 10: Found route error option at 0 from 1 to 17
+78501:DEBUG (17): DSR: Pkt 1: Found route error option at 0 from 1 to 17
+79316:DEBUG (4): DSR: Pkt 6: Found route error option at 0 from 1 to 17
+79378:DEBUG (12): DSR: Pkt 13: Found route error option at 0 from 1 to 17
+79401:DEBUG (8): DSR: Pkt 12: Found route error option at 0 from 1 to 17
+79424:DEBUG (5): DSR: Pkt 0: Found route error option at 0 from 1 to 17
+79446:DEBUG (17): DSR: Pkt 3: Found route error option at 0 from 1 to 17
+79470:DEBUG (6): DSR: Pkt 7: Found route error option at 0 from 1 to 17
+82831:DEBUG (19): DSR: Pkt 8: Unicast send wasn't acked, route error!
+89348:DEBUG (5): DSR: Pkt 8: Unicast send wasn't acked, route error!
+89410:DEBUG (5): DSR: Pkt 8: Composing route error to 0
+89411:DEBUG (5): DSR: Pkt 8: Finding route for route error to 0
+90544:DEBUG (10): DSR: Pkt 0: Found route error option at 0 from 5 to 0
+90606:DEBUG (12): DSR: Pkt 5: Found route error option at 0 from 5 to 0
+90668:DEBUG (11): DSR: Pkt 1: Found route error option at 0 from 5 to 0
+90774:DEBUG (19): DSR: Pkt 12: Found route error option at 0 from 5 to 0
+91748:DEBUG (16): DSR: Pkt 13: Found route error option at 0 from 5 to 0
+91852:DEBUG (15): DSR: Pkt 6: Found route error option at 0 from 5 to 0
+91958:DEBUG (14): DSR: Pkt 2: Found route error option at 0 from 5 to 0
+92834:DEBUG (0): DSR: Pkt 8: Found route error option at 0 from 5 to 0
+92897:DEBUG (4): DSR: Pkt 3: Found route error option at 0 from 5 to 0
+93003:DEBUG (10): DSR: Pkt 2: Found route error option at 0 from 5 to 0
+93026:DEBUG (14): DSR: Pkt 3: Found route error option at 0 from 5 to 0
+93049:DEBUG (12): DSR: Pkt 8: Found route error option at 0 from 5 to 0
+103799:DEBUG (7): DSR: Pkt 10: Unicast send wasn't acked, route error!
+103858:DEBUG (7): DSR: Pkt 10: Composing route error to 16
+103859:DEBUG (7): DSR: Pkt 10: Finding route for route error to 16
+104038:DEBUG (1): DSR: Pkt 8: Unicast send wasn't acked, route error!
+104098:DEBUG (1): DSR: Pkt 8: Composing route error to 16
+104099:DEBUG (1): DSR: Pkt 8: Finding route for route error to 16
+104219:DEBUG (10): DSR: Pkt 8: Found route error option at 0 from 7 to 16
+104280:DEBUG (0): DSR: Pkt 6: Found route error option at 0 from 7 to 16
+104344:DEBUG (3): DSR: Pkt 9: Found route error option at 0 from 7 to 16
+104406:DEBUG (4): DSR: Pkt 13: Found route error option at 0 from 7 to 16
+104468:DEBUG (14): DSR: Pkt 13: Found route error option at 0 from 7 to 16
+104530:DEBUG (6): DSR: Pkt 0: Found route error option at 0 from 7 to 16
+104986:DEBUG (4): DSR: Pkt 0: Found route error option at 0 from 7 to 16
+105009:DEBUG (19): DSR: Pkt 12: Found route error option at 0 from 7 to 16
+105071:DEBUG (14): DSR: Pkt 0: Found route error option at 0 from 7 to 16
+105094:DEBUG (7): DSR: Pkt 12: Found route error option at 0 from 7 to 16
+105117:DEBUG (12): DSR: Pkt 5: Found route error option at 0 from 7 to 16
+105179:DEBUG (18): DSR: Pkt 5: Found route error option at 0 from 7 to 16
+105285:DEBUG (10): DSR: Pkt 9: Found route error option at 0 from 7 to 16
+105647:DEBUG (12): DSR: Pkt 6: Found route error option at 0 from 1 to 16
+105709:DEBUG (8): DSR: Pkt 6: Found route error option at 0 from 1 to 16
+105771:DEBUG (6): DSR: Pkt 1: Found route error option at 0 from 1 to 16
+105832:DEBUG (14): DSR: Pkt 1: Found route error option at 0 from 1 to 16
+106170:DEBUG (19): DSR: Pkt 13: Found route error option at 0 from 1 to 16
+106276:DEBUG (4): DSR: Pkt 1: Found route error option at 0 from 1 to 16
+106338:DEBUG (3): DSR: Pkt 10: Found route error option at 0 from 1 to 16
+106400:DEBUG (0): DSR: Pkt 7: Found route error option at 0 from 1 to 16
+106462:DEBUG (12): DSR: Pkt 7: Found route error option at 0 from 1 to 16
+106485:DEBUG (7): DSR: Pkt 13: Found route error option at 0 from 1 to 16
+106547:DEBUG (13): DSR: Pkt 8: Found route error option at 0 from 1 to 16
+107069:DEBUG (19): DSR: Pkt 0: Found route error option at 0 from 1 to 16
+107092:DEBUG (0): DSR: Pkt 8: Found route error option at 0 from 1 to 16
+107115:DEBUG (7): DSR: Pkt 0: Found route error option at 0 from 1 to 16
+107137:DEBUG (5): DSR: Pkt 11: Found route error option at 0 from 1 to 16
+107289:DEBUG (12): DSR: Pkt 8: Found route error option at 0 from 1 to 16
+107545:DEBUG (4): DSR: Pkt 2: Found route error option at 0 from 1 to 16
+107568:DEBUG (10): DSR: Pkt 10: Found route error option at 0 from 1 to 16
+107630:DEBUG (12): DSR: Pkt 9: Found route error option at 0 from 1 to 16
+107653:DEBUG (14): DSR: Pkt 2: Found route error option at 0 from 1 to 16
+107829:DEBUG (11): DSR: Pkt 12: Found route error option at 0 from 1 to 16
+107891:DEBUG (10): DSR: Pkt 11: Found route error option at 0 from 1 to 16
+107913:DEBUG (16): DSR: Pkt 4: Found route error option at 0 from 1 to 16
+108020:DEBUG (12): DSR: Pkt 10: Found route error option at 0 from 1 to 16
+108043:DEBUG (14): DSR: Pkt 3: Found route error option at 0 from 1 to 16

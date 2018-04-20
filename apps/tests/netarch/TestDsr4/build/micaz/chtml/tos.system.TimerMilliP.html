@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <LINK rel="stylesheet" href="nesdoc.css" type="text/css" media="screen"><title>Component: tos.system.TimerMilliP</title>
+  </head>
+  <body>
+    <h2>Component: tos.system.TimerMilliP
+    </h2>
+    <b>configuration TimerMilliP</b>
+    <p>
+ Components should never wire to this component. This is the
+ underlying configuration of virtualized millisecond timers. 
+ It auto-wires wires the timer
+ implementation (TimerC) to the boot sequence and exports the
+ various Timer interfaces.
+
+ 
+    <p>
+    <dl>
+      <dt><b>Author:</b>
+      <dd>
+        Philip Levis
+ 
+      </dd>
+      <dd>
+        Cory Sharp
+ 
+      </dd>
+      <dt><b>Date:</b>
+      <dd>
+          May 16 2005
+
+      </dd>
+    </dl>
+    <p><p><div id=heading>Provides</div><div id=funcsig>interface <a href="../ihtml/tos.lib.timer.Timer.html">Timer</a>&lt;TMilli&gt; as <b>TimerMilli</b>[uint8_t]</div><p><div id=heading>Wiring</div><p>
+    <map name="comp">
+      <area shape="rect" href="tos.platforms.mica.sim.HilTimerMilliC.html" title="HilTimerMilliC" alt="HilTimerMilliC" coords="84,144,196,203">
+
+      <area shape="rect" href="../ihtml/tos.lib.timer.Timer.html" title="Timer&lt;TMilli&gt;[uint8_t]" alt="Timer&lt;TMilli&gt;[uint8_t]" coords="75,100,194,119">
+
+      <area shape="rect" href="../ihtml/tos.lib.timer.Timer.html" title="Timer&lt;TMilli&gt;[uint8_t]" alt="Timer&lt;TMilli&gt;[uint8_t]" coords="47,65,55,73">
+
+      <area shape="rect" href="../ihtml/tos.lib.timer.Timer.html" title="Timer&lt;TMilli&gt;[uint8_t]" alt="Timer&lt;TMilli&gt;[uint8_t]" coords="87,140,95,148">
+
+      <area shape="rect" href="tos.lib.tossim.MainC.html" title="MainC" alt="MainC" coords="189,16,272,75">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.Init.html" title="Init" alt="Init" coords="218,100,246,119">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.Init.html" title="Init" alt="Init" coords="221,71,229,79">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.Init.html" title="Init" alt="Init" coords="180,140,188,148">
+
+    </map>
+    <img src="tos.system.TimerMilliP.gif" usemap="#comp" id=imgwiring>
+  </body>
+</html>

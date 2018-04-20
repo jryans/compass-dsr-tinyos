@@ -1,0 +1,60 @@
+DEBUG (0): Setting start time to 1
+DEBUG (1): Setting start time to 1000000032
+DEBUG (2): Setting start time to 2000000063
+DEBUG (3): Setting start time to 3000000094
+DEBUG (4): Setting start time to 4000000125
+DEBUG (5): Setting start time to 5000000156
+DEBUG (6): Setting start time to 6000000187
+DEBUG (7): Setting start time to 7000000218
+DEBUG (8): Setting start time to 8000000249
+DEBUG (9): Setting start time to 9000000280
+DEBUG (10): Setting start time to 10000000311
+DEBUG (11): Setting start time to 11000000342
+DEBUG (12): Setting start time to 12000000373
+DEBUG (13): Setting start time to 13000000404
+DEBUG (14): Setting start time to 14000000435
+DEBUG (15): Setting start time to 15000000466
+DEBUG (16): Setting start time to 16000000497
+DEBUG (17): Setting start time to 17000000528
+DEBUG (18): Setting start time to 18000000559
+DEBUG (19): Setting start time to 19000000590
+DEBUG (0): Turning on mote 0 at time 0:0:0.000000000.
+DEBUG (0): Setting start time to 1
+DEBUG (1): Turning on mote 1 at time 0:0:0.100000003.
+DEBUG (1): Setting start time to 1000000032
+DEBUG (2): Turning on mote 2 at time 0:0:0.200000006.
+DEBUG (2): Setting start time to 2000000063
+DEBUG (3): Turning on mote 3 at time 0:0:0.300000009.
+DEBUG (3): Setting start time to 3000000094
+DEBUG (4): Turning on mote 4 at time 0:0:0.400000012.
+DEBUG (4): Setting start time to 4000000125
+DEBUG (5): Turning on mote 5 at time 0:0:0.500000015.
+DEBUG (5): Setting start time to 5000000156
+DEBUG (6): Turning on mote 6 at time 0:0:0.600000018.
+DEBUG (6): Setting start time to 6000000187
+DEBUG (7): Turning on mote 7 at time 0:0:0.700000021.
+DEBUG (7): Setting start time to 7000000218
+DEBUG (8): Turning on mote 8 at time 0:0:0.800000024.
+DEBUG (8): Setting start time to 8000000249
+DEBUG (9): Turning on mote 9 at time 0:0:0.900000028.
+DEBUG (9): Setting start time to 9000000280
+DEBUG (10): Turning on mote 10 at time 0:0:1.000000031.
+DEBUG (10): Setting start time to 10000000311
+DEBUG (11): Turning on mote 11 at time 0:0:1.100000034.
+DEBUG (11): Setting start time to 11000000342
+DEBUG (12): Turning on mote 12 at time 0:0:1.200000037.
+DEBUG (12): Setting start time to 12000000373
+DEBUG (13): Turning on mote 13 at time 0:0:1.300000040.
+DEBUG (13): Setting start time to 13000000404
+DEBUG (14): Turning on mote 14 at time 0:0:1.400000043.
+DEBUG (14): Setting start time to 14000000435
+DEBUG (15): Turning on mote 15 at time 0:0:1.500000046.
+DEBUG (15): Setting start time to 15000000466
+DEBUG (16): Turning on mote 16 at time 0:0:1.600000049.
+DEBUG (16): Setting start time to 16000000497
+DEBUG (17): Turning on mote 17 at time 0:0:1.700000052.
+DEBUG (17): Setting start time to 17000000528
+DEBUG (18): Turning on mote 18 at time 0:0:1.800000055.
+DEBUG (18): Setting start time to 18000000559
+DEBUG (19): Turning on mote 19 at time 0:0:1.900000059.
+DEBUG (19): Setting start time to 19000000590

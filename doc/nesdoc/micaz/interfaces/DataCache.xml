@@ -1,0 +1,180 @@
+<?xml version="1.0" ?><interfacedef loc="32:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/cache/DataCache.nc" nicename="DataCache" qname="DataCache">
+      <documentation loc="32:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/cache/DataCache.nc">
+        <short>
+ A data cache. </short>
+        <long>
+ A data cache.  While this is quite similar to the Cache interface, here a
+ pointer to the element in the cache matching the given input item is
+ returned.  Additional features, such as remove and eviction, are also
+ available.
+
+ @author Ryan Stinnett
+</long>
+      </documentation>
+      <parameters>
+        <typedef loc="32:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/cache/DataCache.nc" name="item_t" ref="0x7e4b7b58">
+          <interfacedef-ref nicename="DataCache" qname="DataCache"/>
+          <type-var alignment="U:" size="U:"><typedef-ref name="item_t" ref="0x7e4b7b58" scoped=""/></type-var>
+        </typedef>
+      </parameters>
+      <function command="" loc="74:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/cache/DataCache.nc" name="remove" provided="0" ref="0x7e4b2858">
+        <documentation loc="68:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/cache/DataCache.nc">
+          <short>
+ Removes an item from the cache.
+
+</short>
+          <long>
+ Removes an item from the cache.
+
+ @param item Pointer to the data item to remove from the cache.
+ @return SUCCESS if found and removed, EINVAL if not found.
+</long>
+        </documentation>
+        <interfacedef-ref nicename="DataCache" qname="DataCache"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="error_t" ref="0x7e8372e8"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-pointer alignment="I:4" size="I:4">
+              <type-var alignment="U:" size="U:"><typedef-ref name="item_t" ref="0x7e4b7b58" scoped=""/></type-var>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="74:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/cache/DataCache.nc" name="item" ref="0x7e4b2628">
+            <type-pointer alignment="I:4" size="I:4">
+              <type-var alignment="U:" size="U:"><typedef-ref name="item_t" ref="0x7e4b7b58" scoped=""/></type-var>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+      <function event="" loc="57:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/cache/DataCache.nc" name="evicted" provided="0" ref="0x7e4b4c70">
+        <documentation loc="49:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/cache/DataCache.nc">
+          <short>
+ Notification that the given item is about to be evicted due to an insert
+ which was requested when the cache was already full. </short>
+          <long>
+ Notification that the given item is about to be evicted due to an insert
+ which was requested when the cache was already full.  Note that this is
+ &lt;b&gt;not&lt;/b&gt; signaled on calls of remove.  The pointer passed here should
+ not saved, as it will not longer be vaild once this event returns.
+
+ @param item Pointer to the data item being evicted.
+</long>
+        </documentation>
+        <interfacedef-ref nicename="DataCache" qname="DataCache"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-pointer alignment="I:4" size="I:4">
+              <type-var alignment="U:" size="U:"><typedef-ref name="item_t" ref="0x7e4b7b58" scoped=""/></type-var>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="57:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/cache/DataCache.nc" name="item" ref="0x7e4b4928">
+            <type-pointer alignment="I:4" size="I:4">
+              <type-var alignment="U:" size="U:"><typedef-ref name="item_t" ref="0x7e4b7b58" scoped=""/></type-var>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="47:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/cache/DataCache.nc" name="insert" provided="0" ref="0x7e4b45f0">
+        <documentation loc="40:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/cache/DataCache.nc">
+          <short>
+ Inserts an item in the cache, evicting if necessary. </short>
+          <long>
+ Inserts an item in the cache, evicting if necessary.  An atomic lookup
+ after insert should return true.
+
+ @param item Pointer to the data item to insert into the cache.
+ @return A pointer to the item in the cache.
+</long>
+        </documentation>
+        <interfacedef-ref nicename="DataCache" qname="DataCache"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-pointer alignment="I:4" size="I:4">
+            <type-var alignment="U:" size="U:"><typedef-ref name="item_t" ref="0x7e4b7b58" scoped=""/></type-var>
+          </type-pointer>
+          <function-parameters>
+            <type-pointer alignment="I:4" size="I:4">
+              <type-var alignment="U:" size="U:"><typedef-ref name="item_t" ref="0x7e4b7b58" scoped=""/></type-var>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="47:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/cache/DataCache.nc" name="item" ref="0x7e4b4350">
+            <type-pointer alignment="I:4" size="I:4">
+              <type-var alignment="U:" size="U:"><typedef-ref name="item_t" ref="0x7e4b7b58" scoped=""/></type-var>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="79:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/cache/DataCache.nc" name="flush" provided="0" ref="0x7e4b2b70">
+        <documentation loc="76:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/cache/DataCache.nc">
+          <short>
+ Flush the cache of all entries.
+</short>
+        </documentation>
+        <interfacedef-ref nicename="DataCache" qname="DataCache"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+      </function>
+      <function command="" loc="66:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/cache/DataCache.nc" name="lookup" provided="0" ref="0x7e4b22e8">
+        <documentation loc="59:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/cache/DataCache.nc">
+          <short>
+ Returns a pointer to the item in the cache by matching various keys or
+ NULL if it was not found.
+
+</short>
+          <long>
+ Returns a pointer to the item in the cache by matching various keys or
+ NULL if it was not found.
+
+ @param item Pointer to the data item to find in the cache.
+ @return A pointer to the item in the cache, or NULL if not found.
+</long>
+        </documentation>
+        <interfacedef-ref nicename="DataCache" qname="DataCache"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-pointer alignment="I:4" size="I:4">
+            <type-var alignment="U:" size="U:"><typedef-ref name="item_t" ref="0x7e4b7b58" scoped=""/></type-var>
+          </type-pointer>
+          <function-parameters>
+            <type-pointer alignment="I:4" size="I:4">
+              <type-var alignment="U:" size="U:"><typedef-ref name="item_t" ref="0x7e4b7b58" scoped=""/></type-var>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="66:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/cache/DataCache.nc" name="item" ref="0x7e4b2010">
+            <type-pointer alignment="I:4" size="I:4">
+              <type-var alignment="U:" size="U:"><typedef-ref name="item_t" ref="0x7e4b7b58" scoped=""/></type-var>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="38:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/cache/DataCache.nc" name="size" provided="0" ref="0x7e4b4010">
+        <documentation loc="34:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/cache/DataCache.nc">
+          <short>
+ Returns the number of items currently stored in the cache.
+</short>
+          <long>
+ Returns the number of items currently stored in the cache.
+ @return The number of items.
+</long>
+        </documentation>
+        <interfacedef-ref nicename="DataCache" qname="DataCache"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x7fea0110"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+      </function>
+    </interfacedef>

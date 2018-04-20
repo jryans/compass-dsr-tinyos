@@ -1,0 +1,14 @@
+digraph "tos.lib.tossim.MainC" {
+  n0x7e759bd8 [shape=ellipse, style=filled, label="Boot", fontsize=12];
+  "SimMainP" [fontsize=12, shape=box, URL="tos.lib.tossim.SimMainP.html"];
+  "SimMainP" [fontsize=12, shape=box, URL="tos.lib.tossim.SimMainP.html"];
+  "TinySchedulerC" [fontsize=12, shape=box,peripheries=2, URL="tos.lib.tossim.TinySchedulerC.html"];
+  "SimMainP" [fontsize=12, shape=box, URL="tos.lib.tossim.SimMainP.html"];
+  "PlatformC" [fontsize=12, shape=box,peripheries=2, URL="tos.platforms.mica.sim.PlatformC.html"];
+  "SimMainP" [fontsize=12, shape=box, URL="tos.lib.tossim.SimMainP.html"];
+  n0x7e756348 [shape=ellipse, style=filled, label="SoftwareInit", fontsize=12];
+  "n0x7e759bd8" -> "SimMainP" [label="Boot", URL="../ihtml/tos.interfaces.Boot.html", fontsize=10];
+  "SimMainP" -> "TinySchedulerC" [label="Scheduler", URL="../ihtml/tos.interfaces.Scheduler.html", fontsize=10];
+  "SimMainP" -> "PlatformC" [label="Init", URL="../ihtml/tos.interfaces.Init.html", fontsize=10];
+  "SimMainP" -> "n0x7e756348" [label="Init", URL="../ihtml/tos.interfaces.Init.html", fontsize=10];
+}

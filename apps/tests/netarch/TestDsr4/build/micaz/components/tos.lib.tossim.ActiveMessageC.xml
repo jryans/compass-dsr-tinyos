@@ -1,0 +1,445 @@
+<?xml version="1.0" ?><component loc="34:/opt/tinyos-2.x/tos/lib/tossim/ActiveMessageC.nc" nicename="tos.lib.tossim.ActiveMessageC" qname="ActiveMessageC">
+      <documentation loc="34:/opt/tinyos-2.x/tos/lib/tossim/ActiveMessageC.nc">
+        <short>
+
+ The basic chip-independent TOSSIM Active Message layer for radio chips
+ that do not have simulation support.
+
+</short>
+        <long>
+
+ The basic chip-independent TOSSIM Active Message layer for radio chips
+ that do not have simulation support.
+
+ @author Philip Levis
+ @date December 2 2005
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="57:/opt/tinyos-2.x/tos/lib/tossim/ActiveMessageC.nc">
+          <from><interface-ref name="SplitControl" ref="0x7e002de8" scoped=""/></from>
+          <to><interface-ref name="Control" ref="0x7dff2280" scoped=""/></to>
+        </wire>
+        <wire loc="59:/opt/tinyos-2.x/tos/lib/tossim/ActiveMessageC.nc">
+          <from><interface-ref name="AMSend" ref="0x7dffe688" scoped=""/></from>
+          <to><interface-ref name="AMSend" ref="0x7e5b0d00" scoped=""/></to>
+        </wire>
+        <wire loc="61:/opt/tinyos-2.x/tos/lib/tossim/ActiveMessageC.nc">
+          <from><interface-ref name="Snoop" ref="0x7dffd7a8" scoped=""/></from>
+          <to><interface-ref name="Snoop" ref="0x7e5a6e40" scoped=""/></to>
+        </wire>
+        <wire loc="62:/opt/tinyos-2.x/tos/lib/tossim/ActiveMessageC.nc">
+          <from><interface-ref name="Packet" ref="0x7dffdc88" scoped=""/></from>
+          <to><interface-ref name="Packet" ref="0x7e5a07a0" scoped=""/></to>
+        </wire>
+        <wire loc="60:/opt/tinyos-2.x/tos/lib/tossim/ActiveMessageC.nc">
+          <from><interface-ref name="Receive" ref="0x7dffd010" scoped=""/></from>
+          <to><interface-ref name="Receive" ref="0x7e5a66a8" scoped=""/></to>
+        </wire>
+        <wire loc="64:/opt/tinyos-2.x/tos/lib/tossim/ActiveMessageC.nc">
+          <from><interface-ref name="PacketAcknowledgements" ref="0x7dff5198" scoped=""/></from>
+          <to><interface-ref name="PacketAcknowledgements" ref="0x7dff2850" scoped=""/></to>
+        </wire>
+        <wire loc="63:/opt/tinyos-2.x/tos/lib/tossim/ActiveMessageC.nc">
+          <from><interface-ref name="AMPacket" ref="0x7dffc400" scoped=""/></from>
+          <to><interface-ref name="AMPacket" ref="0x7e595ea8" scoped=""/></to>
+        </wire>
+        <wire loc="56:/opt/tinyos-2.x/tos/lib/tossim/ActiveMessageC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x7e756348" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x7dff3f18" scoped=""/></to>
+        </wire>
+        <wire loc="66:/opt/tinyos-2.x/tos/lib/tossim/ActiveMessageC.nc">
+          <from><interface-ref name="Model" ref="0x7e58b218" scoped=""/></from>
+          <to><interface-ref name="Packet" ref="0x7dff2d68" scoped=""/></to>
+        </wire>
+        <wire loc="67:/opt/tinyos-2.x/tos/lib/tossim/ActiveMessageC.nc">
+          <from><function-ref name="amAddress" ref="0x7e58ba58" scoped=""/></from>
+          <to><function-ref name="amAddress" ref="0x7dee4408" scoped=""/></to>
+        </wire>
+        <wire loc="69:/opt/tinyos-2.x/tos/lib/tossim/ActiveMessageC.nc">
+          <from><interface-ref name="GainRadioModel" ref="0x7dfde8b8" scoped=""/></from>
+          <to><interface-ref name="Model" ref="0x7df7d170" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="36:/opt/tinyos-2.x/tos/lib/tossim/ActiveMessageC.nc" name="SplitControl" provided="1" ref="0x7e002de8">
+      <component-ref nicename="tos.lib.tossim.ActiveMessageC" qname="ActiveMessageC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="SplitControl" ref="0x7e002de8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SplitControl" qname="SplitControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="startDone" ref="0x7dffe010" scoped=""/>
+        <function-ref name="stopDone" ref="0x7dffe0f0" scoped=""/>
+        <function-ref name="start" ref="0x7dffe1d0" scoped=""/>
+        <function-ref name="stop" ref="0x7dffe2b0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="38:/opt/tinyos-2.x/tos/lib/tossim/ActiveMessageC.nc" name="AMSend" provided="1" ref="0x7dffe688">
+      <component-ref nicename="tos.lib.tossim.ActiveMessageC" qname="ActiveMessageC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="AMSend" ref="0x7dffe688" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMSend" qname="AMSend"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x7fea0110"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="send" ref="0x7dffe860" scoped=""/>
+        <function-ref name="getPayload" ref="0x7dffe940" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x7dffea20" scoped=""/>
+        <function-ref name="cancel" ref="0x7dffeb00" scoped=""/>
+        <function-ref name="sendDone" ref="0x7dffebe0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="40:/opt/tinyos-2.x/tos/lib/tossim/ActiveMessageC.nc" name="Snoop" provided="1" ref="0x7dffd7a8">
+      <component-ref nicename="tos.lib.tossim.ActiveMessageC" qname="ActiveMessageC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Snoop" ref="0x7dffd7a8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Receive" qname="Receive"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x7fea0110"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="payloadLength" ref="0x7dffd980" scoped=""/>
+        <function-ref name="receive" ref="0x7dffda60" scoped=""/>
+        <function-ref name="getPayload" ref="0x7dffdb40" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="42:/opt/tinyos-2.x/tos/lib/tossim/ActiveMessageC.nc" name="Packet" provided="1" ref="0x7dffdc88">
+      <component-ref nicename="tos.lib.tossim.ActiveMessageC" qname="ActiveMessageC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Packet" ref="0x7dffdc88" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Packet" qname="Packet"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x7dffde60" scoped=""/>
+        <function-ref name="payloadLength" ref="0x7dffc010" scoped=""/>
+        <function-ref name="getPayload" ref="0x7dffc0f0" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x7dffc1d0" scoped=""/>
+        <function-ref name="setPayloadLength" ref="0x7dffc2b0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="39:/opt/tinyos-2.x/tos/lib/tossim/ActiveMessageC.nc" name="Receive" provided="1" ref="0x7dffd010">
+      <component-ref nicename="tos.lib.tossim.ActiveMessageC" qname="ActiveMessageC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Receive" ref="0x7dffd010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Receive" qname="Receive"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x7fea0110"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="payloadLength" ref="0x7dffd1e8" scoped=""/>
+        <function-ref name="receive" ref="0x7dffd2c8" scoped=""/>
+        <function-ref name="getPayload" ref="0x7dffd3a8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/opt/tinyos-2.x/tos/lib/tossim/ActiveMessageC.nc" name="PacketAcknowledgements" provided="1" ref="0x7dff5198">
+      <component-ref nicename="tos.lib.tossim.ActiveMessageC" qname="ActiveMessageC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="PacketAcknowledgements" ref="0x7dff5198" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.PacketAcknowledgements" qname="PacketAcknowledgements"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="requestAck" ref="0x7dff5370" scoped=""/>
+        <function-ref name="noAck" ref="0x7dff5450" scoped=""/>
+        <function-ref name="wasAcked" ref="0x7dff5530" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:/opt/tinyos-2.x/tos/lib/tossim/ActiveMessageC.nc" name="AMPacket" provided="1" ref="0x7dffc400">
+      <component-ref nicename="tos.lib.tossim.ActiveMessageC" qname="ActiveMessageC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="AMPacket" ref="0x7dffc400" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMPacket" qname="AMPacket"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="group" ref="0x7dffc5d8" scoped=""/>
+        <function-ref name="source" ref="0x7dffc6b8" scoped=""/>
+        <function-ref name="address" ref="0x7dffc798" scoped=""/>
+        <function-ref name="destination" ref="0x7dffc878" scoped=""/>
+        <function-ref name="setSource" ref="0x7dffc958" scoped=""/>
+        <function-ref name="setDestination" ref="0x7dffca38" scoped=""/>
+        <function-ref name="type" ref="0x7dffcb18" scoped=""/>
+        <function-ref name="setType" ref="0x7dffcbf8" scoped=""/>
+        <function-ref name="isForMe" ref="0x7dffccd8" scoped=""/>
+        <function-ref name="setGroup" ref="0x7dffcdb8" scoped=""/>
+        <function-ref name="localGroup" ref="0x7dffce98" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="59:/opt/tinyos-2.x/tos/lib/tossim/TossimPacketModelC.nc" name="GainRadioModel" provided="0" ref="0x7dfde8b8">
+      <component-ref nicename="tos.lib.tossim.TossimPacketModelC" qname="TossimPacketModelC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="GainRadioModel" ref="0x7dfde8b8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.tossim.GainRadioModel" qname="GainRadioModel"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="putOnAirTo" ref="0x7dfdea90" scoped=""/>
+        <function-ref name="receive" ref="0x7dfdeb70" scoped=""/>
+        <function-ref name="clearChannel" ref="0x7dfdec50" scoped=""/>
+        <function-ref name="setClearValue" ref="0x7dfded30" scoped=""/>
+        <function-ref name="acked" ref="0x7dfdee10" scoped=""/>
+        <function-ref name="shouldAck" ref="0x7dfdeef0" scoped=""/>
+      </interface-functions>
+    </interface><function command="" loc="53:/opt/tinyos-2.x/tos/lib/tossim/ActiveMessageAddressC.nc" name="amAddress" provided="1" ref="0x7dee4408">
+      <component-ref nicename="tos.lib.tossim.ActiveMessageAddressC" qname="ActiveMessageAddressC"/>
+      <type-function alignment="I:1" size="I:1">
+        <type-int alignment="I:2" cname="unsigned short" size="I:2" unsigned=""/>
+        <function-parameters>
+        </function-parameters>
+      </type-function>
+    </function><interface loc="54:/opt/tinyos-2.x/tos/lib/tossim/TossimPacketModelC.nc" name="Init" provided="1" ref="0x7dff3f18">
+      <component-ref nicename="tos.lib.tossim.TossimPacketModelC" qname="TossimPacketModelC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Init" ref="0x7dff3f18" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x7dff2108" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="57:/opt/tinyos-2.x/tos/lib/tossim/TossimPacketModelC.nc" name="Packet" provided="1" ref="0x7dff2d68">
+      <component-ref nicename="tos.lib.tossim.TossimPacketModelC" qname="TossimPacketModelC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Packet" ref="0x7dff2d68" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.tossim.TossimPacketModel" qname="TossimPacketModel"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x7dff1010" scoped=""/>
+        <function-ref name="receive" ref="0x7dff10f0" scoped=""/>
+        <function-ref name="cancel" ref="0x7dff11d0" scoped=""/>
+        <function-ref name="sendDone" ref="0x7dff12b0" scoped=""/>
+        <function-ref name="shouldAck" ref="0x7dff1390" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:/opt/tinyos-2.x/tos/lib/tossim/TossimActiveMessageP.nc" name="Model" provided="0" ref="0x7e58b218">
+      <component-ref nicename="tos.lib.tossim.TossimActiveMessageP" qname="TossimActiveMessageP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Model" ref="0x7e58b218" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.tossim.TossimPacketModel" qname="TossimPacketModel"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x7e58b3f0" scoped=""/>
+        <function-ref name="receive" ref="0x7e58b4d0" scoped=""/>
+        <function-ref name="cancel" ref="0x7e58b5b0" scoped=""/>
+        <function-ref name="sendDone" ref="0x7e58b690" scoped=""/>
+        <function-ref name="shouldAck" ref="0x7e58b770" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="39:/opt/tinyos-2.x/tos/lib/tossim/TossimActiveMessageP.nc" name="AMSend" provided="1" ref="0x7e5b0d00">
+      <component-ref nicename="tos.lib.tossim.TossimActiveMessageP" qname="TossimActiveMessageP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="AMSend" ref="0x7e5b0d00" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMSend" qname="AMSend"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="am_id_t" ref="0x7e881588"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="send" ref="0x7e5b0ed8" scoped=""/>
+        <function-ref name="getPayload" ref="0x7e5b6010" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x7e5b60f0" scoped=""/>
+        <function-ref name="cancel" ref="0x7e5b61d0" scoped=""/>
+        <function-ref name="sendDone" ref="0x7e5b62b0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:/opt/tinyos-2.x/tos/lib/tossim/TossimActiveMessageP.nc" name="Packet" provided="1" ref="0x7e5a07a0">
+      <component-ref nicename="tos.lib.tossim.TossimActiveMessageP" qname="TossimActiveMessageP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Packet" ref="0x7e5a07a0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Packet" qname="Packet"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x7e5a0978" scoped=""/>
+        <function-ref name="payloadLength" ref="0x7e5a0a58" scoped=""/>
+        <function-ref name="getPayload" ref="0x7e5a0b38" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x7e5a0c18" scoped=""/>
+        <function-ref name="setPayloadLength" ref="0x7e5a0cf8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="40:/opt/tinyos-2.x/tos/lib/tossim/TossimActiveMessageP.nc" name="Receive" provided="1" ref="0x7e5a66a8">
+      <component-ref nicename="tos.lib.tossim.TossimActiveMessageP" qname="TossimActiveMessageP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Receive" ref="0x7e5a66a8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Receive" qname="Receive"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="am_id_t" ref="0x7e881588"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="payloadLength" ref="0x7e5a6880" scoped=""/>
+        <function-ref name="receive" ref="0x7e5a6960" scoped=""/>
+        <function-ref name="getPayload" ref="0x7e5a6a40" scoped=""/>
+      </interface-functions>
+    </interface><function command="" loc="228:/opt/tinyos-2.x/tos/lib/tossim/TossimActiveMessageP.nc" name="amAddress" provided="0" ref="0x7e58ba58">
+      <component-ref nicename="tos.lib.tossim.TossimActiveMessageP" qname="TossimActiveMessageP"/>
+      <type-function alignment="I:1" size="I:1">
+        <type-int alignment="I:2" cname="unsigned short" size="I:2" unsigned=""/>
+        <function-parameters>
+        </function-parameters>
+      </type-function>
+    </function><interface loc="56:/opt/tinyos-2.x/tos/lib/tossim/TossimPacketModelC.nc" name="PacketAcknowledgements" provided="1" ref="0x7dff2850">
+      <component-ref nicename="tos.lib.tossim.TossimPacketModelC" qname="TossimPacketModelC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="PacketAcknowledgements" ref="0x7dff2850" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.PacketAcknowledgements" qname="PacketAcknowledgements"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="requestAck" ref="0x7dff2a28" scoped=""/>
+        <function-ref name="noAck" ref="0x7dff2b08" scoped=""/>
+        <function-ref name="wasAcked" ref="0x7dff2be8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="41:/opt/tinyos-2.x/tos/lib/tossim/TossimActiveMessageP.nc" name="Snoop" provided="1" ref="0x7e5a6e40">
+      <component-ref nicename="tos.lib.tossim.TossimActiveMessageP" qname="TossimActiveMessageP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Snoop" ref="0x7e5a6e40" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Receive" qname="Receive"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="am_id_t" ref="0x7e881588"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="payloadLength" ref="0x7e5ab050" scoped=""/>
+        <function-ref name="receive" ref="0x7e5ab130" scoped=""/>
+        <function-ref name="getPayload" ref="0x7e5ab210" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/opt/tinyos-2.x/tos/lib/tossim/TossimActiveMessageP.nc" name="AMPacket" provided="1" ref="0x7e595ea8">
+      <component-ref nicename="tos.lib.tossim.TossimActiveMessageP" qname="TossimActiveMessageP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="AMPacket" ref="0x7e595ea8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMPacket" qname="AMPacket"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="group" ref="0x7e59c0c0" scoped=""/>
+        <function-ref name="source" ref="0x7e59c1a0" scoped=""/>
+        <function-ref name="address" ref="0x7e59c280" scoped=""/>
+        <function-ref name="destination" ref="0x7e59c360" scoped=""/>
+        <function-ref name="setSource" ref="0x7e59c440" scoped=""/>
+        <function-ref name="setDestination" ref="0x7e59c520" scoped=""/>
+        <function-ref name="type" ref="0x7e59c600" scoped=""/>
+        <function-ref name="setType" ref="0x7e59c6e0" scoped=""/>
+        <function-ref name="isForMe" ref="0x7e59c7c0" scoped=""/>
+        <function-ref name="setGroup" ref="0x7e59c8a0" scoped=""/>
+        <function-ref name="localGroup" ref="0x7e59c980" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/opt/tinyos-2.x/tos/lib/tossim/CpmModelC.nc" name="Model" provided="1" ref="0x7df7d170">
+      <component-ref nicename="tos.lib.tossim.CpmModelC" qname="CpmModelC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Model" ref="0x7df7d170" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.tossim.GainRadioModel" qname="GainRadioModel"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="putOnAirTo" ref="0x7df7d348" scoped=""/>
+        <function-ref name="receive" ref="0x7df7d428" scoped=""/>
+        <function-ref name="clearChannel" ref="0x7df7d508" scoped=""/>
+        <function-ref name="setClearValue" ref="0x7df7d5e8" scoped=""/>
+        <function-ref name="acked" ref="0x7df7d6c8" scoped=""/>
+        <function-ref name="shouldAck" ref="0x7df7d7a8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="55:/opt/tinyos-2.x/tos/lib/tossim/TossimPacketModelC.nc" name="Control" provided="1" ref="0x7dff2280">
+      <component-ref nicename="tos.lib.tossim.TossimPacketModelC" qname="TossimPacketModelC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Control" ref="0x7dff2280" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SplitControl" qname="SplitControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="startDone" ref="0x7dff2458" scoped=""/>
+        <function-ref name="stopDone" ref="0x7dff2538" scoped=""/>
+        <function-ref name="start" ref="0x7dff2618" scoped=""/>
+        <function-ref name="stop" ref="0x7dff26f8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="41:/opt/tinyos-2.x/tos/lib/tossim/MainC.nc" name="SoftwareInit" provided="0" ref="0x7e756348">
+      <component-ref nicename="tos.lib.tossim.MainC" qname="MainC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="SoftwareInit" ref="0x7e756348" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x7e756520" scoped=""/>
+      </interface-functions>
+    </interface><component loc="45:/opt/tinyos-2.x/tos/lib/tossim/ActiveMessageAddressC.nc" nicename="tos.lib.tossim.ActiveMessageAddressC" qname="ActiveMessageAddressC">
+      <documentation loc="45:/opt/tinyos-2.x/tos/lib/tossim/ActiveMessageAddressC.nc">
+        <short>
+ Accessor methods for Active Messages.
+
+</short>
+        <long>
+ Accessor methods for Active Messages.
+
+ @author Philip Levis
+ @date June 19 2005
+</long>
+      </documentation>
+      <module/>
+    </component><component loc="36:/opt/tinyos-2.x/tos/lib/tossim/TossimActiveMessageP.nc" nicename="tos.lib.tossim.TossimActiveMessageP" qname="TossimActiveMessageP">
+      <documentation loc="36:/opt/tinyos-2.x/tos/lib/tossim/TossimActiveMessageP.nc">
+        <short>
+
+ The basic chip-independent TOSSIM Active Message layer for radio chips
+ that do not have simulation support.
+
+</short>
+        <long>
+
+ The basic chip-independent TOSSIM Active Message layer for radio chips
+ that do not have simulation support.
+
+ @author Philip Levis
+ @date December 2 2005
+</long>
+      </documentation>
+      <module/>
+    </component><component loc="39:/opt/tinyos-2.x/tos/lib/tossim/MainC.nc" nicename="tos.lib.tossim.MainC" qname="MainC">
+      <configuration/>
+      <wiring>
+        <wire loc="56:/opt/tinyos-2.x/tos/lib/tossim/MainC.nc">
+          <from><interface-ref name="Boot" ref="0x7e759bd8" scoped=""/></from>
+          <to><interface-ref name="Boot" ref="0x7e5f9770" scoped=""/></to>
+        </wire>
+        <wire loc="51:/opt/tinyos-2.x/tos/lib/tossim/MainC.nc">
+          <from><interface-ref name="Scheduler" ref="0x7e5f9ab8" scoped=""/></from>
+          <to><interface-ref name="Scheduler" ref="0x7e8d1c50" scoped=""/></to>
+        </wire>
+        <wire loc="52:/opt/tinyos-2.x/tos/lib/tossim/MainC.nc">
+          <from><interface-ref name="PlatformInit" ref="0x7e5f8010" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x7e7538e0" scoped=""/></to>
+        </wire>
+        <wire loc="55:/opt/tinyos-2.x/tos/lib/tossim/MainC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x7e5f8380" scoped=""/></from>
+          <to><interface-ref name="SoftwareInit" ref="0x7e756348" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="45:/opt/tinyos-2.x/tos/lib/tossim/CpmModelC.nc" nicename="tos.lib.tossim.CpmModelC" qname="CpmModelC">
+      <documentation loc="45:/opt/tinyos-2.x/tos/lib/tossim/CpmModelC.nc">
+        <short>
+ Implementation of all of the SNIST primitives and utility
+ functions.
+
+</short>
+        <long>
+ Implementation of all of the SNIST primitives and utility
+ functions.
+
+ @author Hyungjune Lee
+ @date   Oct 13 2006
+</long>
+      </documentation>
+      <module/>
+    </component><component loc="52:/opt/tinyos-2.x/tos/lib/tossim/TossimPacketModelC.nc" nicename="tos.lib.tossim.TossimPacketModelC" qname="TossimPacketModelC">
+      <documentation loc="52:/opt/tinyos-2.x/tos/lib/tossim/TossimPacketModelC.nc">
+        <short>
+
+ Configuration parameters for a CSMA link.
+
+</short>
+        <long>
+
+ Configuration parameters for a CSMA link.
+
+ @author Philip Levis
+ @date   Dec 10 2005
+</long>
+      </documentation>
+      <module/>
+    </component></referenced></component>

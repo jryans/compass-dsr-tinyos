@@ -1,0 +1,100 @@
+<?xml version="1.0" ?><interfacedef loc="38:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphEdge.nc" nicename="GraphEdge" qname="GraphEdge">
+      <documentation loc="38:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphEdge.nc">
+        <short>
+
+ Access information about an edge of the graph.
+
+
+
+</short>
+        <long>
+
+ Access information about an edge of the graph.
+
+
+
+ @author Ryan Stinnett
+
+</long>
+      </documentation>
+      <function command="" loc="46:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphEdge.nc" name="src" provided="0" ref="0x7dba1ab8">
+        <documentation loc="40:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphEdge.nc">
+          <short>
+
+ Get the first or source vertex of the edge.
+
+ 
+
+</short>
+          <long>
+
+ Get the first or source vertex of the edge.
+
+ 
+
+ @param m The key for the edge.
+
+ @return The first or source vertex.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="GraphEdge" qname="GraphEdge"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="graph_vertex_id_t" ref="0x7dbe4e40"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="graph_edge_id_t" ref="0x7dbe3020"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="46:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphEdge.nc" name="m" ref="0x7dba1898">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="graph_edge_id_t" ref="0x7dbe3020"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="54:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphEdge.nc" name="dest" provided="0" ref="0x7dba0240">
+        <documentation loc="48:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphEdge.nc">
+          <short>
+
+ Get the second or destination vertex of the edge.
+
+ 
+
+</short>
+          <long>
+
+ Get the second or destination vertex of the edge.
+
+ 
+
+ @param m The key for the edge.
+
+ @return The second or destination vertex.
+
+</long>
+        </documentation>
+        <interfacedef-ref nicename="GraphEdge" qname="GraphEdge"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="graph_vertex_id_t" ref="0x7dbe4e40"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="graph_edge_id_t" ref="0x7dbe3020"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="54:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/data/graph/GraphEdge.nc" name="m" ref="0x7dba0010">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="graph_edge_id_t" ref="0x7dbe3020"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+    </interfacedef>

@@ -1,0 +1,15 @@
+#!/bin/bash
+ct="java edu.rice.compass.CompassTools"
+$ct -o -d 0 --power 31
+$ct -o -d 0 --radioretries 5
+$ct -o -d 1 -c
+for pl in `seq $1 $2`;
+do
+  $ct -o -d 0 --power $pl
+  $ct -o -d 0 --radioretries 1
+  $ct -d 1 --ping 250
+  $ct -o -d 0 --power 31
+  $ct -o -d 0 --radioretries 5
+  $ct --stats -d 1 `cygpath -w $PWD/$pl.xml`
+  $ct -o -d 1 -c
+done

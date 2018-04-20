@@ -1,0 +1,165 @@
+<html>
+  <head>
+    <LINK rel="stylesheet" href="nesdoc.css" type="text/css" media="screen"><title>Interface: GraphEdgeWeight</title>
+  </head>
+  <body>
+    <h2>Interface: GraphEdgeWeight</h2>
+    <b>interface GraphEdgeWeight&lt;typedef weight_t&gt;</b><p>
+
+ Access information about the weight of an edge of the graph.
+
+
+
+ 
+    <p>
+    <dl>
+      <dt><b>Author:</b>
+      <dd>
+        Ryan Stinnett
+
+
+      </dd>
+    </dl>
+    <p><p><div id=heading>Commands</div><div id=funcsig><span id=funcnameshort>command bool <a href="#canChangeWeights">canChangeWeights</a>()
+      </span><menu>
+
+ Checks if the graph weights can be changed. 
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command void <a href="#setWeight">setWeight</a>(graph_edge_id_t m, weight_t w)
+      </span><menu>
+
+ Set the weight of the edge. 
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command weight_t <a href="#weight">weight</a>(graph_edge_id_t m)
+      </span><menu>
+
+ Get the weight of the edge. 
+      </menu>
+    </div><p><div id=heading>Events</div><div id=funcsig><span id=funcnameshort>event void <a href="#weightChanged">weightChanged</a>(graph_edge_id_t m)
+      </span><menu>
+
+ The weight of an edge in the graph changed.
+
+ 
+
+
+      </menu>
+    </div><p><div id=heading>Commands - Details</div>
+    <a name="canChangeWeights"></a>
+    <h4>canChangeWeights
+    </h4>
+    <span id=funcnameshort>command bool <b>canChangeWeights</b>()
+    </span>
+    <p>
+    <menu>
+      
+
+ Checks if the graph weights can be changed.  This value should not change 
+
+ at run-time.
+
+ 
+
+ 
+      <p>
+      <dl>
+        <dt><b>Returns:</b>
+        <dd>
+          TRUE if the graph weights can change, FALSE if they cannot.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="setWeight"></a>
+    <h4>setWeight
+    </h4>
+    <span id=funcnameshort>command void <b>setWeight</b>(graph_edge_id_t m, weight_t w)
+    </span>
+    <p>
+    <menu>
+      
+
+ Set the weight of the edge.  If the graph is actually unweighted, no
+
+ action is taken.
+
+ 
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>m</code> -  The key for the edge.
+
+ 
+        </dd>
+        <dd>
+          <code>w</code> -  The updated weight.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="weight"></a>
+    <h4>weight
+    </h4>
+    <span id=funcnameshort>command weight_t <b>weight</b>(graph_edge_id_t m)
+    </span>
+    <p>
+    <menu>
+      
+
+ Get the weight of the edge.  If the graph is actually unweighted, a unit
+
+ weight is always returned.
+
+ 
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>m</code> -  The key for the edge.
+
+ 
+        </dd>
+        <dt><b>Returns:</b>
+        <dd>
+          The weight of the edge.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <p><div id=heading>Events - Details</div>
+    <a name="weightChanged"></a>
+    <h4>weightChanged
+    </h4>
+    <span id=funcnameshort>event void <b>weightChanged</b>(graph_edge_id_t m)
+    </span>
+    <p>
+    <menu>
+      
+
+ The weight of an edge in the graph changed.
+
+ 
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>m</code> -  The key for the edge that had its weight changed.
+
+
+        </dd>
+      </dl>
+    </menu>
+  </body>
+</html>

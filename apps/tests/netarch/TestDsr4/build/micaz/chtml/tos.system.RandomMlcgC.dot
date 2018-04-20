@@ -1,0 +1,11 @@
+digraph "tos.system.RandomMlcgC" {
+  n0x7e2b1a20 [shape=ellipse, style=filled, label="Random", fontsize=12];
+  "RandomMlcgP" [fontsize=12, shape=box, URL="tos.system.RandomMlcgP.html"];
+  n0x7e2b1170 [shape=ellipse, style=filled, label="SeedInit", fontsize=12];
+  "RandomMlcgP" [fontsize=12, shape=box, URL="tos.system.RandomMlcgP.html"];
+  n0x7e2b7d30 [shape=ellipse, style=filled, label="Init", fontsize=12];
+  "RandomMlcgP" [fontsize=12, shape=box, URL="tos.system.RandomMlcgP.html"];
+  "n0x7e2b1a20" -> "RandomMlcgP" [label="Random", URL="../ihtml/tos.interfaces.Random.html", fontsize=10];
+  "n0x7e2b1170" -> "RandomMlcgP" [label="ParameterInit<uint16_t>", URL="../ihtml/tos.interfaces.ParameterInit.html", fontsize=10];
+  "n0x7e2b7d30" -> "RandomMlcgP" [label="Init", URL="../ihtml/tos.interfaces.Init.html", fontsize=10];
+}

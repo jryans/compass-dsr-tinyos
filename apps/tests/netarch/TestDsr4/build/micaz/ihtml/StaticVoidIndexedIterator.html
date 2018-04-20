@@ -1,0 +1,118 @@
+<html>
+  <head>
+    <LINK rel="stylesheet" href="nesdoc.css" type="text/css" media="screen"><title>Interface: StaticVoidIndexedIterator</title>
+  </head>
+  <body>
+    <h2>Interface: StaticVoidIndexedIterator</h2>
+    <b>interface StaticVoidIndexedIterator&lt;typedef iterator_item_t&gt;</b><p>
+
+ Iteration operations using indices.  This interface is the static or
+
+ stateless version which requires a pointer to the structure containing
+
+ the data to be passed in along with the index.
+
+
+
+ 
+    <p>
+    <dl>
+      <dt><b>Author:</b>
+      <dd>
+        Ryan Stinnett
+
+
+      </dd>
+    </dl>
+    <p><p><div id=heading>Commands</div><div id=funcsig><span id=funcnameshort>command iterator_end_t <a href="#end">end</a>(void *d, iterator_item_t m)
+      </span><menu>
+
+ Checks whether you have already reached the end.
+
+
+
+
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command iterator_item_t <a href="#next">next</a>(void *d, iterator_item_t m)
+      </span><menu>
+
+ Gets the index of the next item.
+
+
+
+
+      </menu>
+    </div><p><div id=heading>Commands - Details</div>
+    <a name="end"></a>
+    <h4>end
+    </h4>
+    <span id=funcnameshort>command iterator_end_t <b>end</b>(void *d, iterator_item_t m)
+    </span>
+    <p>
+    <menu>
+      
+
+ Checks whether you have already reached the end.
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>d</code> -  Pointer to the data source.
+
+ 
+        </dd>
+        <dd>
+          <code>m</code> -  Current item's index.
+
+ 
+        </dd>
+        <dt><b>Returns:</b>
+        <dd>
+          TRUE if the current item is the end, FALSE otherwise.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="next"></a>
+    <h4>next
+    </h4>
+    <span id=funcnameshort>command iterator_item_t <b>next</b>(void *d, iterator_item_t m)
+    </span>
+    <p>
+    <menu>
+      
+
+ Gets the index of the next item.
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>d</code> -  Pointer to the data source.
+
+ 
+        </dd>
+        <dd>
+          <code>m</code> -  Current item's index.
+
+ 
+        </dd>
+        <dt><b>Returns:</b>
+        <dd>
+          The next item's index.
+
+
+        </dd>
+      </dl>
+    </menu>
+  </body>
+</html>

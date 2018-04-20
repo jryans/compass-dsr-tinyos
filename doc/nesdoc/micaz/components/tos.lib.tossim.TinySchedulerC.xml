@@ -1,0 +1,95 @@
+<?xml version="1.0" ?><component loc="34:/opt/tinyos-2.x/tos/lib/tossim/TinySchedulerC.nc" nicename="tos.lib.tossim.TinySchedulerC" qname="TinySchedulerC">
+      <documentation loc="34:/opt/tinyos-2.x/tos/lib/tossim/TinySchedulerC.nc">
+        <short>
+ TOSSIM-specific scheduler implementation, which models
+ tasks as simulation events (in order to capture delay).
+
+</short>
+        <long>
+ TOSSIM-specific scheduler implementation, which models
+ tasks as simulation events (in order to capture delay).
+
+ @author Philip Levis
+ @date   Nov 22 2005
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="41:/opt/tinyos-2.x/tos/lib/tossim/TinySchedulerC.nc">
+          <from><interface-ref name="TaskBasic" ref="0x7e835e58" scoped=""/></from>
+          <to><interface-ref name="TaskBasic" ref="0x7e832db8" scoped=""/></to>
+        </wire>
+        <wire loc="40:/opt/tinyos-2.x/tos/lib/tossim/TinySchedulerC.nc">
+          <from><interface-ref name="Scheduler" ref="0x7e8d1c50" scoped=""/></from>
+          <to><interface-ref name="Scheduler" ref="0x7e832620" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="36:/opt/tinyos-2.x/tos/lib/tossim/TinySchedulerC.nc" name="TaskBasic" provided="1" ref="0x7e835e58">
+      <component-ref nicename="tos.lib.tossim.TinySchedulerC" qname="TinySchedulerC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="TaskBasic" ref="0x7e835e58" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.TaskBasic" qname="TaskBasic"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x7fea0110"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="postTask" ref="0x7e841050" scoped=""/>
+        <function-ref name="runTask" ref="0x7e841130" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="35:/opt/tinyos-2.x/tos/lib/tossim/TinySchedulerC.nc" name="Scheduler" provided="1" ref="0x7e8d1c50">
+      <component-ref nicename="tos.lib.tossim.TinySchedulerC" qname="TinySchedulerC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Scheduler" ref="0x7e8d1c50" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Scheduler" qname="Scheduler"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x7e8d1e28" scoped=""/>
+        <function-ref name="taskLoop" ref="0x7e8d1f08" scoped=""/>
+        <function-ref name="runNextTask" ref="0x7ebf2010" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="41:/opt/tinyos-2.x/tos/lib/tossim/SimSchedulerBasicP.nc" name="TaskBasic" provided="1" ref="0x7e832db8">
+      <component-ref nicename="tos.lib.tossim.SimSchedulerBasicP" qname="SimSchedulerBasicP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="TaskBasic" ref="0x7e832db8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.TaskBasic" qname="TaskBasic"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x7fea0110"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="postTask" ref="0x7e831010" scoped=""/>
+        <function-ref name="runTask" ref="0x7e8310f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="40:/opt/tinyos-2.x/tos/lib/tossim/SimSchedulerBasicP.nc" name="Scheduler" provided="1" ref="0x7e832620">
+      <component-ref nicename="tos.lib.tossim.SimSchedulerBasicP" qname="SimSchedulerBasicP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Scheduler" ref="0x7e832620" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Scheduler" qname="Scheduler"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x7e8327f8" scoped=""/>
+        <function-ref name="taskLoop" ref="0x7e8328d8" scoped=""/>
+        <function-ref name="runNextTask" ref="0x7e8329b8" scoped=""/>
+      </interface-functions>
+    </interface><component loc="39:/opt/tinyos-2.x/tos/lib/tossim/SimSchedulerBasicP.nc" nicename="tos.lib.tossim.SimSchedulerBasicP" qname="SimSchedulerBasicP">
+      <documentation loc="39:/opt/tinyos-2.x/tos/lib/tossim/SimSchedulerBasicP.nc">
+        <short>
+ The event queue is the core of the mote side of TOSSIM.</short>
+        <long>
+ The event queue is the core of the mote side of TOSSIM. It is a
+ wrapper around the underlying heap. Unlike the 1.x version, it is
+ not re-entrant: merging the Python console and TOSSIM means that
+ functionality like packet injection/reception from external tools
+ is on the Python side.
+
+ @author Phil Levis
+ @date   November 22 2005
+</long>
+      </documentation>
+      <module/>
+    </component></referenced></component>

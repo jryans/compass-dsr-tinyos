@@ -1,0 +1,70 @@
+<?xml version="1.0" ?><component abstract="" loc="35:/opt/tinyos-2.x/tos/system/AMQueueEntryP.nc" nicename="tos.system.AMQueueEntryP" qname="AMQueueEntryP">
+      <documentation loc="35:/opt/tinyos-2.x/tos/system/AMQueueEntryP.nc">
+        <short>
+ Internal AM component that fills in needed packet fields for the 
+ AMSend -&gt; Send transformation.
+
+</short>
+        <long>
+ Internal AM component that fills in needed packet fields for the 
+ AMSend -&gt; Send transformation.
+
+ @author Philip Levis
+ @date   Jan 16 2006
+</long>
+      </documentation>
+      <parameters>
+        <constant loc="35:/opt/tinyos-2.x/tos/system/AMQueueEntryP.nc" name="amId" ref="0x7d9e3010">
+          <component-ref nicename="tos.system.AMQueueEntryP" qname="AMQueueEntryP"/>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="am_id_t" ref="0x7e881588"/></typename>
+          </type-int>
+        </constant>
+      </parameters>
+      <module/>
+    <specification><interface loc="36:/opt/tinyos-2.x/tos/system/AMQueueEntryP.nc" name="AMSend" provided="1" ref="0x7d9e3250">
+      <component-ref nicename="tos.system.AMQueueEntryP" qname="AMQueueEntryP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="AMSend" ref="0x7d9e3250" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMSend" qname="AMSend"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x7d9e3428" scoped=""/>
+        <function-ref name="getPayload" ref="0x7d9e3508" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x7d9e35e8" scoped=""/>
+        <function-ref name="cancel" ref="0x7d9e36c8" scoped=""/>
+        <function-ref name="sendDone" ref="0x7d9e37a8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="38:/opt/tinyos-2.x/tos/system/AMQueueEntryP.nc" name="Send" provided="0" ref="0x7d9dc188">
+      <component-ref nicename="tos.system.AMQueueEntryP" qname="AMQueueEntryP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Send" ref="0x7d9dc188" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Send" qname="Send"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x7d9dc360" scoped=""/>
+        <function-ref name="getPayload" ref="0x7d9dc440" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x7d9dc520" scoped=""/>
+        <function-ref name="cancel" ref="0x7d9dc600" scoped=""/>
+        <function-ref name="sendDone" ref="0x7d9dc6e0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="39:/opt/tinyos-2.x/tos/system/AMQueueEntryP.nc" name="AMPacket" provided="0" ref="0x7d9dc830">
+      <component-ref nicename="tos.system.AMQueueEntryP" qname="AMQueueEntryP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="AMPacket" ref="0x7d9dc830" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMPacket" qname="AMPacket"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="group" ref="0x7d9dca08" scoped=""/>
+        <function-ref name="source" ref="0x7d9dcae8" scoped=""/>
+        <function-ref name="address" ref="0x7d9dcbc8" scoped=""/>
+        <function-ref name="destination" ref="0x7d9dcca8" scoped=""/>
+        <function-ref name="setSource" ref="0x7d9dcd88" scoped=""/>
+        <function-ref name="setDestination" ref="0x7d9dce68" scoped=""/>
+        <function-ref name="type" ref="0x7d9e1010" scoped=""/>
+        <function-ref name="setType" ref="0x7d9e10f0" scoped=""/>
+        <function-ref name="isForMe" ref="0x7d9e11d0" scoped=""/>
+        <function-ref name="setGroup" ref="0x7d9e12b0" scoped=""/>
+        <function-ref name="localGroup" ref="0x7d9e1390" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

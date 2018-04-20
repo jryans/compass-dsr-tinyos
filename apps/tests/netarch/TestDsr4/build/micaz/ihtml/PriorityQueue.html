@@ -1,0 +1,413 @@
+<html>
+  <head>
+    <LINK rel="stylesheet" href="nesdoc.css" type="text/css" media="screen"><title>Interface: PriorityQueue</title>
+  </head>
+  <body>
+    <h2>Interface: PriorityQueue</h2>
+    <b>interface PriorityQueue</b><p>
+
+ Interface to a priority queue sitting on top of an index heap.  The meaning
+
+ of some terms defined here is implementation dependent since either a min or
+
+ max heap could be used.
+
+
+
+ 
+    <p>
+    <dl>
+      <dt><b>Author:</b>
+      <dd>
+        Ryan Stinnett
+
+
+      </dd>
+    </dl>
+    <p><p><div id=heading>Commands</div><div id=funcsig><span id=funcnameshort>command void <a href="#clear">clear</a>()
+      </span><menu>
+
+ Removes all elements from the priority queue.
+
+
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command bool <a href="#empty">empty</a>()
+      </span><menu>
+
+ Checks if the priority queue is empty.
+
+
+
+
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command priority_queue_id_t <a href="#findBest">findBest</a>()
+      </span><menu>
+
+ Finds the index of the element with the best priority (at the root of the
+
+ heap), but does not remove it.
+
+ 
+
+
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command error_t <a href="#insert">insert</a>(priority_queue_id_t m)
+      </span><menu>
+
+ Insert the element at index m into the priority queue.
+
+
+
+
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command bool <a href="#inserted">inserted</a>(priority_queue_id_t m)
+      </span><menu>
+
+ Checks whether element m has already been inserted.
+
+ 
+
+
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command priority_queue_id_t <a href="#maxSize">maxSize</a>()
+      </span><menu>
+
+ The maximum number of elements the priority queue can hold.
+
+
+
+
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command void <a href="#move">move</a>(priority_queue_id_t m)
+      </span><menu>
+
+ If the priority of element m has changed, move that element up or down the 
+
+ heap if needed.
+
+
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command void <a href="#moveDown">moveDown</a>(priority_queue_id_t m)
+      </span><menu>
+
+ If the priority of element m has worsened, move that element down the heap
+
+ if needed.
+
+
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command void <a href="#moveUp">moveUp</a>(priority_queue_id_t m)
+      </span><menu>
+
+ If the priority of element m has improved, move that element up the heap
+
+ if needed.
+
+
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command priority_queue_id_t <a href="#removeBest">removeBest</a>()
+      </span><menu>
+
+ Finds the index of the element with the best priority (at the root of the
+
+ heap) and removes it from the priority queue.
+
+ 
+
+
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command priority_queue_id_t <a href="#size">size</a>()
+      </span><menu>
+
+ The number of elements currently in the priority queue.
+
+
+      </menu>
+    </div><p><div id=heading>Commands - Details</div>
+    <a name="clear"></a>
+    <h4>clear
+    </h4>
+    <span id=funcnameshort>command void <b>clear</b>()
+    </span>
+    <p>
+    <menu>
+      
+
+ Removes all elements from the priority queue.
+
+
+    </menu>
+    <hr>
+    <a name="empty"></a>
+    <h4>empty
+    </h4>
+    <span id=funcnameshort>command bool <b>empty</b>()
+    </span>
+    <p>
+    <menu>
+      
+
+ Checks if the priority queue is empty.
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Returns:</b>
+        <dd>
+          Whether the priority queue is empty.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="findBest"></a>
+    <h4>findBest
+    </h4>
+    <span id=funcnameshort>command priority_queue_id_t <b>findBest</b>()
+    </span>
+    <p>
+    <menu>
+      
+
+ Finds the index of the element with the best priority (at the root of the
+
+ heap), but does not remove it.
+
+ 
+
+ 
+      <p>
+      <dl>
+        <dt><b>Returns:</b>
+        <dd>
+          Index of the element with the best priority.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="insert"></a>
+    <h4>insert
+    </h4>
+    <span id=funcnameshort>command error_t <b>insert</b>(priority_queue_id_t m)
+    </span>
+    <p>
+    <menu>
+      
+
+ Insert the element at index m into the priority queue.
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>m</code> -  Index of the element to insert.
+
+ 
+        </dd>
+        <dt><b>Returns:</b>
+        <dd>
+          If the priority queue is full then FAIL, if m is too large for the
+
+         queue then ESIZE, if m has already been inserted then EALREADY,
+
+         otherwise SUCCESS.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="inserted"></a>
+    <h4>inserted
+    </h4>
+    <span id=funcnameshort>command bool <b>inserted</b>(priority_queue_id_t m)
+    </span>
+    <p>
+    <menu>
+      
+
+ Checks whether element m has already been inserted.
+
+ 
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>m</code> -  Index of the element to check on.
+
+ 
+        </dd>
+        <dt><b>Returns:</b>
+        <dd>
+          TRUE if element m has already been inserted, otherwise FALSE.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="maxSize"></a>
+    <h4>maxSize
+    </h4>
+    <span id=funcnameshort>command priority_queue_id_t <b>maxSize</b>()
+    </span>
+    <p>
+    <menu>
+      
+
+ The maximum number of elements the priority queue can hold.
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Returns:</b>
+        <dd>
+          The maximum priority queue size.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="move"></a>
+    <h4>move
+    </h4>
+    <span id=funcnameshort>command void <b>move</b>(priority_queue_id_t m)
+    </span>
+    <p>
+    <menu>
+      
+
+ If the priority of element m has changed, move that element up or down the 
+
+ heap if needed.
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>m</code> -  Index of the element with altered priority.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="moveDown"></a>
+    <h4>moveDown
+    </h4>
+    <span id=funcnameshort>command void <b>moveDown</b>(priority_queue_id_t m)
+    </span>
+    <p>
+    <menu>
+      
+
+ If the priority of element m has worsened, move that element down the heap
+
+ if needed.
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>m</code> -  Index of the element with altered priority.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="moveUp"></a>
+    <h4>moveUp
+    </h4>
+    <span id=funcnameshort>command void <b>moveUp</b>(priority_queue_id_t m)
+    </span>
+    <p>
+    <menu>
+      
+
+ If the priority of element m has improved, move that element up the heap
+
+ if needed.
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>m</code> -  Index of the element with altered priority.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="removeBest"></a>
+    <h4>removeBest
+    </h4>
+    <span id=funcnameshort>command priority_queue_id_t <b>removeBest</b>()
+    </span>
+    <p>
+    <menu>
+      
+
+ Finds the index of the element with the best priority (at the root of the
+
+ heap) and removes it from the priority queue.
+
+ 
+
+ 
+      <p>
+      <dl>
+        <dt><b>Returns:</b>
+        <dd>
+          Index of the element with the best priority.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="size"></a>
+    <h4>size
+    </h4>
+    <span id=funcnameshort>command priority_queue_id_t <b>size</b>()
+    </span>
+    <p>
+    <menu>
+      
+
+ The number of elements currently in the priority queue.
+
+ Always less than or equal to maxSize().
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Returns:</b>
+        <dd>
+          The number of elements in the priority queue.
+
+
+        </dd>
+      </dl>
+    </menu>
+  </body>
+</html>

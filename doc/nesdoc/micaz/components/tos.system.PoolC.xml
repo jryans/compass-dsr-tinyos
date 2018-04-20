@@ -1,0 +1,144 @@
+<?xml version="1.0" ?><component abstract="" loc="41:/opt/tinyos-2.x/tos/system/PoolC.nc" nicename="tos.system.PoolC" qname="PoolC">
+      <documentation loc="41:/opt/tinyos-2.x/tos/system/PoolC.nc">
+        <short>
+  A general dynamic memory pool component.
+
+ </short>
+        <long>
+  A general dynamic memory pool component.
+
+  @author Philip Levis
+  @author Geoffrey Mainland
+  @date   $Date: 2006/12/12 18:23:47 $
+</long>
+      </documentation>
+      <parameters>
+        <typedef loc="41:/opt/tinyos-2.x/tos/system/PoolC.nc" name="pool_t" ref="0x7e2fc190">
+          <component-ref nicename="tos.system.PoolC" qname="PoolC"/>
+          <type-var alignment="U:" size="U:"><typedef-ref name="pool_t" ref="0x7e2fc190" scoped=""/></type-var>
+        </typedef>
+        <constant loc="41:/opt/tinyos-2.x/tos/system/PoolC.nc" name="POOL_SIZE" ref="0x7e2fc320">
+          <component-ref nicename="tos.system.PoolC" qname="PoolC"/>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x7fea0110"/></typename>
+          </type-int>
+        </constant>
+      </parameters>
+      <configuration/>
+      <wiring>
+        <wire loc="49:/opt/tinyos-2.x/tos/system/PoolC.nc">
+          <from><interface-ref name="Pool" ref="0x7e2fc5f8" scoped=""/></from>
+          <to><interface-ref name="Pool" ref="0x7e2f8808" scoped=""/></to>
+        </wire>
+        <wire loc="48:/opt/tinyos-2.x/tos/system/PoolC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x7e756348" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x7e2f8460" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="42:/opt/tinyos-2.x/tos/system/PoolC.nc" name="Pool" provided="1" ref="0x7e2fc5f8">
+      <component-ref nicename="tos.system.PoolC" qname="PoolC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Pool" ref="0x7e2fc5f8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Pool" qname="Pool"/>
+        <arguments>
+          <type-var alignment="U:" size="U:"><typedef-ref name="pool_t" ref="0x7e2fc190" scoped=""/></type-var>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="get" ref="0x7e2fb490" scoped=""/>
+        <function-ref name="maxSize" ref="0x7e2fb010" scoped=""/>
+        <function-ref name="empty" ref="0x7e2fcc20" scoped=""/>
+        <function-ref name="put" ref="0x7e2fb1f0" scoped=""/>
+        <function-ref name="size" ref="0x7e2fce00" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="56:/opt/tinyos-2.x/tos/system/PoolP.nc" name="Pool" provided="1" ref="0x7e2f8808">
+      <component-ref nicename="tos.system.PoolP" qname="PoolC.PoolP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Pool" ref="0x7e2f8808" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Pool" qname="Pool"/>
+        <arguments>
+          <type-var alignment="U:" size="U:"><typedef-ref name="pool_t" ref="0x7e2fc190" scoped=""/></type-var>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="get" ref="0x7e2ea6a8" scoped=""/>
+        <function-ref name="maxSize" ref="0x7e2ea228" scoped=""/>
+        <function-ref name="empty" ref="0x7e2f8e30" scoped=""/>
+        <function-ref name="put" ref="0x7e2ea408" scoped=""/>
+        <function-ref name="size" ref="0x7e2ea048" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="55:/opt/tinyos-2.x/tos/system/PoolP.nc" name="Init" provided="1" ref="0x7e2f8460">
+      <component-ref nicename="tos.system.PoolP" qname="PoolC.PoolP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Init" ref="0x7e2f8460" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x7e2f8638" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="41:/opt/tinyos-2.x/tos/lib/tossim/MainC.nc" name="SoftwareInit" provided="0" ref="0x7e756348">
+      <component-ref nicename="tos.lib.tossim.MainC" qname="MainC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="SoftwareInit" ref="0x7e756348" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x7e756520" scoped=""/>
+      </interface-functions>
+    </interface><component abstract="" loc="53(PoolC.PoolP):/opt/tinyos-2.x/tos/system/PoolP.nc" nicename="tos.system.PoolP" qname="PoolC.PoolP">
+      <documentation loc="53(PoolC.PoolP):/opt/tinyos-2.x/tos/system/PoolP.nc">
+        <short>
+  Implementation of a general dynamic memory pool component.
+ </short>
+        <long>
+  Implementation of a general dynamic memory pool component.
+  Note that the allocation/deallocation policies are 
+  different than traditional dynamic allocators such as
+  malloc or slab allocators. When initialized, the Pool
+  contains &lt;code&gt;size&lt;/code&gt; items of type &lt;code&gt;pool_t&lt;/code&gt;.
+  These elements can be removed from the pool for use with 
+  &lt;code&gt;Pool.get&lt;/code&gt;, and new elements can be placed in
+  the pool with &lt;code&gt;Pool.put&lt;/code&gt;. The pool allows 
+  components to &lt;code&gt;put&lt;/code&gt; elements besides those which
+  were obtained with &lt;code&gt;get&lt;/code&gt;. The pool can never have
+  more than &lt;code&gt;size&lt;/code&gt; elements in it.
+
+  @author Philip Levis
+  @author Kyle Jamieson
+  @author Geoffrey Mainland
+  @date   $Date: 2006/12/12 18:23:47 $
+</long>
+      </documentation>
+      <instance>
+        <component-ref nicename="tos.system.PoolP" qname="PoolP"/>
+        <arguments>
+          <type-var alignment="U:" size="U:"><typedef-ref name="pool_t" ref="0x7e2fc190" scoped=""/></type-var>
+          <value cst="U:">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x7fea0110"/></typename>
+            </type-int>
+          </value>
+        </arguments>
+      </instance>
+      <module/>
+    </component><component loc="39:/opt/tinyos-2.x/tos/lib/tossim/MainC.nc" nicename="tos.lib.tossim.MainC" qname="MainC">
+      <configuration/>
+      <wiring>
+        <wire loc="56:/opt/tinyos-2.x/tos/lib/tossim/MainC.nc">
+          <from><interface-ref name="Boot" ref="0x7e759bd8" scoped=""/></from>
+          <to><interface-ref name="Boot" ref="0x7e5f9770" scoped=""/></to>
+        </wire>
+        <wire loc="51:/opt/tinyos-2.x/tos/lib/tossim/MainC.nc">
+          <from><interface-ref name="Scheduler" ref="0x7e5f9ab8" scoped=""/></from>
+          <to><interface-ref name="Scheduler" ref="0x7e8d1c50" scoped=""/></to>
+        </wire>
+        <wire loc="52:/opt/tinyos-2.x/tos/lib/tossim/MainC.nc">
+          <from><interface-ref name="PlatformInit" ref="0x7e5f8010" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x7e7538e0" scoped=""/></to>
+        </wire>
+        <wire loc="55:/opt/tinyos-2.x/tos/lib/tossim/MainC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x7e5f8380" scoped=""/></from>
+          <to><interface-ref name="SoftwareInit" ref="0x7e756348" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component></referenced></component>

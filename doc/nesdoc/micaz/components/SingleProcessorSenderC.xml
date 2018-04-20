@@ -1,0 +1,381 @@
+<?xml version="1.0" ?><component abstract="" loc="41:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/single/SingleProcessorSenderC.nc" nicename="SingleProcessorSenderC" qname="SingleProcessorSenderC">
+      <documentation loc="41:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/single/SingleProcessorSenderC.nc">
+        <short>
+
+ Modified sender for single destination multihop packets of created
+
+ by a PacketEngine processor for a given link layer AM type.
+
+
+
+</short>
+        <long>
+
+ Modified sender for single destination multihop packets of created
+
+ by a PacketEngine processor for a given link layer AM type.
+
+
+
+ @author Ryan Stinnett
+
+</long>
+      </documentation>
+      <parameters>
+        <constant loc="41:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/single/SingleProcessorSenderC.nc" name="lowerId" ref="0x7d92c2a0">
+          <component-ref nicename="SingleProcessorSenderC" qname="SingleProcessorSenderC"/>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="am_id_t" ref="0x7e881588"/></typename>
+          </type-int>
+        </constant>
+      </parameters>
+      <configuration/>
+      <wiring>
+        <wire loc="60:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/single/SingleProcessorSenderC.nc">
+          <from><interface-ref name="SinglePacket" ref="0x7d92cbc0" scoped=""/></from>
+          <to><interface-ref name="SinglePacket" ref="0x7d97bb48" scoped=""/></to>
+        </wire>
+        <wire loc="62:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/single/SingleProcessorSenderC.nc">
+          <from><interface-ref name="Packet" ref="0x7d92bf00" scoped=""/></from>
+          <to><interface-ref name="Packet" ref="0x7d979af0" scoped=""/></to>
+        </wire>
+        <wire loc="59:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/single/SingleProcessorSenderC.nc">
+          <from><interface-ref name="Send" ref="0x7d92c518" scoped=""/></from>
+          <to><interface-ref name="Send" ref="0x7d97a508" scoped=""/>
+          <arguments>
+            <value cst="U:">
+              <type-int alignment="I:4" cname="int" size="I:4"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="61:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/single/SingleProcessorSenderC.nc">
+          <from><interface-ref name="AMPacket" ref="0x7d92b320" scoped=""/></from>
+          <to><interface-ref name="AMPacket" ref="0x7dffd400" scoped=""/></to>
+        </wire>
+        <wire loc="64:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/single/SingleProcessorSenderC.nc">
+          <from><interface-ref name="SubSend" ref="0x7d977548" scoped=""/>
+          <arguments>
+            <value cst="U:">
+              <type-int alignment="I:4" cname="int" size="I:4"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="Send" ref="0x7d926ec8" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="44:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/single/SingleProcessorSenderC.nc" name="SinglePacket" provided="1" ref="0x7d92cbc0">
+      <component-ref nicename="SingleProcessorSenderC" qname="SingleProcessorSenderC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="SinglePacket" ref="0x7d92cbc0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="SinglePacket" qname="SinglePacket"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="source" ref="0x7d92cd98" scoped=""/>
+        <function-ref name="destination" ref="0x7d92ce78" scoped=""/>
+        <function-ref name="setSource" ref="0x7d92b010" scoped=""/>
+        <function-ref name="setDestination" ref="0x7d92b0f0" scoped=""/>
+        <function-ref name="isForMe" ref="0x7d92b1d0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/single/SingleProcessorSenderC.nc" name="Packet" provided="1" ref="0x7d92bf00">
+      <component-ref nicename="SingleProcessorSenderC" qname="SingleProcessorSenderC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Packet" ref="0x7d92bf00" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Packet" qname="Packet"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x7d9290f0" scoped=""/>
+        <function-ref name="payloadLength" ref="0x7d9291d0" scoped=""/>
+        <function-ref name="getPayload" ref="0x7d9292b0" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x7d929390" scoped=""/>
+        <function-ref name="setPayloadLength" ref="0x7d929470" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/single/SingleProcessorSenderC.nc" name="Send" provided="1" ref="0x7d92c518">
+      <component-ref nicename="SingleProcessorSenderC" qname="SingleProcessorSenderC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Send" ref="0x7d92c518" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMSend" qname="AMSend"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x7d92c6f0" scoped=""/>
+        <function-ref name="getPayload" ref="0x7d92c7d0" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x7d92c8b0" scoped=""/>
+        <function-ref name="cancel" ref="0x7d92c990" scoped=""/>
+        <function-ref name="sendDone" ref="0x7d92ca70" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/single/SingleProcessorSenderC.nc" name="AMPacket" provided="1" ref="0x7d92b320">
+      <component-ref nicename="SingleProcessorSenderC" qname="SingleProcessorSenderC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="AMPacket" ref="0x7d92b320" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMPacket" qname="AMPacket"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="group" ref="0x7d92b4f8" scoped=""/>
+        <function-ref name="source" ref="0x7d92b5d8" scoped=""/>
+        <function-ref name="address" ref="0x7d92b6b8" scoped=""/>
+        <function-ref name="destination" ref="0x7d92b798" scoped=""/>
+        <function-ref name="setSource" ref="0x7d92b878" scoped=""/>
+        <function-ref name="setDestination" ref="0x7d92b958" scoped=""/>
+        <function-ref name="type" ref="0x7d92ba38" scoped=""/>
+        <function-ref name="setType" ref="0x7d92bb18" scoped=""/>
+        <function-ref name="isForMe" ref="0x7d92bbf8" scoped=""/>
+        <function-ref name="setGroup" ref="0x7d92bcd8" scoped=""/>
+        <function-ref name="localGroup" ref="0x7d92bdb8" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="42:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketSenderC.nc" name="Send" provided="1" ref="0x7d926ec8">
+      <component-ref nicename="SingleProcessorSenderC.PacketSenderC" qname="SingleProcessorSenderC.PacketSenderC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Send" ref="0x7d926ec8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMSend" qname="AMSend"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x7d91c0c0" scoped=""/>
+        <function-ref name="getPayload" ref="0x7d91c1a0" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x7d91c280" scoped=""/>
+        <function-ref name="cancel" ref="0x7d91c360" scoped=""/>
+        <function-ref name="sendDone" ref="0x7d91c440" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="42:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/single/SinglePacketC.nc" name="SinglePacket" provided="1" ref="0x7d97bb48">
+      <component-ref nicename="SinglePacketC" qname="SinglePacketC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="SinglePacket" ref="0x7d97bb48" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="SinglePacket" qname="SinglePacket"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="source" ref="0x7d97bd20" scoped=""/>
+        <function-ref name="destination" ref="0x7d97be00" scoped=""/>
+        <function-ref name="setSource" ref="0x7d97bee0" scoped=""/>
+        <function-ref name="setDestination" ref="0x7d97a010" scoped=""/>
+        <function-ref name="isForMe" ref="0x7d97a0f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/single/SinglePacketC.nc" name="Packet" provided="1" ref="0x7d979af0">
+      <component-ref nicename="SinglePacketC" qname="SinglePacketC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Packet" ref="0x7d979af0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Packet" qname="Packet"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x7d979cc8" scoped=""/>
+        <function-ref name="payloadLength" ref="0x7d979da8" scoped=""/>
+        <function-ref name="getPayload" ref="0x7d979e88" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x7d977010" scoped=""/>
+        <function-ref name="setPayloadLength" ref="0x7d9770f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="49:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/single/SinglePacketC.nc" name="SubSend" provided="0" ref="0x7d977548">
+      <component-ref nicename="SinglePacketC" qname="SinglePacketC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="SubSend" ref="0x7d977548" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMSend" qname="AMSend"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="packet_client_id_t" ref="0x7e50b868"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="send" ref="0x7d977720" scoped=""/>
+        <function-ref name="getPayload" ref="0x7d977800" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x7d9778e0" scoped=""/>
+        <function-ref name="cancel" ref="0x7d9779c0" scoped=""/>
+        <function-ref name="sendDone" ref="0x7d977aa0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:/opt/tinyos-2.x/tos/lib/tossim/ActiveMessageC.nc" name="AMPacket" provided="1" ref="0x7dffd400">
+      <component-ref nicename="tos.lib.tossim.ActiveMessageC" qname="ActiveMessageC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="AMPacket" ref="0x7dffd400" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMPacket" qname="AMPacket"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="group" ref="0x7dffd5d8" scoped=""/>
+        <function-ref name="source" ref="0x7dffd6b8" scoped=""/>
+        <function-ref name="address" ref="0x7dffd798" scoped=""/>
+        <function-ref name="destination" ref="0x7dffd878" scoped=""/>
+        <function-ref name="setSource" ref="0x7dffd958" scoped=""/>
+        <function-ref name="setDestination" ref="0x7dffda38" scoped=""/>
+        <function-ref name="type" ref="0x7dffdb18" scoped=""/>
+        <function-ref name="setType" ref="0x7dffdbf8" scoped=""/>
+        <function-ref name="isForMe" ref="0x7dffdcd8" scoped=""/>
+        <function-ref name="setGroup" ref="0x7dffddb8" scoped=""/>
+        <function-ref name="localGroup" ref="0x7dffde98" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/single/SinglePacketC.nc" name="Send" provided="1" ref="0x7d97a508">
+      <component-ref nicename="SinglePacketC" qname="SinglePacketC"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Send" ref="0x7d97a508" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMSend" qname="AMSend"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="packet_client_id_t" ref="0x7e50b868"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="send" ref="0x7d97a6e0" scoped=""/>
+        <function-ref name="getPayload" ref="0x7d97a7c0" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x7d97a8a0" scoped=""/>
+        <function-ref name="cancel" ref="0x7d97a980" scoped=""/>
+        <function-ref name="sendDone" ref="0x7d97aa60" scoped=""/>
+      </interface-functions>
+    </interface><component loc="40:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/single/SinglePacketC.nc" nicename="SinglePacketC" qname="SinglePacketC">
+      <documentation loc="40:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/single/SinglePacketC.nc">
+        <short>
+
+ Connects to SinglePacketP to supporting modules.
+
+
+
+</short>
+        <long>
+
+ Connects to SinglePacketP to supporting modules.
+
+
+
+ @author Ryan Stinnett
+
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="58:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/single/SinglePacketC.nc">
+          <from><interface-ref name="SinglePacket" ref="0x7d97bb48" scoped=""/></from>
+          <to><interface-ref name="SinglePacket" ref="0x7d971240" scoped=""/></to>
+        </wire>
+        <wire loc="62:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/single/SinglePacketC.nc">
+          <from><interface-ref name="Packet" ref="0x7d979af0" scoped=""/></from>
+          <to><interface-ref name="Packet" ref="0x7d96d238" scoped=""/></to>
+        </wire>
+        <wire loc="59:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/single/SinglePacketC.nc">
+          <from><interface-ref name="Send" ref="0x7d97a508" scoped=""/></from>
+          <to><interface-ref name="Send" ref="0x7d971bb0" scoped=""/></to>
+        </wire>
+        <wire loc="61:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/single/SinglePacketC.nc">
+          <from><interface-ref name="Snoop" ref="0x7d979610" scoped=""/></from>
+          <to><interface-ref name="Snoop" ref="0x7d970d40" scoped=""/></to>
+        </wire>
+        <wire loc="60:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/single/SinglePacketC.nc">
+          <from><interface-ref name="Receive" ref="0x7d97ae38" scoped=""/></from>
+          <to><interface-ref name="Receive" ref="0x7d9705a8" scoped=""/></to>
+        </wire>
+        <wire loc="63:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/single/SinglePacketC.nc">
+          <from><interface-ref name="SubSend" ref="0x7d96dbe8" scoped=""/></from>
+          <to><interface-ref name="SubSend" ref="0x7d977548" scoped=""/></to>
+        </wire>
+        <wire loc="64:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/single/SinglePacketC.nc">
+          <from><interface-ref name="SubReceive" ref="0x7d96b5d8" scoped=""/></from>
+          <to><interface-ref name="SubReceive" ref="0x7d977ea8" scoped=""/></to>
+        </wire>
+        <wire loc="66:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/single/SinglePacketC.nc">
+          <from><interface-ref name="SubPacket" ref="0x7d96bae8" scoped=""/></from>
+          <to><interface-ref name="Packet" ref="0x7e4faad0" scoped=""/></to>
+        </wire>
+        <wire loc="67:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/single/SinglePacketC.nc">
+          <from><interface-ref name="AMPacket" ref="0x7d96a240" scoped=""/></from>
+          <to><interface-ref name="AMPacket" ref="0x7dffd400" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="34:/opt/tinyos-2.x/tos/lib/tossim/ActiveMessageC.nc" nicename="tos.lib.tossim.ActiveMessageC" qname="ActiveMessageC">
+      <documentation loc="34:/opt/tinyos-2.x/tos/lib/tossim/ActiveMessageC.nc">
+        <short>
+
+ The basic chip-independent TOSSIM Active Message layer for radio chips
+ that do not have simulation support.
+
+</short>
+        <long>
+
+ The basic chip-independent TOSSIM Active Message layer for radio chips
+ that do not have simulation support.
+
+ @author Philip Levis
+ @date December 2 2005
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="57:/opt/tinyos-2.x/tos/lib/tossim/ActiveMessageC.nc">
+          <from><interface-ref name="SplitControl" ref="0x7e003de8" scoped=""/></from>
+          <to><interface-ref name="Control" ref="0x7dff3280" scoped=""/></to>
+        </wire>
+        <wire loc="59:/opt/tinyos-2.x/tos/lib/tossim/ActiveMessageC.nc">
+          <from><interface-ref name="AMSend" ref="0x7dfff688" scoped=""/></from>
+          <to><interface-ref name="AMSend" ref="0x7e5b0d00" scoped=""/></to>
+        </wire>
+        <wire loc="61:/opt/tinyos-2.x/tos/lib/tossim/ActiveMessageC.nc">
+          <from><interface-ref name="Snoop" ref="0x7dffe7a8" scoped=""/></from>
+          <to><interface-ref name="Snoop" ref="0x7e5a6e40" scoped=""/></to>
+        </wire>
+        <wire loc="62:/opt/tinyos-2.x/tos/lib/tossim/ActiveMessageC.nc">
+          <from><interface-ref name="Packet" ref="0x7dffec88" scoped=""/></from>
+          <to><interface-ref name="Packet" ref="0x7e5a07a0" scoped=""/></to>
+        </wire>
+        <wire loc="60:/opt/tinyos-2.x/tos/lib/tossim/ActiveMessageC.nc">
+          <from><interface-ref name="Receive" ref="0x7dffe010" scoped=""/></from>
+          <to><interface-ref name="Receive" ref="0x7e5a66a8" scoped=""/></to>
+        </wire>
+        <wire loc="64:/opt/tinyos-2.x/tos/lib/tossim/ActiveMessageC.nc">
+          <from><interface-ref name="PacketAcknowledgements" ref="0x7dff6198" scoped=""/></from>
+          <to><interface-ref name="PacketAcknowledgements" ref="0x7dff3850" scoped=""/></to>
+        </wire>
+        <wire loc="63:/opt/tinyos-2.x/tos/lib/tossim/ActiveMessageC.nc">
+          <from><interface-ref name="AMPacket" ref="0x7dffd400" scoped=""/></from>
+          <to><interface-ref name="AMPacket" ref="0x7e595ea8" scoped=""/></to>
+        </wire>
+        <wire loc="56:/opt/tinyos-2.x/tos/lib/tossim/ActiveMessageC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x7e756348" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x7dff4f18" scoped=""/></to>
+        </wire>
+        <wire loc="66:/opt/tinyos-2.x/tos/lib/tossim/ActiveMessageC.nc">
+          <from><interface-ref name="Model" ref="0x7e58b218" scoped=""/></from>
+          <to><interface-ref name="Packet" ref="0x7dff3d68" scoped=""/></to>
+        </wire>
+        <wire loc="67:/opt/tinyos-2.x/tos/lib/tossim/ActiveMessageC.nc">
+          <from><function-ref name="amAddress" ref="0x7e58ba58" scoped=""/></from>
+          <to><function-ref name="amAddress" ref="0x7def0408" scoped=""/></to>
+        </wire>
+        <wire loc="69:/opt/tinyos-2.x/tos/lib/tossim/ActiveMessageC.nc">
+          <from><interface-ref name="GainRadioModel" ref="0x7dfdf8b8" scoped=""/></from>
+          <to><interface-ref name="Model" ref="0x7df7e170" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component abstract="" loc="39(SingleProcessorSenderC.PacketSenderC):/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketSenderC.nc" nicename="SingleProcessorSenderC.PacketSenderC" qname="SingleProcessorSenderC.PacketSenderC">
+      <documentation loc="39(SingleProcessorSenderC.PacketSenderC):/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketSenderC.nc">
+        <short>
+
+ Sender for generic multihop packets of a given application layer
+
+ AM type.
+
+
+
+</short>
+        <long>
+
+ Sender for generic multihop packets of a given application layer
+
+ AM type.
+
+
+
+ @author Ryan Stinnett
+
+</long>
+      </documentation>
+      <instance>
+        <component-ref nicename="PacketSenderC" qname="PacketSenderC"/>
+        <arguments>
+          <value cst="I:0">
+            <type-int alignment="I:4" cname="int" size="I:4"/>
+          </value>
+          <value cst="U:">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="am_id_t" ref="0x7e881588"/></typename>
+            </type-int>
+          </value>
+          <value cst="U:">
+            <type-int alignment="I:4" cname="int" size="I:4"/>
+          </value>
+        </arguments>
+      </instance>
+      <configuration/>
+    </component></referenced></component>

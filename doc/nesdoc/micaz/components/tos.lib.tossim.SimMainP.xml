@@ -1,0 +1,41 @@
+<?xml version="1.0" ?><component loc="35:/opt/tinyos-2.x/tos/lib/tossim/SimMainP.nc" nicename="tos.lib.tossim.SimMainP" qname="SimMainP">
+      <module/>
+    <specification><interface loc="39:/opt/tinyos-2.x/tos/lib/tossim/SimMainP.nc" name="SoftwareInit" provided="0" ref="0x7e5f8380">
+      <component-ref nicename="tos.lib.tossim.SimMainP" qname="SimMainP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="SoftwareInit" ref="0x7e5f8380" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x7e5f8558" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="36:/opt/tinyos-2.x/tos/lib/tossim/SimMainP.nc" name="Boot" provided="1" ref="0x7e5f9770">
+      <component-ref nicename="tos.lib.tossim.SimMainP" qname="SimMainP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Boot" ref="0x7e5f9770" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Boot" qname="Boot"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="booted" ref="0x7e5f9948" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="38:/opt/tinyos-2.x/tos/lib/tossim/SimMainP.nc" name="PlatformInit" provided="0" ref="0x7e5f8010">
+      <component-ref nicename="tos.lib.tossim.SimMainP" qname="SimMainP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="PlatformInit" ref="0x7e5f8010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x7e5f81e8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="37:/opt/tinyos-2.x/tos/lib/tossim/SimMainP.nc" name="Scheduler" provided="0" ref="0x7e5f9ab8">
+      <component-ref nicename="tos.lib.tossim.SimMainP" qname="SimMainP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Scheduler" ref="0x7e5f9ab8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Scheduler" qname="Scheduler"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x7e5f9c90" scoped=""/>
+        <function-ref name="taskLoop" ref="0x7e5f9d70" scoped=""/>
+        <function-ref name="runNextTask" ref="0x7e5f9e50" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

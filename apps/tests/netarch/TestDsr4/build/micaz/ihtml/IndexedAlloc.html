@@ -1,0 +1,272 @@
+<html>
+  <head>
+    <LINK rel="stylesheet" href="nesdoc.css" type="text/css" media="screen"><title>Interface: IndexedAlloc</title>
+  </head>
+  <body>
+    <h2>Interface: IndexedAlloc</h2>
+    <b>interface IndexedAlloc</b><p>
+
+ Interface to a component that implements a run-time allocation policy on top
+
+ of a static size array via indices.  This simplifies component design by
+
+ moving the policy out of each component, leading to cleaner code.
+
+
+
+ 
+    <p>
+    <dl>
+      <dt><b>Author:</b>
+      <dd>
+        Ryan Stinnett
+
+
+      </dd>
+    </dl>
+    <p><p><div id=heading>Commands</div><div id=funcsig><span id=funcnameshort>command bool <a href="#all">all</a>()
+      </span><menu>
+
+ Checks if all of the elements are allocated.
+
+
+
+
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command indexed_alloc_id_t <a href="#alloc">alloc</a>()
+      </span><menu>
+
+ Allocate an index in the set.
+
+
+
+
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command bool <a href="#allocated">allocated</a>(indexed_alloc_id_t m)
+      </span><menu>
+
+ Checks if an index is currently allocated.
+
+
+
+
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command error_t <a href="#free">free</a>(indexed_alloc_id_t m)
+      </span><menu>
+
+ Frees an index in the set.
+
+
+
+
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command indexed_alloc_id_t <a href="#maxSize">maxSize</a>()
+      </span><menu>
+
+ The maximum number of elements that can be allocated.
+
+
+
+
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command bool <a href="#none">none</a>()
+      </span><menu>
+
+ Checks if none of the elements are allocated.
+
+
+
+
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command indexed_alloc_id_t <a href="#size">size</a>()
+      </span><menu>
+
+ The number of elements currently allocated.
+
+
+      </menu>
+    </div><p><div id=heading>Commands - Details</div>
+    <a name="all"></a>
+    <h4>all
+    </h4>
+    <span id=funcnameshort>command bool <b>all</b>()
+    </span>
+    <p>
+    <menu>
+      
+
+ Checks if all of the elements are allocated.
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Returns:</b>
+        <dd>
+          TRUE if all of the elements are allocated, FALSE otherwise.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="alloc"></a>
+    <h4>alloc
+    </h4>
+    <span id=funcnameshort>command indexed_alloc_id_t <b>alloc</b>()
+    </span>
+    <p>
+    <menu>
+      
+
+ Allocate an index in the set.
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Returns:</b>
+        <dd>
+          If an index is free, it will be allocated and returned.  Otherwise,
+
+         maxSize() is returned to indicate that all elements are allocated.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="allocated"></a>
+    <h4>allocated
+    </h4>
+    <span id=funcnameshort>command bool <b>allocated</b>(indexed_alloc_id_t m)
+    </span>
+    <p>
+    <menu>
+      
+
+ Checks if an index is currently allocated.
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Returns:</b>
+        <dd>
+          TRUE if the index is allocated, FALSE if it is not.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="free"></a>
+    <h4>free
+    </h4>
+    <span id=funcnameshort>command error_t <b>free</b>(indexed_alloc_id_t m)
+    </span>
+    <p>
+    <menu>
+      
+
+ Frees an index in the set.
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Returns:</b>
+        <dd>
+          If an index is allocated, it will be freed and SUCCESS is returned.
+
+         If it was already free, no change is made and EALREADY is returned.
+
+         If the index is too large, ESIZE is returned.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="maxSize"></a>
+    <h4>maxSize
+    </h4>
+    <span id=funcnameshort>command indexed_alloc_id_t <b>maxSize</b>()
+    </span>
+    <p>
+    <menu>
+      
+
+ The maximum number of elements that can be allocated.
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Returns:</b>
+        <dd>
+          The maximum size that can be allocated.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="none"></a>
+    <h4>none
+    </h4>
+    <span id=funcnameshort>command bool <b>none</b>()
+    </span>
+    <p>
+    <menu>
+      
+
+ Checks if none of the elements are allocated.
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Returns:</b>
+        <dd>
+          TRUE if none of the elements are allocated, FALSE otherwise.
+
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="size"></a>
+    <h4>size
+    </h4>
+    <span id=funcnameshort>command indexed_alloc_id_t <b>size</b>()
+    </span>
+    <p>
+    <menu>
+      
+
+ The number of elements currently allocated.
+
+ Always less than or equal to maxSize().
+
+
+
+ 
+      <p>
+      <dl>
+        <dt><b>Returns:</b>
+        <dd>
+          The number of elements currently allocated.
+
+
+        </dd>
+      </dl>
+    </menu>
+  </body>
+</html>

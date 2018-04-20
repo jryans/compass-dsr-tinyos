@@ -1,0 +1,462 @@
+<?xml version="1.0" ?><component loc="80:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketEngineP.nc" nicename="PacketEngineP" qname="PacketEngineP">
+      <documentation loc="80:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketEngineP.nc">
+        <short>
+
+ Queues packets sent, received, and overheard for a multihop routing
+
+ protocol. </short>
+        <long>
+
+ Queues packets sent, received, and overheard for a multihop routing
+
+ protocol.  This &quot;packet engine&quot; is intended to be flexible enough to
+
+ support a wide array of possible protocols.
+
+
+
+ A control component using the PacketEngine interfaces provided here
+
+ is notified of and can control all of the above packets, while not
+
+ having to deal with packet management issues itself.
+
+
+
+ At any time after being notified of a packet's reception, the control
+
+ component can modify the packet (if needed) and then instruct this engine
+
+ to take one of the following actions:
+
+   - Send (pass to lower layer)
+
+   - Send with Intercept (pass to lower layer if upper layer approves)
+
+   - Receive (pass to upper layer)
+
+   - Drop (silently remove)
+
+
+
+ Note that this allows for some unusual actions to take place, such as
+
+ forcing a receive on a packet the upper layer has sent (which also
+
+ means it won't go on the radio anymore).
+
+
+
+ The control component is responsible for ensuring the packet is valid
+
+ if it makes any modifications.  For example, it must update the payload
+
+ length if the size of the payload changes.
+
+
+
+ This component does not request acknowledgements or use any kind of
+
+ automatic retry scheme.  However, the return value of the
+
+ PacketEngine.sendDone event allows the control component to request
+
+ a retry for any packet that failed to send.  The control component or
+
+ the upper layer is certainly free to request acknowledgments on its own.
+
+
+
+ When disabled, no new packets are accepted into the buffer and the
+
+ packets already in the buffer are not processed but do remain in
+
+ the buffer.  Processing resumes when enabled again.
+
+
+
+ The AM type of packets sent from the upper layer is copied into the
+
+ packet payload for storage so that multihop protocols can use AM types
+
+ of their own without collisions.
+
+
+
+ Based on TransceiverM by David Moss, CtpForwardingEngineP by Phil Levis,
+
+ Kyle Jamieson, Omprakash Gnawali, and Rodrigo Fonseca, and
+
+ ForwardingEngineM by Roamin Thouvenin.
+
+
+
+ @author Ryan Stinnett
+
+</long>
+      </documentation>
+      <module/>
+    <specification><interface loc="95:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketEngineP.nc" name="SubReceive" provided="0" ref="0x7e4bdc28">
+      <component-ref nicename="PacketEngineP" qname="PacketEngineP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="SubReceive" ref="0x7e4bdc28" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Receive" qname="Receive"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="am_id_t" ref="0x7e881588"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="payloadLength" ref="0x7e4bde00" scoped=""/>
+        <function-ref name="receive" ref="0x7e4bdee0" scoped=""/>
+        <function-ref name="getPayload" ref="0x7e4ba010" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="94:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketEngineP.nc" name="SubSend" provided="0" ref="0x7e4bd2c8">
+      <component-ref nicename="PacketEngineP" qname="PacketEngineP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="SubSend" ref="0x7e4bd2c8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMSend" qname="AMSend"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="am_id_t" ref="0x7e881588"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="send" ref="0x7e4bd4a0" scoped=""/>
+        <function-ref name="getPayload" ref="0x7e4bd580" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x7e4bd660" scoped=""/>
+        <function-ref name="cancel" ref="0x7e4bd740" scoped=""/>
+        <function-ref name="sendDone" ref="0x7e4bd820" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="100:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketEngineP.nc" name="SendPool" provided="0" ref="0x7e4aa8a8">
+      <component-ref nicename="PacketEngineP" qname="PacketEngineP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="SendPool" ref="0x7e4aa8a8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Pool" qname="Pool"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:50"><nx_struct-ref name="message_t" ref="0x7e872dd8"/>
+            <typename><typedef-ref name="message_t" ref="0x7e8707a8"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="get" ref="0x7e4ad738" scoped=""/>
+        <function-ref name="maxSize" ref="0x7e4ad2b8" scoped=""/>
+        <function-ref name="empty" ref="0x7e4aaed0" scoped=""/>
+        <function-ref name="put" ref="0x7e4ad498" scoped=""/>
+        <function-ref name="size" ref="0x7e4ad0d8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="97:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketEngineP.nc" name="PacketEngineClient" provided="0" ref="0x7e4badf0">
+      <component-ref nicename="PacketEngineP" qname="PacketEngineP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="PacketEngineClient" ref="0x7e4badf0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="PacketEngineClient" qname="PacketEngineClient"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="packet_client_id_t" ref="0x7e50b868"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="upperType" ref="0x7e4b9010" scoped=""/>
+        <function-ref name="defaultLowerType" ref="0x7e4b90f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="101:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketEngineP.nc" name="ReceivePool" provided="0" ref="0x7e4ad9c8">
+      <component-ref nicename="PacketEngineP" qname="PacketEngineP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="ReceivePool" ref="0x7e4ad9c8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Pool" qname="Pool"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:50"><nx_struct-ref name="message_t" ref="0x7e872dd8"/>
+            <typename><typedef-ref name="message_t" ref="0x7e8707a8"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="get" ref="0x7e4a9850" scoped=""/>
+        <function-ref name="maxSize" ref="0x7e4a93d0" scoped=""/>
+        <function-ref name="empty" ref="0x7e4a9010" scoped=""/>
+        <function-ref name="put" ref="0x7e4a95b0" scoped=""/>
+        <function-ref name="size" ref="0x7e4a91f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="86:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketEngineP.nc" name="Intercept" provided="1" ref="0x7e4d69d0">
+      <component-ref nicename="PacketEngineP" qname="PacketEngineP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Intercept" ref="0x7e4d69d0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Intercept" qname="Intercept"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="am_id_t" ref="0x7e881588"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="forward" ref="0x7e4d6ba8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="87:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketEngineP.nc" name="Packet" provided="1" ref="0x7e4d6cf0">
+      <component-ref nicename="PacketEngineP" qname="PacketEngineP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Packet" ref="0x7e4d6cf0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Packet" qname="Packet"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x7e4d6ec8" scoped=""/>
+        <function-ref name="payloadLength" ref="0x7e4d5010" scoped=""/>
+        <function-ref name="getPayload" ref="0x7e4d50f0" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x7e4d51d0" scoped=""/>
+        <function-ref name="setPayloadLength" ref="0x7e4d52b0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="103:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketEngineP.nc" name="Random" provided="0" ref="0x7e4a7790">
+      <component-ref nicename="PacketEngineP" qname="PacketEngineP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Random" ref="0x7e4a7790" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Random" qname="Random"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="rand16" ref="0x7e4a7968" scoped=""/>
+        <function-ref name="rand32" ref="0x7e4a7a48" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="84:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketEngineP.nc" name="Send" provided="1" ref="0x7e4d78e0">
+      <component-ref nicename="PacketEngineP" qname="PacketEngineP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Send" ref="0x7e4d78e0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMSend" qname="AMSend"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="packet_client_id_t" ref="0x7e50b868"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="send" ref="0x7e4d7ab8" scoped=""/>
+        <function-ref name="getPayload" ref="0x7e4d7b98" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x7e4d7c78" scoped=""/>
+        <function-ref name="cancel" ref="0x7e4d7d58" scoped=""/>
+        <function-ref name="sendDone" ref="0x7e4d7e38" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="93:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketEngineP.nc" name="RadioControl" provided="0" ref="0x7e4d0a38">
+      <component-ref nicename="PacketEngineP" qname="PacketEngineP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="RadioControl" ref="0x7e4d0a38" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SplitControl" qname="SplitControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="startDone" ref="0x7e4d0c10" scoped=""/>
+        <function-ref name="stopDone" ref="0x7e4d0cf0" scoped=""/>
+        <function-ref name="start" ref="0x7e4d0dd0" scoped=""/>
+        <function-ref name="stop" ref="0x7e4d0eb0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="102:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketEngineP.nc" name="SendState" provided="0" ref="0x7e4a7010">
+      <component-ref nicename="PacketEngineP" qname="PacketEngineP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="SendState" ref="0x7e4a7010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.State" qname="State"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getState" ref="0x7e4a71e8" scoped=""/>
+        <function-ref name="toIdle" ref="0x7e4a72c8" scoped=""/>
+        <function-ref name="isState" ref="0x7e4a73a8" scoped=""/>
+        <function-ref name="isIdle" ref="0x7e4a7488" scoped=""/>
+        <function-ref name="requestState" ref="0x7e4a7568" scoped=""/>
+        <function-ref name="forceState" ref="0x7e4a7648" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="89:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketEngineP.nc" name="PacketWaitList" provided="1" ref="0x7e4d48c0">
+      <component-ref nicename="PacketEngineP" qname="PacketEngineP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="PacketWaitList" ref="0x7e4d48c0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="IndexedIterator" qname="IndexedIterator"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="packet_id_t" ref="0x7e50bf28"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="am_id_t" ref="0x7e881588"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="end" ref="0x7e4d21a0" scoped=""/>
+        <function-ref name="next" ref="0x7e4d4ee8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="99:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketEngineP.nc" name="SendQueue" provided="0" ref="0x7e4b2dd0">
+      <component-ref nicename="PacketEngineP" qname="PacketEngineP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="SendQueue" ref="0x7e4b2dd0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="DataCache" qname="DataCache"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:2"><struct-ref ref="0x7e5049d0"/>
+            <typename><typedef-ref name="packet_send_entry_t" ref="0x7e504c20"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="remove" ref="0x7e4b6e48" scoped=""/>
+        <function-ref name="evicted" ref="0x7e4b68e8" scoped=""/>
+        <function-ref name="insert" ref="0x7e4b6628" scoped=""/>
+        <function-ref name="flush" ref="0x7e4b10f8" scoped=""/>
+        <function-ref name="lookup" ref="0x7e4b6b88" scoped=""/>
+        <function-ref name="size" ref="0x7e4b6448" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="96:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketEngineP.nc" name="SubPacket" provided="0" ref="0x7e4ba418">
+      <component-ref nicename="PacketEngineP" qname="PacketEngineP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="SubPacket" ref="0x7e4ba418" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Packet" qname="Packet"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="am_id_t" ref="0x7e881588"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="clear" ref="0x7e4ba670" scoped=""/>
+        <function-ref name="payloadLength" ref="0x7e4ba750" scoped=""/>
+        <function-ref name="getPayload" ref="0x7e4ba830" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x7e4ba910" scoped=""/>
+        <function-ref name="setPayloadLength" ref="0x7e4ba9f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="82:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketEngineP.nc" name="Init" provided="1" ref="0x7e4d8eb8">
+      <component-ref nicename="PacketEngineP" qname="PacketEngineP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Init" ref="0x7e4d8eb8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x7e4d70c0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="88:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketEngineP.nc" name="PacketEngine" provided="1" ref="0x7e4d5690">
+      <component-ref nicename="PacketEngineP" qname="PacketEngineP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="PacketEngine" ref="0x7e4d5690" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="PacketEngine" qname="PacketEngine"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="am_id_t" ref="0x7e881588"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="upperType" ref="0x7e4d5868" scoped=""/>
+        <function-ref name="send" ref="0x7e4d5948" scoped=""/>
+        <function-ref name="receive" ref="0x7e4d5a28" scoped=""/>
+        <function-ref name="sendIntercept" ref="0x7e4d5b08" scoped=""/>
+        <function-ref name="sendAdded" ref="0x7e4d5be8" scoped=""/>
+        <function-ref name="receiveAdded" ref="0x7e4d5cc8" scoped=""/>
+        <function-ref name="snoopAdded" ref="0x7e4d5da8" scoped=""/>
+        <function-ref name="packet" ref="0x7e4d5e88" scoped=""/>
+        <function-ref name="sendDone" ref="0x7e4d4010" scoped=""/>
+        <function-ref name="drop" ref="0x7e4d40f0" scoped=""/>
+        <function-ref name="upperSendDone" ref="0x7e4d41d0" scoped=""/>
+        <function-ref name="waitList" ref="0x7e4d42b0" scoped=""/>
+        <function-ref name="setUpperType" ref="0x7e4d4390" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="194:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketEngineP.nc" name="msgAction" provided="0" ref="0x7e404960">
+      <component-ref nicename="PacketEngineP" qname="PacketEngineP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="msgAction" ref="0x7e404960" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.TaskBasic" qname="TaskBasic"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="postTask" ref="0x7e404b38" scoped=""/>
+        <function-ref name="runTask" ref="0x7e404c18" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="85:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketEngineP.nc" name="Receive" provided="1" ref="0x7e4d6258">
+      <component-ref nicename="PacketEngineP" qname="PacketEngineP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="Receive" ref="0x7e4d6258" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Receive" qname="Receive"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="am_id_t" ref="0x7e881588"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="payloadLength" ref="0x7e4d6430" scoped=""/>
+        <function-ref name="receive" ref="0x7e4d6510" scoped=""/>
+        <function-ref name="getPayload" ref="0x7e4d65f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="193:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketEngineP.nc" name="msgAdded" provided="0" ref="0x7e404230">
+      <component-ref nicename="PacketEngineP" qname="PacketEngineP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="msgAdded" ref="0x7e404230" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.TaskBasic" qname="TaskBasic"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="postTask" ref="0x7e404408" scoped=""/>
+        <function-ref name="runTask" ref="0x7e4044e8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="90:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketEngineP.nc" name="SendQueueEqual" provided="1" ref="0x7e4d00b8">
+      <component-ref nicename="PacketEngineP" qname="PacketEngineP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="SendQueueEqual" ref="0x7e4d00b8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="Equal" qname="Equal"/>
+        <arguments>
+          <type-pointer alignment="I:4" size="I:4">
+            <type-tag alignment="I:1" size="I:2"><struct-ref ref="0x7e5049d0"/>
+              <typename><typedef-ref name="packet_send_entry_t" ref="0x7e504c20"/></typename>
+            </type-tag>
+          </type-pointer>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="test" ref="0x7e4d06e0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="104:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketEngineP.nc" name="SendBackoff" provided="0" ref="0x7e4a7c58">
+      <component-ref nicename="PacketEngineP" qname="PacketEngineP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="SendBackoff" ref="0x7e4a7c58" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:4" size="I:4"><struct-ref ref="0x7e52c440"/>
+            <typename><typedef-ref name="TMilli" ref="0x7e52c628"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x7e4a2650" scoped=""/>
+        <function-ref name="fired" ref="0x7e4a69a8" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x7e4a2010" scoped=""/>
+        <function-ref name="isOneShot" ref="0x7e4a6d68" scoped=""/>
+        <function-ref name="getdt" ref="0x7e4a2a10" scoped=""/>
+        <function-ref name="gett0" ref="0x7e4a2830" scoped=""/>
+        <function-ref name="isRunning" ref="0x7e4a6b88" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x7e4a62c8" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x7e4a2330" scoped=""/>
+        <function-ref name="startOneShot" ref="0x7e4a6548" scoped=""/>
+        <function-ref name="stop" ref="0x7e4a67c8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="98:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketEngineP.nc" name="AMPacket" provided="0" ref="0x7e4b9240">
+      <component-ref nicename="PacketEngineP" qname="PacketEngineP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="AMPacket" ref="0x7e4b9240" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMPacket" qname="AMPacket"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="group" ref="0x7e4b9418" scoped=""/>
+        <function-ref name="source" ref="0x7e4b94f8" scoped=""/>
+        <function-ref name="address" ref="0x7e4b95d8" scoped=""/>
+        <function-ref name="destination" ref="0x7e4b96b8" scoped=""/>
+        <function-ref name="setSource" ref="0x7e4b9798" scoped=""/>
+        <function-ref name="setDestination" ref="0x7e4b9878" scoped=""/>
+        <function-ref name="type" ref="0x7e4b9958" scoped=""/>
+        <function-ref name="setType" ref="0x7e4b9a38" scoped=""/>
+        <function-ref name="isForMe" ref="0x7e4b9b18" scoped=""/>
+        <function-ref name="setGroup" ref="0x7e4b9bf8" scoped=""/>
+        <function-ref name="localGroup" ref="0x7e4b9cd8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="83:/home/jryans/tinyos-2.x-contrib-rice/tos/lib/netarch/multihop/PacketEngineP.nc" name="StdControl" provided="1" ref="0x7e4d7210">
+      <component-ref nicename="PacketEngineP" qname="PacketEngineP"/>
+      <type-interface alignment="I:4" size="I:4"><interface-ref name="StdControl" ref="0x7e4d7210" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.StdControl" qname="StdControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="start" ref="0x7e4d73e8" scoped=""/>
+        <function-ref name="stop" ref="0x7e4d74c8" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

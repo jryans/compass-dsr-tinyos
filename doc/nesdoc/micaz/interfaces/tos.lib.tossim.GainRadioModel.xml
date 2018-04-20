@@ -1,0 +1,155 @@
+<?xml version="1.0" ?><interfacedef loc="39:/opt/tinyos-2.x/tos/lib/tossim/GainRadioModel.nc" nicename="tos.lib.tossim.GainRadioModel" qname="GainRadioModel">
+      <documentation loc="39:/opt/tinyos-2.x/tos/lib/tossim/GainRadioModel.nc">
+        <short>
+</short>
+        <long>
+ @author Phil Levis
+ @author David Gay
+ Revision:  $Revision: 1.5 $
+
+ Defines global error codes for error_t in TinyOS.
+</long>
+      </documentation>
+      <function command="" loc="40:/opt/tinyos-2.x/tos/lib/tossim/GainRadioModel.nc" name="putOnAirTo" provided="0" ref="0x7dfe11a0">
+        <interfacedef-ref nicename="tos.lib.tossim.GainRadioModel" qname="GainRadioModel"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:4" cname="int" size="I:4"/>
+            <type-pointer alignment="I:4" size="I:4">
+              <type-tag alignment="I:1" size="I:50"><nx_struct-ref name="message_t" ref="0x7e872dd8"/>
+                <typename><typedef-ref name="message_t" ref="0x7e8707a8"/></typename>
+              </type-tag>
+            </type-pointer>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="bool" ref="0x7ec91520"/></typename>
+            </type-int>
+            <type-int alignment="I:8" cname="long long" size="I:8">
+              <typename><typedef-ref name="sim_time_t" ref="0x7ec90658"/></typename>
+            </type-int>
+            <type-float alignment="I:8" cname="double" size="I:8"/>
+            <type-float alignment="I:8" cname="double" size="I:8"/>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="40:/opt/tinyos-2.x/tos/lib/tossim/GainRadioModel.nc" name="dest" ref="0x7dfe2720">
+            <type-int alignment="I:4" cname="int" size="I:4"/>
+          </variable>
+          <variable loc="41:/opt/tinyos-2.x/tos/lib/tossim/GainRadioModel.nc" name="msg" ref="0x7dfe28e0">
+            <type-pointer alignment="I:4" size="I:4">
+              <type-tag alignment="I:1" size="I:50"><nx_struct-ref name="message_t" ref="0x7e872dd8"/>
+                <typename><typedef-ref name="message_t" ref="0x7e8707a8"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+          <variable loc="42:/opt/tinyos-2.x/tos/lib/tossim/GainRadioModel.nc" name="ack" ref="0x7dfe2a78">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="bool" ref="0x7ec91520"/></typename>
+            </type-int>
+          </variable>
+          <variable loc="43:/opt/tinyos-2.x/tos/lib/tossim/GainRadioModel.nc" name="endTime" ref="0x7dfe2c18">
+            <type-int alignment="I:8" cname="long long" size="I:8">
+              <typename><typedef-ref name="sim_time_t" ref="0x7ec90658"/></typename>
+            </type-int>
+          </variable>
+          <variable loc="44:/opt/tinyos-2.x/tos/lib/tossim/GainRadioModel.nc" name="gain" ref="0x7dfe2da8">
+            <type-float alignment="I:8" cname="double" size="I:8"/>
+          </variable>
+          <variable loc="45:/opt/tinyos-2.x/tos/lib/tossim/GainRadioModel.nc" name="reverseGain" ref="0x7dfe1010">
+            <type-float alignment="I:8" cname="double" size="I:8"/>
+          </variable>
+        </parameters>
+      </function>
+      <function event="" loc="51:/opt/tinyos-2.x/tos/lib/tossim/GainRadioModel.nc" name="receive" provided="0" ref="0x7dfdf288">
+        <interfacedef-ref nicename="tos.lib.tossim.GainRadioModel" qname="GainRadioModel"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-pointer alignment="I:4" size="I:4">
+              <type-tag alignment="I:1" size="I:50"><nx_struct-ref name="message_t" ref="0x7e872dd8"/>
+                <typename><typedef-ref name="message_t" ref="0x7e8707a8"/></typename>
+              </type-tag>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="51:/opt/tinyos-2.x/tos/lib/tossim/GainRadioModel.nc" name="msg" ref="0x7dfdf120">
+            <type-pointer alignment="I:4" size="I:4">
+              <type-tag alignment="I:1" size="I:50"><nx_struct-ref name="message_t" ref="0x7e872dd8"/>
+                <typename><typedef-ref name="message_t" ref="0x7e8707a8"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="48:/opt/tinyos-2.x/tos/lib/tossim/GainRadioModel.nc" name="clearChannel" provided="0" ref="0x7dfe1920">
+        <interfacedef-ref nicename="tos.lib.tossim.GainRadioModel" qname="GainRadioModel"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="bool" ref="0x7ec91520"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+      </function>
+      <function command="" loc="47:/opt/tinyos-2.x/tos/lib/tossim/GainRadioModel.nc" name="setClearValue" provided="0" ref="0x7dfe1620">
+        <interfacedef-ref nicename="tos.lib.tossim.GainRadioModel" qname="GainRadioModel"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-float alignment="I:8" cname="double" size="I:8"/>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="47:/opt/tinyos-2.x/tos/lib/tossim/GainRadioModel.nc" name="value" ref="0x7dfe14b8">
+            <type-float alignment="I:8" cname="double" size="I:8"/>
+          </variable>
+        </parameters>
+      </function>
+      <function event="" loc="50:/opt/tinyos-2.x/tos/lib/tossim/GainRadioModel.nc" name="acked" provided="0" ref="0x7dfe1dc8">
+        <interfacedef-ref nicename="tos.lib.tossim.GainRadioModel" qname="GainRadioModel"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-pointer alignment="I:4" size="I:4">
+              <type-tag alignment="I:1" size="I:50"><nx_struct-ref name="message_t" ref="0x7e872dd8"/>
+                <typename><typedef-ref name="message_t" ref="0x7e8707a8"/></typename>
+              </type-tag>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="50:/opt/tinyos-2.x/tos/lib/tossim/GainRadioModel.nc" name="msg" ref="0x7dfe1c60">
+            <type-pointer alignment="I:4" size="I:4">
+              <type-tag alignment="I:1" size="I:50"><nx_struct-ref name="message_t" ref="0x7e872dd8"/>
+                <typename><typedef-ref name="message_t" ref="0x7e8707a8"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+      <function event="" loc="52:/opt/tinyos-2.x/tos/lib/tossim/GainRadioModel.nc" name="shouldAck" provided="0" ref="0x7dfdf740">
+        <interfacedef-ref nicename="tos.lib.tossim.GainRadioModel" qname="GainRadioModel"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="bool" ref="0x7ec91520"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-pointer alignment="I:4" size="I:4">
+              <type-tag alignment="I:1" size="I:50"><nx_struct-ref name="message_t" ref="0x7e872dd8"/>
+                <typename><typedef-ref name="message_t" ref="0x7e8707a8"/></typename>
+              </type-tag>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="52:/opt/tinyos-2.x/tos/lib/tossim/GainRadioModel.nc" name="msg" ref="0x7dfdf5d8">
+            <type-pointer alignment="I:4" size="I:4">
+              <type-tag alignment="I:1" size="I:50"><nx_struct-ref name="message_t" ref="0x7e872dd8"/>
+                <typename><typedef-ref name="message_t" ref="0x7e8707a8"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+    </interfacedef>

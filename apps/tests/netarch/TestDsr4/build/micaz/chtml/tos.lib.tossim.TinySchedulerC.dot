@@ -1,0 +1,8 @@
+digraph "tos.lib.tossim.TinySchedulerC" {
+  n0x7e835e58 [shape=ellipse, style=filled, label="TaskBasic", fontsize=12];
+  "SimSchedulerBasicP" [fontsize=12, shape=box, URL="tos.lib.tossim.SimSchedulerBasicP.html"];
+  n0x7e8d1c50 [shape=ellipse, style=filled, label="Scheduler", fontsize=12];
+  "SimSchedulerBasicP" [fontsize=12, shape=box, URL="tos.lib.tossim.SimSchedulerBasicP.html"];
+  "n0x7e835e58" -> "SimSchedulerBasicP" [label="TaskBasic[uint8_t]", style=bold, URL="../ihtml/tos.interfaces.TaskBasic.html", fontsize=10];
+  "n0x7e8d1c50" -> "SimSchedulerBasicP" [label="Scheduler", URL="../ihtml/tos.interfaces.Scheduler.html", fontsize=10];
+}

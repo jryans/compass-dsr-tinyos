@@ -1,0 +1,2 @@
+RNA-18:
+Added AM_RECOVER_TYPE to get upper type from lower type.

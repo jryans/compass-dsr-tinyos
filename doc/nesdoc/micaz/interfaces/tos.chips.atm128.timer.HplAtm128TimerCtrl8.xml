@@ -1,0 +1,106 @@
+<?xml version="1.0" ?><interfacedef loc="33:/opt/tinyos-2.x/tos/chips/atm128/timer/HplAtm128TimerCtrl8.nc" nicename="tos.chips.atm128.timer.HplAtm128TimerCtrl8" qname="HplAtm128TimerCtrl8">
+      <documentation loc="33:/opt/tinyos-2.x/tos/chips/atm128/timer/HplAtm128TimerCtrl8.nc">
+        <short>
+ HPL Interface to Atmega128 8-bit timer control registers
+
+</short>
+        <long>
+ HPL Interface to Atmega128 8-bit timer control registers
+
+ @author Martin Turon &lt;mturon@xbow.com&gt;
+</long>
+      </documentation>
+      <function command="" loc="36:/opt/tinyos-2.x/tos/chips/atm128/timer/HplAtm128TimerCtrl8.nc" name="getControl" provided="0" ref="0x7e1f0858">
+        <documentation loc="35:/opt/tinyos-2.x/tos/chips/atm128/timer/HplAtm128TimerCtrl8.nc">
+          <short> Timer control register: Direct access</short>
+        </documentation>
+        <interfacedef-ref nicename="tos.chips.atm128.timer.HplAtm128TimerCtrl8" qname="HplAtm128TimerCtrl8"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-tag alignment="I:1" size="I:1"><union-ref ref="0x7e25b280"/>
+            <typename><typedef-ref name="Atm128TimerControl_t" ref="0x7e25b6b0"/></typename>
+          </type-tag>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+      </function>
+      <function command="" loc="44:/opt/tinyos-2.x/tos/chips/atm128/timer/HplAtm128TimerCtrl8.nc" name="getInterruptFlag" provided="0" ref="0x7e1e0898">
+        <documentation loc="43:/opt/tinyos-2.x/tos/chips/atm128/timer/HplAtm128TimerCtrl8.nc">
+          <short> Interrupt flag register: Direct access</short>
+        </documentation>
+        <interfacedef-ref nicename="tos.chips.atm128.timer.HplAtm128TimerCtrl8" qname="HplAtm128TimerCtrl8"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-tag alignment="I:1" size="I:1"><union-ref ref="0x7e256528"/>
+            <typename><typedef-ref name="Atm128_TIFR_t" ref="0x7e256778"/></typename>
+          </type-tag>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+      </function>
+      <function command="" loc="40:/opt/tinyos-2.x/tos/chips/atm128/timer/HplAtm128TimerCtrl8.nc" name="getInterruptMask" provided="0" ref="0x7e1e0088">
+        <documentation loc="39:/opt/tinyos-2.x/tos/chips/atm128/timer/HplAtm128TimerCtrl8.nc">
+          <short> Interrupt mask register: Direct access</short>
+        </documentation>
+        <interfacedef-ref nicename="tos.chips.atm128.timer.HplAtm128TimerCtrl8" qname="HplAtm128TimerCtrl8"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-tag alignment="I:1" size="I:1"><union-ref ref="0x7e2571a0"/>
+            <typename><typedef-ref name="Atm128_TIMSK_t" ref="0x7e2573f0"/></typename>
+          </type-tag>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+      </function>
+      <function command="" loc="41:/opt/tinyos-2.x/tos/chips/atm128/timer/HplAtm128TimerCtrl8.nc" name="setInterruptMask" provided="0" ref="0x7e1e0540">
+        <interfacedef-ref nicename="tos.chips.atm128.timer.HplAtm128TimerCtrl8" qname="HplAtm128TimerCtrl8"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-tag alignment="I:1" size="I:1"><union-ref ref="0x7e2571a0"/>
+              <typename><typedef-ref name="Atm128_TIMSK_t" ref="0x7e2573f0"/></typename>
+            </type-tag>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="41:/opt/tinyos-2.x/tos/chips/atm128/timer/HplAtm128TimerCtrl8.nc" name="mask" ref="0x7e1e03d8">
+            <type-tag alignment="I:1" size="I:1"><union-ref ref="0x7e2571a0"/>
+              <typename><typedef-ref name="Atm128_TIMSK_t" ref="0x7e2573f0"/></typename>
+            </type-tag>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="45:/opt/tinyos-2.x/tos/chips/atm128/timer/HplAtm128TimerCtrl8.nc" name="setInterruptFlag" provided="0" ref="0x7e1e0d50">
+        <interfacedef-ref nicename="tos.chips.atm128.timer.HplAtm128TimerCtrl8" qname="HplAtm128TimerCtrl8"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-tag alignment="I:1" size="I:1"><union-ref ref="0x7e256528"/>
+              <typename><typedef-ref name="Atm128_TIFR_t" ref="0x7e256778"/></typename>
+            </type-tag>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="45:/opt/tinyos-2.x/tos/chips/atm128/timer/HplAtm128TimerCtrl8.nc" name="flags" ref="0x7e1e0be8">
+            <type-tag alignment="I:1" size="I:1"><union-ref ref="0x7e256528"/>
+              <typename><typedef-ref name="Atm128_TIFR_t" ref="0x7e256778"/></typename>
+            </type-tag>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="37:/opt/tinyos-2.x/tos/chips/atm128/timer/HplAtm128TimerCtrl8.nc" name="setControl" provided="0" ref="0x7e1f0d10">
+        <interfacedef-ref nicename="tos.chips.atm128.timer.HplAtm128TimerCtrl8" qname="HplAtm128TimerCtrl8"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-tag alignment="I:1" size="I:1"><union-ref ref="0x7e25b280"/>
+              <typename><typedef-ref name="Atm128TimerControl_t" ref="0x7e25b6b0"/></typename>
+            </type-tag>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="37:/opt/tinyos-2.x/tos/chips/atm128/timer/HplAtm128TimerCtrl8.nc" name="control" ref="0x7e1f0ba8">
+            <type-tag alignment="I:1" size="I:1"><union-ref ref="0x7e25b280"/>
+              <typename><typedef-ref name="Atm128TimerControl_t" ref="0x7e25b6b0"/></typename>
+            </type-tag>
+          </variable>
+        </parameters>
+      </function>
+    </interfacedef>
