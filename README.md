@@ -56,16 +56,16 @@ modified for TinyOS is used as the routing layer.
 
 ### <span id="downloads"></span>Code and Documentation
 
-  - [**Fundamentals**](framework.pdf) - describes framework goals and
+  - [**Fundamentals**](https://convolv.es/compass-dsr-tinyos/framework.pdf) - describes framework goals and
     overall structure
-  - [**Installation**](install.txt) - guide to getting started with the
+  - [**Installation**](https://convolv.es/compass-dsr-tinyos/install.txt) - guide to getting started with the
     framework
-  - [**Application Examples**](apps/) - demo applications that use the
+  - [**Application Examples**](https://convolv.es/compass-dsr-tinyos/apps/) - demo applications that use the
     framework
-  - [**Framework Extension Examples**](exts/) - skeleton protocols that
+  - [**Framework Extension Examples**](https://convolv.es/compass-dsr-tinyos/exts/) - skeleton protocols that
     can be used as building blocks to expand the framework
   - [**Source Code**](https://github.com/jryans/compass-dsr-tinyos)
-  - [**Source Code Documentation**](nesdoc/) - generated from the
+  - [**Source Code Documentation**](https://convolv.es/compass-dsr-tinyos/nesdoc/) - generated from the
     framework code with nesdoc
 
 ### <span id="x1-110003.3"></span>References
