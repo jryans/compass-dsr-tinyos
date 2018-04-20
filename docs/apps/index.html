@@ -1,0 +1,45 @@
+<html>
+
+<head><title>Application Examples</title></head>
+
+<body>
+
+<h2><center>Application Examples</center></h2>
+
+<p><h3>Multihop Counter (UnicastCountToLeds)</h3></p>
+
+<p>UnicastCountToLeds acts very similarly to the TinyOS example applicaton
+RadioCountToLeds, in which a 4Hz counter is maintained, and then the value
+is sent over the radio and displayed on LEDs of another node. However, here
+only node 0 sends a unicast message to node 1 with its value, rather than
+having each node broadcast its value in an AM packet every time it gets
+updated. Normally this would require nodes 0 and 1 to be within radio range
+of each other, but by simply using the send and receive components from the
+COMPASS framework, the message can be delivered across multiple hops to reach
+node 1 (assuming there is a path connecting node 0 and 1 in the network).</p>
+
+<ul>
+<li><a href="UnicastCountToLeds/UnicastCountToLedsAppC.nc">UnicastCountToLedsAppC.nc</a>
+<li><a href="UnicastCountToLeds/UnicastCountToLedsC.nc">UnicastCountToLedsC.nc</a>
+<li><a href="UnicastCountToLeds/UnicastCountToLeds.h">UnicastCountToLeds.h</a>
+</ul>
+
+<p><h3>Visual Route Tracer (MultihopLight)</h3></p>
+
+<p>The intensity of light at a source mote A is used to control an LED at a destination mote B. 
+The COMPASS multihop framework is used to allow the source and destination to be an arbitrary 
+number of hops away from each other. By reducing radio power to a low level, this application 
+acts as simple visual demo of the utility of multihop communication. All other nodes act as 
+forwarders between nodes A and B, and can be added and removed at any time, causing the routing 
+path between A and B to change in real time.  The on/off setting of this LED is displayed throughout 
+the path taken by the packets, making this system a rudimentary route tracer.</p>
+
+<ul>
+<li><a href="MultihopLight/MultihopLightAppC.nc">MultihopLightAppC.nc</a>
+<li><a href="MultihopLight/MultihopLightC.nc">MultihopLightC.nc</a>
+<li><a href="MultihopLight/MultihopLight.h">MultihopLight.h</a>
+</ul>
+
+</body>
+
+</html>

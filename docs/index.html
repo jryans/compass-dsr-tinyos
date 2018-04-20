@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html > 
+<head><title>The COMPASS Multihop Framework for TinyOS</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<!-- html --> 
+<meta name="src" content="api_doc.tex"> 
+<meta name="date" content="2007-11-14 13:25:00"> 
+<link rel="stylesheet" type="text/css" href="index.css"> 
+</head><body 
+>
+   <div class="maketitle">
+                                                                  
+
+                                                                  
+                                                                  
+
+                                                                  
+
+<h2 class="titleHead">The COMPASS<br />
+Multihop Framework for TinyOS</h2>
+<div class="author" ><span 
+class="cmr-12">J. Ryan Stinnett</span>
+<br /> <span 
+class="cmr-9">ECE Department</span>
+<br /> <span 
+class="cmr-9">Rice University</span>
+<br /><span class="obeylines-h"><a 
+href="mailto:jryans@rice.edu" class="url" ><span 
+class="cmtt-9">jryans@rice.edu</span></a></span></div>
+<br />
+<br />
+<a href="#x1-10001">Overview</a> - <a href="#downloads">Code and Documentation</a> - <a href="#x1-110003.3">References</a>
+   </div>
+   <h3 class="sectionHead<a 
+ id="x1-10001"></a>Overview</h3>
+<!--l. 16--><p class="noindent" >TinyOS 2.x supplies a well-designed single hop messaging layer for applications, but
+there is no standardized multihop framework. To address this issue, we surveyed a
+large number of applications <span class="cite">[<a 
+href="#Xsurvey">1</a>]</span> to determine the addressing techniques and
+messaging stack features used in sensor networks. From the results of this survey, we
+designed a multihop networking API <span class="cite">[<a 
+href="#Xapi">2</a>]</span> to address the needs of application designers
+at the messaging layer in a unified way.
+<!--l. 25--><p class="noindent" >   This framework intends to implement that API. The key goals of this
+include:
+     <ul class="itemize1">
+     <li class="itemize">Multihop routing with several addressing modes based on:
+         <ul class="itemize2">
+         <li class="itemize">Node address (single node, multiple nodes, or a list of nodes)
+         </li>
+         <li class="itemize">Geographical region
+         </li>
+         <li class="itemize">Device hierarchy</li></ul>
+     </li>
+     <li class="itemize">Intercept messages to be forwarded
+                                                                  
+
+                                                                  
+     </li>
+     <li class="itemize">Control transmission effort
+     </li>
+     <li class="itemize">Congestion management
+     </li>
+     <li class="itemize">Support self-organized device hierarchies</li></ul>
+<!--l. 43--><p class="noindent" >   Our design allows application designers to focus on the application layer without
+being bogged down by the details of routing protocol implementation. Similarly,
+routing protocol designers can make their improvements more accessible to the rest
+of the community since only a few wiring changes are needed to alter the
+routing protocol used by a given addressing mode, leaving application code
+untouched.
+<!--l. 51--><p class="noindent" >   In its current form, the framework implementation supports addressing and
+multihop routing by a single node address. Our version of Dynamic Source Routing
+(DSR) <span class="cite">[<a 
+href="#Xdsr-rfc">3</a>]</span> modified for TinyOS is used as the routing layer.
+<p class="noindent" >
+   <h3 class="likesectionHead"><a 
+ id="downloads"></a>Code and Documentation</h3>
+<p class="noindent" >   
+<ul class="itemize1">
+<li><a href="framework.pdf"><b>Fundamentals</b></a> - describes framework goals and overall structure
+<li><a href="install.txt"><b>Installation</b></a> - guide to getting started with the framework
+<li><a href="apps/"><b>Application Examples</b></a> - demo applications that use the framework
+<li><a href="exts/"><b>Framework Extension Examples</b></a> - skeleton protocols that can be used as building blocks to expand the framework
+<li><b>Source Code</b> - coming soon!
+<li><a href="nesdoc/"><b>Source Code Documentation</b></a> - generated from the framework code with nesdoc
+</ul>
+
+<!--l. 2--><p class="noindent" >
+   <h3 class="likesectionHead"><a 
+ id="x1-110003.3"></a>References</h3>
+<!--l. 2--><p class="noindent" >
+   <div class="thebibliography">
+   <p class="bibitem" ><span class="biblabel">
+ [1]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="Xsurvey"></a>R.&#x00A0;Wagner, M.&#x00A0;Duarte, J.&#x00A0;R. Stinnett, T.&#x00A0;S.&#x00A0;E. Ng, D.&#x00A0;B. Johnson,
+   and  R.&#x00A0;Baraniuk,  &#8220;A  network  API-driven  survey  of  communication
+   requirements   of   distributed   data   processing   algorithms   for   sensor
+   networks,&#8221;   Rice   University,   Tech.   Rep.,   2006.   [Online].   Available:   <span class="obeylines-h"><a 
+href="http://www.ece.rice.edu/~rwagner/IPSN-API-survey.pdf" class="url" >http://www.ece.rice.edu/&#x02DC;rwagner/IPSN-API-survey.pdf</a></span>
+                                                                  
+
+                                                                  
+   </p>
+   <p class="bibitem" ><span class="biblabel">
+ [2]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="Xapi"></a>R.&#x00A0;Wagner,    J.&#x00A0;R.    Stinnett,    M.&#x00A0;Duarte,    R.&#x00A0;Baraniuk,    D.&#x00A0;B.
+   Johnson,   and   T.&#x00A0;S.&#x00A0;E.   Ng,   &#8220;A   Network   Application   Programming
+   Interface     for     Data     Processing     in     Sensor     Networks,&#8221;     Rice
+   University,  Tech.  Rep.  TREE0705,  Jan.  2007.  [Online].  Available:  <span class="obeylines-h"><a 
+href="http://www.dsp.rice.edu/~rwagner/docs/wagnerTREE0705.pdf" class="url" >http://www.dsp.rice.edu/&#x02DC;rwagner/docs/wagnerTREE0705.pdf</a></span>
+   </p>
+   <p class="bibitem" ><span class="biblabel">
+ [3]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="Xdsr-rfc"></a>D.&#x00A0;Johnson,  Y.&#x00A0;Hu,  and  D.&#x00A0;Maltz,  <span 
+class="cmti-10">The  Dynamic  Source  Routing</span>
+   <span 
+class="cmti-10">Protocol (DSR) for Mobile Ad Hoc Networks for IPv4</span>, IETF RFC 4728, Feb.
+   2007.
+   </p>
+      </div>
+    
+</body></html> 
+
+                                                                  
+
+

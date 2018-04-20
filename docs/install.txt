@@ -1,0 +1,36 @@
+         The COMPASS Multihop Framework for TinyOS
+J. Ryan Stinnett                             Rice University 
+<jryans@rice.edu>                             ECE Department
+------------------------------------------------------------
+Installation
+------------------------------------------------------------
+
+1. Ensure that you have a working installation of TinyOS
+   2.0.2.  For more information about TinyOS itself, take a
+   look at http://www.tinyos.net/.
+
+2. Either download the most recent release from the
+   framework homepage, or use CVS to get the latest code
+   from tinyos-2.x-contrib/rice/framework.  The framework 
+   directory structure is set up so that it could easily be 
+   integrated into your TinyOS installation, however
+   keeping the two separate is suggested to avoid any 
+   conflicts that may arise as TinyOS evolves.
+
+3. Assuming that your TinyOS environment variables are set
+   correctly (see step 1), you should be ready to compile
+   applications that make use of the framework!  There are a
+   number of directories that must be included when
+   compiling framework applications, but there is no need to
+   add them manually or adjust any paths.  The included
+   applications simply use a small script to add all of the
+   required directories automatically, which should be useful
+   when building your own applications as well.
+
+4. Test that everything is setup properly by going into the
+   directory of one of the included applications and typing
+   "make <target>", replacing <target> with your platform of
+   choice.  Please note that at this time all testing was 
+   done solely on the micaz platform, but we would be very
+   interested to hear how well the framework works on other
+   platforms. 
